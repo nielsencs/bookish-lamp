@@ -1,19 +1,19 @@
 import os
 
 def main():
-    path1 = 'E:\\GitHub\\bookish-lamp\\structure'
-    path2 = 'E:\\GitHub\\bookish-lamp\\eng-web_usfm'
+    tPath1 = 'E:\\GitHub\\bookish-lamp\\structure'
+    tPath2 = 'E:\\GitHub\\bookish-lamp\\eng-web_usfm'
     tChapter = ''
     tVerse = ''
     para = ''
     comStart = '\\f'
     comEnd = '\\f*'
 
-    os.chdir(path1)
+    os.chdir(tPath1)
     fr1 = open('versesMaster.sql', 'r')
-    os.chdir(path2)
+    os.chdir(tPath2)
     fw = open('..\\versesMaster.usfm.txt', 'w', encoding="utf8")
-    for filename in os.listdir(path2):
+    for filename in os.listdir(tPath2):
         if filename.endswith('.usfm'):
             tBook = filename[3:6]
             print('processing ' + filename, end='')
