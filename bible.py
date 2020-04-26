@@ -1,5 +1,57 @@
 import os
 
+def main():
+    path1 = 'E:\\GitHub\\bookish-lamp\\structure'
+    path2 = 'E:\\GitHub\\bookish-lamp\\eng-web_usfm'
+    tChapter = ''
+    tVerse = ''
+    para = ''
+    comStart = '\\f'
+    comEnd = '\\f*'
+
+    os.chdir(path1)
+    fr1 = open('versesMaster.sql', 'r')
+    os.chdir(path2)
+    fw = open('..\\versesMaster.usfm.txt', 'w', encoding="utf8")
+    for filename in os.listdir(path2):
+        if filename.endswith('.usfm'):
+            tBook = filename[3:6]
+            print('processing ' + filename, end='')
+            fr2 = open(filename, 'r', encoding="utf8")
+            line1 = findVerse(fr1,"'")
+            line2 = fr2.readline()
+            while line2:
+                if line2.startswith('\\c'):
+                    tChapter = line2[3:-1]
+                if line2.startswith('\\p'):
+                    para = line2[3:-1]
+                else:
+                    para = ''
+                if line2.startswith('\\v'):
+                    tVerse = line2[2:5]
+                    if comStart in line2:
+                        line2=line2[0:line2.find(comStart)] + line2[line2.find(comEnd)+3:]
+                        print('+', end='')
+                    else:
+                        print('-', end='')
+                    line2 = swapQuotes(firstAlpha(line2[3:] + para))
+                    line2=line2.rstrip()
+                    if line1 != line2:
+                        #print(line1)
+                        fw.write(tBook + tChapter + tVerse + ':' + line1 + '\n')
+                        fw.write(tBook + tChapter + tVerse + ':' + line2 + '\n')
+                    #else:
+                        
+                    line1 = findVerse(fr1,"'")
+                else:
+                    print('.', end='')
+                line2 = fr2.readline()
+                #line2 = ''
+            fr2.close()
+            print('')
+    fr1.close()
+    fw.close()
+
 def firstAlpha(line):
     bDoIt = True
     while bDoIt:
@@ -87,55 +139,5 @@ def findVerse(fr, tVerse):
         else:
             line = fr.readline()
     return line
- 
 
-path1 = 'E:\\GitHub\\bookish-lamp\\structure'
-path2 = 'E:\\GitHub\\bookish-lamp\\eng-web_usfm'
-tChapter = ''
-tVerse = ''
-para = ''
-comStart = '\\f'
-comEnd = '\\f*'
-
-os.chdir(path1)
-fr1 = open('versesMaster.sql', 'r')
-os.chdir(path2)
-fw = open('..\\versesMaster.usfm.txt', 'w', encoding="utf8")
-for filename in os.listdir(path2):
-    if filename.endswith('.usfm'):
-        tBook = filename[3:6]
-        print('processing ' + filename, end='')
-        fr2 = open(filename, 'r', encoding="utf8")
-        line1 = findVerse(fr1,"'")
-        line2 = fr2.readline()
-        while line2:
-            if line2.startswith('\\c'):
-                tChapter = line2[3:-1]
-            if line2.startswith('\\p'):
-                para = line2[3:-1]
-            else:
-                para = ''
-            if line2.startswith('\\v'):
-                tVerse = line2[2:5]
-                if comStart in line2:
-                    line2=line2[0:line2.find(comStart)] + line2[line2.find(comEnd)+3:]
-                    print('+', end='')
-                else:
-                    print('-', end='')
-                line2 = swapQuotes(firstAlpha(line2[3:] + para))
-                line2=line2.rstrip()
-                if line1 != line2:
-                    #print(line1)
-                    fw.write(tBook + tChapter + tVerse + ':' + line1 + '\n')
-                    fw.write(tBook + tChapter + tVerse + ':' + line2 + '\n')
-                #else:
-                    
-                line1 = findVerse(fr1,"'")
-            else:
-                print('.', end='')
-            line2 = fr2.readline()
-            #line2 = ''
-        fr2.close()
-        print('')
-fr1.close()
-fw.close()
+main() 
