@@ -1,2 +1,2 @@
 # bookish-lamp
-Some basic tools to edit my bible based on the WEB
+Some basic tools to edit my bible based on the WEB public domain Bible
