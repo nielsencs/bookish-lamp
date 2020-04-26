@@ -1,8 +1,8 @@
 import os
 
 def main():
-    path1 = 'E:\\GitHub\\bookish-lamp\\structure'
-    path2 = 'E:\\GitHub\\bookish-lamp\\eng-web_usfm'
+    tPath1 = 'E:\\GitHub\\bookish-lamp\\structure'
+    tPath2 = 'E:\\GitHub\\bookish-lamp\\eng-web_usfm'
     tBook1 = ''
     tBook2 = ''
     tBook1Prev = ''
@@ -21,16 +21,16 @@ def main():
     com2Start = '\\x'
     com2End = '\\x*'
 
-    os.chdir(path1)
+    os.chdir(tPath1)
     fr1 = open('versesMaster.sql', 'r')
-    os.chdir(path2)
+    os.chdir(tPath2)
     fw1 = open('..\\versesMaster_1.txt', 'w', encoding="utf8")
     fw2 = open('..\\versesMaster_2.txt', 'w', encoding="utf8")
     bOldTestament = True
 
     doHeader(fw1)
     
-    for filename in os.listdir(path2):
+    for filename in os.listdir(tPath2):
         if filename.endswith('.usfm'):
             tBook2Prev = tBook2
             tBook2 = filename[3:6]
@@ -48,15 +48,16 @@ def main():
                     buffer = fr2.readline()
                     if line2.startswith('\\c'):
                         tChapter2 = lpadNum(line2[3:-1])
-                    if line2.startswith('\\p') or line2.startswith('\\q'):
-                        para = line2[3:-1].strip()
+                    para = ''
+                    while line2.startswith('\\p') or line2.startswith('\\q'):
+                        para += line2[3:-1].strip() + ' '
+                        line2 = buffer
+                        buffer = fr2.readline()
                         if para > '':
                             print('p', end='')
-                    else:
-                        para = ''
                     if line2.startswith('\\v'):
-                        if buffer.startswith('\\p') or buffer.startswith('\\q'):
-                            para = buffer[3:-1].strip()
+                        while buffer.startswith('\\p') or buffer.startswith('\\q'):
+                            para += buffer[3:-1].strip() + ' '
                             buffer = fr2.readline()
                         line = parseSQL(fr1, fw2,"'")
                         line1 = line[0]
@@ -68,13 +69,13 @@ def main():
                         tVerse2 = lpadNum(tVerse2[0:tVerse2.find(' ')])
 
                         if comStart in line2:
-                            line2=line2[0:line2.find(comStart)] + line2[line2.find(comEnd)+3:]
+                            line2=trimExtras(line2, comStart, comEnd)
                             print('+', end='')
                         else:
                             print('-', end='')
 
                         if com2Start in line2:
-                            line2=line2[0:line2.find(com2Start)] + line2[line2.find(com2End)+3:]
+                            line2=trimExtras(line2, com2Start, com2End)
                             print('#', end='')
                         else:
                             print('-', end='')
@@ -87,18 +88,24 @@ def main():
 
                         line2 = swapWords(line2, 'lamp stand', 'lampstand')
                         line2 = swapWords(line2, 'bondage', 'slavery')
+                        line2 = swapWords(line2, 'worshiper', 'worshipper')
+                        line1 = swapWords(line1, 'it happened that ', '')
+                        line1 = swapWords(line1, 'It happened ', '')
                         if bOldTestament:
                             line2 = swapWords(line2, 'Yahweh', 'TheIAM<H3068>')
-
+                            line2 = swapWords(line2, 'herb', 'vegetation<H6212>')
+                            line2 = addCode(line2, 'Lord', '<H0113>')
                             line2 = addCode(line2, 'gods', '<H0430>')
                             line2 = addCode(line2, 'god', '<H0430>')
                             line2 = addCode(line2, 'God', '<H0430>')
                         else:
                             line2 = swapWords(line2, 'Christ', 'AnointedOne<G5547>')
+
                             line2 = swapWords(line2, 'beloved', 'dear-ones<G0027>')
                             line2 = swapWords(line2, 'Beloved', 'Dear-ones<G0027>')
 
                             line2 = addCode(line2, 'Lord', '<G2962>')
+                            line2 = addCode(line2, 'lord', '<G2962>')
                             line2 = addCode(line2, 'love', '<G0025>')
 
                             line2 = swapWords(line2, 'love<G0025>d', 'loved<G0025>')
@@ -108,9 +115,17 @@ def main():
                             line2 = swapWords(line2, 'a love<G0025>', 'a love<G0026>')
 
                             line2 = addCode(line2, 'master', '<G2962>')
+                            line2 = addCode(line2, 'Master', '<G2962>')
                             line2 = swapWords(line2, 'master<G2962>s', 'masters<G2962>')
+                            line2 = swapWords(line2, 'Master<G2962>s', 'Masters<G2962>')
                             line2 = swapWords(line2, 'master<G2962>\'s', 'master\'s<G2962>')
+
+                            line2 = swapWords(line2, 'works', 'acts')
+                            
+                        line2 = swapWords(line2, '—', '- ')
                         line2 = swapWords(line2, '  ', ' ')
+                        line2 = line2.strip()
+
                         if tVerse2 != tVerse1:
                             x = input(tChapter1 + ':' + tVerse1 + '|' + tChapter2 + ':' + tVerse2)
                         if tBook2 != tBook1:
@@ -202,6 +217,33 @@ def trimChar(line, tChar):
             bDoIt = False
     return line
 
+def trimExtras(line, lDelim, rDelim):
+    #bDoIt = True
+    while lDelim in line:
+        lLine = line[0:line.find(lDelim)]
+        rLine = line[line.find(rDelim)+3:]
+        line = lLine + rLine
+    return line
+
+def trimAngleBrackets(line):
+    lAngle = '<'
+    rAngle = '>'
+    bDoIt = True
+    while bDoIt:
+        if lAngle in line:
+            lLine = line[0:line.find(lAngle)]
+            #print('left part:')
+            #print(lLine)
+            rLine = line[line.find(rAngle)+1:]
+            #print('right part:')
+            #print(rLine)
+            line = lLine + rLine
+            #print('joined:')
+            #print(line)
+        else:
+            bDoIt = False
+    return line
+
 def swapQuotes(line):
     tChar1 = '“'
     tChar2 = '”'
@@ -228,25 +270,6 @@ def swapQuotes(line):
             line = line[0:line.find(tChar4)] + "'" + line[line.find(tChar4)+1:]
         else:
             bDoIt4 = False
-    return line
-
-def trimAngleBrackets(line):
-    lAngle = '<'
-    rAngle = '>'
-    bDoIt = True
-    while bDoIt:
-        if lAngle in line:
-            lLine = line[0:line.find(lAngle)]
-            #print('left part:')
-            #print(lLine)
-            rLine = line[line.find(rAngle)+1:]
-            #print('right part:')
-            #print(rLine)
-            line = lLine + rLine
-            #print('joined:')
-            #print(line)
-        else:
-            bDoIt = False
     return line
 
 def lpadNum(tNum):
