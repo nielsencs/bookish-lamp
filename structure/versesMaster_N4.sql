@@ -3407,7 +3407,7 @@ INSERT INTO `verses` (`bookCode`, `chapter`, `verseNumber`, `verseText`) VALUES
 ('JOH',  11,  18, 'Now Bethany was near Jerusalem, about fifteen stadia away.'),
 ('JOH',  11,  19, 'Many of the Jews had joined the women around Martha and Mary, to console them concerning their brother.'),
 ('JOH',  11,  20, 'Then when Martha heard that Jesus was coming, she went and met him, but Mary stayed in the house.'),
-('JOH',  11,  21, 'Therefore Martha said to Jesus, \"Lord<G2962>, if you would have been here, my brother wouldn\'t have died.'),
+('JOH',  11,  21, 'Therefore Martha said to Jesus, \"Lord<G2962>, if you would have been here, my brother would not have died.'),
 ('JOH',  11,  22, 'Even now I know that whatever you ask of God, God will give you.\"'),
 ('JOH',  11,  23, 'Jesus said to her, \"Your brother will rise again.\"'),
 ('JOH',  11,  24, 'Martha said to him, \"I know that he will rise again in the resurrection at the last day.\"'),
