@@ -1,19 +1,20 @@
 import os
+from bibleModule import lpadNum
 
 #globals
 tPath = 'E:\\GitHub\\bookish-lamp\\'
 tPath1 = 'eng-web_usfm\\'
-tPath2 = 'eng-web_usfm_2020-06-01'
+tPath2 = 'eng-web_usfm_2020-06-01\\'
 fw = ''
 
 def main():
     global fw
     tBook = ''
 
-    os.chdir(tPath + tPath1)
     fw = open(tPath + 'WEBChanges.txt', 'w', encoding="utf8")
     bOldTestament = True
-    
+
+    os.chdir(tPath + tPath1)
     for tFileName1 in os.listdir(tPath + tPath1):
         if tFileName1.endswith('.usfm'):
             tBookPrev = tBook
@@ -28,31 +29,26 @@ def main():
     fw.close()
 
 def compareThem(tFile1, tFile2, tBook):
-    global fw
+    #global fw
 
     print('--------------------------------------------------------------------')
     print('Comparing ' + tFile1 + ' with ' + tFile2)
     print('--------------------------------------------------------------------')
 
-    fr1 = open(tPath + tPath1 + '\\' + tFile1, 'r', encoding='utf8')
-    fr2 = open(tPath + tPath2 + '\\' + tFile2, 'r', encoding='utf8')
+    fr1 = open(tPath + tPath1 + tFile1, 'r', encoding='utf8')
+    fr2 = open(tPath + tPath2 + tFile2, 'r', encoding='utf8')
 
-    tChapter1 = '1'
-    tChapter2 = '1'
-    tVerse1 = ''
-    tVerse2 = ''
+    tChapter1 = tChapter2 = '1'
+    tVerse1 = tVerse2 = ''
     para = ''
-    tLine1 = ''
-    tLine2 = ''
-    tBuffer1 = ''
-    tBuffer2 = ''
-    tLine1 = 'start'
-    tLine2 = 'start'
+    tLine1 = tLine2 = ''
+    tBuffer1 = tBuffer2 = ''
+    tLine1 = tLine2 = 'start'
 
     while tLine1 and tLine2:
-        print('@', end='')
+        #print('@', end='')
         tLine1, tBuffer1 = getToVerseOrChapter(tLine1, tBuffer1, fr1)
-        tChapter1, tLine1, tBuffer1  = getChapter(tChapter1, tLine1, tBuffer1)
+        tChapter1, tLine1, tBuffer1 = getChapter(tChapter1, tLine1, tBuffer1)
 
         tLine2, tBuffer2 = getToVerseOrChapter(tLine2, tBuffer2, fr2)
         tChapter2, tLine2, tBuffer2 = getChapter(tChapter2, tLine2, tBuffer2)
@@ -64,24 +60,30 @@ def compareThem(tFile1, tFile2, tBook):
                 tLine1 = tBuffer1
                 tBuffer1 = ''
             else:
-            #    tLine1, tBuffer1 = getToVerseOrChapter(tLine1, tBuffer1, fr1)
-                print('Buffer and line empty 1')
-                wait = input("PRESS ENTER TO CONTINUE.")
-        else:
-            print('OUCH! 1')
-            wait = input("PRESS ENTER TO CONTINUE.")
+                tLine1 = fr1.readline()
+
+                #tLine1, tBuffer1 = getToVerseOrChapter(tLine1, tBuffer1, fr1)
+
+                #print('Buffer and line empty 1')
+                #wait = input("PRESS ENTER TO CONTINUE.")
+        #else:
+        #    print('OUCH! 1')
+        #    wait = input("PRESS ENTER TO CONTINUE.")
 
         if not tLine2:
             if tBuffer2:
                 tLine2 = tBuffer2
                 tBuffer2 = ''
             else:
-            #    tLine2, tBuffer2 = getToVerseOrChapter(tLine2, tBuffer2, fr2)
-                print('Buffer and line empty 2')
-                wait = input("PRESS ENTER TO CONTINUE.")
-        else:
-            print('OUCH! 2')
-            wait = input("PRESS ENTER TO CONTINUE.")
+                tLine2 = fr2.readline()
+
+                #tLine2, tBuffer2 = getToVerseOrChapter(tLine2, tBuffer2, fr2)
+
+                #print('Buffer and line empty 2')
+                #wait = input("PRESS ENTER TO CONTINUE.")
+        #else:
+        #    print('OUCH! 2')
+        #    wait = input("PRESS ENTER TO CONTINUE.")
 
     fr1.close()
     fr2.close()
@@ -105,20 +107,9 @@ def getToVerseOrChapter(tLine, tBuffer, fr):
             tBuffer = ''
             break
         if tBuffer.startswith('\\v') or tBuffer.startswith('\\p') or tBuffer.startswith('\\q'):
-            line = "MORE cRAP"
-            break
-def stuff2():
-    while True:
-        tBuffer = 'dummy line!'
-        if True:
-            tLine = 'dummy line!'
-
-
-
-
             #print('#', end='')
             tLine = tBuffer
-            tBuffer = fr2.readline()
+            tBuffer = fr.readline()
             if tBuffer.startswith('\\c'):
                 break
             para = ''
@@ -154,9 +145,12 @@ def getChapter(tChapter, tLine, tBuffer):
     return tChapter, tLine, tBuffer
 
 def processLine(tLine1, tLine2, tBook, tChapter1, tChapter2):
+    #global fw
+    #print(tLine1[2:5] + tLine2[2:5], end='')
+
     if tLine1 == tLine2:
         print('.', end='')
-    else:
+    else: 
         print(tLine1)
         print(tLine2)
         print('*', end='')
@@ -282,122 +276,4 @@ def getFileName2(tFileName1):
         tFileName2 = '95-JUDeng-web.usfm'
     return tFileName2
 
-def trimComments(tLine):
-    comStart = '\\f'
-    comEnd = '\\f*'
-    com2Start = '\\x'
-    com2End = '\\x*'
-    if comStart in tLine:
-        tLine=trimExtras(tLine, comStart, comEnd)
-        #print('+', end='')
-    #else:
-        #print('-', end='')
-
-    if com2Start in tLine:
-        tLine=trimExtras(tLine, com2Start, com2End)
-        #print('#', end='')
-    #else:
-        #print('-', end='')
-    return tLine
-
-def firstAlpha(line):
-    #print(len(line), end='')
-    if len(line)>0:
-        bDoIt = True
-        while bDoIt:
-            if line[0].isalpha():
-                bDoIt = False
-            else:
-                line = line[1:]
-                #print('"' + line[0] + '" removed:')
-                #print(line)
-    return line
-
-def trimChar(line, tChar):
-    bDoIt = True
-    while bDoIt:
-        if tChar in line:
-            line = line[0:line.find(tChar)] + line[line.find(tChar)+1:]
-            #print('"' + tChar + '" removed:')
-            #print(line)
-        else:
-            bDoIt = False
-    return line
-
-def swapQuotes(line):
-    tChar1 = '“'    
-    tChar2 = '”'    
-    tChar3 = '‘'    
-    tChar4 = '’'
-    bDoIt1 = True
-    bDoIt2 = True
-    bDoIt3 = True
-    bDoIt4 = True
-    while bDoIt1 or bDoIt2 or bDoIt3 or bDoIt4:
-        if tChar1 in line:
-            line = line[0:line.find(tChar1)] + '"' + line[line.find(tChar1)+1:]
-        else:
-            bDoIt1 = False
-        if tChar2 in line:
-            line = line[0:line.find(tChar2)] + '"' + line[line.find(tChar2)+1:]
-        else:
-            bDoIt2 = False
-        if tChar3 in line:
-            line = line[0:line.find(tChar3)] + "'" + line[line.find(tChar3)+1:]
-        else:
-            bDoIt3 = False
-        if tChar4 in line:
-            line = line[0:line.find(tChar4)] + "'" + line[line.find(tChar4)+1:]
-        else:
-            bDoIt4 = False
-    return line
-
-def trimAngleBrackets(line):
-    lAngle = '<'
-    rAngle = '>'
-    bDoIt = True
-    while bDoIt:
-        if lAngle in line:
-            lLine = line[0:line.find(lAngle)]
-            #print('left part:')
-            #print(lLine)
-            rLine = line[line.find(rAngle)+1:]
-            #print('right part:')
-            #print(rLine)
-            line = lLine + rLine
-            #print('joined:')
-            #print(line)
-        else:
-            bDoIt = False
-    return line
-
-def lpadNum(tNum):
-    tNum = '   ' + tNum.strip()
-    tNum = tNum[-4:]
-    return tNum
-
-def swapWords(tText, tWordOut, tWordIn):
-    while tWordOut in tText:
-        iStart = tText.find(tWordOut)
-        iLength = len(tWordOut)
-        tText = tText[0:iStart] + tWordIn + tText[iStart + iLength:]
-    return tText
-        
-def addCode(tText, tWord, tCode):
-    tNew = ''
-    while tWord in tText:
-        iStart = tText.find(tWord)
-        iLength = len(tWord)
-        tNew = tNew + tText[0:iStart + iLength] + tCode
-        tText =  tText[iStart + iLength:]
-    return tNew + tText
-        
-def escapeQuotes(tText, tQuote):
-    tNew = ''
-    while tQuote in tText:
-        iStart = tText.find(tQuote)
-        tNew = tNew + tText[0:iStart] + '\\' + tQuote
-        tText =  tText[iStart + 1:]
-    return tNew + tText
-        
 main()
