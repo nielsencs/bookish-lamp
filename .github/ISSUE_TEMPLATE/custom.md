@@ -1,9 +1,9 @@
 ---
-name: Custom issue template
-about: Describe this issue template's purpose here.
+name: Bible Text Issue template
+about: You believe the text is inaccurate or clumsy or...
 title: ''
-labels: ''
-assignees: ''
+labels: 'bug,BibleText'
+assignees: 'nielsencs'
 
 ---
 
