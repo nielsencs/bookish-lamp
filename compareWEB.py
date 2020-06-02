@@ -27,6 +27,7 @@ def main():
             compareThem(tFileName1, tFileName2, tBook)
             wait = input("PRESS ENTER TO CONTINUE.")
     fw.close()
+    print('Done!')
 
 def compareThem(tFile1, tFile2, tBook):
     #global fw
@@ -55,51 +56,35 @@ def compareThem(tFile1, tFile2, tBook):
 
         processLine(tLine1, tLine2, tBook, tChapter1, tChapter2)
 
-        if not tLine1:
-            if tBuffer1:
-                tLine1 = tBuffer1
-                tBuffer1 = ''
-            else:
-                tLine1 = fr1.readline()
+        if tBuffer1:
+            tLine1 = tBuffer1
+            tBuffer1 = ''
+        else:
+            tLine1 = fr1.readline()
 
-                #tLine1, tBuffer1 = getToVerseOrChapter(tLine1, tBuffer1, fr1)
-
-                #print('Buffer and line empty 1')
-                #wait = input("PRESS ENTER TO CONTINUE.")
-        #else:
-        #    print('OUCH! 1')
-        #    wait = input("PRESS ENTER TO CONTINUE.")
-
-        if not tLine2:
-            if tBuffer2:
-                tLine2 = tBuffer2
-                tBuffer2 = ''
-            else:
-                tLine2 = fr2.readline()
-
-                #tLine2, tBuffer2 = getToVerseOrChapter(tLine2, tBuffer2, fr2)
-
-                #print('Buffer and line empty 2')
-                #wait = input("PRESS ENTER TO CONTINUE.")
-        #else:
-        #    print('OUCH! 2')
-        #    wait = input("PRESS ENTER TO CONTINUE.")
+        if tBuffer2:
+            tLine2 = tBuffer2
+            tBuffer2 = ''
+        else:
+            tLine2 = fr2.readline()
 
     fr1.close()
     fr2.close()
-    print('Done!')
+    print('--------------------------------------------------------------------')
+    print(tFile1 + ' compared with ' + tFile2)
+    print('--------------------------------------------------------------------')
 
 def getToVerseOrChapter(tLine, tBuffer, fr):
+    if tLine == tBuffer:
+        print('Buffer matches line!')
+        wait = input("PRESS ENTER TO CONTINUE.")
+
     if not tBuffer:
         tBuffer = fr.readline()
 
     if not tLine:
         tline = tBuffer
         tBuffer = fr.readline()
-
-    if tLine == tBuffer:
-        print('Buffer matches line!')
-        wait = input("PRESS ENTER TO CONTINUE.")
 
     while tBuffer:
         if tBuffer.startswith('\\c'):
