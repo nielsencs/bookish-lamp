@@ -1,4 +1,5 @@
 import os
+from bibleModule import *
 
 def main():
     tPath1 = 'E:\\GitHub\\bookish-lamp\\structure'
@@ -206,44 +207,6 @@ def firstAlphaOrQuote(line):
                 #print(line)
     return line
 
-def trimChar(line, tChar):
-    bDoIt = True
-    while bDoIt:
-        if tChar in line:
-            line = line[0:line.find(tChar)] + line[line.find(tChar)+1:]
-            #print('"' + tChar + '" removed:')
-            #print(line)
-        else:
-            bDoIt = False
-    return line
-
-def trimExtras(line, lDelim, rDelim):
-    #bDoIt = True
-    while lDelim in line:
-        lLine = line[0:line.find(lDelim)]
-        rLine = line[line.find(rDelim)+3:]
-        line = lLine + rLine
-    return line
-
-def trimAngleBrackets(line):
-    lAngle = '<'
-    rAngle = '>'
-    bDoIt = True
-    while bDoIt:
-        if lAngle in line:
-            lLine = line[0:line.find(lAngle)]
-            #print('left part:')
-            #print(lLine)
-            rLine = line[line.find(rAngle)+1:]
-            #print('right part:')
-            #print(rLine)
-            line = lLine + rLine
-            #print('joined:')
-            #print(line)
-        else:
-            bDoIt = False
-    return line
-
 def swapQuotes(line):
     tChar1 = '“'
     tChar2 = '”'
@@ -271,35 +234,6 @@ def swapQuotes(line):
         else:
             bDoIt4 = False
     return line
-
-def lpadNum(tNum):
-    tNum = '   ' + tNum.strip()
-    tNum = tNum[-4:]
-    return tNum
-
-def swapWords(tText, tWordOut, tWordIn):
-    while tWordOut in tText:
-        iStart = tText.find(tWordOut)
-        iLength = len(tWordOut)
-        tText = tText[0:iStart] + tWordIn + tText[iStart + iLength:]
-    return tText
-        
-def addCode(tText, tWord, tCode):
-    tNew = ''
-    while tWord in tText:
-        iStart = tText.find(tWord)
-        iLength = len(tWord)
-        tNew = tNew + tText[0:iStart + iLength] + tCode
-        tText =  tText[iStart + iLength:]
-    return tNew + tText
-        
-def escapeQuotes(tText, tQuote):
-    tNew = ''
-    while tQuote in tText:
-        iStart = tText.find(tQuote)
-        tNew = tNew + tText[0:iStart] + '\\' + tQuote
-        tText =  tText[iStart + 1:]
-    return tNew + tText
         
 def doHeader(fw2):
     fw2.write('-- phpMyAdmin SQL Dump\n')
