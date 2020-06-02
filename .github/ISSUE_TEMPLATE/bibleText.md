@@ -1,8 +1,8 @@
 ---
-name: Bible Text Issue template
+name: Bible Text Issue
 about: You believe the text is inaccurate or clumsy or...
 title: ''
-labels: 'bug,BibleText'
+labels: 'BibleText,W'
 assignees: 'nielsencs'
 
 ---
