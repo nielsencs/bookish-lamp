@@ -1,21 +1,20 @@
 import os
 
 #globals
-tPath1 = 'E:\\GitHub\\bookish-lamp\\eng-web_usfm\\'
-tPath2 = 'E:\\GitHub\\bookish-lamp\\eng-web_usfm_2020-06-01'
-fr1 = ''
-fr2 = ''
+tPath = 'E:\\GitHub\\bookish-lamp\\'
+tPath1 = 'eng-web_usfm\\'
+tPath2 = 'eng-web_usfm_2020-06-01'
 fw = ''
 
 def main():
     global fw
     tBook = ''
 
-    os.chdir(tPath1)
-    fw = open('..\\WEBChanges.txt', 'w', encoding="utf8")
+    os.chdir(tPath + tPath1)
+    fw = open(tPath + 'WEBChanges.txt', 'w', encoding="utf8")
     bOldTestament = True
     
-    for tFileName1 in os.listdir(tPath1):
+    for tFileName1 in os.listdir(tPath + tPath1):
         if tFileName1.endswith('.usfm'):
             tBookPrev = tBook
             tBook = tFileName1[3:6]
@@ -29,11 +28,14 @@ def main():
     fw.close()
 
 def compareThem(tFile1, tFile2, tBook):
-    global fr1, fr2, fw
+    global fw
 
     print('--------------------------------------------------------------------')
     print('Comparing ' + tFile1 + ' with ' + tFile2)
     print('--------------------------------------------------------------------')
+
+    fr1 = open(tPath + tPath1 + '\\' + tFile1, 'r', encoding='utf8')
+    fr2 = open(tPath + tPath2 + '\\' + tFile2, 'r', encoding='utf8')
 
     tChapter1 = '1'
     tChapter2 = '1'
@@ -44,13 +46,11 @@ def compareThem(tFile1, tFile2, tBook):
     tLine2 = ''
     tBuffer1 = ''
     tBuffer2 = ''
-
-    fr1 = open(tPath1 + '\\' + tFile1, 'r', encoding='utf8')
-    fr2 = open(tPath2 + '\\' + tFile2, 'r', encoding='utf8')
-
     tLine1 = 'start'
     tLine2 = 'start'
+
     while tLine1 and tLine2:
+        print('@', end='')
         tLine1, tBuffer1 = getToVerseOrChapter(tLine1, tBuffer1, fr1)
         tChapter1, tLine1, tBuffer1  = getChapter(tChapter1, tLine1, tBuffer1)
 
@@ -59,25 +59,45 @@ def compareThem(tFile1, tFile2, tBook):
 
         processLine(tLine1, tLine2, tBook, tChapter1, tChapter2)
 
-        if tBuffer1:
-            tLine1 = tBuffer1
-            tBuffer1 = ''
+        if not tLine1:
+            if tBuffer1:
+                tLine1 = tBuffer1
+                tBuffer1 = ''
+            else:
+            #    tLine1, tBuffer1 = getToVerseOrChapter(tLine1, tBuffer1, fr1)
+                print('Buffer and line empty 1')
+                wait = input("PRESS ENTER TO CONTINUE.")
         else:
-            tLine1 = getToVerseOrChapter(tLine1, tBuffer1, fr1)
-        if tBuffer2:
-            tLine2 = tBuffer2
-            tBuffer2 = ''
+            print('OUCH! 1')
+            wait = input("PRESS ENTER TO CONTINUE.")
+
+        if not tLine2:
+            if tBuffer2:
+                tLine2 = tBuffer2
+                tBuffer2 = ''
+            else:
+            #    tLine2, tBuffer2 = getToVerseOrChapter(tLine2, tBuffer2, fr2)
+                print('Buffer and line empty 2')
+                wait = input("PRESS ENTER TO CONTINUE.")
         else:
-            tLine2, tBuffer2 = getToVerseOrChapter(tLine2, tBuffer2, fr2)
+            print('OUCH! 2')
+            wait = input("PRESS ENTER TO CONTINUE.")
 
     fr1.close()
     fr2.close()
+    print('Done!')
 
 def getToVerseOrChapter(tLine, tBuffer, fr):
-    if not tLine:
-        tline = "CRAP LINE!!!!"
     if not tBuffer:
         tBuffer = fr.readline()
+
+    if not tLine:
+        tline = tBuffer
+        tBuffer = fr.readline()
+
+    if tLine == tBuffer:
+        print('Buffer matches line!')
+        wait = input("PRESS ENTER TO CONTINUE.")
 
     while tBuffer:
         if tBuffer.startswith('\\c'):
@@ -86,6 +106,7 @@ def getToVerseOrChapter(tLine, tBuffer, fr):
             break
         if tBuffer.startswith('\\v') or tBuffer.startswith('\\p') or tBuffer.startswith('\\q'):
             line = "MORE cRAP"
+            break
 def stuff2():
     while True:
         tBuffer = 'dummy line!'
