@@ -25,7 +25,7 @@ def main():
             tFileName2 = getFileName2(tFileName1)
 
             compareThem(tFileName1, tFileName2, tBook)
-            wait = input("PRESS ENTER TO CONTINUE.")
+            #wait = input("PRESS ENTER TO CONTINUE.")
     fw.close()
     print('Done!')
 
