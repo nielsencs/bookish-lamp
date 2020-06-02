@@ -52,10 +52,10 @@ def compareThem(tFile1, tFile2, tBook):
     tLine2 = 'start'
     while tLine1 and tLine2:
         tLine1, tBuffer1 = getToVerseOrChapter(tLine1, tBuffer1, fr1)
-        tChapter1 = getChapter(tChapter1, tLine1, tBuffer1)
+        tChapter1, tLine1, tBuffer1  = getChapter(tChapter1, tLine1, tBuffer1)
 
         tLine2, tBuffer2 = getToVerseOrChapter(tLine2, tBuffer2, fr2)
-        tChapter2 = getChapter(tChapter2, tLine2, tBuffer2)
+        tChapter2, tLine2, tBuffer2 = getChapter(tChapter2, tLine2, tBuffer2)
 
         processLine(tLine1, tLine2, tBook, tChapter1, tChapter2)
 
@@ -63,7 +63,7 @@ def compareThem(tFile1, tFile2, tBook):
             tLine1 = tBuffer1
             tBuffer1 = ''
         else:
-            tLine1, tBuffer1 = getToVerseOrChapter(tLine1, tBuffer1, fr1)
+            tLine1 = getToVerseOrChapter(tLine1, tBuffer1, fr1)
         if tBuffer2:
             tLine2 = tBuffer2
             tBuffer2 = ''
@@ -74,6 +74,8 @@ def compareThem(tFile1, tFile2, tBook):
     fr2.close()
 
 def getToVerseOrChapter(tLine, tBuffer, fr):
+    if not tLine:
+        tline = "CRAP LINE!!!!"
     if not tBuffer:
         tBuffer = fr.readline()
 
@@ -83,13 +85,12 @@ def getToVerseOrChapter(tLine, tBuffer, fr):
             tBuffer = ''
             break
         if tBuffer.startswith('\\v') or tBuffer.startswith('\\p') or tBuffer.startswith('\\q'):
-def stuff2:
-    if not tBuffer:
-        tBuffer = fr.readline()
-
-    while tBuffer:
-        if tBuffer.startswith('\\c'):
-            tLine = tBuffer
+            line = "MORE cRAP"
+def stuff2():
+    while True:
+        tBuffer = 'dummy line!'
+        if True:
+            tLine = 'dummy line!'
 
 
 
@@ -117,22 +118,19 @@ def stuff2:
     return tLine, tBuffer
 
 def getChapter(tChapter, tLine, tBuffer):
-    #print('tChapter:',end='')
-    #print(tChapter,end='')
-    #print(', tLine:',end='')
-    #print(tLine,end='')
-    #print('tBuffer:',end='')
-    #print(tBuffer)
     if tLine.startswith('\\c'):
         tChapter = lpadNum(tLine[3:-1])
-        print(' Cl ')
+        print('')
+        print(' Cl ', end='')
+        tLine = tBuffer
+        tBuffer = ''
     else:
         if tBuffer.startswith('\\c'):
-            tChapter = lpadNum(tLine[3:-1])
-            print(' Cb ')
-        #else:
-            #print(' C- ')
-    return tChapter
+            tChapter = lpadNum(tBuffer[3:-1])
+            tBuffer = ''
+            print('')
+            print(' Cb ', end='')
+    return tChapter, tLine, tBuffer
 
 def processLine(tLine1, tLine2, tBook, tChapter1, tChapter2):
     if tLine1 == tLine2:
@@ -147,10 +145,6 @@ def processLine(tLine1, tLine2, tBook, tChapter1, tChapter2):
         fw.write(tBook)
         fw.write(tChapter2)
         fw.write(tLine2)
-    #if tBuffer:
-        
-    #tLine1 = fr1.readline()
-    #tLine2 = fr2.readline()
 
 def stuff():
     line = parseSQL(fr1, fw2,"'")
