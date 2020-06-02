@@ -1,4 +1,5 @@
 import os
+from bibleModule import *
 
 def main():
     tPath1 = 'E:\\GitHub\\bookish-lamp\\structure'
@@ -12,8 +13,8 @@ def main():
     tVerse1 = ''
     tVerse2 = ''
     para = ''
-    line1 = ''
-    line2 = ''
+    tLine1 = ''
+    tLine2 = ''
     buffer = ''
 
     comStart = '\\f'
@@ -44,115 +45,115 @@ def main():
             buffer = fr2.readline()
             while buffer:
                 if buffer.startswith('\\v') or buffer.startswith('\\c') or buffer.startswith('\\p') or buffer.startswith('\\q'):
-                    line2 = buffer
+                    tLine2 = buffer
                     buffer = fr2.readline()
-                    if line2.startswith('\\c'):
-                        tChapter2 = lpadNum(line2[3:-1])
+                    if tLine2.startswith('\\c'):
+                        tChapter2 = lpadNum(tLine2[3:-1])
                     para = ''
-                    while line2.startswith('\\p') or line2.startswith('\\q'):
-                        para += line2[3:-1].strip() + ' '
-                        line2 = buffer
+                    while tLine2.startswith('\\p') or tLine2.startswith('\\q'):
+                        para += tLine2[3:-1].strip() + ' '
+                        tLine2 = buffer
                         buffer = fr2.readline()
                         if para > '':
                             print('p', end='')
-                    if line2.startswith('\\v'):
+                    if tLine2.startswith('\\v'):
                         while buffer.startswith('\\p') or buffer.startswith('\\q'):
                             para += buffer[3:-1].strip() + ' '
                             buffer = fr2.readline()
                         line = parseSQL(fr1, fw2,"'")
-                        line1 = line[0]
+                        tLine1 = line[0]
                         tBook1Prev = tBook1
                         tBook1 = line[1]
                         tChapter1 = lpadNum(line[2])
                         tVerse1 = lpadNum(line[3])
-                        tVerse2 = line2[2:8].strip()
+                        tVerse2 = tLine2[2:8].strip()
                         tVerse2 = lpadNum(tVerse2[0:tVerse2.find(' ')])
 
-                        if comStart in line2:
-                            line2=trimExtras(line2, comStart, comEnd)
+                        if comStart in tLine2:
+                            tLine2=trimExtras(tLine2, comStart, comEnd)
                             print('+', end='')
                         else:
                             print('-', end='')
 
-                        if com2Start in line2:
-                            line2=trimExtras(line2, com2Start, com2End)
+                        if com2Start in tLine2:
+                            tLine2=trimExtras(tLine2, com2Start, com2End)
                             print('#', end='')
                         else:
                             print('-', end='')
 
-                        line2 = swapQuotes(firstAlphaOrQuote(line2[3:].strip() + ' ' + para))
+                        tLine2 = swapQuotes(firstAlphaOrQuote(tLine2[3:].strip() + ' ' + para))
 
-                        line2 = swapWords(line2, '\\wj*', '')
-                        line2 = swapWords(line2, '\\wj ', '')
-                        line2 = swapWords(line2, 'wj ', '')
+                        tLine2 = swapWords(tLine2, '\\wj*', '')
+                        tLine2 = swapWords(tLine2, '\\wj ', '')
+                        tLine2 = swapWords(tLine2, 'wj ', '')
 
-                        line2 = swapWords(line2, 'lamp stand', 'lampstand')
-                        line2 = swapWords(line2, 'bondage', 'slavery')
-                        line2 = swapWords(line2, 'worshiper', 'worshipper')
-                        line1 = swapWords(line1, 'it happened that ', '')
-                        line1 = swapWords(line1, 'It happened ', '')
+                        tLine2 = swapWords(tLine2, 'lamp stand', 'lampstand')
+                        tLine2 = swapWords(tLine2, 'bondage', 'slavery')
+                        tLine2 = swapWords(tLine2, 'worshiper', 'worshipper')
+                        tLine1 = swapWords(tLine1, 'it happened that ', '')
+                        tLine1 = swapWords(tLine1, 'It happened ', '')
                         if bOldTestament:
-                            line2 = swapWords(line2, 'Yahweh', 'TheIAM<H3068>')
-                            line2 = swapWords(line2, 'herb', 'vegetation<H6212>')
-                            line2 = addCode(line2, 'Lord', '<H0113>')
-                            line2 = addCode(line2, 'gods', '<H0430>')
-                            line2 = addCode(line2, 'god', '<H0430>')
-                            line2 = addCode(line2, 'God', '<H0430>')
+                            tLine2 = swapWords(tLine2, 'Yahweh', 'TheIAM<H3068>')
+                            tLine2 = swapWords(tLine2, 'herb', 'vegetation<H6212>')
+                            tLine2 = addCode(tLine2, 'Lord', '<H0113>')
+                            tLine2 = addCode(tLine2, 'gods', '<H0430>')
+                            tLine2 = addCode(tLine2, 'god', '<H0430>')
+                            tLine2 = addCode(tLine2, 'God', '<H0430>')
                         else:
-                            line2 = swapWords(line2, 'Christ', 'AnointedOne<G5547>')
+                            tLine2 = swapWords(tLine2, 'Christ', 'AnointedOne<G5547>')
 
-                            line2 = swapWords(line2, 'beloved', 'dear-ones<G0027>')
-                            line2 = swapWords(line2, 'Beloved', 'Dear-ones<G0027>')
+                            tLine2 = swapWords(tLine2, 'beloved', 'dear-ones<G0027>')
+                            tLine2 = swapWords(tLine2, 'Beloved', 'Dear-ones<G0027>')
 
-                            line2 = addCode(line2, 'Lord', '<G2962>')
-                            line2 = addCode(line2, 'lord', '<G2962>')
-                            line2 = addCode(line2, 'love', '<G0025>')
+                            tLine2 = addCode(tLine2, 'Lord', '<G2962>')
+                            tLine2 = addCode(tLine2, 'lord', '<G2962>')
+                            tLine2 = addCode(tLine2, 'love', '<G0025>')
 
-                            line2 = swapWords(line2, 'love<G0025>d', 'loved<G0025>')
-                            line2 = swapWords(line2, 'love<G0025>s', 'loves<G0025>')
-                            line2 = swapWords(line2, 'is love<G0025>', 'is love<G0026>')
-                            line2 = swapWords(line2, 'God\'s love<G0025>', 'God\'s love<G0026>')
-                            line2 = swapWords(line2, 'a love<G0025>', 'a love<G0026>')
+                            tLine2 = swapWords(tLine2, 'love<G0025>d', 'loved<G0025>')
+                            tLine2 = swapWords(tLine2, 'love<G0025>s', 'loves<G0025>')
+                            tLine2 = swapWords(tLine2, 'is love<G0025>', 'is love<G0026>')
+                            tLine2 = swapWords(tLine2, 'God\'s love<G0025>', 'God\'s love<G0026>')
+                            tLine2 = swapWords(tLine2, 'a love<G0025>', 'a love<G0026>')
 
-                            line2 = addCode(line2, 'master', '<G2962>')
-                            line2 = addCode(line2, 'Master', '<G2962>')
-                            line2 = swapWords(line2, 'master<G2962>s', 'masters<G2962>')
-                            line2 = swapWords(line2, 'Master<G2962>s', 'Masters<G2962>')
-                            line2 = swapWords(line2, 'master<G2962>\'s', 'master\'s<G2962>')
+                            tLine2 = addCode(tLine2, 'master', '<G2962>')
+                            tLine2 = addCode(tLine2, 'Master', '<G2962>')
+                            tLine2 = swapWords(tLine2, 'master<G2962>s', 'masters<G2962>')
+                            tLine2 = swapWords(tLine2, 'Master<G2962>s', 'Masters<G2962>')
+                            tLine2 = swapWords(tLine2, 'master<G2962>\'s', 'master\'s<G2962>')
 
-                            line2 = swapWords(line2, 'works', 'acts')
+                            tLine2 = swapWords(tLine2, 'works', 'acts')
                             
-                        line2 = swapWords(line2, '—', '- ')
-                        line2 = swapWords(line2, '  ', ' ')
-                        line2 = line2.strip()
+                        tLine2 = swapWords(tLine2, '—', '- ')
+                        tLine2 = swapWords(tLine2, '  ', ' ')
+                        tLine2 = tLine2.strip()
 
                         if tVerse2 != tVerse1:
                             x = input(tChapter1 + ':' + tVerse1 + '|' + tChapter2 + ':' + tVerse2)
                         if tBook2 != tBook1:
-                            x = input(tBook1 + 'was' + tBook1Prev + '|' + tBook2 + 'was' + tBook2Prev + '\n' + line1 + '|' + line2)
+                            x = input(tBook1 + 'was' + tBook1Prev + '|' + tBook2 + 'was' + tBook2Prev + '\n' + tLine1 + '|' + tLine2)
                             if tBook2 == tBook1Prev:
-                                print('skipping:' + line2, end='')
-                                line2 = fr2.readline()
+                                print('skipping:' + tLine2, end='')
+                                tLine2 = fr2.readline()
                             else:
                                 x = input(tBook1 + 'was' + tBook1Prev + '|' + tBook2 + 'was' + tBook2Prev)
                                 if x == 1:
                                     line = parseSQL(fr1, fw2, "'")
-                                    line1 = line[0]
+                                    tLine1 = line[0]
                                     tBook1Prev = tBook1
                                     tBook1 = line[1]
                                     tChapter1 = line[2]
                                     tVerse1 = line[3]
                                 if x == 2:
-                                    line2 = fr2.readline()
-                        if line1 == line2:
+                                    tLine2 = fr2.readline()
+                        if tLine1 == tLine2:
                             fw2.write(line[4])
                             #fw2.write('(same)')
                         else:
-                            line2 = escapeQuotes(line2, '\"')
-                            line2 = escapeQuotes(line2, '\'')
-                            #x = input(line1 + '|||' + line2)
-                            fw1.write('(\'' + tBook1 + '\',' + tChapter1 + ',' + tVerse1 + ', \'' + line1 + '\'),\n')
-                            fw2.write('(\'' + tBook2 + '\',' + tChapter2 + ',' + tVerse2 + ', \'' + line2.strip() + '\'),\n')
+                            tLine2 = escapeQuotes(tLine2, '\"')
+                            tLine2 = escapeQuotes(tLine2, '\'')
+                            #x = input(tLine1 + '|||' + tLine2)
+                            fw1.write('(\'' + tBook1 + '\',' + tChapter1 + ',' + tVerse1 + ', \'' + tLine1 + '\'),\n')
+                            fw2.write('(\'' + tBook2 + '\',' + tChapter2 + ',' + tVerse2 + ', \'' + tLine2.strip() + '\'),\n')
                     else:
                         print('.', end='')
                 else:
@@ -164,33 +165,33 @@ def main():
     fw2.close()
 
 def parseSQL(fr1, fw2, tVerseDelim):
-    line1Clean = ''
+    tLine1Clean = ''
     tBook = ''
     tChapter = ''
     tVerse = ''
     
     bDoIt = True
     while bDoIt:
-        line1SQL = fr1.readline()
-        if line1SQL[0:6] == 'INSERT':
+        tLine1SQL = fr1.readline()
+        if tLine1SQL[0:6] == 'INSERT':
             print('I', end='')
-            fw2.write(line1SQL)
-        elif line1SQL[13:16].strip() == '0':
+            fw2.write(tLine1SQL)
+        elif tLine1SQL[13:16].strip() == '0':
             print('0', end='')
-            fw2.write(line1SQL)
+            fw2.write(tLine1SQL)
         else:
-            if tVerseDelim in line1SQL:
+            if tVerseDelim in tLine1SQL:
                 bDoIt = False
-                tBook = line1SQL[2:5]
-                tChapter = line1SQL[8:11]
-                tVerse = line1SQL[13:16]
-                line1Clean = line1SQL[15:]
-                line1Clean = line1Clean[line1Clean.find(tVerseDelim)+1:-4]
-                line1Clean = trimAngleBrackets(line1Clean)
-                line1Clean = trimChar(line1Clean, '\\')
+                tBook = tLine1SQL[2:5]
+                tChapter = tLine1SQL[8:11]
+                tVerse = tLine1SQL[13:16]
+                tLine1Clean = tLine1SQL[15:]
+                tLine1Clean = tLine1Clean[tLine1Clean.find(tVerseDelim)+1:-4]
+                tLine1Clean = trimAngleBrackets(tLine1Clean)
+                tLine1Clean = trimChar(tLine1Clean, '\\')
             else:
-                fw2.write(line1SQL)
-    return line1Clean, tBook, tChapter, tVerse, line1SQL
+                fw2.write(tLine1SQL)
+    return tLine1Clean, tBook, tChapter, tVerse, tLine1SQL
 
 def firstAlphaOrQuote(line):
     tQuotes = '“”‘’'
@@ -206,101 +207,6 @@ def firstAlphaOrQuote(line):
                 #print(line)
     return line
 
-def trimChar(line, tChar):
-    bDoIt = True
-    while bDoIt:
-        if tChar in line:
-            line = line[0:line.find(tChar)] + line[line.find(tChar)+1:]
-            #print('"' + tChar + '" removed:')
-            #print(line)
-        else:
-            bDoIt = False
-    return line
-
-def trimExtras(line, lDelim, rDelim):
-    #bDoIt = True
-    while lDelim in line:
-        lLine = line[0:line.find(lDelim)]
-        rLine = line[line.find(rDelim)+3:]
-        line = lLine + rLine
-    return line
-
-def trimAngleBrackets(line):
-    lAngle = '<'
-    rAngle = '>'
-    bDoIt = True
-    while bDoIt:
-        if lAngle in line:
-            lLine = line[0:line.find(lAngle)]
-            #print('left part:')
-            #print(lLine)
-            rLine = line[line.find(rAngle)+1:]
-            #print('right part:')
-            #print(rLine)
-            line = lLine + rLine
-            #print('joined:')
-            #print(line)
-        else:
-            bDoIt = False
-    return line
-
-def swapQuotes(line):
-    tChar1 = '“'
-    tChar2 = '”'
-    tChar3 = '‘'
-    tChar4 = '’'
-    bDoIt1 = True
-    bDoIt2 = True
-    bDoIt3 = True
-    bDoIt4 = True
-    while bDoIt1 or bDoIt2 or bDoIt3 or bDoIt4:
-        if tChar1 in line:
-            line = line[0:line.find(tChar1)] + '"' + line[line.find(tChar1)+1:]
-        else:
-            bDoIt1 = False
-        if tChar2 in line:
-            line = line[0:line.find(tChar2)] + '"' + line[line.find(tChar2)+1:]
-        else:
-            bDoIt2 = False
-        if tChar3 in line:
-            line = line[0:line.find(tChar3)] + "'" + line[line.find(tChar3)+1:]
-        else:
-            bDoIt3 = False
-        if tChar4 in line:
-            line = line[0:line.find(tChar4)] + "'" + line[line.find(tChar4)+1:]
-        else:
-            bDoIt4 = False
-    return line
-
-def lpadNum(tNum):
-    tNum = '   ' + tNum.strip()
-    tNum = tNum[-4:]
-    return tNum
-
-def swapWords(tText, tWordOut, tWordIn):
-    while tWordOut in tText:
-        iStart = tText.find(tWordOut)
-        iLength = len(tWordOut)
-        tText = tText[0:iStart] + tWordIn + tText[iStart + iLength:]
-    return tText
-        
-def addCode(tText, tWord, tCode):
-    tNew = ''
-    while tWord in tText:
-        iStart = tText.find(tWord)
-        iLength = len(tWord)
-        tNew = tNew + tText[0:iStart + iLength] + tCode
-        tText =  tText[iStart + iLength:]
-    return tNew + tText
-        
-def escapeQuotes(tText, tQuote):
-    tNew = ''
-    while tQuote in tText:
-        iStart = tText.find(tQuote)
-        tNew = tNew + tText[0:iStart] + '\\' + tQuote
-        tText =  tText[iStart + 1:]
-    return tNew + tText
-        
 def doHeader(fw2):
     fw2.write('-- phpMyAdmin SQL Dump\n')
     fw2.write('-- version 4.7.0\n')
