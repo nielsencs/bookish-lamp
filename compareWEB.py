@@ -138,12 +138,19 @@ def processLine(tLine1, tLine2, tBook, tChapter1, tChapter2):
     else: 
         print(tLine1)
         print(tLine2)
-        print('*', end='')
+        #print('*', end='')
+        tVerse1 = lpadNum(tLine1[2:5])
+        tVerse2 = lpadNum(tLine2[2:5])
+        tLine1 = tLine1[5:].strip(' ')
+        tLine2 = tLine2[5:].strip(' ')
+
         fw.write(tBook)
-        fw.write(tChapter1)
+        fw.write(tChapter1 + ':')
+        fw.write(tVerse1 + ', ')
         fw.write(tLine1)
         fw.write(tBook)
-        fw.write(tChapter2)
+        fw.write(tChapter2 + ':')
+        fw.write(tVerse2 + ', ')
         fw.write(tLine2)
 
 def stuff():
