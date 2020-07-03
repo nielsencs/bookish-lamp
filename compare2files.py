@@ -9,7 +9,7 @@ oRoot.withdraw()
 
 #globals
 tPath1 = 'E:\\GitHub\\bookish-lamp\\structure\\'
-tPath2 = 'E:\\GitHub\\bookish-lamp\\eng-web_usfm\\'
+tPath2 = 'E:\\GitHub\\bookish-lamp\\eng-web_usfm_2020-06-01\\'
 
 tFile1 = ''
 tFile2 = ''
