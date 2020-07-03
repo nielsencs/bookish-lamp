@@ -49,9 +49,9 @@ def trimChar(line, tChar):
     return line
 
 def swapQuotes(line):
-    tChar1 = '“'    
-    tChar2 = '”'    
-    tChar3 = '‘'    
+    tChar1 = '“'
+    tChar2 = '”'
+    tChar3 = '‘'
     tChar4 = '’'
     bDoIt1 = True
     bDoIt2 = True
@@ -106,7 +106,7 @@ def swapWords(tText, tWordOut, tWordIn):
         iLength = len(tWordOut)
         tText = tText[0:iStart] + tWordIn + tText[iStart + iLength:]
     return tText
-        
+
 def addCode(tText, tWord, tCode):
     tNew = ''
     while tWord in tText:
@@ -115,7 +115,7 @@ def addCode(tText, tWord, tCode):
         tNew = tNew + tText[0:iStart + iLength] + tCode
         tText =  tText[iStart + iLength:]
     return tNew + tText
-        
+
 def escapeQuotes(tText, tQuote):
     tNew = ''
     while tQuote in tText:
