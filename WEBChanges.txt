@@ -1,3 +1,5 @@
+Comparing 'eng-web_usfm_2019-04-10\' with 'eng-web_usfm_2020-06-01\':
+
 GEN  50:   3, Forty days were used for him, for that is how many the days it takes to embalm. The Egyptians wept for Israel for seventy days. 
 GEN  50:   3, Forty days were used for him, for that is how many days it takes to embalm. The Egyptians wept for Israel for seventy days. 
 EXO   3:  25, God saw the children of Israel, and God was concerned about them. 

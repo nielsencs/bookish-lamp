@@ -12,6 +12,8 @@ def main():
     tBook = ''
 
     fw = open(tPath + 'WEBChanges.txt', 'w', encoding="utf8")
+    fw.write('Comparing \'' + tPath1 + '\' with \'' + tPath2 + '\':\n\n')
+
     bOldTestament = True
 
     os.chdir(tPath + tPath1)
