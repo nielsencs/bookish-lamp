@@ -153,7 +153,3 @@ def myBookAbbrFromWEB(tBookAbbr):
     if tBookAbbr == 'JUD':
         tMyBookAbbr = 'JDE'
     return tMyBookAbbr
-
-def notApocrypha(tBook):
-    tApocrypha = '|TOB|JDT|ESG|WIS|SIR|BAR|1MA|2MA|1ES|MAN|PS2|3MA|2ES|4MA|DAG|'
-    return not(tApocrypha.find(tBook) > 0)
