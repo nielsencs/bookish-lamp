@@ -34,7 +34,7 @@ def main():
     for filename in os.listdir(tPath2):
         if filename.endswith('.usfm'):
             tBook2Prev = tBook2
-            tBook2 = filename[3:6]
+            tBook2 = myBookAbbrFromWEB(filename[3:6])
             if tBook2=='MAT':
                 bOldTestament=False
             print('')
