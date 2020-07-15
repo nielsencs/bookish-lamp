@@ -30,7 +30,7 @@ def main():
     bOldTestament = True
 
     doHeader(fw1)
-    
+
     for filename in os.listdir(tPath2):
         if filename.endswith('.usfm'):
             tBook2Prev = tBook2
@@ -122,7 +122,7 @@ def main():
                             tLine2 = swapWords(tLine2, 'master<G2962>\'s', 'master\'s<G2962>')
 
                             tLine2 = swapWords(tLine2, 'works', 'acts')
-                            
+
                         tLine2 = swapWords(tLine2, '—', '- ')
                         tLine2 = swapWords(tLine2, '  ', ' ')
                         tLine2 = tLine2.strip()
@@ -169,7 +169,7 @@ def parseSQL(fr1, fw2, tVerseDelim):
     tBook = ''
     tChapter = ''
     tVerse = ''
-    
+
     bDoIt = True
     while bDoIt:
         tLine1SQL = fr1.readline()
@@ -208,17 +208,7 @@ def firstAlphaOrQuote(line):
     return line
 
 def doHeader(fw2):
-    fw2.write('-- phpMyAdmin SQL Dump\n')
-    fw2.write('-- version 4.7.0\n')
-    fw2.write('-- https://www.phpmyadmin.net/\n')
-    fw2.write('--\n')
-    fw2.write('-- Host: 127.0.0.1\n')
-    fw2.write('-- Generation Time: Mar 01, 2018 at 07:38 PM\n')
-    fw2.write('-- Server version: 5.7.17\n')
-    fw2.write('-- PHP Version: 5.6.30\n')
-    fw2.write('\n')
     fw2.write('SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";\n')
-    fw2.write('SET AUTOCOMMIT = 0;\n')
     fw2.write('START TRANSACTION;\n')
     fw2.write('SET time_zone = "+00:00";\n')
     fw2.write('\n')
@@ -228,29 +218,16 @@ def doHeader(fw2):
     fw2.write('/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;\n')
     fw2.write('/*!40101 SET NAMES utf8mb4 */;\n')
     fw2.write('\n')
-    fw2.write('--\n')
-    fw2.write('-- Database: `biblestu_dy`\n')
-    fw2.write('--\n')
-    fw2.write('\n')
-    fw2.write('-- --------------------------------------------------------\n')
-    fw2.write('\n')
-    fw2.write('--\n')
-    fw2.write('-- Table structure for table `verses`\n')
-    fw2.write('--\n')
-    fw2.write('\n')
     fw2.write('DROP TABLE IF EXISTS `verses`;\n')
     fw2.write('CREATE TABLE `verses` (\n')
-    fw2.write('  `verseID` int(11) NOT NULL PRIMARY KEY AUTO_INCREMENT,\n')
+    fw2.write('  `verseID` int(11) NOT NULL AUTO_INCREMENT,\n')
     fw2.write('  `bookCode` varchar(3) NOT NULL,\n')
     fw2.write('  `chapter` smallint(4) NOT NULL,\n')
     fw2.write('  `verseNumber` smallint(4) NOT NULL,\n')
     fw2.write('  `verseText` text NOT NULL\n')
+    fw2.write('  PRIMARY KEY (`verseID`)\n')
+
     fw2.write(') ENGINE=MyISAM DEFAULT CHARSET=latin1;\n')
     fw2.write('\n')
-    fw2.write('--\n')
-    fw2.write('-- Dumping data for table `verses`\n')
-    fw2.write('--\n')
-    fw2.write('\n')
-    fw2.write('INSERT INTO `verses` (`bookCode`, `chapter`, `verseNumber`, `verseText`) VALUES\n')
 
 main()
