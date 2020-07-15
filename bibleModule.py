@@ -123,33 +123,3 @@ def escapeQuotes(tText, tQuote):
         tNew = tNew + tText[0:iStart] + '\\' + tQuote
         tText =  tText[iStart + 1:]
     return tNew + tText
-
-def myBookAbbrFromWEB(tBookAbbr):
-    tMyBookAbbr = tBookAbbr
-    if tBookAbbr == '1SA':
-        tMyBookAbbr = '1SM'
-    if tBookAbbr == '2SA':
-        tMyBookAbbr = '2SM'
-    if tBookAbbr == 'SNG':
-        tMyBookAbbr = 'SON'
-    if tBookAbbr == 'EZK':
-        tMyBookAbbr = 'EZE'
-    if tBookAbbr == 'JOL':
-        tMyBookAbbr = 'JOE'
-    if tBookAbbr == 'NAM':
-        tMyBookAbbr = 'NAH'
-    if tBookAbbr == 'MRK':
-        tMyBookAbbr = 'MAR'
-    if tBookAbbr == 'JHN':
-        tMyBookAbbr = 'JOH'
-    if tBookAbbr == 'JAS':
-        tMyBookAbbr = 'JAM'
-    if tBookAbbr == '1JN':
-        tMyBookAbbr = '1JO'
-    if tBookAbbr == '2JN':
-        tMyBookAbbr = '2JO'
-    if tBookAbbr == '3JN':
-        tMyBookAbbr = '3JO'
-    if tBookAbbr == 'JUD':
-        tMyBookAbbr = 'JDE'
-    return tMyBookAbbr
