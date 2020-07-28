@@ -23,7 +23,7 @@ def main():
     com2End = '\\x*'
 
     os.chdir(tPath1)
-    fr1 = open('versesMaster.sql', 'r')
+    fr1 = open('bibleVerses.sql', 'r')
     os.chdir(tPath2)
     fw1 = open('..\\versesMaster_1.txt', 'w', encoding="utf8")
     fw2 = open('..\\versesMaster_2.txt', 'w', encoding="utf8")
@@ -153,8 +153,10 @@ def main():
                                 tLine2 = escapeQuotes(tLine2, '\"')
                                 tLine2 = escapeQuotes(tLine2, '\'')
                                 #x = input(tLine1 + '|||' + tLine2)
+
                                 fw1.write('(\'' + tBook1 + '\',' + tChapter1 + ',' + tVerse1 + ', \'' + tLine1 + '\'),\n')
-                                fw2.write('(\'' + tBook2 + '\',' + tChapter2 + ',' + tVerse2 + ', \'' + tLine2.strip() + '\'),\n')
+                                fw2.write('INSERT INTO `verses` (`bookCode`, `chapter`, `verseNumber`, `verseText`) VALUES ')
+                                fw2.write('(\'' + tBook2 + '\',' + tChapter2 + ',' + tVerse2 + ', \'' + tLine2.strip() + '\');\n')
                         else:
                             print('.', end='')
                     else:
@@ -170,23 +172,24 @@ def parseSQL(fr1, fw2, tVerseDelim):
     tBook = ''
     tChapter = ''
     tVerse = ''
-
     bDoIt = True
     while bDoIt:
         tLine1SQL = fr1.readline()
-        if tLine1SQL[0:6] == 'INSERT':
-            print('I', end='')
-            fw2.write(tLine1SQL)
-        elif tLine1SQL[13:16].strip() == '0':
+        print(tLine1SQL)
+        if tLine1SQL[85:88].strip() == '0':
             print('0', end='')
             fw2.write(tLine1SQL)
         else:
             if tVerseDelim in tLine1SQL:
                 bDoIt = False
-                tBook = tLine1SQL[2:5]
-                tChapter = tLine1SQL[8:11]
-                tVerse = tLine1SQL[13:16]
-                tLine1Clean = tLine1SQL[15:]
+                tBook = tLine1SQL[71:74]
+                print(tBook)
+                tChapter = tLine1SQL[77:80]
+                print(tChapter)
+                tVerse = tLine1SQL[82:85]
+                print(tVerse)
+                tLine1Clean = tLine1SQL[84:]
+                print(tLine1Clean)
                 tLine1Clean = tLine1Clean[tLine1Clean.find(tVerseDelim)+1:-4]
                 tLine1Clean = trimAngleBrackets(tLine1Clean)
                 tLine1Clean = trimChar(tLine1Clean, '\\')
