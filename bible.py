@@ -42,7 +42,7 @@ def main():
                 print('processing ' + filename + ':')
                 print('')
                 fr2 = open(filename, 'r', encoding="utf8")
-    
+
                 buffer = fr2.readline()
                 while buffer:
                     if buffer.startswith('\\v') or buffer.startswith('\\c') or buffer.startswith('\\p') or buffer.startswith('\\q'):
@@ -69,25 +69,25 @@ def main():
                             tVerse1 = lpadNum(line[3])
                             tVerse2 = tLine2[2:8].strip()
                             tVerse2 = lpadNum(tVerse2[0:tVerse2.find(' ')])
-    
+
                             if comStart in tLine2:
                                 tLine2=trimExtras(tLine2, comStart, comEnd)
                                 print('+', end='')
                             else:
                                 print('-', end='')
-    
+
                             if com2Start in tLine2:
                                 tLine2=trimExtras(tLine2, com2Start, com2End)
                                 print('#', end='')
                             else:
                                 print('-', end='')
-    
+
                             tLine2 = swapQuotes(firstAlphaOrQuote(tLine2[3:].strip() + ' ' + para))
-    
+
                             tLine2 = swapWords(tLine2, '\\wj*', '')
                             tLine2 = swapWords(tLine2, '\\wj ', '')
                             tLine2 = swapWords(tLine2, 'wj ', '')
-    
+
                             tLine2 = swapWords(tLine2, 'lamp stand', 'lampstand')
                             tLine2 = swapWords(tLine2, 'bondage', 'slavery')
                             tLine2 = swapWords(tLine2, 'worshiper', 'worshipper')
@@ -102,32 +102,32 @@ def main():
                                 tLine2 = addCode(tLine2, 'God', '<H0430>')
                             else:
                                 tLine2 = swapWords(tLine2, 'Christ', 'AnointedOne<G5547>')
-    
+
                                 tLine2 = swapWords(tLine2, 'beloved', 'dear-ones<G0027>')
                                 tLine2 = swapWords(tLine2, 'Beloved', 'Dear-ones<G0027>')
-    
+
                                 tLine2 = addCode(tLine2, 'Lord', '<G2962>')
                                 tLine2 = addCode(tLine2, 'lord', '<G2962>')
                                 tLine2 = addCode(tLine2, 'love', '<G0025>')
-    
+
                                 tLine2 = swapWords(tLine2, 'love<G0025>d', 'loved<G0025>')
                                 tLine2 = swapWords(tLine2, 'love<G0025>s', 'loves<G0025>')
                                 tLine2 = swapWords(tLine2, 'is love<G0025>', 'is love<G0026>')
                                 tLine2 = swapWords(tLine2, 'God\'s love<G0025>', 'God\'s love<G0026>')
                                 tLine2 = swapWords(tLine2, 'a love<G0025>', 'a love<G0026>')
-    
+
                                 tLine2 = addCode(tLine2, 'master', '<G2962>')
                                 tLine2 = addCode(tLine2, 'Master', '<G2962>')
                                 tLine2 = swapWords(tLine2, 'master<G2962>s', 'masters<G2962>')
                                 tLine2 = swapWords(tLine2, 'Master<G2962>s', 'Masters<G2962>')
                                 tLine2 = swapWords(tLine2, 'master<G2962>\'s', 'master\'s<G2962>')
-    
+
                                 tLine2 = swapWords(tLine2, 'works', 'acts')
-    
+
                             tLine2 = swapWords(tLine2, '—', '- ')
                             tLine2 = swapWords(tLine2, '  ', ' ')
                             tLine2 = tLine2.strip()
-    
+
                             if tVerse2 != tVerse1:
                                 x = input(tChapter1 + ':' + tVerse1 + '|' + tChapter2 + ':' + tVerse2)
                             if tBook2 != tBook1:
