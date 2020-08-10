@@ -9,7 +9,7 @@ oRoot.withdraw()
 
 #globals
 tPath1 = 'E:\\GitHub\\bookish-lamp\\structure\\'
-tPath2 = 'E:\\GitHub\\bookish-lamp\\eng-web_usfm\\'
+tPath2 = 'E:\\GitHub\\bookish-lamp\\eng-web_usfm_2020-06-01\\'
 
 tFile1 = ''
 tFile2 = ''
@@ -24,7 +24,7 @@ def main():
     #tFile1 = filedialog.askopenfilename(initialdir = tPath1,
     #                                    title = 'Select file',
     #                                    filetypes = (('SeQueL files','*.sql'),('TeXT files','*.txt'),('all files','*.*')))
-    tFile1 = tPath1 + 'versesMaster.sql'
+    tFile1 = tPath1 + 'bibleVerses.sql'
 
     print(tFile1)
     #tFile2 = filedialog.askopenfilename(initialdir = tPath2,
@@ -41,7 +41,7 @@ def main():
 
     #os.chdir(tPath1)
     fr1 = open(tFile1, 'r')
-    fw = open(tPath1 + 'versesMaster_new.sql', 'w', encoding='utf8')
+    fw = open(tPath1 + 'bibleVerses_new.sql', 'w', encoding='utf8')
 
     fr2 = open(tFile2, 'r', encoding='utf8')
     tLine1 = fr1.readline()
@@ -56,7 +56,7 @@ def main():
                 print('')
                 print(tChap)
                 print('')
-        
+
         if tLine1 == tLine2:
             print('.', end='')
             fw.write(tLine1)
