@@ -2,8 +2,8 @@ import os
 from bibleModule import *
 
 def main():
-    tPath1 = 'E:\\GitHub\\bookish-lamp\\structure'
-    tPath2 = 'E:\\GitHub\\bookish-lamp\\eng-web_usfm'
+    tPath1 = 'E:\\GitHub\\bookish-lamp\\database'
+    tPath2 = 'E:\\GitHub\\bookish-lamp\\eng-web_usfm_2020-06-01'
     tBook1 = ''
     tBook2 = ''
     tBook1Prev = ''
@@ -30,7 +30,7 @@ def main():
     bOldTestament = True
 
     doHeader(fw1)
-    
+
     for filename in os.listdir(tPath2):
         if filename.endswith('.usfm'):
             tBook2Prev = tBook2
@@ -122,7 +122,7 @@ def main():
                             tLine2 = swapWords(tLine2, 'master<G2962>\'s', 'master\'s<G2962>')
 
                             tLine2 = swapWords(tLine2, 'works', 'acts')
-                            
+
                         tLine2 = swapWords(tLine2, '—', '- ')
                         tLine2 = swapWords(tLine2, '  ', ' ')
                         tLine2 = tLine2.strip()
@@ -169,7 +169,7 @@ def parseSQL(fr1, fw2, tVerseDelim):
     tBook = ''
     tChapter = ''
     tVerse = ''
-    
+
     bDoIt = True
     while bDoIt:
         tLine1SQL = fr1.readline()

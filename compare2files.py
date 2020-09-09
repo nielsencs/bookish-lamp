@@ -8,8 +8,8 @@ oRoot = tk.Tk()
 oRoot.withdraw()
 
 #globals
-tPath1 = 'E:\\GitHub\\bookish-lamp\\structure\\'
-tPath2 = 'E:\\GitHub\\bookish-lamp\\eng-web_usfm\\'
+tPath1 = 'E:\\GitHub\\bookish-lamp\\database\\'
+tPath2 = 'E:\\GitHub\\bookish-lamp\\eng-web_usfm_2020-06-01\\'
 
 tFile1 = ''
 tFile2 = ''
@@ -56,7 +56,7 @@ def main():
                 print('')
                 print(tChap)
                 print('')
-        
+
         if tLine1 == tLine2:
             print('.', end='')
             fw.write(tLine1)
