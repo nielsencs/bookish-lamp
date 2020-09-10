@@ -49,9 +49,9 @@ def trimChar(line, tChar):
     return line
 
 def swapQuotes(line):
-    tChar1 = '“'    
-    tChar2 = '”'    
-    tChar3 = '‘'    
+    tChar1 = '“'
+    tChar2 = '”'
+    tChar3 = '‘'
     tChar4 = '’'
     bDoIt1 = True
     bDoIt2 = True
@@ -106,7 +106,7 @@ def swapWords(tText, tWordOut, tWordIn):
         iLength = len(tWordOut)
         tText = tText[0:iStart] + tWordIn + tText[iStart + iLength:]
     return tText
-        
+
 def addCode(tText, tWord, tCode):
     tNew = ''
     while tWord in tText:
@@ -115,7 +115,7 @@ def addCode(tText, tWord, tCode):
         tNew = tNew + tText[0:iStart + iLength] + tCode
         tText =  tText[iStart + iLength:]
     return tNew + tText
-        
+
 def escapeQuotes(tText, tQuote):
     tNew = ''
     while tQuote in tText:
@@ -123,3 +123,37 @@ def escapeQuotes(tText, tQuote):
         tNew = tNew + tText[0:iStart] + '\\' + tQuote
         tText =  tText[iStart + 1:]
     return tNew + tText
+
+def myBookAbbrFromWEB(tBookAbbr):
+    tMyBookAbbr = tBookAbbr
+    if tBookAbbr == '1SA':
+        tMyBookAbbr = '1SM'
+    if tBookAbbr == '2SA':
+        tMyBookAbbr = '2SM'
+    if tBookAbbr == 'SNG':
+        tMyBookAbbr = 'SON'
+    if tBookAbbr == 'EZK':
+        tMyBookAbbr = 'EZE'
+    if tBookAbbr == 'JOL':
+        tMyBookAbbr = 'JOE'
+    if tBookAbbr == 'NAM':
+        tMyBookAbbr = 'NAH'
+    if tBookAbbr == 'MRK':
+        tMyBookAbbr = 'MAR'
+    if tBookAbbr == 'JHN':
+        tMyBookAbbr = 'JOH'
+    if tBookAbbr == 'JAS':
+        tMyBookAbbr = 'JAM'
+    if tBookAbbr == '1JN':
+        tMyBookAbbr = '1JO'
+    if tBookAbbr == '2JN':
+        tMyBookAbbr = '2JO'
+    if tBookAbbr == '3JN':
+        tMyBookAbbr = '3JO'
+    if tBookAbbr == 'JUD':
+        tMyBookAbbr = 'JDE'
+    return tMyBookAbbr
+
+def notApocrypha(tBook):
+    tApocrypha = '|TOB|JDT|ESG|WIS|SIR|BAR|1MA|2MA|1ES|MAN|PS2|3MA|2ES|4MA|DAG|'
+    return not(tApocrypha.find(tBook) > 0)
