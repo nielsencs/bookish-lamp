@@ -3,8 +3,10 @@ from bibleModule import lpadNum
 
 #globals
 tPath = 'E:\\GitHub\\bookish-lamp\\'
-tPath1 = 'eng-web_usfm_2019-04-10\\'
-tPath2 = 'eng-web_usfm_2020-06-01\\'
+# tPath1 = 'eng-web_usfm_2019-04-10\\'
+# tPath2 = 'eng-web_usfm_2020-06-01\\'
+tPath1 = 'eng-web_usfm_2020-06-01\\'
+tPath2 = 'eng-web_usfm_2020-09-09\\'
 fw = ''
 
 def main():
