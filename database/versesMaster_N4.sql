@@ -5573,7 +5573,7 @@ INSERT INTO `verses` (`bookCode`, `chapter`, `verseNumber`, `verseText`) VALUES 
 INSERT INTO `verses` (`bookCode`, `chapter`, `verseNumber`, `verseText`) VALUES ('1CO',  14,  36, 'What? Was it from you that the word of God went out? Or did it come to you alone?');
 INSERT INTO `verses` (`bookCode`, `chapter`, `verseNumber`, `verseText`) VALUES ('1CO',  14,  37, 'If any man thinks himself to be a prophet or spiritual, let him recognize the things which I write to you, that they are the commandment of the Lord<G2962>.');
 INSERT INTO `verses` (`bookCode`, `chapter`, `verseNumber`, `verseText`) VALUES ('1CO',  14,  38, 'But if anyone is ignorant, let him be ignorant.');
-INSERT INTO `verses` (`bookCode`, `chapter`, `verseNumber`, `verseText`) VALUES ('1CO',  14,  39, 'So, my  brothers, desire earnestly to prophesy, and don\'t forbid speaking with other languages.');
+INSERT INTO `verses` (`bookCode`, `chapter`, `verseNumber`, `verseText`) VALUES ('1CO',  14,  39, 'So, my brothers, desire earnestly to prophesy, and don\'t forbid speaking with other languages.');
 INSERT INTO `verses` (`bookCode`, `chapter`, `verseNumber`, `verseText`) VALUES ('1CO',  14,  40, 'Let all things be done decently and in order.');
 INSERT INTO `verses` (`bookCode`, `chapter`, `verseNumber`, `verseText`) VALUES ('1CO',  15,   1, 'Now I declare to you, brothers, the Good News which I preached to you, which also you received, in which you also stand,');
 INSERT INTO `verses` (`bookCode`, `chapter`, `verseNumber`, `verseText`) VALUES ('1CO',  15,   2, 'by which also you are saved, if you hold firmly the word which I preached to you- unless you believed in vain.');
@@ -5744,7 +5744,7 @@ INSERT INTO `verses` (`bookCode`, `chapter`, `verseNumber`, `verseText`) VALUES 
 INSERT INTO `verses` (`bookCode`, `chapter`, `verseNumber`, `verseText`) VALUES ('2CO',   5,   8, 'We are courageous, I say, and are willing rather to be absent from the body and to be at home with the Lord<G2962>.');
 INSERT INTO `verses` (`bookCode`, `chapter`, `verseNumber`, `verseText`) VALUES ('2CO',   5,   9, 'So we also make it our aim, whether at home or absent, to be well pleasing to him.');
 INSERT INTO `verses` (`bookCode`, `chapter`, `verseNumber`, `verseText`) VALUES ('2CO',   5,  10, 'For we must all be revealed before the judgment seat of the AnointedOne<G5547> that each one may receive the things in the body according to what he has done, whether good or bad.');
-INSERT INTO `verses` (`bookCode`, `chapter`, `verseNumber`, `verseText`) VALUES ('2CO',   5,  11, 'So, knowing  the fear of the Lord<G2962>, we persuade men, but we are revealed to God, and I hope that we are revealed also in your consciences.');
+INSERT INTO `verses` (`bookCode`, `chapter`, `verseNumber`, `verseText`) VALUES ('2CO',   5,  11, 'So, knowing the fear of the Lord<G2962>, we persuade men, but we are revealed to God, and I hope that we are revealed also in your consciences.');
 INSERT INTO `verses` (`bookCode`, `chapter`, `verseNumber`, `verseText`) VALUES ('2CO',   5,  12, 'For we are not commending ourselves to you again, but speak as giving you occasion of boasting on our behalf, that you may have something to answer those who boast in appearance, and not in heart.');
 INSERT INTO `verses` (`bookCode`, `chapter`, `verseNumber`, `verseText`) VALUES ('2CO',   5,  13, 'For if we are beside ourselves, it is for God. Or if we are of sober mind, it is for you.');
 INSERT INTO `verses` (`bookCode`, `chapter`, `verseNumber`, `verseText`) VALUES ('2CO',   5,  14, 'For the love<G0026> of the AnointedOne<G5547> constrains us; because we judge thus, that one died for all, therefore all died.');
@@ -7959,7 +7959,4 @@ INSERT INTO `verses` (`bookCode`, `chapter`, `verseNumber`, `verseText`) VALUES 
 INSERT INTO `verses` (`bookCode`, `chapter`, `verseNumber`, `verseText`) VALUES ('REV',  22,  20, 'He who testifies these things says, \"Yes, I come quickly.\" Amen! Yes, come, Lord<G2962> Jesus.');
 INSERT INTO `verses` (`bookCode`, `chapter`, `verseNumber`, `verseText`) VALUES ('REV',  22,  21, 'The grace of the Lord<G2962> Jesus AnointedOne<G5547> be with all the saints. Amen.');
 
-
-/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */
-/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */
-/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */
+COMMIT;
