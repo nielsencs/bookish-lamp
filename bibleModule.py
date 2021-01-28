@@ -154,6 +154,142 @@ def myBookAbbrFromWEB(tBookAbbr):
         tMyBookAbbr = 'JDE'
     return tMyBookAbbr
 
+def myBookAbbrFromWEBName(tWEBName):
+    tMyBookAbbr = ''
+    if tWEBName == '1_Chronicles':
+        tMyBookAbbr = '1CH'
+    elif tWEBName == '1_Corinthians':
+        tMyBookAbbr = '1CO'
+    elif tWEBName == '1_John':
+        tMyBookAbbr = '1JO'
+    elif tWEBName == '1_Kings':
+        tMyBookAbbr = '1KI'
+    elif tWEBName == '1_Peter':
+        tMyBookAbbr = '1PE'
+    elif tWEBName == '1_Samuel':
+        tMyBookAbbr = '1SM'
+    elif tWEBName == '1_Thessalonians':
+        tMyBookAbbr = '1TH'
+    elif tWEBName == '1_Timothy':
+        tMyBookAbbr = '1TI'
+    elif tWEBName == '2_Chronicles':
+        tMyBookAbbr = '2CH'
+    elif tWEBName == '2_Corinthians':
+        tMyBookAbbr = '2CO'
+    elif tWEBName == '2_John':
+        tMyBookAbbr = '2JO'
+    elif tWEBName == '2_Kings':
+        tMyBookAbbr = '2KI'
+    elif tWEBName == '2_Peter':
+        tMyBookAbbr = '2PE'
+    elif tWEBName == '2_Samuel':
+        tMyBookAbbr = '2SM'
+    elif tWEBName == '2_Thessalonians':
+        tMyBookAbbr = '2TH'
+    elif tWEBName == '2_Timothy':
+        tMyBookAbbr = '2TI'
+    elif tWEBName == '3_John':
+        tMyBookAbbr = '3JO'
+    elif tWEBName == 'Acts':
+        tMyBookAbbr = 'ACT'
+    elif tWEBName == 'Amos':
+        tMyBookAbbr = 'AMO'
+    elif tWEBName == 'Colossians':
+        tMyBookAbbr = 'COL'
+    elif tWEBName == 'Daniel':
+        tMyBookAbbr = 'DAN'
+    elif tWEBName == 'Deuteronomy':
+        tMyBookAbbr = 'DEU'
+    elif tWEBName == 'Ecclesiastes':
+        tMyBookAbbr = 'ECC'
+    elif tWEBName == 'Ephesians':
+        tMyBookAbbr = 'EPH'
+    elif tWEBName == 'Esther':
+        tMyBookAbbr = 'EST'
+    elif tWEBName == 'Exodus':
+        tMyBookAbbr = 'EXO'
+    elif tWEBName == 'Ezekiel':
+        tMyBookAbbr = 'EZE'
+    elif tWEBName == 'Ezra':
+        tMyBookAbbr = 'EZR'
+    elif tWEBName == 'Galatians':
+        tMyBookAbbr = 'GAL'
+    elif tWEBName == 'Genesis':
+        tMyBookAbbr = 'GEN'
+    elif tWEBName == 'Habakkuk':
+        tMyBookAbbr = 'HAB'
+    elif tWEBName == 'Haggai':
+        tMyBookAbbr = 'HAG'
+    elif tWEBName == 'Hebrews':
+        tMyBookAbbr = 'HEB'
+    elif tWEBName == 'Hosea':
+        tMyBookAbbr = 'HOS'
+    elif tWEBName == 'Isaiah':
+        tMyBookAbbr = 'ISA'
+    elif tWEBName == 'James':
+        tMyBookAbbr = 'JAM'
+    elif tWEBName == 'Jeremiah':
+        tMyBookAbbr = 'JDE'
+    elif tWEBName == 'Job':
+        tMyBookAbbr = 'JDG'
+    elif tWEBName == 'Joel':
+        tMyBookAbbr = 'JER'
+    elif tWEBName == 'John':
+        tMyBookAbbr = 'JOB'
+    elif tWEBName == 'Jonah':
+        tMyBookAbbr = 'JOE'
+    elif tWEBName == 'Joshua':
+        tMyBookAbbr = 'JOH'
+    elif tWEBName == 'Jude':
+        tMyBookAbbr = 'JON'
+    elif tWEBName == 'Judges':
+        tMyBookAbbr = 'JOS'
+    elif tWEBName == 'Lamentations':
+        tMyBookAbbr = 'LAM'
+    elif tWEBName == 'Leviticus':
+        tMyBookAbbr = 'LEV'
+    elif tWEBName == 'Luke':
+        tMyBookAbbr = 'LUK'
+    elif tWEBName == 'Malachi':
+        tMyBookAbbr = 'MAL'
+    elif tWEBName == 'Mark':
+        tMyBookAbbr = 'MAR'
+    elif tWEBName == 'Matthew':
+        tMyBookAbbr = 'MAT'
+    elif tWEBName == 'Micah':
+        tMyBookAbbr = 'MIC'
+    elif tWEBName == 'Nahum':
+        tMyBookAbbr = 'NAH'
+    elif tWEBName == 'Nehemiah':
+        tMyBookAbbr = 'NEH'
+    elif tWEBName == 'Numbers':
+        tMyBookAbbr = 'NUM'
+    elif tWEBName == 'Obadiah':
+        tMyBookAbbr = 'OBA'
+    elif tWEBName == 'Philemon':
+        tMyBookAbbr = 'PHM'
+    elif tWEBName == 'Philippians':
+        tMyBookAbbr = 'PHP'
+    elif tWEBName == 'Proverbs':
+        tMyBookAbbr = 'PRO'
+    elif tWEBName == 'Psalms':
+        tMyBookAbbr = 'PSA'
+    elif tWEBName == 'Revelation':
+        tMyBookAbbr = 'REV'
+    elif tWEBName == 'Romans':
+        tMyBookAbbr = 'ROM'
+    elif tWEBName == 'Ruth':
+        tMyBookAbbr = 'RUT'
+    elif tWEBName == 'SongOfSongs':
+        tMyBookAbbr = 'SON'
+    elif tWEBName == 'Titus':
+        tMyBookAbbr = 'TIT'
+    elif tWEBName == 'Zechariah':
+        tMyBookAbbr = 'ZEC'
+    elif tWEBName == 'Zephaniah':
+        tMyBookAbbr = 'ZEP'
+    return tMyBookAbbr
+
 def notApocrypha(tBook):
     tApocrypha = '|TOB|JDT|ESG|WIS|SIR|BAR|1MA|2MA|1ES|MAN|PS2|3MA|2ES|4MA|DAG|'
     return not(tApocrypha.find(tBook) > 0)
