@@ -8,7 +8,7 @@ def main():
     tVerseText = ''
 
     tPath1 = 'WEB(2011)'
-    tPath2 = tPath1 + '\\Galatians'
+    tPath2 = tPath1 + '\\Genesis'
 
     fw2 = open('WEB(2011)bible.sql', 'w')
 
@@ -22,8 +22,9 @@ def main():
         fr2 = open(tPath2 + '\\' + tFilename, 'r')
         tBuffer = fr2.readline()
         while tBuffer:
-            tVerseNum = getVerseNum(tBuffer)
-            tVerseText = getVerseText(tBuffer)
+            tVerseNum, tVerseText = getVerse(tBuffer)
+            tVerseText = escapeQuotes(tVerseText, '\"')
+            tVerseText = escapeQuotes(tVerseText, '\'')
 
             fw2.write('INSERT INTO `verses` (`bookCode`, `chapter`, `verseNumber`, `verseText`) VALUES ')
             fw2.write('(\'' + tBook + '\',' + tChapter + ',' + tVerseNum + ', \'' + tVerseText.strip() + '\');\n')
@@ -36,20 +37,13 @@ def main():
 def getChapterFromFilename(tFilename):
     tChapter = tFilename[-7:-4]
     if tChapter[0].isalpha():
-        tChapter = tChapter[1:].zfill(4)
+        tChapter = ' ' + tChapter[1:].zfill(4)
     return tChapter
 
-def getVerseNum(tBuffer):
-    tVerseNum = tBuffer[0:3]
-    if tVerseNum[-1].isalpha():
-        tVerseNum = tVerseNum[:-1]
-    tVerseNum = ' ' + tVerseNum.zfill(4)
-    return tVerseNum
-
-def getVerseText(tBuffer):
-    tVerseText = tBuffer[2:]
-    while not tVerseText[0].isalpha():
-        tVerseText = tVerseText[1:]
-    return tVerseText
+def getVerse(tBuffer):
+    i = tBuffer.index(' ')
+    tVerseNum = ' ' + tBuffer[0:i].zfill(4)
+    tVerseText = tBuffer[i:]
+    return tVerseNum, tVerseText
 
 main()
