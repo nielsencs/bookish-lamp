@@ -155,6 +155,9 @@ def myBookAbbrFromWEB(tBookAbbr):
     return tMyBookAbbr
 
 def myBookAbbrFromWEBName(tWEBName):
+    tWEBName = tWEBName[:-4]
+    while tWEBName[-1].isdigit():
+        tWEBName = tWEBName[:-1]
     tMyBookAbbr = ''
     if tWEBName == '1_Chronicles':
         tMyBookAbbr = '1CH'
