@@ -211,27 +211,4 @@ def firstAlphaOrQuote(line):
                 #print(line)
     return line
 
-def doHeader(fw2):
-    fw2.write('SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";\n')
-    fw2.write('START TRANSACTION;\n')
-    fw2.write('SET time_zone = "+00:00";\n')
-    fw2.write('\n')
-    fw2.write('\n')
-    fw2.write('/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;\n')
-    fw2.write('/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;\n')
-    fw2.write('/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;\n')
-    fw2.write('/*!40101 SET NAMES utf8mb4 */;\n')
-    fw2.write('\n')
-    fw2.write('DROP TABLE IF EXISTS `verses`;\n')
-    fw2.write('CREATE TABLE `verses` (\n')
-    fw2.write('  `verseID` int(11) NOT NULL AUTO_INCREMENT,\n')
-    fw2.write('  `bookCode` varchar(3) NOT NULL,\n')
-    fw2.write('  `chapter` smallint(4) NOT NULL,\n')
-    fw2.write('  `verseNumber` smallint(4) NOT NULL,\n')
-    fw2.write('  `verseText` text NOT NULL\n')
-    fw2.write('  PRIMARY KEY (`verseID`)\n')
-
-    fw2.write(') ENGINE=MyISAM DEFAULT CHARSET=latin1;\n')
-    fw2.write('\n')
-
 main()
