@@ -232,21 +232,21 @@ def myBookAbbrFromWEBName(tWEBName):
     elif tWEBName == 'James':
         tMyBookAbbr = 'JAM'
     elif tWEBName == 'Jeremiah':
-        tMyBookAbbr = 'JDE'
-    elif tWEBName == 'Job':
-        tMyBookAbbr = 'JDG'
-    elif tWEBName == 'Joel':
         tMyBookAbbr = 'JER'
-    elif tWEBName == 'John':
+    elif tWEBName == 'Job':
         tMyBookAbbr = 'JOB'
-    elif tWEBName == 'Jonah':
+    elif tWEBName == 'Joel':
         tMyBookAbbr = 'JOE'
-    elif tWEBName == 'Joshua':
+    elif tWEBName == 'John':
         tMyBookAbbr = 'JOH'
-    elif tWEBName == 'Jude':
+    elif tWEBName == 'Jonah':
         tMyBookAbbr = 'JON'
-    elif tWEBName == 'Judges':
+    elif tWEBName == 'Joshua':
         tMyBookAbbr = 'JOS'
+    elif tWEBName == 'Jude':
+        tMyBookAbbr = 'JDE'
+    elif tWEBName == 'Judges':
+        tMyBookAbbr = 'JDG'
     elif tWEBName == 'Lamentations':
         tMyBookAbbr = 'LAM'
     elif tWEBName == 'Leviticus':
@@ -317,6 +317,6 @@ def doHeader(fw2):
     fw2.write('  `verseNumber` smallint(4) NOT NULL,\n')
     fw2.write('  `verseText` text NOT NULL\n')
     fw2.write('  PRIMARY KEY (`verseID`)\n')
-
+    fw2.write('  UNIQUE KEY `book-chapter-verse` (`bookCode`,`chapter`,`verseNumber`)\n')
     fw2.write(') ENGINE=MyISAM DEFAULT CHARSET=latin1;\n')
     fw2.write('\n')
