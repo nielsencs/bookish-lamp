@@ -69,6 +69,7 @@ atFiles = ['Genesis',
 'Revelation']
 
 def main():
+    bOldTestament = True
     tBook = ''
     tChapter = ''
     tVerseNum = ''
@@ -86,12 +87,61 @@ def main():
             tBook = myBookAbbrFromWEBName(tFilename)
             tChapter = getChapterFromFilename(tFilename)
 
+            if tBook == 'MAT':
+                bOldTestament = False
             fr2 = open(tPath1 + '\\' + tPath2 + '\\' + tFilename, 'r')
             tBuffer = fr2.readline()
             while tBuffer:
                 tVerseNum, tVerseText = getVerse(tBuffer)
                 tVerseText = escapeQuotes(tVerseText, '\"')
                 tVerseText = escapeQuotes(tVerseText, '\'')
+
+                tVerseText = swapWords(tVerseText, 'lamp stand', 'lampstand')
+                tVerseText = swapWords(tVerseText, 'bondage', 'slavery')
+                tVerseText = swapWords(tVerseText, 'worshiper', 'worshipper')
+                tVerseText = swapWords(tVerseText, 'seed', 'offspring')
+                tVerseText = swapWords(tVerseText, 'chastening', 'discipline')
+
+                if bOldTestament:
+                    tVerseText = swapWords(tVerseText, 'Yahweh', 'TheIAM<H3068>')
+                    tVerseText = swapWords(tVerseText, 'herb', 'vegetation<H6212>')
+                    tVerseText = addCode(tVerseText, 'Lord', '<H0113>')
+                    tVerseText = addCode(tVerseText, 'lord', '<H0113>')
+                    tVerseText = addCode(tVerseText, 'gods', '<H0430>')
+                    tVerseText = addCode(tVerseText, 'god', '<H0430>')
+                    tVerseText = addCode(tVerseText, 'God', '<H0430>')
+                    tVerseText = addCode(tVerseText, 'anointed', '<H4886>')
+                    tVerseText = addCode(tVerseText, 'Almighty', '<H7706>')
+                    tVerseText = addCode(tVerseText, 'pursue', '<H7291>')
+                    tVerseText = addCode(tVerseText, 'persecute', '<H7291>')
+                else:
+                    tVerseText = swapWords(tVerseText, 'Christ', 'AnointedOne<G5547>')
+
+                    tVerseText = swapWords(tVerseText, 'beloved', 'dear-ones<G0027>')
+                    tVerseText = swapWords(tVerseText, 'Beloved', 'Dear-ones<G0027>')
+
+                    tVerseText = addCode(tVerseText, 'Lord', '<G2962>')
+                    tVerseText = addCode(tVerseText, 'lord', '<G2962>')
+                    tVerseText = addCode(tVerseText, 'love', '<G0025>')
+
+                    tVerseText = swapWords(tVerseText, 'love<G0025>d', 'loved<G0025>')
+                    tVerseText = swapWords(tVerseText, 'love<G0025>s', 'loves<G0025>')
+                    tVerseText = swapWords(tVerseText, 'is love<G0025>', 'is love<G0026>')
+                    tVerseText = swapWords(tVerseText, 'God\'s love<G0025>', 'God\'s love<G0026>')
+                    tVerseText = swapWords(tVerseText, 'a love<G0025>', 'a love<G0026>')
+
+                    tVerseText = addCode(tVerseText, 'master', '<G2962>')
+                    tVerseText = addCode(tVerseText, 'Master', '<G2962>')
+                    tVerseText = swapWords(tVerseText, 'master<G2962>s', 'masters<G2962>')
+                    tVerseText = swapWords(tVerseText, 'Master<G2962>s', 'Masters<G2962>')
+                    tVerseText = swapWords(tVerseText, 'master<G2962>\'s', 'master\'s<G2962>')
+
+                    tVerseText = swapWords(tVerseText, 'works', 'acts')
+
+                tVerseText = swapWords(tVerseText, '—', '- ')
+                tVerseText = swapWords(tVerseText, '  ', ' ')
+                tVerseText = tVerseText.strip()
+
 
                 fw2.write('INSERT INTO `verses` (`bookCode`, `chapter`, `verseNumber`, `verseText`) VALUES ')
                 fw2.write('(\'' + tBook + '\',' + tChapter + ',' + tVerseNum + ', \'' + tVerseText.strip() + '\');\n')
