@@ -112,8 +112,16 @@ def addCode(tText, tWord, tCode):
     while tWord in tText:
         iStart = tText.find(tWord)
         iLength = len(tWord)
-        tNew = tNew + tText[0:iStart + iLength] + tCode
-        tText =  tText[iStart + iLength:]
+        # bShouldChange = not tCode in tText[iStart + iLength:iStart + iLength + 10] # if there is already that code applied
+        # if bShouldChange:
+        tTestText = tText[iStart + iLength:iStart + iLength + 1]
+        bShouldChange = not tTestText.isalpha() # if the next character is not alpha (e.g space or punctuation)
+        if bShouldChange:
+            tNew = tNew + tText[0:iStart + iLength] + tCode
+            tText =  tText[iStart + iLength:]
+        else:
+            tNew = tNew + tText[0:iStart + iLength]
+            tText =  tText[iStart + iLength:]
     return tNew + tText
 
 def escapeQuotes(tText, tQuote):
