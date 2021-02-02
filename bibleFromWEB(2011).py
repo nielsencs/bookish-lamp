@@ -153,8 +153,7 @@ def main():
 
 def getChapterFromFilename(tFilename):
     tChapter = tFilename[-7:-4]
-    if tChapter[0].isalpha():
-        # tChapter = ' ' + tChapter[1:].zfill(4)
+    while tChapter[0].isalpha() or tChapter[0] == '0': # strip leading spaces or 0s
         tChapter = tChapter[1:]
     tChapter = lpadNum(tChapter)
 
@@ -163,8 +162,9 @@ def getChapterFromFilename(tFilename):
 def getVerse(tBuffer):
     i = tBuffer.index(' ')
 
-    # tVerseNum = ' ' + tBuffer[0:i].zfill(4)
-    tVerseNum = tBuffer[0:i]
+    tVerseNum = tBuffer[0:i].strip()
+    if tVerseNum[0] == '0': # strip leading 0
+        tVerseNum = tVerseNum[1:]
     tVerseNum = lpadNum(tVerseNum)
     tVerseText = tBuffer[i:]
     return tVerseNum, tVerseText
