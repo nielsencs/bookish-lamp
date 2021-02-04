@@ -39,22 +39,19 @@ def main():
 
     buffer = ''
 
-    fr1 = open(tFile1, 'r')
     fw = open('comparison.sql', 'w')
 
-    fr2 = open(tFile2, 'r')
+    fr1 = open(tFile1, 'r')
     tLine1 = fr1.readline()
-    tLine2 = fr2.readline()
-    tChap = tLine1[2:5]
-    print(tChap)
     while not tLine1[:12] == 'INSERT INTO ':
         tLine1 = fr1.readline()
-    # print('################:' + tLine1 + ':################')
     tBook = tLine1[82:85]
     print('\n' + tBook)
+
+    fr2 = open(tFile2, 'r')
+    tLine2 = fr2.readline()
     while not tLine2[:12] == 'INSERT INTO ':
         tLine2 = fr2.readline()
-    # print('================:' + tLine2 + ':================')
 
     while tLine1 or tLine2:
         tBookNew = tLine1[82:85]
@@ -64,7 +61,7 @@ def main():
         if tLine1 == tLine2:
             print('.', end='')
             # fw.write(tLine1)
-            fw.write('-')
+            fw.write('-\n')
         else:
             #print('')
             #print('1:' + tLine1)
