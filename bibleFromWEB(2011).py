@@ -165,6 +165,8 @@ def getVerse(tBuffer):
     tVerseNum = tBuffer[0:i].strip()
     if tVerseNum[0] == '0': # strip leading 0
         tVerseNum = tVerseNum[1:]
+    if tVerseNum == '': #was 0!
+        tVerseNum = '0'
     tVerseNum = lpadNum(tVerseNum)
     tVerseText = tBuffer[i:]
     return tVerseNum, tVerseText
