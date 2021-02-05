@@ -150,6 +150,7 @@ def main():
 
                 tBuffer = fr2.readline()
             print('')
+    fw2.close()
 
 def getChapterFromFilename(tFilename):
     tChapter = tFilename[-7:-4]
