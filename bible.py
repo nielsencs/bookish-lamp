@@ -155,8 +155,9 @@ def main():
                                 #x = input(tLine1 + '|||' + tLine2)
 
                                 fw1.write('(\'' + tBook1 + '\',' + tChapter1 + ',' + tVerse1 + ', \'' + tLine1 + '\'),\n')
-                                fw2.write('INSERT INTO `verses` (`bookCode`, `chapter`, `verseNumber`, `verseText`) VALUES ')
-                                fw2.write('(\'' + tBook2 + '\',' + tChapter2 + ',' + tVerse2 + ', \'' + tLine2.strip() + '\');\n')
+                                # fw2.write('INSERT INTO `verses` (`bookCode`, `chapter`, `verseNumber`, `verseText`) VALUES ')
+                                # fw2.write('(\'' + tBook2 + '\',' + tChapter2 + ',' + tVerse2 + ', \'' + tLine2.strip() + '\');\n')
+                                writeLine(fw2, tBook2, tChapter2, tVerse2, tLine2)
                         else:
                             print('.', end='')
                     else:
@@ -196,42 +197,5 @@ def parseSQL(fr1, fw2, tVerseDelim):
             else:
                 fw2.write(tLine1SQL)
     return tLine1Clean, tBook, tChapter, tVerse, tLine1SQL
-
-def firstAlphaOrQuote(line):
-    tQuotes = '“”‘’'
-    #print(len(line), end='')
-    if len(line)>0:
-        bDoIt = True
-        while bDoIt:
-            if line[0].isalpha() or tQuotes.count(line[0])>0:
-                bDoIt = False
-            else:
-                line = line[1:]
-                #print('"' + line[0] + '" removed:')
-                #print(line)
-    return line
-
-def doHeader(fw2):
-    fw2.write('SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";\n')
-    fw2.write('START TRANSACTION;\n')
-    fw2.write('SET time_zone = "+00:00";\n')
-    fw2.write('\n')
-    fw2.write('\n')
-    fw2.write('/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;\n')
-    fw2.write('/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;\n')
-    fw2.write('/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;\n')
-    fw2.write('/*!40101 SET NAMES utf8mb4 */;\n')
-    fw2.write('\n')
-    fw2.write('DROP TABLE IF EXISTS `verses`;\n')
-    fw2.write('CREATE TABLE `verses` (\n')
-    fw2.write('  `verseID` int(11) NOT NULL AUTO_INCREMENT,\n')
-    fw2.write('  `bookCode` varchar(3) NOT NULL,\n')
-    fw2.write('  `chapter` smallint(4) NOT NULL,\n')
-    fw2.write('  `verseNumber` smallint(4) NOT NULL,\n')
-    fw2.write('  `verseText` text NOT NULL\n')
-    fw2.write('  PRIMARY KEY (`verseID`)\n')
-
-    fw2.write(') ENGINE=MyISAM DEFAULT CHARSET=latin1;\n')
-    fw2.write('\n')
 
 main()
