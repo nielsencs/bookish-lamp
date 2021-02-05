@@ -342,3 +342,7 @@ def firstAlphaOrQuote(line):
                 #print('"' + line[0] + '" removed:')
                 #print(line)
     return line
+
+def writeLine(fw, tBook, tChapter, tVerseNum, tVerseText):
+    fw.write('INSERT INTO `verses` (`bookCode`, `chapter`, `verseNumber`, `verseText`) VALUES ')
+    fw.write('(\'' + tBook + '\',' + tChapter + ',' + tVerseNum + ', \'' + tVerseText.strip() + '\');\n')

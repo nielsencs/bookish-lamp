@@ -155,8 +155,9 @@ def main():
                                 #x = input(tLine1 + '|||' + tLine2)
 
                                 fw1.write('(\'' + tBook1 + '\',' + tChapter1 + ',' + tVerse1 + ', \'' + tLine1 + '\'),\n')
-                                fw2.write('INSERT INTO `verses` (`bookCode`, `chapter`, `verseNumber`, `verseText`) VALUES ')
-                                fw2.write('(\'' + tBook2 + '\',' + tChapter2 + ',' + tVerse2 + ', \'' + tLine2.strip() + '\');\n')
+                                # fw2.write('INSERT INTO `verses` (`bookCode`, `chapter`, `verseNumber`, `verseText`) VALUES ')
+                                # fw2.write('(\'' + tBook2 + '\',' + tChapter2 + ',' + tVerse2 + ', \'' + tLine2.strip() + '\');\n')
+                                writeLine(fw2, tBook2, tChapter2, tVerse2, tLine2)
                         else:
                             print('.', end='')
                     else:
