@@ -17,7 +17,6 @@ def trimComments(tLine):
     return tLine
 
 def trimExtras(line, lDelim, rDelim):
-    #bDoIt = True
     while lDelim in line:
         lLine = line[0:line.find(lDelim)]
         rLine = line[line.find(rDelim)+3:]
