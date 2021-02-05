@@ -8,8 +8,10 @@ oRoot = tk.Tk()
 oRoot.withdraw()
 
 #globals
-tPath1 = 'database\\'
-tPath2 = 'eng-web_usfm_2020-06-01\\'
+# tPath1 = 'database\\'
+# tPath2 = 'eng-web_usfm_2020-06-01\\'
+tPath1 = ''
+tPath2 = ''
 
 tFile1 = ''
 tFile2 = ''
@@ -39,7 +41,8 @@ def main():
 
     buffer = ''
 
-    fw = open('comparison.sql', 'w')
+    tWriteName = writeFileName(tFile1, tFile2)
+    fw = open('comparisons\\' + tWriteName, 'w')
 
     fr1 = open(tFile1, 'r')
     tLine1 = fr1.readline()
@@ -61,7 +64,7 @@ def main():
         if tLine1 == tLine2:
             print('.', end='')
             # fw.write(tLine1)
-            fw.write('-\n')
+            fw.write('-\n-\n')
         else:
             #print('')
             #print('1:' + tLine1)
@@ -84,5 +87,12 @@ def main():
     fr1.close()
     fr2.close()
     fw.close()
+def writeFileName(tFile1, tFile2):
+    tWriteName = ''
+    tWriteName = tWriteName + os.path.basename(tFile1)[:-4]
+    tWriteName = tWriteName + '-vs-'
+    tWriteName = tWriteName + os.path.basename(tFile2)[:-4]
+    tWriteName = tWriteName + '.sql'
+    return tWriteName
 
 main()
