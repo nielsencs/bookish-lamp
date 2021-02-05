@@ -12,8 +12,7 @@ def main():
     com2Start = '\\x'
     com2End = '\\x*'
 
-    # fw2 = open('USFM(2019)bible.sql', 'w', encoding="utf8")
-    fw2 = open('USFM(2019)bible.sql', 'w')
+    fw2 = open('USFM(2019)bible.sql', 'w', encoding="utf8")
 
     bOldTestament = True
     tBook2 = ''
@@ -36,9 +35,22 @@ def main():
 
                 buffer = fr2.readline()
                 while buffer:
-                    if buffer.startswith('\\v') or buffer.startswith('\\c') or buffer.startswith('\\p') or buffer.startswith('\\q'):
+                    if buffer.startswith('\\v') or buffer.startswith('\\c') or buffer.startswith('\\d') or buffer.startswith('\\p') or buffer.startswith('\\q') or buffer.startswith('\\ms1'):
                         tLine2 = buffer
                         buffer = fr2.readline()
+                        if tLine2.startswith('\\ms1'): #psalm books
+                            tVerse2 = lpadNum('0')
+                            tLine2 = '[' + tLine2[5:].strip() + ']'
+                            if buffer.startswith('\\d'):
+                                tLine2 = tLine2 + ' ' + buffer[3:].strip()
+                                # buffer = fr2.readline()
+                            writeLine(fw2, tBook2, tChapter2, tVerse2, tLine2)
+                            buffer = fr2.readline()
+                        if tLine2.startswith('\\d'):
+                            tVerse2 = lpadNum('0')
+                            tLine2 = tLine2[3:].strip()
+                            writeLine(fw2, tBook2, tChapter2, tVerse2, tLine2)
+                            buffer = fr2.readline()
                         if tLine2.startswith('\\c'):
                             tChapter2 = lpadNum(tLine2[3:-1])
                         para = ''
@@ -48,18 +60,15 @@ def main():
                             buffer = fr2.readline()
                             if para > '':
                                 print('p', end='')
+
                         if tLine2.startswith('\\v'):
                             while buffer.startswith('\\p') or buffer.startswith('\\q'):
                                 para += buffer[3:-1].strip() + ' '
                                 buffer = fr2.readline()
-                            # line = parseSQL(fr1, fw2,"'")
-                            # tLine1 = line[0]
-                            # tBook1Prev = tBook1
-                            # tBook1 = line[1]
-                            # tChapter1 = lpadNum(line[2])
-                            # tVerse1 = lpadNum(line[3])
                             tVerse2 = tLine2[2:8].strip()
                             tVerse2 = lpadNum(tVerse2[0:tVerse2.find(' ')])
+
+                            tLine2 = swapQuotes(firstAlphaOrQuote(tLine2[3:].strip() + ' ' + para))
 
                             if comStart in tLine2:
                                 tLine2=trimExtras(tLine2, comStart, comEnd)
@@ -72,8 +81,6 @@ def main():
                                 print('#', end='')
                             else:
                                 print('-', end='')
-
-                            tLine2 = swapQuotes(firstAlphaOrQuote(tLine2[3:].strip() + ' ' + para))
 
                             tLine2 = swapWords(tLine2, '\\wj*', '')
                             tLine2 = swapWords(tLine2, '\\wj ', '')
@@ -129,8 +136,7 @@ def main():
                             tLine2 = escapeQuotes(tLine2, '\'')
                             #x = input(tLine1 + '|||' + tLine2)
 
-                            fw2.write('INSERT INTO `verses` (`bookCode`, `chapter`, `verseNumber`, `verseText`) VALUES ')
-                            fw2.write('(\'' + tBook2 + '\',' + tChapter2 + ',' + tVerse2 + ', \'' + tLine2.strip() + '\');\n')
+                            writeLine(fw2, tBook2, tChapter2, tVerse2, tLine2)
                         else:
                             print('.', end='')
                     else:
