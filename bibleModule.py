@@ -328,3 +328,17 @@ def doHeader(fw2):
     fw2.write('  UNIQUE KEY `book-chapter-verse` (`bookCode`,`chapter`,`verseNumber`)\n')
     fw2.write(') ENGINE=MyISAM DEFAULT CHARSET=latin1;\n')
     fw2.write('\n')
+
+def firstAlphaOrQuote(line):
+    tQuotes = '“”‘’'
+    #print(len(line), end='')
+    if len(line)>0:
+        bDoIt = True
+        while bDoIt:
+            if line[0].isalpha() or tQuotes.count(line[0])>0:
+                bDoIt = False
+            else:
+                line = line[1:]
+                #print('"' + line[0] + '" removed:')
+                #print(line)
+    return line

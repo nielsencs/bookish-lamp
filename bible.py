@@ -197,18 +197,4 @@ def parseSQL(fr1, fw2, tVerseDelim):
                 fw2.write(tLine1SQL)
     return tLine1Clean, tBook, tChapter, tVerse, tLine1SQL
 
-def firstAlphaOrQuote(line):
-    tQuotes = '“”‘’'
-    #print(len(line), end='')
-    if len(line)>0:
-        bDoIt = True
-        while bDoIt:
-            if line[0].isalpha() or tQuotes.count(line[0])>0:
-                bDoIt = False
-            else:
-                line = line[1:]
-                #print('"' + line[0] + '" removed:')
-                #print(line)
-    return line
-
 main()
