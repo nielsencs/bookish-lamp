@@ -76,7 +76,8 @@ def main():
     tVerseText = ''
 
     tPath1 = 'WEB(2011)'
-    fw2 = open('WEB(2011)bible.sql', 'w')
+    tPath2 = 'generatedSQL'
+    fw2 = open(tPath2 + '\\WEB(2011)bible.sql', 'w')
     doHeader(fw2)
     # tPath2 = tPath1 + '\\Genesis'
     # for tPath2 in os.listdir(tPath1): # wrong order!

@@ -2,7 +2,7 @@ import os
 from bibleModule import *
 
 def main():
-    tPath2 = 'eng-web_usfm_2019-04-10'
+    tPath1 = 'eng-web_usfm_2019-04-10'
     para = ''
     tLine2 = ''
     buffer = ''
@@ -12,7 +12,8 @@ def main():
     com2Start = '\\x'
     com2End = '\\x*'
 
-    fw2 = open('USFM(2019)bible.sql', 'w', encoding="utf8")
+    tPath2 = 'generatedSQL'
+    fw2 = open(tPath2 + '\\USFM(2019)bible.sql', 'w', encoding="utf8")
 
     bOldTestament = True
     tBook2 = ''
@@ -22,7 +23,7 @@ def main():
 
     doHeader(fw2)
 
-    for filename in os.listdir(tPath2):
+    for filename in os.listdir(tPath1):
         if filename.endswith('.usfm'):
             tBook2 = myBookAbbrFromWEB(filename[3:6])
             if notApocrypha(tBook2):
@@ -31,7 +32,7 @@ def main():
                 print('')
                 print('processing ' + filename + ':')
                 print('')
-                fr2 = open(tPath2 + '\\' +filename, 'r', encoding="utf8")
+                fr2 = open(tPath1 + '\\' +filename, 'r', encoding="utf8")
 
                 buffer = fr2.readline()
                 while buffer:
