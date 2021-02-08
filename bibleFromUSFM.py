@@ -2,7 +2,9 @@ import os
 from bibleModule import *
 
 def main():
-    tPath1 = 'eng-web_usfm_2019-04-10'
+    # tPath1 = 'eng-web_usfm_2019-04-10'
+    tPath1 = 'eng-web_usfm_2020-06-01'
+
     para = ''
     tLine2 = ''
     buffer = ''
@@ -13,7 +15,8 @@ def main():
     com2End = '\\x*'
 
     tPath2 = 'generatedSQL'
-    fw2 = open(tPath2 + '\\USFM(2019)bible.sql', 'w', encoding="utf8")
+    # fw2 = open(tPath2 + '\\USFM(2019)bible.sql', 'w', encoding="utf8")
+    fw2 = open(tPath2 + '\\USFM_2020-06-01_bible.sql', 'w', encoding="utf8")
 
     bOldTestament = True
     tBook2 = ''
