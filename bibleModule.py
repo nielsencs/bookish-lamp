@@ -346,9 +346,9 @@ def writeLine(fw, tBook, tChapter, tVerseNum, tVerseText):
     fw.write('INSERT INTO `verses` (`bookCode`, `chapter`, `verseNumber`, `verseText`) VALUES ')
     fw.write('(\'' + tBook + '\',' + tChapter + ',' + tVerseNum + ', \'' + tVerseText.strip() + '\');\n')
 
-def getLine(fr2):
+def getLine(fr2, bGetStrongsFromFile):
     tLine = fr2.readline()
-    tLine = handleStrongs(tLine, True)
+    tLine = handleStrongs(tLine, bGetStrongsFromFile)
     return tLine
 
 def handleStrongs(tLine, bAddNumbers):
@@ -372,7 +372,7 @@ def handleStrongs(tLine, bAddNumbers):
         tStrongs = tStrongs[iStrong:]
         tStrongs = tStrongs[9:-1]
         tStrongs = tStrongs[0] + tStrongs[1:].zfill(4)
-        if tStrongs in atStrongs:
+        if tStrongs in atStrongs and bAddNumbers:
             tStrongs = '<' + tStrongs + '>'
         else:
             tStrongs = ''
