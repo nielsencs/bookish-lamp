@@ -363,19 +363,15 @@ def handleStrongs(tLine, bAddNumbers):
     tLeft = ''
     tWord = ''
     tRight = ''
-    i=0
     while tWordStart in tLine:
-        i = i + 1
-        if i > 100:
-            halt
         iStrong = 0
         tLeft = tLine[0:tLine.find(tWordStart)]
         tStrongs = tLine[tLine.find(tWordStart)+3:tLine.find(tWordEnd):]
         iStrong = tStrongs.find('|strong=')
         tWord = tStrongs[0:iStrong]
         tStrongs = tStrongs[iStrong:]
-        tStrongs = tStrongs[10:-2]
-
+        tStrongs = tStrongs[9:-1]
+        tStrongs = tStrongs[0] + tStrongs[1:].zfill(4)
         if tStrongs in atStrongs:
             tStrongs = '<' + tStrongs + '>'
         else:
