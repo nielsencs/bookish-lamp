@@ -18,9 +18,9 @@ def trimComments(tLine):
 
 def trimExtras(line, lDelim, rDelim):
     while lDelim in line:
-        lLine = line[0:line.find(lDelim)]
-        rLine = line[line.find(rDelim)+3:]
-        line = lLine + rLine
+        tLeft = line[0:line.find(lDelim)]
+        tRight = line[line.find(rDelim)+3:]
+        line = tLeft + tRight
     return line
 
 def firstAlpha(line):
@@ -81,13 +81,13 @@ def trimAngleBrackets(line):
     bDoIt = True
     while bDoIt:
         if lAngle in line:
-            lLine = line[0:line.find(lAngle)]
+            tLeft = line[0:line.find(lAngle)]
             #print('left part:')
-            #print(lLine)
-            rLine = line[line.find(rAngle)+1:]
+            #print(tLeft)
+            tRight = line[line.find(rAngle)+1:]
             #print('right part:')
-            #print(rLine)
-            line = lLine + rLine
+            #print(tRight)
+            line = tLeft + tRight
             #print('joined:')
             #print(line)
         else:
