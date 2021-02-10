@@ -35,38 +35,38 @@ def main():
                 print('')
                 fr2 = open(tPath1 + '\\' +filename, 'r', encoding="utf8")
 
-                buffer = fr2.readline()
+                buffer = getLine(fr2)
                 while buffer:
                     if buffer.startswith('\\v') or buffer.startswith('\\c') or buffer.startswith('\\d') or buffer.startswith('\\p') or buffer.startswith('\\q') or buffer.startswith('\\ms1'):
                         tLine2 = buffer
-                        buffer = fr2.readline()
+                        buffer = getLine(fr2)
                         if tLine2.startswith('\\ms1'): #psalm books
                             tVerse2 = lpadNum('0')
                             tLine2 = '[' + tLine2[5:].strip() + ']'
                             if buffer.startswith('\\d'):
                                 tLine2 = tLine2 + ' ' + buffer[3:].strip()
-                                # buffer = fr2.readline()
+                                # buffer = getLine(fr2)
                             writeLine(fw2, tBook2, tChapter2, tVerse2, tLine2)
-                            buffer = fr2.readline()
+                            buffer = getLine(fr2)
                         if tLine2.startswith('\\d'):
                             tVerse2 = lpadNum('0')
                             tLine2 = tLine2[3:].strip()
                             writeLine(fw2, tBook2, tChapter2, tVerse2, tLine2)
-                            buffer = fr2.readline()
+                            buffer = getLine(fr2)
                         if tLine2.startswith('\\c'):
                             tChapter2 = lpadNum(tLine2[3:-1])
                         para = ''
                         while tLine2.startswith('\\p') or tLine2.startswith('\\q'):
                             para += tLine2[3:-1].strip() + ' '
                             tLine2 = buffer
-                            buffer = fr2.readline()
+                            buffer = getLine(fr2)
                             if para > '':
                                 print('p', end='')
 
                         if tLine2.startswith('\\v'):
                             while buffer.startswith('\\p') or buffer.startswith('\\q'):
                                 para += buffer[3:-1].strip() + ' '
-                                buffer = fr2.readline()
+                                buffer = getLine(fr2)
                             tVerse2 = tLine2[2:8].strip()
                             tVerse2 = lpadNum(tVerse2[0:tVerse2.find(' ')])
 
@@ -142,7 +142,7 @@ def main():
                         else:
                             print('.', end='')
                     else:
-                        buffer = fr2.readline()
+                        buffer = getLine(fr2)
                 fr2.close()
                 print('')
     fw2.close()

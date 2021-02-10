@@ -345,3 +345,41 @@ def firstAlphaOrQuote(line):
 def writeLine(fw, tBook, tChapter, tVerseNum, tVerseText):
     fw.write('INSERT INTO `verses` (`bookCode`, `chapter`, `verseNumber`, `verseText`) VALUES ')
     fw.write('(\'' + tBook + '\',' + tChapter + ',' + tVerseNum + ', \'' + tVerseText.strip() + '\');\n')
+
+def getLine(fr2):
+    tLine = fr2.readline()
+    tLine = handleStrongs(tLine, True)
+    return tLine
+
+def handleStrongs(tLine, bAddNumbers):
+    atStrongs = ['H0430', 'H3068', 'H7307', 'H0136', 'H7706', 'H0410', 'G3841',
+    'H1814', 'H7291', 'H3050', 'G1459', 'H0403', 'H0433', 'H4756', 'H1376',
+    'H2657', 'H1166', 'H1167', 'H0113', 'H5633', 'H0426', 'G0026', 'G0025',
+    'G0027', 'G2315', 'G2962', 'G2634', 'G2961', 'G1203', 'G2960', 'H8314',
+    'G3323', 'G2519', 'G5580', 'H6212', 'G5546', 'G2209', 'G5547', 'H4899',
+    'H4886', 'G0862', 'G4550', 'G4657', 'G4995', 'G5349', 'G5509']
+    tWordStart = '\\w '
+    tWordEnd = '\\w*'
+    tLeft = ''
+    tWord = ''
+    tRight = ''
+    i=0
+    while tWordStart in tLine:
+        i = i + 1
+        if i > 100:
+            halt
+        iStrong = 0
+        tLeft = tLine[0:tLine.find(tWordStart)]
+        tStrongs = tLine[tLine.find(tWordStart)+3:tLine.find(tWordEnd):]
+        iStrong = tStrongs.find('|strong=')
+        tWord = tStrongs[0:iStrong]
+        tStrongs = tStrongs[iStrong:]
+        tStrongs = tStrongs[10:-2]
+
+        if tStrongs in atStrongs:
+            tStrongs = '<' + tStrongs + '>'
+        else:
+            tStrongs = ''
+        tRight = tLine[tLine.find(tWordEnd)+3:]
+        tLine = tLeft + tWord + tStrongs + tRight
+    return tLine
