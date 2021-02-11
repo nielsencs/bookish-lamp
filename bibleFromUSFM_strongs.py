@@ -1,12 +1,33 @@
 import os
 from bibleModule import *
 
-def main():
-    # tPath1 = 'eng-web_usfm_2020-09-09'
-    # tPath1 = 'eng-web_usfm_2020-10-14'
-    tPath1 = 'eng-web-usfm_2021-02-06'
+import tkinter as tk
+from tkinter import filedialog
 
-    bGetStrongsFromFile = False
+oTkWindow = tk.Tk()
+oTkWindow.title('Generate SQL from USFM')
+oTkWindow.geometry('400x150')
+
+iAddStrongs = tk.IntVar()
+tTkPath1 = tk.StringVar()
+
+tPath1 = 'eng-web-usfm_2021-02-06'
+tTkPath1.set(tPath1)
+
+def getPath():
+    global tPath1
+    tPath1 = tk.filedialog.askdirectory(initialdir = tPath1, title = 'Select USFM folder')
+    tTkPath1.set(tPath1)
+
+def main():
+    tPath1 = tTkPath1.get()
+    print('using this folder:\'' + tPath1 + '\', do', end='')
+    if iAddStrongs.get() == 0:
+        print('n\'t', end='')
+    print(' get strongs numbers from USFM file')
+    tFile = 'USFM_' + tPath1[-10:] + '_bible' + str(iAddStrongs.get()) + '.sql'
+    print('filename:\'' + tFile + '\'')
+    bGetStrongsFromFile = iAddStrongs.get()==1
 
     para = ''
     tLine2 = ''
@@ -19,7 +40,7 @@ def main():
 
     tPath2 = 'generatedSQL'
 
-    fw2 = open(tPath2 + '\\USFM_' + tPath1[13:] + '_bible.sql', 'w', encoding="utf8")
+    fw2 = open(tPath2 + '\\' + tFile, 'w', encoding="utf8")
 
     bOldTestament = True
     tBook2 = ''
@@ -158,4 +179,21 @@ def main():
                 print('')
     fw2.close()
 
-main()
+oLabel = tk.Label(oTkWindow, text='            ') # noob way of padding!
+oLabel.grid(column = 0, row=0)
+
+oLabel = tk.Label(oTkWindow, text='Path')
+oLabel.grid(column = 1, row=1)
+oText1 = tk.Entry(oTkWindow, textvariable = tTkPath1, width = 40)
+oText1.grid(column = 2, row=1)
+oBut1 = tk.Button(oTkWindow, command=getPath, text='browse')
+oBut1.grid(column = 3, row=1)
+
+oCheck1 = tk.Checkbutton(oTkWindow, text = 'Get strongs numbers from USFM file',
+                               variable = iAddStrongs, onvalue = 1, offvalue = 0)
+oCheck1.grid(column = 2)
+
+oBut2 = tk.Button(oTkWindow, command=main, text='Go')
+oBut2.grid(column = 2)
+
+oTkWindow.mainloop()
