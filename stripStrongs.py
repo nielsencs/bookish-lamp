@@ -19,14 +19,14 @@ def main():
     print(tFile1)
 
     tWriteName = writeFileName(tFile1)
-    fw = open(tWriteName, 'w')
+    fw = open(tPath1 + '\\' + tWriteName, 'w')
 
     fr1 = open(tFile1, 'r')
     tLine1 = fr1.readline()
 
     while tLine1:
-        tLine1 = stripStrongs(tLine1)
-        print('.', end='')
+        tLine1, tDot = stripStrongs(tLine1)
+        print(tDot, end='')
         fw.write(tLine1)
         tLine1 = fr1.readline()
 
@@ -46,10 +46,12 @@ def stripStrongs(tLine):
     tLeft = ''
     tWord = ''
     tRight = ''
+    tDot = '.'
     while tStrongStart in tLine:
         tLeft = tLine[0:tLine.find(tStrongStart)]
         tRight = tLine[tLine.find(tStrongEnd)+3:]
         tLine = tLeft + tRight
-    return tLine
+        tDot = 's'
+    return tLine, tDot
 
 main()
