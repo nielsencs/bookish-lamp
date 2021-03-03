@@ -122,10 +122,10 @@ def main():
 
                             if bOldTestament:
                                 if bGetStrongsFromFile:
-                                    tLine2 = swapWords(tLine2, 'Yahweh', 'TheIAM')
+                                    tLine2 = swapWords(tLine2, 'Yahweh', 'ForeverOne')
                                     tLine2 = swapWords(tLine2, 'herb', 'vegetation')
                                 else:
-                                    tLine2 = swapWords(tLine2, 'Yahweh', 'TheIAM<H3068>')
+                                    tLine2 = swapWords(tLine2, 'Yahweh', 'ForeverOne<H3068>')
                                     tLine2 = swapWords(tLine2, 'herb', 'vegetation<H6212>')
                                     tLine2 = addCode(tLine2, 'Lord', '<H0113>')
                                     tLine2 = addCode(tLine2, 'lord', '<H0113>')

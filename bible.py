@@ -94,7 +94,7 @@ def main():
                             tLine1 = swapWords(tLine1, 'it happened that ', '')
                             tLine1 = swapWords(tLine1, 'It happened ', '')
                             if bOldTestament:
-                                tLine2 = swapWords(tLine2, 'Yahweh', 'TheIAM<H3068>')
+                                tLine2 = swapWords(tLine2, 'Yahweh', 'ForeverOne<H3068>')
                                 tLine2 = swapWords(tLine2, 'herb', 'vegetation<H6212>')
                                 tLine2 = addCode(tLine2, 'Lord', '<H0113>')
                                 tLine2 = addCode(tLine2, 'gods', '<H0430>')

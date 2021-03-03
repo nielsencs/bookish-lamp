@@ -104,7 +104,7 @@ def main():
                 tVerseText = swapWords(tVerseText, 'chastening', 'discipline')
 
                 if bOldTestament:
-                    tVerseText = swapWords(tVerseText, 'Yahweh', 'TheIAM<H3068>')
+                    tVerseText = swapWords(tVerseText, 'Yahweh', 'ForeverOne<H3068>')
                     tVerseText = swapWords(tVerseText, 'herb', 'vegetation<H6212>')
                     tVerseText = addCode(tVerseText, 'Lord', '<H0113>')
                     tVerseText = addCode(tVerseText, 'lord', '<H0113>')
