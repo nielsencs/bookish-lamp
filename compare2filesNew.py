@@ -87,6 +87,7 @@ def main():
     fr1.close()
     fr2.close()
     fw.close()
+
 def writeFileName(tFile1, tFile2):
     tWriteName = ''
     tWriteName = tWriteName + os.path.basename(tFile1)[:-4]
