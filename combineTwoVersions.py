@@ -63,7 +63,7 @@ def setupTopFrame():
     oBut2 = tk.Button(oFrameTop, command=getFile2, text='browse')
     oBut2.grid(column = 5, row=iRow, padx = 5, pady = 5)
 
-    oBut3 = tk.Button(oFrameTop, command=main, text='Go')
+    oBut3 = tk.Button(oFrameTop, command=processStart, text='Go')
     oBut3.grid(column = 7, row=iRow, padx = 5, pady = 5)
 # ==============================================================================
 def setupMidFrame():
@@ -106,10 +106,10 @@ def setupMidFrame():
     oText5 = tk.Entry(oFrameMid, textvariable = tTkLine3, width = 140)
     oText5.grid(column = 1, row=iRow, padx = 5, pady = 5)
 
-    oBut5 = tk.Button(oFrameMid, command=main, text='Write to File')
+    oBut5 = tk.Button(oFrameMid, command=processWrite, text='Write to File')
     oBut5.grid(column = 3, row=iRow, padx = 5, pady = 5)
 # ==============================================================================
-def main():
+def processStart():
 # ==============================================================================
     if len(tTkFile1.get()) == 0 or len(tTkFile2.get()) == 0:
         messagebox.showinfo('Alert', 'Please select files first')
@@ -131,41 +131,38 @@ def main():
         tLine2 = fr2.readline()
         while not tLine2[:12] == 'INSERT INTO ':
             tLine2 = fr2.readline()
+        processSame()
+# ==============================================================================
+def processSame():
+# ==============================================================================
+    while tLine1 == tLine2:
+        print('.', end='')
+        fw.write(tLine1)
+        tBookNew = tLine1[82:85]
+        if tBookNew != tBook:
+            tBook = tBookNew
+            print('\n' + tBook)
+        tLine1 = fr1.readline()
+        tLine2 = fr2.readline()
 
-        while tLine1 or tLine2:
-            tBookNew = tLine1[82:85]
-            if tBookNew != tBook:
-                tBook = tBookNew
-                print('\n' + tBook)
-            if tLine1 == tLine2:
-                print('.', end='')
-                fw.write(tLine1)
-                # fw.write('-\n-\n')
-            else:
-                tTkLine1.set(tLine1)
-                tTkLine2.set(tLine2)
-                # messagebox.showinfo('Alert', 'Here we go!')
-                #print('')
-                #print('1:' + tLine1)
-                #print('2:' + tLine2)
-                #iLine = input('1 or 2 (or 3 for new input):')
-                #if iLine == 1:
-                #    fw.write(tLine1)
-                #if iLine == 2:
-                #    fw.write(tLine2)
-                #if iLine == 3:
-                #    newLine = input('New line:')
-                #    fw.write(newLine)
-                print('D', end='')
-                fw.write(tLine1)
-                fw.write('--' + tLine2)
+    tTkLine1.set(tLine1)
+    tTkLine2.set(tLine2)
+# ==============================================================================
+def processWrite():
+# ==============================================================================
+    print('D', end='')
+    fw.write(tLine3)
 
-            tLine1 = fr1.readline()
-            tLine2 = fr2.readline()
+    tLine1 = fr1.readline()
+    tLine2 = fr2.readline()
+    processSame()
+# ==============================================================================
+def processStop():
+# ==============================================================================
+    fr1.close()
+    fr2.close()
+    fw.close()
 
-        fr1.close()
-        fr2.close()
-        fw.close()
 # ==============================================================================
 def writeFileName(tFile1, tFile2, tPath):
 # ==============================================================================
