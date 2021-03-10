@@ -3,197 +3,190 @@ from bibleModule import *
 
 import tkinter as tk
 from tkinter import filedialog
+from tkinter import messagebox
 
 oTkWindow = tk.Tk()
-oTkWindow.title('Generate SQL from USFM')
-oTkWindow.geometry('400x150')
+oTkWindow.title('Combine Two Bible Versions')
+oTkWindow.geometry('1400x300')
+oTkWindow.config(bg='skyblue')
 
-iAddStrongs = tk.IntVar()
-tTkPath1 = tk.StringVar()
+tTkFile1 = tk.StringVar()
+tTkFile2 = tk.StringVar()
+tTkLine1 = tk.StringVar()
+tTkLine2 = tk.StringVar()
+tTkLine3 = tk.StringVar()
+bTkLine1 = tk.BooleanVar()
+bTkLine2 = tk.BooleanVar()
 
-tPath1 = 'eng-web-usfm_2021-02-06'
-tTkPath1.set(tPath1)
+tPath1 = 'generatedSQL'
+# ==============================================================================
+def getFile1():
+# ==============================================================================
+    global tFile1
+    tFile1 = tk.filedialog.askopenfilename(initialdir = tPath1,
+                                           title = 'Select file',
+                                           filetypes = (('SeQueL files','*.sql'),('TeXT files','*.txt'),('all files','*.*')))
+    tTkFile1.set(os.path.basename(tFile1))
+# ==============================================================================
+def getFile2():
+# ==============================================================================
+    global tFile2
+    tFile2 = tk.filedialog.askopenfilename(initialdir = tPath1,
+                                           title = 'Select file',
+                                           filetypes = (('SeQueL files','*.sql'),('TeXT files','*.txt'),('all files','*.*')))
+    tTkFile2.set(os.path.basename(tFile2))
+# ==============================================================================
+def setupTopFrame():
+# ==============================================================================
+    oFrameTop = tk.Frame(oTkWindow)
+    oFrameTop.grid(row = 0, column = 0, padx = 5, pady = 5)
 
-def getPath():
-    global tPath1
-    tPath1 = tk.filedialog.askdirectory(initialdir = tPath1, title = 'Select USFM folder')
-    tTkPath1.set(tPath1)
+    iRow = 0
 
+    oLabel0 = tk.Label(oFrameTop, text='Setup')
+    oLabel0.grid(column = 0, row=iRow, padx = 5, pady = 5)
+
+    iRow = iRow + 1
+
+    oLabel1 = tk.Label(oFrameTop, text='Files')
+    oLabel1.grid(column = 0, row=iRow, padx = 5, pady = 5)
+
+    oText1 = tk.Entry(oFrameTop, textvariable = tTkFile1, width = 40)
+    oText1.grid(column = 1, row=iRow, padx = 5, pady = 5)
+
+    oBut1 = tk.Button(oFrameTop, command=getFile1, text='browse')
+    oBut1.grid(column = 2, row=iRow, padx = 5, pady = 5)
+
+    oText2 = tk.Entry(oFrameTop, textvariable = tTkFile2, width = 40)
+    oText2.grid(column = 4, row=iRow, padx = 5, pady = 5)
+
+    oBut2 = tk.Button(oFrameTop, command=getFile2, text='browse')
+    oBut2.grid(column = 5, row=iRow, padx = 5, pady = 5)
+
+    oBut3 = tk.Button(oFrameTop, command=main, text='Go')
+    oBut3.grid(column = 7, row=iRow, padx = 5, pady = 5)
+# ==============================================================================
+def setupMidFrame():
+# ==============================================================================
+    oFrameMid = tk.Frame(oTkWindow)
+    oFrameMid.grid(row = 1, column = 0, padx = 5, pady = 5)
+
+    iRow = 0
+
+    oLabel2 = tk.Label(oFrameMid, text='Process', justify = 'left')
+    oLabel2.grid(column = 0, row=iRow, padx = 5, pady = 5)
+
+    iRow = iRow + 1
+
+    oLabel3 = tk.Label(oFrameMid, text='A', justify = 'right')
+    oLabel3.grid(column = 0, row=iRow, padx = 5, pady = 5)
+
+    oText3 = tk.Entry(oFrameMid, textvariable = tTkLine1, width = 140)
+    oText3.grid(column = 1, row=iRow, padx = 5, pady = 5)
+
+    oChkBttn3 = tk.Checkbutton(oFrameMid, variable = bTkLine1)
+    oChkBttn3.grid(column = 2, row=iRow, padx = 0, pady = 0)
+
+    iRow = iRow + 1
+
+    oLabel4 = tk.Label(oFrameMid, text='B', justify = 'right')
+    oLabel4.grid(column = 0, row=iRow, padx = 5, pady = 5)
+
+    oText4 = tk.Entry(oFrameMid, textvariable = tTkLine2, width = 140)
+    oText4.grid(column = 1, row=iRow, padx = 5, pady = 5)
+
+    oChkBttn4 = tk.Checkbutton(oFrameMid, variable = bTkLine2)
+    oChkBttn4.grid(column = 2, row=iRow, padx = 0, pady = 0)
+
+    iRow = iRow + 1
+
+    oLabel5 = tk.Label(oFrameMid, text='>', justify = 'right')
+    oLabel5.grid(column = 0, row=iRow, padx = 5, pady = 5)
+
+    oText5 = tk.Entry(oFrameMid, textvariable = tTkLine3, width = 140)
+    oText5.grid(column = 1, row=iRow, padx = 5, pady = 5)
+
+    oBut5 = tk.Button(oFrameMid, command=main, text='Write to File')
+    oBut5.grid(column = 3, row=iRow, padx = 5, pady = 5)
+# ==============================================================================
 def main():
-    tPath1 = tTkPath1.get()
-    print('using this folder:\'' + tPath1 + '\', do', end='')
-    if iAddStrongs.get() == 0:
-        print('n\'t', end='')
-    print(' get strongs numbers from USFM file')
-    tFile = 'USFM_' + tPath1[-10:] + '_bible' + str(iAddStrongs.get()) + '.sql'
-    print('filename:\'' + tFile + '\'')
-    bGetStrongsFromFile = iAddStrongs.get()==1
+# ==============================================================================
+    if len(tTkFile1.get()) == 0 or len(tTkFile2.get()) == 0:
+        messagebox.showinfo('Alert', 'Please select files first')
+    else:
+        buffer = ''
 
-    para = ''
-    tLine2 = ''
-    buffer = ''
+        tWriteName = writeFileName(tFile1, tFile2, 'database')
+        fw = open(tWriteName, 'w', encoding="utf8")
 
-    comStart = '\\f'
-    comEnd = '\\f*'
-    com2Start = '\\x'
-    com2End = '\\x*'
+        fr1 = open(tFile1, 'r', encoding="utf8")
+        tLine1 = fr1.readline()
+        while not tLine1[:12] == 'INSERT INTO ':
+            fw.write(tLine1)
+            tLine1 = fr1.readline()
+        tBook = tLine1[82:85]
+        print('\n' + tBook)
 
-    tPath2 = 'generatedSQL'
+        fr2 = open(tFile2, 'r', encoding="utf8")
+        tLine2 = fr2.readline()
+        while not tLine2[:12] == 'INSERT INTO ':
+            tLine2 = fr2.readline()
 
-    fw2 = open(tPath2 + '\\' + tFile, 'w', encoding="utf8")
+        while tLine1 or tLine2:
+            tBookNew = tLine1[82:85]
+            if tBookNew != tBook:
+                tBook = tBookNew
+                print('\n' + tBook)
+            if tLine1 == tLine2:
+                print('.', end='')
+                fw.write(tLine1)
+                # fw.write('-\n-\n')
+            else:
+                tTkLine1.set(tLine1)
+                tTkLine2.set(tLine2)
+                # messagebox.showinfo('Alert', 'Here we go!')
+                #print('')
+                #print('1:' + tLine1)
+                #print('2:' + tLine2)
+                #iLine = input('1 or 2 (or 3 for new input):')
+                #if iLine == 1:
+                #    fw.write(tLine1)
+                #if iLine == 2:
+                #    fw.write(tLine2)
+                #if iLine == 3:
+                #    newLine = input('New line:')
+                #    fw.write(newLine)
+                print('D', end='')
+                fw.write(tLine1)
+                fw.write('--' + tLine2)
 
-    bOldTestament = True
-    tBook2 = ''
-    tChapter2 = ''
-    tVerseNum = ''
-    tVerseText = ''
+            tLine1 = fr1.readline()
+            tLine2 = fr2.readline()
 
-    doHeader(fw2)
+        fr1.close()
+        fr2.close()
+        fw.close()
+# ==============================================================================
+def writeFileName(tFile1, tFile2, tPath):
+# ==============================================================================
+    bDoIt = True
+    i = 0
+    tI = ''
+    while bDoIt:
+        tWriteName = ''
+        tWriteName = tWriteName + os.path.basename(tFile1)[:-4]
+        tWriteName = tWriteName + '-C-'
+        tWriteName = tWriteName + os.path.basename(tFile2)[:-4]
+        tWriteName = tWriteName + tI
+        tWriteName = tWriteName + '.sql'
+        if os.path.isfile(tPath + '\\' + tWriteName):
+            i = i + 1
+            tI = '(' + str(i) + ')'
+        else:
+            bDoIt = False
+    return tPath + '\\' + tWriteName
 
-    for filename in os.listdir(tPath1):
-        if filename.endswith('.usfm'):
-            tBook2 = myBookAbbrFromWEB(filename[3:6])
-            if notApocrypha(tBook2):
-                if tBook2=='MAT':
-                    bOldTestament=False
-                print('')
-                print('processing ' + filename + ':')
-                print('')
-                fr2 = open(tPath1 + '\\' +filename, 'r', encoding="utf8")
-
-                buffer = getLine(fr2, bGetStrongsFromFile)
-                while buffer:
-                    if buffer.startswith('\\v') or buffer.startswith('\\c') or buffer.startswith('\\d') or buffer.startswith('\\p') or buffer.startswith('\\q') or buffer.startswith('\\ms1'):
-                        tLine2 = buffer
-                        buffer = getLine(fr2, bGetStrongsFromFile)
-                        if tLine2.startswith('\\ms1'): #psalm books
-                            tVerse2 = lpadNum('0')
-                            tLine2 = '[' + tLine2[5:].strip() + ']'
-                            if buffer.startswith('\\d'):
-                                tLine2 = tLine2 + ' ' + buffer[3:].strip()
-                                # buffer = getLine(fr2, bGetStrongsFromFile)
-                            writeLine(fw2, tBook2, tChapter2, tVerse2, tLine2)
-                            buffer = getLine(fr2, bGetStrongsFromFile)
-                        if tLine2.startswith('\\d'):
-                            tVerse2 = lpadNum('0')
-                            tLine2 = tLine2[3:].strip()
-                            writeLine(fw2, tBook2, tChapter2, tVerse2, tLine2)
-                            buffer = getLine(fr2, bGetStrongsFromFile)
-                        if tLine2.startswith('\\c'):
-                            tChapter2 = lpadNum(tLine2[3:-1])
-                        para = ''
-                        while tLine2.startswith('\\p') or tLine2.startswith('\\q'):
-                            para += tLine2[3:-1].strip() + ' '
-                            tLine2 = buffer
-                            buffer = getLine(fr2, bGetStrongsFromFile)
-                            if para > '':
-                                print('p', end='')
-
-                        if tLine2.startswith('\\v'):
-                            while buffer.startswith('\\p') or buffer.startswith('\\q'):
-                                para += buffer[3:-1].strip() + ' '
-                                buffer = getLine(fr2, bGetStrongsFromFile)
-                            tVerse2 = tLine2[2:8].strip()
-                            tVerse2 = lpadNum(tVerse2[0:tVerse2.find(' ')])
-
-                            tLine2 = swapQuotes(firstAlphaOrQuote(tLine2[3:].strip() + ' ' + para))
-
-                            if comStart in tLine2:
-                                tLine2=trimExtras(tLine2, comStart, comEnd)
-                                print('+', end='')
-                            else:
-                                print('-', end='')
-
-                            if com2Start in tLine2:
-                                tLine2=trimExtras(tLine2, com2Start, com2End)
-                                print('#', end='')
-                            else:
-                                print('-', end='')
-
-                            tLine2 = swapWords(tLine2, '\\wj*', '')
-                            tLine2 = swapWords(tLine2, '\\wj ', '')
-                            tLine2 = swapWords(tLine2, 'wj ', '')
-
-                            tLine2 = swapWords(tLine2, 'lamp stand', 'lampstand')
-                            tLine2 = swapWords(tLine2, 'bondage', 'slavery')
-                            tLine2 = swapWords(tLine2, 'worshiper', 'worshipper')
-                            tLine2 = swapWords(tLine2, 'seed', 'offspring')
-                            tLine2 = swapWords(tLine2, 'chastening', 'discipline')
-
-                            if bOldTestament:
-                                if bGetStrongsFromFile:
-                                    tLine2 = swapWords(tLine2, 'Yahweh', 'ForeverOne')
-                                    tLine2 = swapWords(tLine2, 'herb', 'vegetation')
-                                else:
-                                    tLine2 = swapWords(tLine2, 'Yahweh', 'ForeverOne<H3068>')
-                                    tLine2 = swapWords(tLine2, 'herb', 'vegetation<H6212>')
-                                    tLine2 = addCode(tLine2, 'Lord', '<H0113>')
-                                    tLine2 = addCode(tLine2, 'lord', '<H0113>')
-                                    tLine2 = addCode(tLine2, 'gods', '<H0430>')
-                                    tLine2 = addCode(tLine2, 'god', '<H0430>')
-                                    tLine2 = addCode(tLine2, 'God', '<H0430>')
-                                    tLine2 = addCode(tLine2, 'anointed', '<H4886>')
-                                    tLine2 = addCode(tLine2, 'Almighty', '<H7706>')
-                                    tLine2 = addCode(tLine2, 'pursue', '<H7291>')
-                                    tLine2 = addCode(tLine2, 'persecute', '<H7291>')
-                            else:
-                                tLine2 = swapWords(tLine2, 'Christ', 'AnointedOne<G5547>')
-
-                                tLine2 = swapWords(tLine2, 'beloved', 'dear-ones<G0027>')
-                                tLine2 = swapWords(tLine2, 'Beloved', 'Dear-ones<G0027>')
-
-                                if not bGetStrongsFromFile:
-                                    tLine2 = addCode(tLine2, 'Lord', '<G2962>')
-                                    tLine2 = addCode(tLine2, 'lord', '<G2962>')
-                                    tLine2 = addCode(tLine2, 'love', '<G0025>')
-
-                                tLine2 = swapWords(tLine2, 'love<G0025>d', 'loved<G0025>')
-                                tLine2 = swapWords(tLine2, 'love<G0025>s', 'loves<G0025>')
-                                tLine2 = swapWords(tLine2, 'is love<G0025>', 'is love<G0026>')
-                                tLine2 = swapWords(tLine2, 'God\'s love<G0025>', 'God\'s love<G0026>')
-                                tLine2 = swapWords(tLine2, 'a love<G0025>', 'a love<G0026>')
-
-                                if not bGetStrongsFromFile:
-                                    tLine2 = addCode(tLine2, 'master', '<G2962>')
-                                    tLine2 = addCode(tLine2, 'Master', '<G2962>')
-                                tLine2 = swapWords(tLine2, 'master<G2962>s', 'masters<G2962>')
-                                tLine2 = swapWords(tLine2, 'Master<G2962>s', 'Masters<G2962>')
-                                tLine2 = swapWords(tLine2, 'master<G2962>\'s', 'master\'s<G2962>')
-
-                                tLine2 = swapWords(tLine2, 'works', 'acts')
-
-                            tLine2 = swapWords(tLine2, '—', '- ')
-                            tLine2 = swapWords(tLine2, '  ', ' ')
-                            tLine2 = tLine2.strip()
-
-                            tLine2 = escapeQuotes(tLine2, '\"')
-                            tLine2 = escapeQuotes(tLine2, '\'')
-                            #x = input(tLine1 + '|||' + tLine2)
-
-                            writeLine(fw2, tBook2, tChapter2, tVerse2, tLine2)
-                        else:
-                            print('.', end='')
-                    else:
-                        buffer = getLine(fr2, bGetStrongsFromFile)
-                fr2.close()
-                print('')
-    fw2.close()
-
-oLabel = tk.Label(oTkWindow, text='            ') # noob way of padding!
-oLabel.grid(column = 0, row=0)
-
-oLabel = tk.Label(oTkWindow, text='Path')
-oLabel.grid(column = 1, row=1)
-oText1 = tk.Entry(oTkWindow, textvariable = tTkPath1, width = 40)
-oText1.grid(column = 2, row=1)
-oBut1 = tk.Button(oTkWindow, command=getPath, text='browse')
-oBut1.grid(column = 3, row=1)
-
-oCheck1 = tk.Checkbutton(oTkWindow, text = 'Get strongs numbers from USFM file',
-                               variable = iAddStrongs, onvalue = 1, offvalue = 0)
-oCheck1.grid(column = 2)
-
-oBut2 = tk.Button(oTkWindow, command=main, text='Go')
-oBut2.grid(column = 2)
+setupTopFrame()
+setupMidFrame()
 
 oTkWindow.mainloop()
