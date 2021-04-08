@@ -42,16 +42,16 @@ def main():
     buffer = ''
 
     tWriteName = writeFileName(tFile1, tFile2)
-    fw = open('comparisons\\' + tWriteName, 'w')
+    fw = open('comparisons\\' + tWriteName, 'w', encoding="utf8")
 
-    fr1 = open(tFile1, 'r')
+    fr1 = open(tFile1, 'r', encoding="utf8")
     tLine1 = fr1.readline()
     while not tLine1[:12] == 'INSERT INTO ':
         tLine1 = fr1.readline()
     tBook = tLine1[82:85]
     print('\n' + tBook)
 
-    fr2 = open(tFile2, 'r')
+    fr2 = open(tFile2, 'r', encoding="utf8")
     tLine2 = fr2.readline()
     while not tLine2[:12] == 'INSERT INTO ':
         tLine2 = fr2.readline()
@@ -64,7 +64,7 @@ def main():
         if tLine1 == tLine2:
             print('.', end='')
             # fw.write(tLine1)
-            fw.write('-\n-\n')
+            fw.write('-\n')
         else:
             #print('')
             #print('1:' + tLine1)
@@ -78,8 +78,8 @@ def main():
             #    newLine = input('New line:')
             #    fw.write(newLine)
             print('D', end='')
-            fw.write(tLine1)
-            fw.write('--' + tLine2)
+            # fw.write(tLine1)
+            fw.write(tLine2)
 
         tLine1 = fr1.readline()
         tLine2 = fr2.readline()
