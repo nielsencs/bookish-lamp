@@ -42,6 +42,7 @@ def main():
     tChapter2 = ''
     tVerseNum = ''
     tVerseText = ''
+    tLetterText = ''
 
     doHeader(fw2)
 
@@ -70,10 +71,13 @@ def main():
                             writeLine(fw2, tBook2, tChapter2, tVerse2, tLine2)
                             buffer = getLine(fr2, bGetStrongsFromFile)
                         if tLine2.startswith('\\d'):
-                            tVerse2 = lpadNum('0')
-                            tLine2 = trimComments(tLine2[3:].strip())
-                            writeLine(fw2, tBook2, tChapter2, tVerse2, tLine2)
-                            buffer = getLine(fr2, bGetStrongsFromFile)
+                            if tBook2 == 'PSA' and tChapter2.strip() == '119':
+                                tLetterText = '[' + tLine2[3:].strip() + '] '
+                            else:
+                                tVerse2 = lpadNum('0')
+                                tLine2 = trimComments(tLine2[3:].strip())
+                                writeLine(fw2, tBook2, tChapter2, tVerse2, tLine2)
+                                buffer = getLine(fr2, bGetStrongsFromFile)
                         if tLine2.startswith('\\c'):
                             tChapter2 = lpadNum(tLine2[3:-1])
                         para = ''
@@ -92,7 +96,8 @@ def main():
                             tVerse2 = lpadNum(tVerse2[0:tVerse2.find(' ')])
 
                             tLine2 = swapQuotes(firstAlphaOrQuote(tLine2[3:].strip() + ' ' + para))
-                            tLine2 = trimComments(firstAlphaOrQuote(tLine2))
+                            tLine2 = tLetterText + trimComments(firstAlphaOrQuote(tLine2))
+                            tLetterText = ''
 
                             #============== ignore unhandled tags ==============
                             tLine2 = swapWords(tLine2, '\\wj*', '')
