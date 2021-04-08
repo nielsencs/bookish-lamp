@@ -65,13 +65,13 @@ def main():
                             tVerse2 = lpadNum('0')
                             tLine2 = '[' + tLine2[5:].strip() + ']'
                             if buffer.startswith('\\d'):
-                                tLine2 = tLine2 + ' ' + buffer[3:].strip()
+                                tLine2 = tLine2 + ' ' + trimComments(buffer[3:].strip())
                                 # buffer = getLine(fr2, bGetStrongsFromFile)
                             writeLine(fw2, tBook2, tChapter2, tVerse2, tLine2)
                             buffer = getLine(fr2, bGetStrongsFromFile)
                         if tLine2.startswith('\\d'):
                             tVerse2 = lpadNum('0')
-                            tLine2 = tLine2[3:].strip()
+                            tLine2 = trimComments(tLine2[3:].strip())
                             writeLine(fw2, tBook2, tChapter2, tVerse2, tLine2)
                             buffer = getLine(fr2, bGetStrongsFromFile)
                         if tLine2.startswith('\\c'):
@@ -92,7 +92,7 @@ def main():
                             tVerse2 = lpadNum(tVerse2[0:tVerse2.find(' ')])
 
                             tLine2 = swapQuotes(firstAlphaOrQuote(tLine2[3:].strip() + ' ' + para))
-                            tLine2 = trimComments(firstAlphaOrQuote(tLine2[3:].strip() + ' ' + para))
+                            tLine2 = trimComments(firstAlphaOrQuote(tLine2))
 
                             #============== ignore unhandled tags ==============
                             tLine2 = swapWords(tLine2, '\\wj*', '')
