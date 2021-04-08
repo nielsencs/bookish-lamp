@@ -1,3 +1,5 @@
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
 import os
 from bibleModule import *
 
@@ -7,7 +9,7 @@ from tkinter import messagebox
 
 oTkWindow = tk.Tk()
 oTkWindow.title('Combine Two Bible Versions')
-oTkWindow.geometry('1400x300')
+oTkWindow.geometry('1680x300')
 oTkWindow.config(bg='skyblue')
 
 tTkFile1 = tk.StringVar()
@@ -18,7 +20,18 @@ tTkLine3 = tk.StringVar()
 bTkLine1 = tk.BooleanVar()
 bTkLine2 = tk.BooleanVar()
 
+bTkLine1.set(True)
+
 tPath1 = 'generatedSQL'
+
+fr1 = ''
+fr2 = ''
+fw = ''
+tBook = ''
+
+tLine1 = ''
+tLine2 = ''
+# tLine3 = ''
 # ==============================================================================
 def getFile1():
 # ==============================================================================
@@ -81,10 +94,10 @@ def setupMidFrame():
     oLabel3 = tk.Label(oFrameMid, text='A', justify = 'right')
     oLabel3.grid(column = 0, row=iRow, padx = 5, pady = 5)
 
-    oText3 = tk.Entry(oFrameMid, textvariable = tTkLine1, width = 140)
+    oText3 = tk.Entry(oFrameMid, textvariable = tTkLine1, width = 210)
     oText3.grid(column = 1, row=iRow, padx = 5, pady = 5)
 
-    oChkBttn3 = tk.Checkbutton(oFrameMid, variable = bTkLine1)
+    oChkBttn3 = tk.Checkbutton(oFrameMid, command=copyLine1, variable = bTkLine1)
     oChkBttn3.grid(column = 2, row=iRow, padx = 0, pady = 0)
 
     iRow = iRow + 1
@@ -92,10 +105,10 @@ def setupMidFrame():
     oLabel4 = tk.Label(oFrameMid, text='B', justify = 'right')
     oLabel4.grid(column = 0, row=iRow, padx = 5, pady = 5)
 
-    oText4 = tk.Entry(oFrameMid, textvariable = tTkLine2, width = 140)
+    oText4 = tk.Entry(oFrameMid, textvariable = tTkLine2, width = 210)
     oText4.grid(column = 1, row=iRow, padx = 5, pady = 5)
 
-    oChkBttn4 = tk.Checkbutton(oFrameMid, variable = bTkLine2)
+    oChkBttn4 = tk.Checkbutton(oFrameMid, command=copyLine2, variable = bTkLine2)
     oChkBttn4.grid(column = 2, row=iRow, padx = 0, pady = 0)
 
     iRow = iRow + 1
@@ -103,14 +116,30 @@ def setupMidFrame():
     oLabel5 = tk.Label(oFrameMid, text='>', justify = 'right')
     oLabel5.grid(column = 0, row=iRow, padx = 5, pady = 5)
 
-    oText5 = tk.Entry(oFrameMid, textvariable = tTkLine3, width = 140)
+    oText5 = tk.Entry(oFrameMid, textvariable = tTkLine3, width = 210)
     oText5.grid(column = 1, row=iRow, padx = 5, pady = 5)
 
     oBut5 = tk.Button(oFrameMid, command=processWrite, text='Write to File')
     oBut5.grid(column = 3, row=iRow, padx = 5, pady = 5)
 # ==============================================================================
+def copyLine1():
+# ==============================================================================
+    if bTkLine1.get():
+        tTkLine3.set(tTkLine1.get())
+        bTkLine2.set(False) # set the other one false
+# ==============================================================================
+def copyLine2():
+# ==============================================================================
+    if bTkLine2.get():
+        tTkLine3.set(tTkLine2.get())
+        bTkLine1.set(False) # set the other one false
+# ==============================================================================
 def processStart():
 # ==============================================================================
+    global fr1
+    global fr2
+    global fw
+    global tBook
     if len(tTkFile1.get()) == 0 or len(tTkFile2.get()) == 0:
         messagebox.showinfo('Alert', 'Please select files first')
     else:
@@ -131,10 +160,15 @@ def processStart():
         tLine2 = fr2.readline()
         while not tLine2[:12] == 'INSERT INTO ':
             tLine2 = fr2.readline()
-        processSame()
+        processSame(tLine1, tLine2)
 # ==============================================================================
-def processSame():
+def processSame(tLine1, tLine2):
 # ==============================================================================
+    global fr1
+    global fr2
+    global fw
+    global tBook
+
     while tLine1 == tLine2:
         print('.', end='')
         fw.write(tLine1)
@@ -145,20 +179,37 @@ def processSame():
         tLine1 = fr1.readline()
         tLine2 = fr2.readline()
 
-    tTkLine1.set(tLine1)
-    tTkLine2.set(tLine2)
+    tTkLine1.set(tLine1[80:])
+    tTkLine2.set(tLine2[80:])
+    copyLine()
+# ==============================================================================
+def copyLine():
+# ==============================================================================
+    if bTkLine1.get():
+        tTkLine3.set(tTkLine1.get())
+    if bTkLine2.get():
+        tTkLine3.set(tTkLine2.get())
 # ==============================================================================
 def processWrite():
 # ==============================================================================
+    global fr1
+    global fr2
+    global fw
+    global tBook
+
     print('D', end='')
-    fw.write(tLine3)
+    fw.write('INSERT INTO `verses` (`bookCode`, `chapter`, `verseNumber`, `verseText`) VALUES ' + tTkLine3.get())
 
     tLine1 = fr1.readline()
     tLine2 = fr2.readline()
-    processSame()
+    processSame(tLine1, tLine2)
 # ==============================================================================
 def processStop():
 # ==============================================================================
+    global fr1
+    global fr2
+    global fw
+
     fr1.close()
     fr2.close()
     fw.close()
@@ -187,3 +238,5 @@ setupTopFrame()
 setupMidFrame()
 
 oTkWindow.mainloop()
+
+processStop()
