@@ -5,23 +5,23 @@ def trimComments(tLine):
     com2End = '\\x*'
     if comStart in tLine:
         tLine=trimExtras(tLine, comStart, comEnd)
-        #print('+', end='')
-    #else:
-        #print('-', end='')
+        print('+', end='')
+    else:
+        print('-', end='')
 
     if com2Start in tLine:
         tLine=trimExtras(tLine, com2Start, com2End)
-        #print('#', end='')
-    #else:
-        #print('-', end='')
+        print('#', end='')
+    else:
+        print('-', end='')
     return tLine
 
-def trimExtras(line, lDelim, rDelim):
-    while lDelim in line:
-        tLeft = line[0:line.find(lDelim)]
-        tRight = line[line.find(rDelim)+3:]
-        line = tLeft + tRight
-    return line
+def trimExtras(tLine, lDelim, rDelim):
+    while lDelim in tLine:
+        tLeft = tLine[0:tLine.find(lDelim)]
+        tRight = tLine[tLine.find(rDelim)+3:]
+        tLine = tLeft + tRight
+    return tLine
 
 def firstAlpha(line):
     #print(len(line), end='')
@@ -352,14 +352,21 @@ def getLine(fr2, bGetStrongsFromFile):
     return tLine
 
 def handleStrongs(tLine, bAddNumbers):
+    tWordStart1 = '\\w '
+    tWordStart2 = '\\+w '
+    tWordEnd1 = '\\w*'
+    tWordEnd2 = '\\+w*'
+    tLine = handleStrongs2(tLine, bAddNumbers, tWordStart1, tWordEnd1)
+    tLine = handleStrongs2(tLine, bAddNumbers, tWordStart2, tWordEnd2)
+    return tLine
+
+def handleStrongs2(tLine, bAddNumbers, tWordStart, tWordEnd):
     atStrongs = ['H0430', 'H3068', 'H7307', 'H0136', 'H7706', 'H0410', 'G3841',
     'H1814', 'H7291', 'H3050', 'G1459', 'H0403', 'H0433', 'H4756', 'H1376',
     'H2657', 'H1166', 'H1167', 'H0113', 'H5633', 'H0426', 'G0026', 'G0025',
     'G0027', 'G2315', 'G2962', 'G2634', 'G2961', 'G1203', 'G2960', 'H8314',
     'G3323', 'G2519', 'G5580', 'H6212', 'G5546', 'G2209', 'G5547', 'H4899',
     'H4886', 'G0862', 'G4550', 'G4657', 'G4995', 'G5349', 'G5509']
-    tWordStart = '\\w '
-    tWordEnd = '\\w*'
     tLeft = ''
     tWord = ''
     tRight = ''
@@ -376,6 +383,7 @@ def handleStrongs(tLine, bAddNumbers):
             tStrongs = '<' + tStrongs + '>'
         else:
             tStrongs = ''
-        tRight = tLine[tLine.find(tWordEnd)+3:]
+        # tRight = tLine[tLine.find(tWordEnd)+3:]
+        tRight = tLine[tLine.find(tWordEnd)+len(tWordEnd):]
         tLine = tLeft + tWord + tStrongs + tRight
     return tLine

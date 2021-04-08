@@ -33,11 +33,6 @@ def main():
     tLine2 = ''
     buffer = ''
 
-    comStart = '\\f'
-    comEnd = '\\f*'
-    com2Start = '\\x'
-    com2End = '\\x*'
-
     tPath2 = 'generatedSQL'
 
     fw2 = open(tPath2 + '\\' + tFile, 'w', encoding="utf8")
@@ -97,22 +92,17 @@ def main():
                             tVerse2 = lpadNum(tVerse2[0:tVerse2.find(' ')])
 
                             tLine2 = swapQuotes(firstAlphaOrQuote(tLine2[3:].strip() + ' ' + para))
+                            tLine2 = trimComments(firstAlphaOrQuote(tLine2[3:].strip() + ' ' + para))
 
-                            if comStart in tLine2:
-                                tLine2=trimExtras(tLine2, comStart, comEnd)
-                                print('+', end='')
-                            else:
-                                print('-', end='')
-
-                            if com2Start in tLine2:
-                                tLine2=trimExtras(tLine2, com2Start, com2End)
-                                print('#', end='')
-                            else:
-                                print('-', end='')
-
+                            #============== ignore unhandled tags ==============
                             tLine2 = swapWords(tLine2, '\\wj*', '')
                             tLine2 = swapWords(tLine2, '\\wj ', '')
                             tLine2 = swapWords(tLine2, 'wj ', '')
+                            tLine2 = swapWords(tLine2, '\\qs*', '')
+                            tLine2 = swapWords(tLine2, '\\qs', '')
+                            tLine2 = swapWords(tLine2, '\\bk*', '')
+                            tLine2 = swapWords(tLine2, '\\bk', '')
+                            #============== ignore unhandled tags ==============
 
                             tLine2 = swapWords(tLine2, 'lamp stand', 'lampstand')
                             tLine2 = swapWords(tLine2, 'bondage', 'slavery')
