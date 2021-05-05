@@ -163,7 +163,6 @@ def main():
 
                             tLine2 = escapeQuotes(tLine2, '\"')
                             tLine2 = escapeQuotes(tLine2, '\'')
-                            #x = input(tLine1 + '|||' + tLine2)
 
                             writeLine(fw2, tBook2, tChapter2, tVerse2, tLine2)
                         else:
