@@ -65,122 +65,6 @@ def main():
 
     processStop()
 # ==============================================================================
-def processSame(tLine1, tLine2):
-# ==============================================================================
-    global tFileReadWNow
-    global fr2
-    global fw
-    global tBook
-
-    while tLine1 == tLine2:
-        print('.', end='')
-        fw.write(tLine1)
-        tBookNew = tLine1[82:85]
-        if tBookNew != tBook:
-            tBook = tBookNew
-            print('\n' + tBook)
-        tLine1 = tFileReadWNow.readline()
-        tLine2 = fr2.readline()
-
-    tTkLine1.set(tLine1[80:])
-    tTkLine2.set(tLine2[80:])
-    copyLine()
-# ==============================================================================
-def copyLine():
-# ==============================================================================
-    if bTkLine1.get():
-        tTkLine3.set(tTkLine1.get())
-    if bTkLine2.get():
-        tTkLine3.set(tTkLine2.get())
-# ==============================================================================
-def processStop():
-# ==============================================================================
-    global tFileReadWNow
-    global fr2
-    global fw
-    global bStarted
-
-    if bStarted:
-        tFileReadWNow.close()
-        fr2.close()
-        fw.close()
-# ==============================================================================
-def writeFileName(tFile1, tFile2, tPath):
-# ==============================================================================
-    bDoIt = True
-    i = 0
-    tI = ''
-    while bDoIt:
-        tWriteName = ''
-        tWriteName = tWriteName + os.path.basename(tFile1)[:-4]
-        tWriteName = tWriteName + '-C-'
-        tWriteName = tWriteName + os.path.basename(tFile2)[:-4]
-        tWriteName = tWriteName + tI
-        tWriteName = tWriteName + '.sql'
-        if os.path.isfile(tPath + '\\' + tWriteName):
-            i = i + 1
-            tI = '(' + str(i) + ')'
-        else:
-            bDoIt = False
-    return tPath + '\\' + tWriteName
-# ==============================================================================
-def startSession():
-# ==============================================================================
-    global iScriptLine
-    global stream
-    global p
-    global frames
-    global MMdata
-
-
-    p = pyaudio.PyAudio()
-    stream = None
-    stream = p.open(format = FORMAT,
-                    channels = CHANNELS,
-                    rate = RATE,
-                    input = True,
-                    frames_per_buffer = CHUNK)
-    frames = []
-    MMdata = np.zeros((0,3))
-    print("* starting recording session for line " + str(iScriptLine + start_line))
-# ==============================================================================
-def finishSession():
-# ==============================================================================
-    global iScriptLine
-    global stream
-    global p
-    global frames
-    global tWavFiles
-
-    bStart = True
-
-    print("* done recording session for line " + str(iScriptLine + start_line))
-
-    stream.stop_stream()
-    stream.close()
-    p.terminate()
-
-    frames_with_content = []
-
-    iLen = len(frames)
-    # for i in range(EDGE_MARGIN, iLen-EDGE_MARGIN):
-    for i in range(EDGE_MARGIN, iLen):
-        keepMarginWindowStart = max(0, i - KEEP_MARGIN)
-        keepMarginWindowEnd = min(iLen, i + KEEP_MARGIN+1)
-        if bKeepPauses and not bStart:
-            frames_with_content.append(frames[i])
-        elif np.sum(MMdata[keepMarginWindowStart:keepMarginWindowEnd, 2]) >= 1: # if this chunk, or any of its neighbouring chunks, "has content", include it.
-            frames_with_content.append(frames[i])
-            bStart = False
-
-    # tWavFile = tPath + '/output' + str(iScriptLine) + '.wav' # restore this if you want to go back to just numbered wave files
-    tWavFile = tBook + '_' + str(iChapter).zfill(3) + '_' + str(iScriptLine).zfill(3) + '.wav' # chapter and verse named wave files
-    tWavFiles = buildWavFileList(tWavFiles, tWavFile, iScriptLine)
-    # tWavFiles[iScriptLine] = tWavFile
-    writeWaveFile(tPath + '/' + tWavFile, frames_with_content, p.get_sample_size(FORMAT), CHANNELS, FORMAT, RATE)
-
-    stream = None
-# ==============================================================================
 def setupTopFrame(tTkFileOrig, tTkFileWNow, tTkFileMine):
 # ==============================================================================
     oFrameTop = tk.Frame(oTkWindow)
@@ -271,30 +155,6 @@ def setupMidFrame(tTkLine1, bTkLine1, tTkLine2, bTkLine2, tTkLine3, bTkLine3, tT
     oBut6 = tk.Button(oFrameMid, command=processWrite, text='Write to File')
     oBut6.grid(column = 3, row=iRow, padx = 5, pady = 5)
 # ==============================================================================
-def getFile1():
-# ==============================================================================
-    global tFile1
-    tFile1 = tk.filedialog.askopenfilename(initialdir = tPath1,
-                                           title = 'Select file',
-                                           filetypes = (('SeQueL files','*.sql'),('TeXT files','*.txt'),('all files','*.*')))
-    tTkFileOrig.set(os.path.basename(tFile1))
-# ==============================================================================
-def getFile2():
-# ==============================================================================
-    global tFile2
-    tFile2 = tk.filedialog.askopenfilename(initialdir = tPath1,
-                                           title = 'Select file',
-                                           filetypes = (('SeQueL files','*.sql'),('TeXT files','*.txt'),('all files','*.*')))
-    tTkFileMine.set(os.path.basename(tFile2))
-# ==============================================================================
-def getFile3():
-# ==============================================================================
-    global tFile2
-    tFile2 = tk.filedialog.askopenfilename(initialdir = tPath1,
-                                           title = 'Select file',
-                                           filetypes = (('SeQueL files','*.sql'),('TeXT files','*.txt'),('all files','*.*')))
-    tTkFileMine.set(os.path.basename(tFile2))
-# ==============================================================================
 def processStart():
 # ==============================================================================
     # global tTkFileOrig
@@ -327,6 +187,127 @@ def processStart():
             tLine2 = fr2.readline()
         processSame(tLine1, tLine2)
         bStarted = True
+# ==============================================================================
+def processSame(tLine1, tLine2):
+# ==============================================================================
+    global tFileReadWNow
+    global fr2
+    global fw
+    global tBook
+
+    while tLine1 == tLine2:
+        print('.', end='')
+        fw.write(tLine1)
+        tBookNew = tLine1[82:85]
+        if tBookNew != tBook:
+            tBook = tBookNew
+            print('\n' + tBook)
+        tLine1 = tFileReadWNow.readline()
+        tLine2 = fr2.readline()
+
+    tTkLine1.set(tLine1[80:])
+    tTkLine2.set(tLine2[80:])
+    copyLine()
+# ==============================================================================
+def copyLine():
+# ==============================================================================
+    if bTkLine1.get():
+        tTkLine3.set(tTkLine1.get())
+    if bTkLine2.get():
+        tTkLine3.set(tTkLine2.get())
+# ==============================================================================
+def processStop():
+# ==============================================================================
+    global tFileReadWNow
+    global fr2
+    global fw
+    global bStarted
+
+    if bStarted:
+        tFileReadWNow.close()
+        fr2.close()
+        fw.close()
+# ==============================================================================
+def startSession():
+# ==============================================================================
+    global iScriptLine
+    global stream
+    global p
+    global frames
+    global MMdata
+
+
+    p = pyaudio.PyAudio()
+    stream = None
+    stream = p.open(format = FORMAT,
+                    channels = CHANNELS,
+                    rate = RATE,
+                    input = True,
+                    frames_per_buffer = CHUNK)
+    frames = []
+    MMdata = np.zeros((0,3))
+    print("* starting recording session for line " + str(iScriptLine + start_line))
+# ==============================================================================
+def finishSession():
+# ==============================================================================
+    global iScriptLine
+    global stream
+    global p
+    global frames
+    global tWavFiles
+
+    bStart = True
+
+    print("* done recording session for line " + str(iScriptLine + start_line))
+
+    stream.stop_stream()
+    stream.close()
+    p.terminate()
+
+    frames_with_content = []
+
+    iLen = len(frames)
+    # for i in range(EDGE_MARGIN, iLen-EDGE_MARGIN):
+    for i in range(EDGE_MARGIN, iLen):
+        keepMarginWindowStart = max(0, i - KEEP_MARGIN)
+        keepMarginWindowEnd = min(iLen, i + KEEP_MARGIN+1)
+        if bKeepPauses and not bStart:
+            frames_with_content.append(frames[i])
+        elif np.sum(MMdata[keepMarginWindowStart:keepMarginWindowEnd, 2]) >= 1: # if this chunk, or any of its neighbouring chunks, "has content", include it.
+            frames_with_content.append(frames[i])
+            bStart = False
+
+    # tWavFile = tPath + '/output' + str(iScriptLine) + '.wav' # restore this if you want to go back to just numbered wave files
+    tWavFile = tBook + '_' + str(iChapter).zfill(3) + '_' + str(iScriptLine).zfill(3) + '.wav' # chapter and verse named wave files
+    tWavFiles = buildWavFileList(tWavFiles, tWavFile, iScriptLine)
+    # tWavFiles[iScriptLine] = tWavFile
+    writeWaveFile(tPath + '/' + tWavFile, frames_with_content, p.get_sample_size(FORMAT), CHANNELS, FORMAT, RATE)
+
+    stream = None
+# ==============================================================================
+def getFile1():
+# ==============================================================================
+    global tFile1
+    tFile1 = tk.filedialog.askopenfilename(initialdir = tPath1,
+                                           title = 'Select file',
+                                           filetypes = (('SeQueL files','*.sql'),('TeXT files','*.txt'),('all files','*.*')))
+    tTkFileOrig.set(os.path.basename(tFile1))
+# ==============================================================================
+def getFile2():
+# ==============================================================================
+    global tFile2
+    tFile2 = tk.filedialog.askopenfilename(initialdir = tPath1,
+                                           title = 'Select file',
+                                           filetypes = (('SeQueL files','*.sql'),('TeXT files','*.txt'),('all files','*.*')))
+    tTkFileMine.set(os.path.basename(tFile2))
+# ==============================================================================
+def getFile3():
+# ==============================================================================
+    global tFile2
+    tFile2 = tk.filedialog.askopenfilename(initialdir = tPath1,
+                                           title = 'Select file',
+                                           filetypes = (('SeQueL files','*.sql'),('TeXT files','*.txt'),('all files','*.*')))
+    tTkFileMine.set(os.path.basename(tFile2))
 # ==============================================================================
 def copyLine1():
 # ==============================================================================
