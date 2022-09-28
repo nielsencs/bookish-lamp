@@ -8,10 +8,8 @@ oRoot = tk.Tk()
 oRoot.withdraw()
 
 #globals
-# tPath1 = 'database\\'
-# tPath2 = 'eng-web_usfm_2020-06-01\\'
-tPath1 = ''
-tPath2 = ''
+tPath1 = 'generatedSQL\\'
+tPath2 = 'database\\'
 
 tFile1 = ''
 tFile2 = ''
