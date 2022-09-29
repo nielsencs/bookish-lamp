@@ -1,9 +1,12 @@
+
 # bookish-lamp
+
 Some basic tools to edit my bible, based on the WEB public domain Bible.
 
 This is VERY MUCH a WiP! The purpose is to prepare a full (without apocrypha) Bible text for my website BibleStudyMan.co.uk. I've opted (so far) to use the downloadable WEB USFM format files as my source. Then I convert them to SQL and modify as I learn and get inspiration for changes to modernise some passages and more closely match the original text.
 The following is some explanation of what the files are intented for:
 
+```
 Any folder starting 'eng-web-usfm' is a WEB download taken from https://ebible.org/find/details.php?id=eng-web&all=1 with date: eng-web-usfm_yyyy-mm-dd e.g. eng-web-usfm_2021-02-14 was from 14th February 2021
 eng-asv_usfm_2022-08-01              -    Like the WEB downloads, but the ASV on which the WEB is based https://ebible.org/find/details.php?id=eng-asv
 engasvbt_usfm_2022-02-09             -    Like the WEB downloads, but the Byzantine Text ASV https://ebible.org/find/details.php?id=engasvbt
@@ -34,3 +37,4 @@ Ignore the following (yes I know if I was doing this 'properly' they wouldn't be
 stripStrongs.py                      -    
 versesMaster_1.txt                   -    
 versesMaster_2.txt                   -    
+```
