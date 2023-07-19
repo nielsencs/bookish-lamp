@@ -1,3 +1,5 @@
+import os
+
 def trimComments(tLine):
     comStart = '\\f'
     comEnd = '\\f*'
@@ -387,3 +389,23 @@ def handleStrongs2(tLine, bAddNumbers, tWordStart, tWordEnd):
         tRight = tLine[tLine.find(tWordEnd)+len(tWordEnd):]
         tLine = tLeft + tWord + tStrongs + tRight
     return tLine
+
+def writeFileName(tFile1):
+    tWriteName = ''
+    tWriteName = tWriteName + os.path.basename(tFile1)[:-4]
+    tWriteName = tWriteName + 'NS'
+    tWriteName = tWriteName + '.sql'
+    return tWriteName
+
+def stripStrongs(tLine):
+    tStrongStart = '<'
+    tStrongEnd = '>'
+    tLeft = ''
+    tRight = ''
+    tDot = '.'
+    while tStrongStart in tLine:
+        tLeft = tLine[0:tLine.find(tStrongStart)]
+        tRight = tLine[tLine.find(tStrongEnd) + 1:]
+        tLine = tLeft + tRight
+        tDot = 's'
+    return tLine, tDot

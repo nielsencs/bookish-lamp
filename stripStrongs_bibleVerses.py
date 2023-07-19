@@ -1,20 +1,10 @@
-import tkinter as tk
-from tkinter import filedialog
-
 from bibleModule import writeFileName, stripStrongs
-
-oRoot = tk.Tk()
-oRoot.withdraw()
 
 #globals
 tPath1 = 'generatedSQL'
 
 def main():
-    tFile1 = filedialog.askopenfilename(initialdir = tPath1,
-                                       title = 'Select file',
-                                       filetypes = (('SeQueL files','*.sql'),('TeXT files','*.txt'),('all files','*.*')))
-
-    print(tFile1)
+    tFile1 = 'D:/Python/bookish-lamp/database/bibleVerses.sql'
 
     tWriteName = writeFileName(tFile1)
     fw = open(tPath1 + '\\' + tWriteName, 'w', encoding="utf8")
