@@ -112,13 +112,13 @@ def main():
                             tLine2 = swapWords(tLine2, 'lamp stand', 'lampstand')
                             tLine2 = swapWords(tLine2, 'bondage', 'slavery')
                             tLine2 = swapWords(tLine2, 'worshiper', 'worshipper')
-                            tLine2 = swapWords(tLine2, 'seed', 'offspring')
                             tLine2 = swapWords(tLine2, 'chastening', 'discipline')
 
                             if bOldTestament:
                                 if bGetStrongsFromFile:
                                     tLine2 = swapWords(tLine2, 'Yahweh', 'ForeverOne')
                                     tLine2 = swapWords(tLine2, 'herb', 'vegetation')
+                                    # tLine2 = swapWords(tLine2, 'Lord', 'MyLord')
                                 else:
                                     tLine2 = swapWords(tLine2, 'Yahweh', 'ForeverOne<H3068>')
                                     tLine2 = swapWords(tLine2, 'herb', 'vegetation<H6212>')
@@ -131,7 +131,8 @@ def main():
                                     tLine2 = addCode(tLine2, 'Almighty', '<H7706>')
                                     tLine2 = addCode(tLine2, 'pursue', '<H7291>')
                                     tLine2 = addCode(tLine2, 'persecute', '<H7291>')
-                            else:
+                                # tLine2 = swapWords(tLine2, 'Lord<H0136>', 'MyLord<H0136>')
+                            else: #new testament!
                                 tLine2 = swapWords(tLine2, 'Christ', 'AnointedOne<G5547>')
 
                                 tLine2 = swapWords(tLine2, 'beloved', 'dear-ones<G0027>')
@@ -144,9 +145,9 @@ def main():
 
                                 tLine2 = swapWords(tLine2, 'love<G0025>d', 'loved<G0025>')
                                 tLine2 = swapWords(tLine2, 'love<G0025>s', 'loves<G0025>')
-                                tLine2 = swapWords(tLine2, 'is love<G0025>', 'is love<G0026>')
-                                tLine2 = swapWords(tLine2, 'God\'s love<G0025>', 'God\'s love<G0026>')
-                                tLine2 = swapWords(tLine2, 'a love<G0025>', 'a love<G0026>')
+                                tLine2 = swapWords(tLine2, 'is love<G0026>', 'is love<G0026>')
+                                tLine2 = swapWords(tLine2, 'God\'s love<G0026>', 'God\'s love<G0026>')
+                                tLine2 = swapWords(tLine2, 'a love<G0026>', 'a love<G0026>')
 
                                 if not bGetStrongsFromFile:
                                     tLine2 = addCode(tLine2, 'master', '<G2962>')
