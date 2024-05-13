@@ -1,5 +1,6 @@
-did (sorted up to EZR)
+did ... - ...ed (sorted up to ISA)
 cast - throw/threw/thrown (sorted up to JER 23:33)
+neither - nor (sorted up to EXO)
 even in - in (even in Bethsaida - in Bethsaida)
 even the - the (even the whole bull)
 behold
@@ -8,9 +9,11 @@ were you - you were
 asked of him
 before - in front of
 this day - today
-
-
-
+out of - from
+shall it - it will/must
+shall not - mustn\'t
+you shall (delete)/do
+herewith - (delete)
 
 
 
@@ -22,9 +25,8 @@ have come on you - have happened?
 whereas - whilst?
 bore - carried
 bear - carry/give birth
-tell/told - ask
+tell/told - ask/say
 earth - ground
-neither - nor
 
 
 therein (sorted!)
@@ -45,3 +47,4 @@ make there - make ... there (sorted!)
 shall he - he shall/he will (sorted!)
 is come - has come (sorted!)
 It was so (sorted!)
+come in - enter (sorted!)
