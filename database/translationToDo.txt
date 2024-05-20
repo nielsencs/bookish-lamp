@@ -1,16 +1,20 @@
-cast - throw/threw/thrown (sorted up to LAM)
 neither - nor (sorted up to EXO)
-
-whereas - whilst?
+you shall not - don\'t/you won\'t/you mustn\'t (sorted up to NUM)
+shall not - mustn\'t
+shall it - it will/must
+you shall (delete)/do/you must
+should - would
+forth - out/???
+midst - midst/middle
+whereas - although
 whereof - of?
 herewith - (delete)
-thereon - on it
 utmost - farthest
-is fallen - has fallen
-brass - bronze
 no more - no longer
 likewise - the same/similarly
 stripes - lashes?
+persons - people/souls?
+by reason of - because of
 
 at even - in the evening
 even in - in (even in Bethsaida - in Bethsaida)
@@ -22,9 +26,6 @@ asked of him
 before - in front of
 this day - today
 out of - from
-shall it - it will/must
-shall not - mustn\'t
-you shall (delete)/do
 save - except
 pervert - corrupt
 
@@ -33,11 +34,13 @@ border - territory?
 : - ;
 ; - ,
 have come on you - have happened?
-
+flesh - meat?
 bore - carried
 bear - carry/give birth
 tell/told - ask/say
 earth - ground
+brass/bronze - copper-alloy?
+cast out demons - throw out demons?
 
 
 therein (sorted!)
@@ -63,3 +66,7 @@ such as - those who/just like/etc. (sorted!)
 as wife - [to be his] wife (sorted!)
 afar off - far away/[at/from] a distance/from afar (sorted!)
 did ... - ...ed (sorted!)
+is fallen - has fallen (sorted!)
+thereon - on it (sorted!)
+cast - throw/threw/thrown/rejected/shed (sorted!)
+take a wife - get a wife/have a wife (sorted!)
