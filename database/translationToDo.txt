@@ -1,25 +1,32 @@
-neither - nor (sorted up to EXO)
-you shall not - don\'t/you won\'t/you mustn\'t (sorted up to NUM)
+neither - nor (sorted up to LEV 11)
+you shall not - don\'t/you won\'t/you mustn\'t (sorted up to DEU)
+neither shall - nor will (sorted up to EZE 43)
 shall not - mustn\'t
 shall it - it will/must
 you shall (delete)/do/you must
 should - would
+behold
+
 forth - out/???
 midst - midst/middle
 whereas - although
 whereof - of?
+whereunto - to what purpose?
 herewith - (delete)
 utmost - farthest
 no more - no longer
+any more - any longer
 likewise - the same/similarly
-stripes - lashes?
 persons - people/souls?
 by reason of - because of
-
+visiting the iniquity - ???
+thereto - to it
+does ... - ...s
+thus - (delete)/so/this/like this/these
+in which - where
 at even - in the evening
 even in - in (even in Bethsaida - in Bethsaida)
 even the - the (even the whole bull)
-behold
 will I - I will
 were you - you were
 asked of him
@@ -70,3 +77,8 @@ is fallen - has fallen (sorted!)
 thereon - on it (sorted!)
 cast - throw/threw/thrown/rejected/shed (sorted!)
 take a wife - get a wife/have a wife (sorted!)
+humbled her - humiliated her (sorted!)
+thereby - by/by them/by it/by there/that way (sorted!)
+neither shall you - don\'t/you won\'t/you mustn\'t/nor (sorted!)
+stripes - lashes (sorted!)
+do sacrifice - make sacrifices (sorted!)
