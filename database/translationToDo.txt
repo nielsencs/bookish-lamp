@@ -1,12 +1,25 @@
-neither - nor (sorted up to LEV 11)
+### current ###
+neither - nor (sorted up to LEV)
 you shall not - don\'t/you won\'t/you mustn\'t (sorted up to DEU)
+you shall (delete)/do/you must/you will/you\'ll (sorted up to GEN)
 neither shall - nor will (sorted up to EZE 43)
-shall not - mustn\'t
-shall it - it will/must
-you shall (delete)/do/you must
-should - would
-behold
+out of - from (sorted up to GEN)
+went up from - went up from/left/stopped (sorted up to 2SM)
 
+### next ###
+shall it - it will/must
+shall not - will not/mustn\'t/won\'t
+should - would
+behold - behold/look/see/observe/note/get this?
+shed no blood - don't spill any blood?
+in want of - lacking?
+travail - labor
+offspring - descendants
+house - household
+them of - those of
+increase - produce (...yield its increase)
+
+### after that? ###
 forth - out/???
 midst - midst/middle
 whereas - although
@@ -32,10 +45,10 @@ were you - you were
 asked of him
 before - in front of
 this day - today
-out of - from
 save - except
 pervert - corrupt
 
+### to be considered ###
 gathered themselves together - gathered/assembled/got together/crowded?
 border - territory?
 : - ;
@@ -48,8 +61,14 @@ tell/told - ask/say
 earth - ground
 brass/bronze - copper-alloy?
 cast out demons - throw out demons?
+cubit - cubit/a forearm's worth/50cm/
+you\'ll/isn\'t - you&apos;ll/isn&apos;t
+
+...said \"...\" - ...said &ldquo;...&rdquo;
+...said \'...\' - ...said &lsquo;...&rsquo;
 
 
+### completed ###
 therein (sorted!)
 obeisance (sorted!)
 old was (sorted!)
