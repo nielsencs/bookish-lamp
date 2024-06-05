@@ -1,12 +1,30 @@
+########################################################
+### LordOfMine<H0136> to Lord<H0136> and BACK AGAIN! ###
+########################################################
+########### WEB comparison complete to EXO 6 ###########
+########################################################
+
 ### current ###
-neither - nor (sorted up to LEV)
+midst - midst/middle (sorted up to EXO)
+
+#=# after comparison with WEB #=#
+[^you] shall [regex] - (delete) (sorted up to EXO 6)
+you shall /do/you must/you will/you\'ll (sorted up to GEN)
 you shall not - don\'t/you won\'t/you mustn\'t (sorted up to DEU)
-you shall (delete)/do/you must/you will/you\'ll (sorted up to GEN)
-neither shall - nor will (sorted up to EZE 43)
+happen.* that[regex] - (delete) (sorted up to NUM)
 out of - from (sorted up to GEN)
+lest - for fear that
+even in - in (even in Bethsaida - in Bethsaida)
+even the - the (even the whole bull)
+at even - in the evening
+neither - nor (sorted up to LEV)
+neither shall - nor will (sorted up to EZE 43)
 went up from - went up from/left/stopped (sorted up to 2SM)
+diminished - reduced
+spoken - said
 
 ### next ###
+maiden - young woman?
 shall it - it will/must
 shall not - will not/mustn\'t/won\'t
 should - would
@@ -21,7 +39,6 @@ increase - produce (...yield its increase)
 
 ### after that? ###
 forth - out/???
-midst - midst/middle
 whereas - although
 whereof - of?
 whereunto - to what purpose?
@@ -37,9 +54,6 @@ thereto - to it
 does ... - ...s
 thus - (delete)/so/this/like this/these
 in which - where
-at even - in the evening
-even in - in (even in Bethsaida - in Bethsaida)
-even the - the (even the whole bull)
 will I - I will
 were you - you were
 asked of him
@@ -101,3 +115,6 @@ thereby - by/by them/by it/by there/that way (sorted!)
 neither shall you - don\'t/you won\'t/you mustn\'t/nor (sorted!)
 stripes - lashes (sorted!)
 do sacrifice - make sacrifices (sorted!)
+it happen that - (delete)/it happens (sorted!)
+let it happen.* that[regex] - May it be that (sorted!)
+that which - what (sorted!)
