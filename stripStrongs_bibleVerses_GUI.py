@@ -26,8 +26,7 @@ def gui():
     app_name = 'stripStrongs_bibleVerses_GUI.py'
 
     layout = [
-                [sg.Text(app_name, font=("Helvetica", 25))],
-                [sg.Button('Go', key='bGO')],
+                [sg.Button('Cut bibleVerses Strong\'s', key='bGO')],
             ]
 
     window = sg.Window(app_name, layout)
