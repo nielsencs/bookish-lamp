@@ -1,27 +1,41 @@
 ########################################################
-### LordOfMine<H0136> to Lord<H0136> and BACK AGAIN! ###
+############## don't forget to change to ###############
+
+LordOfMine<H0136> to Lord<H0136> and BACK AGAIN!
+
 ########################################################
-########### WEB comparison complete to EXO 6 ###########
+############## WEB comparison complete to ##############
+
+EXO 10
+
 ########################################################
 
 ### current ###
+none like me - no one like me (sorted up to SON)
 midst - midst/middle (sorted up to EXO)
 
 #=# after comparison with WEB #=#
-[^you] shall [regex] - (delete) (sorted up to EXO 6)
+[^y][^o][^u] shall[regex] - (delete) (sorted up to EXO 6)
 you shall /do/you must/you will/you\'ll (sorted up to GEN)
 you shall not - don\'t/you won\'t/you mustn\'t (sorted up to DEU)
+which are - (delete)
 happen.* that[regex] - (delete) (sorted up to NUM)
 out of - from (sorted up to GEN)
+were ...ed - had ...ed
 lest - for fear that
 even in - in (even in Bethsaida - in Bethsaida)
 even the - the (even the whole bull)
+even to - as far as?
 at even - in the evening
 neither - nor (sorted up to LEV)
 neither shall - nor will (sorted up to EZE 43)
 went up from - went up from/left/stopped (sorted up to 2SM)
 diminished - reduced
 spoken - said
+go in to - go in to [see]/enter
+grievous - dreadful/severe
+thrust.*out[regex]
+
 
 ### next ###
 maiden - young woman?
@@ -36,6 +50,7 @@ offspring - descendants
 house - household
 them of - those of
 increase - produce (...yield its increase)
+; and .[regex] - . T/. H/. I[etc.] (sorted up to GEN 13)
 
 ### after that? ###
 forth - out/???
