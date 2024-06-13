@@ -6,16 +6,29 @@ LordOfMine<H0136> to Lord<H0136> and BACK AGAIN!
 ########################################################
 ############## WEB comparison complete to ##############
 
-EXO 10
+EXO 23
 
 ########################################################
 
 ### current ###
+
+#=# BEFORE comparison with WEB #=#
 none like me - no one like me (sorted up to SON)
 midst - midst/middle (sorted up to EXO)
+: and .[regex] - . Y/. T/. I[etc.] (sorted up to EXO)
+NEXT 3 IN THIS ORDER! *
+spoiler - raider (sorted up to JDG 2:14)*
+despoiled - plundered (sorted up to JDG 2:14)*
+spoil - plunder (sorted up to EXO)*
+besides - besides/in addition to (sorted up to LEV)
+the angel of ForeverOne<H3068> - ForeverOne<H3068>\'s angel (sorted up to NUM 22:22)
+of ForeverOne<H3068> - ForeverOne<H3068>\'s EXCEPT NAME (sorted up to EXO)
+pursued<H7291> after - pursued<H7291> (sorted up to EXO)
 
-#=# after comparison with WEB #=#
+#=# AFTER comparison with WEB #=#
+behold - behold/look/see/observe/note/get this?
 [^y][^o][^u] shall[regex] - (delete) (sorted up to EXO 6)
+; and .[regex] - . T/. H/. I[etc.] (sorted up to GEN 13)
 you shall /do/you must/you will/you\'ll (sorted up to GEN)
 you shall not - don\'t/you won\'t/you mustn\'t (sorted up to DEU)
 which are - (delete)
@@ -26,7 +39,7 @@ lest - for fear that
 even in - in (even in Bethsaida - in Bethsaida)
 even the - the (even the whole bull)
 even to - as far as?
-at even - in the evening
+at evening - in the evening/evening of
 neither - nor (sorted up to LEV)
 neither shall - nor will (sorted up to EZE 43)
 went up from - went up from/left/stopped (sorted up to 2SM)
@@ -34,15 +47,15 @@ diminished - reduced
 spoken - said
 go in to - go in to [see]/enter
 grievous - dreadful/severe
-thrust.*out[regex]
-
+thrust.*out[regex] - thrown out/ejected/chucked out/deported?
+under the mountain - at the base of the mountain
 
 ### next ###
+come near to (the alter etc.) - approach
 maiden - young woman?
 shall it - it will/must
 shall not - will not/mustn\'t/won\'t
 should - would
-behold - behold/look/see/observe/note/get this?
 shed no blood - don't spill any blood?
 in want of - lacking?
 travail - labor
@@ -50,7 +63,6 @@ offspring - descendants
 house - household
 them of - those of
 increase - produce (...yield its increase)
-; and .[regex] - . T/. H/. I[etc.] (sorted up to GEN 13)
 
 ### after that? ###
 forth - out/???
