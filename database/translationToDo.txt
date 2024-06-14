@@ -6,7 +6,7 @@ LordOfMine<H0136> to Lord<H0136> and BACK AGAIN!
 ########################################################
 ############## WEB comparison complete to ##############
 
-EXO 23
+EXO 32:22
 
 ########################################################
 
@@ -24,10 +24,12 @@ besides - besides/in addition to (sorted up to LEV)
 the angel of ForeverOne<H3068> - ForeverOne<H3068>\'s angel (sorted up to NUM 22:22)
 of ForeverOne<H3068> - ForeverOne<H3068>\'s EXCEPT NAME (sorted up to EXO)
 pursued<H7291> after - pursued<H7291> (sorted up to EXO)
+over against - opposite (sorted up to NUM)
+after - according to (e.g. according to the shekel)(sorted up to LEV 5:15)
 
 #=# AFTER comparison with WEB #=#
-behold - behold/look/see/observe/note/get this?
 [^y][^o][^u] shall[regex] - (delete) (sorted up to EXO 6)
+behold - behold/look/see/observe/note/get this?
 ; and .[regex] - . T/. H/. I[etc.] (sorted up to GEN 13)
 you shall /do/you must/you will/you\'ll (sorted up to GEN)
 you shall not - don\'t/you won\'t/you mustn\'t (sorted up to DEU)
@@ -49,6 +51,7 @@ go in to - go in to [see]/enter
 grievous - dreadful/severe
 thrust.*out[regex] - thrown out/ejected/chucked out/deported?
 under the mountain - at the base of the mountain
+fourth - quarter
 
 ### next ###
 come near to (the alter etc.) - approach
@@ -63,6 +66,7 @@ offspring - descendants
 house - household
 them of - those of
 increase - produce (...yield its increase)
+molten - molded/cast (e.g. molten calf)
 
 ### after that? ###
 forth - out/???
