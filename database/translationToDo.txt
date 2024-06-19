@@ -6,7 +6,7 @@ LordOfMine<H0136> to Lord<H0136> and BACK AGAIN!
 ########################################################
 ############## WEB comparison complete to ##############
 
-EXO 32:22
+EXO
 
 ########################################################
 
@@ -28,16 +28,33 @@ over against - opposite (sorted up to NUM)
 after - according to (e.g. according to the shekel)(sorted up to LEV 5:15)
 
 #=# AFTER comparison with WEB #=#
+came out of - left (sorted up to EXO)
+out of - out of/from/in (sorted up to EXO)
+deal with - treat (sorted up to EXO)
+diminish - reduce (sorted up to EXO)
+no one shall - let no one (sorted up to EXO)
+moreover - furthermore/in addition (sorted up to EXO)
+by reason - because (sorted up to EXO)
+its increase - its produce (sorted up to EXO)
+speak to - speak to/tell (sorted up to EXO)
+that they - to
+that we may - to/so we can (sorted up to EXO)
+come to pass - (delete) (sorted up to EXO)
+bring it to pass - bring it about (sorted up to EXO)
+
+you shall .[regex] /do/you must/you will/you\'ll (sorted up to EXO 12)
+you shall not - don\'t/you won\'t/you mustn\'t (sorted up to DEU)
+he shall - let him (sorted up to EXO 20)
 [^y][^o][^u] shall[regex] - (delete) (sorted up to EXO 6)
+
+make no - don\'t make any
+from year to year - every year (sorted up to EXO)
 behold - behold/look/see/observe/note/get this?
 ; and .[regex] - . T/. H/. I[etc.] (sorted up to GEN 13)
-you shall /do/you must/you will/you\'ll (sorted up to GEN)
-you shall not - don\'t/you won\'t/you mustn\'t (sorted up to DEU)
 which are - (delete)
 happen.* that[regex] - (delete) (sorted up to NUM)
-out of - from (sorted up to GEN)
 were ...ed - had ...ed
-lest - for fear that
+lest - for fear that/in case
 even in - in (even in Bethsaida - in Bethsaida)
 even the - the (even the whole bull)
 even to - as far as?
@@ -45,13 +62,18 @@ at evening - in the evening/evening of
 neither - nor (sorted up to LEV)
 neither shall - nor will (sorted up to EZE 43)
 went up from - went up from/left/stopped (sorted up to 2SM)
-diminished - reduced
+went out from - left (sorted up to ???)
 spoken - said
 go in to - go in to [see]/enter
 grievous - dreadful/severe
 thrust.*out[regex] - thrown out/ejected/chucked out/deported?
 under the mountain - at the base of the mountain
 fourth - quarter
+depart from - leave
+residue - rest
+in which - where
+the thing that - what
+its appointed season - the apointed time?
 
 ### next ###
 come near to (the alter etc.) - approach
@@ -67,6 +89,7 @@ house - household
 them of - those of
 increase - produce (...yield its increase)
 molten - molded/cast (e.g. molten calf)
+earth - earth/land/ground
 
 ### after that? ###
 forth - out/???
@@ -79,16 +102,14 @@ no more - no longer
 any more - any longer
 likewise - the same/similarly
 persons - people/souls?
-by reason of - because of
 visiting the iniquity - ???
 thereto - to it
 does ... - ...s
 thus - (delete)/so/this/like this/these
-in which - where
 will I - I will
 were you - you were
 asked of him
-before - in front of
+before - before/in front of
 this day - today
 save - except
 pervert - corrupt
@@ -103,15 +124,14 @@ flesh - meat?
 bore - carried
 bear - carry/give birth
 tell/told - ask/say
-earth - ground
 brass/bronze - copper-alloy?
 cast out demons - throw out demons?
 cubit - cubit/a forearm's worth/50cm/
 you\'ll/isn\'t - you&apos;ll/isn&apos;t
-
+the name of ForeverOne - the name of ForeverOne/the name ForeverOne (remove 'of'! e.g. proclaim the name ForeverOne)
 ...said \"...\" - ...said &ldquo;...&rdquo;
 ...said \'...\' - ...said &lsquo;...&rsquo;
-
+pertain - associated with/belonging to?
 
 ### completed ###
 therein (sorted!)
