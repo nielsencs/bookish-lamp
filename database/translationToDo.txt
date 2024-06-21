@@ -28,8 +28,9 @@ over against - opposite (sorted up to NUM)
 after - according to (e.g. according to the shekel)(sorted up to LEV 5:15)
 
 #=# AFTER comparison with WEB #=#
-came out of - left (sorted up to EXO)
-out of - out of/from/in (sorted up to EXO)
+NEXT 2 IN THIS ORDER! *
+came out of - left (sorted up to EXO)*
+out of - out of/from/in (sorted up to EXO)*
 deal with - treat (sorted up to EXO)
 diminish - reduce (sorted up to EXO)
 no one shall - let no one (sorted up to EXO)
@@ -37,13 +38,16 @@ moreover - furthermore/in addition (sorted up to EXO)
 by reason - because (sorted up to EXO)
 its increase - its produce (sorted up to EXO)
 speak to - speak to/tell (sorted up to EXO)
-that they - to
-that we may - to/so we can (sorted up to EXO)
+NEXT 5 IN THIS ORDER! *
+that he may - so he can/for him to/that he would/he would/so he would (sorted up to EXO)*
+that they may - so they can/so they/so they will (sorted up to EXO)*
+that they not - so they don\'t (sorted up to EXO)*
+that they - so they/to/they (sorted up to EXO)*
+that we may - to/so we can (sorted up to EXO)*
 come to pass - (delete) (sorted up to EXO)
 bring it to pass - bring it about (sorted up to EXO)
-
-you shall .[regex] /do/you must/you will/you\'ll (sorted up to EXO 12)
 you shall not - don\'t/you won\'t/you mustn\'t (sorted up to DEU)
+you shall .[regex] /do/you must/you will/you\'ll (sorted up to EXO 29)
 he shall - let him (sorted up to EXO 20)
 [^y][^o][^u] shall[regex] - (delete) (sorted up to EXO 6)
 
@@ -65,6 +69,7 @@ went up from - went up from/left/stopped (sorted up to 2SM)
 went out from - left (sorted up to ???)
 spoken - said
 go in to - go in to [see]/enter
+go from - leave
 grievous - dreadful/severe
 thrust.*out[regex] - thrown out/ejected/chucked out/deported?
 under the mountain - at the base of the mountain
@@ -74,6 +79,7 @@ residue - rest
 in which - where
 the thing that - what
 its appointed season - the apointed time?
+entreat - beg/implore/beseech/plead with/supplicate/pray/ask
 
 ### next ###
 come near to (the alter etc.) - approach
