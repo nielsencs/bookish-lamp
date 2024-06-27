@@ -56,7 +56,7 @@ def main():
                             t_verse_text  = t_line[verse_index:verse_index + 77]
                             t_verse_num = get_verse_number(t_verse_text)
                             if t_verse_num > '0':
-                                fw.write(make_sql(t_book, t_chapter, t_verse_num) + t_verse_text)
+                                fw.write(make_sql(t_book, t_chapter, t_verse_num))
                             t_line  = t_line[verse_index + 1:]
                     t_line = fr.readline()                   
                 fr.close()
