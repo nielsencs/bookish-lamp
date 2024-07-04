@@ -39,7 +39,7 @@ def process_file(file_path, output_file):
                 verse_text = line[verse_index:verse_index + 77]
                 verse_num = get_verse_number(verse_text)
                 if verse_num > '0':
-                    output_file.write(make_sql(book_code, chapter, verse_num, verse_text))
+                    output_file.write(make_sql(book_code, chapter, lpadNum(verse_num), verse_text))
                 line = line[verse_index + 1:]
 
 def main():
