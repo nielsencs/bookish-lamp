@@ -1,3 +1,12 @@
+DROP TABLE IF EXISTS `paragraphs`;
+CREATE TABLE `paragraphs` (
+  `paraID` int(11) NOT NULL AUTO_INCREMENT,
+  `bookCode` varchar(3) NOT NULL,
+  `chapter` smallint(4) NOT NULL,
+  `verseNumber` smallint(4) NOT NULL,
+  PRIMARY KEY (`paraID`),
+  UNIQUE KEY `book-chapter-verse` (`bookCode`,`chapter`,`verseNumber`)
+) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 INSERT INTO `paragraphs` (`bookCode`, `chapter`, `verseNumber`) VALUES ('1CH',   1,   1);
 INSERT INTO `paragraphs` (`bookCode`, `chapter`, `verseNumber`) VALUES ('1CH',   1,   5);
 INSERT INTO `paragraphs` (`bookCode`, `chapter`, `verseNumber`) VALUES ('1CH',   1,   8);
