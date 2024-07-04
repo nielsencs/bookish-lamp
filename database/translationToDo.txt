@@ -1,7 +1,7 @@
 ########################################################
 ############## don't forget to change to ###############
 
-LordOfMine<H0136> to Lord<H0136> and BACK AGAIN!
+LordOfMine{H0136} to Lord{H0136} and BACK AGAIN!
 
 ########################################################
 ############## WEB comparison complete to ##############
@@ -21,9 +21,9 @@ spoiler - raider (sorted up to JDG 2:14)*
 despoiled - plundered (sorted up to JDG 2:14)*
 spoil - plunder (sorted up to EXO)*
 besides - besides/in addition to (sorted up to LEV)
-the angel of ForeverOne<H3068> - ForeverOne<H3068>\'s angel (sorted up to NUM 22:22)
-of ForeverOne<H3068> - ForeverOne<H3068>\'s EXCEPT NAME (sorted up to EXO)
-pursued<H7291> after - pursued<H7291> (sorted up to EXO)
+the angel of ForeverOne{H3068} - ForeverOne{H3068}\'s angel (sorted up to NUM 22:22)
+of ForeverOne{H3068} - ForeverOne{H3068}\'s EXCEPT NAME (sorted up to EXO)
+pursued{H7291} after - pursued{H7291} (sorted up to EXO)
 over against - opposite (sorted up to NUM)
 after - according to (e.g. according to the shekel)(sorted up to LEV 5:15)
 

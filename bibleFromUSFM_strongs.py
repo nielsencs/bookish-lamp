@@ -40,8 +40,7 @@ def main():
     bOldTestament = True
     tBook2 = ''
     tChapter2 = ''
-    tVerseNum = ''
-    tVerseText = ''
+    tVerse2 = ''
     tLetterText = ''
 
     doHeader(fw2)

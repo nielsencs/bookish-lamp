@@ -1,0 +1,6 @@
+UPDATE `verses`
+INNER JOIN `paragraphs`
+ON `paragraphs`.`bookCode` = `verses`.`bookCode`
+AND `paragraphs`.`chapter` = `verses`.`chapter`
+AND `paragraphs`.`verseNumber` = `verses`.`verseNumber`
+SET `verses`.`verseText` = CONCAT('<p>', `verses`.`verseText`);
