@@ -26,15 +26,14 @@ of ForeverOne{H3068} - ForeverOne{H3068}\'s EXCEPT NAME (sorted up to EXO)
 pursued{H7291} after - pursued{H7291} (sorted up to EXO)
 over against - opposite (sorted up to NUM)
 after - according to (e.g. according to the shekel)(sorted up to LEV 5:15)
-
-
 doings - actions
 
-
 #=# AFTER comparison with WEB #=#
+
 NEXT 2 IN THIS ORDER! *
 came out of - left (sorted up to EXO)*
 out of - out of/from/in (sorted up to EXO)*
+
 deal with - treat (sorted up to EXO)
 diminish - reduce (sorted up to EXO)
 no one shall - let no one (sorted up to EXO)
@@ -42,35 +41,42 @@ moreover - furthermore/in addition (sorted up to EXO)
 by reason - because (sorted up to EXO)
 its increase - its produce (sorted up to EXO)
 speak to - speak to/tell (sorted up to EXO)
+
 NEXT 5 IN THIS ORDER! *
 that he may - so he can/for him to/that he would/he would/so he would (sorted up to EXO)*
 that they may - so they can/so they/so they will (sorted up to EXO)*
 that they not - so they don\'t (sorted up to EXO)*
 that they - so they/to/they (sorted up to EXO)*
 that we may - to/so we can (sorted up to EXO)*
+
 come to pass - (delete) (sorted up to EXO)
 bring it to pass - bring it about (sorted up to EXO)
-you shall not - don\'t/you won\'t/you mustn\'t (sorted up to DEU)
-you shall .[regex] /do/you must/you will/you\'ll (sorted up to EXO 29)
-he shall - let him (sorted up to EXO 20)
-[^y][^o][^u] shall[regex] - (delete) (sorted up to EXO 6)
 
-make no - don\'t make any
+you shall not - don\'t/you won\'t/you mustn\'t (sorted up to DEU)
+you shall .[regex] /do/you must/you will/you\'ll (sorted up to EXO)
+he shall - let him/he must/he should/he is to (sorted up to EXO)
+they shall - let them/they must/they should/they are to/they will (sorted up to EXO)
+[^y][^o][^u] shall[regex] - (delete)/will/is to/are to/may/can/let (sorted up to EXO 27:16)
+
+make no - don\'t make any/not make any (sorted up to EXO)
 from year to year - every year (sorted up to EXO)
+happen.* that[regex] - (delete) (sorted up to NUM)
+neither - nor (sorted up to LEV)
+neither shall - nor will (sorted up to EZE 43)
+went up from - went up from/left/stopped (sorted up to 2SM)
+went out from - left (sorted up to ???)
+forefront - front
+
+### next ###
 behold - behold/look/see/observe/note/get this?
 ; and .[regex] - . T/. H/. I[etc.] (sorted up to GEN 13)
 which are - (delete)
-happen.* that[regex] - (delete) (sorted up to NUM)
 were ...ed - had ...ed
 lest - for fear that/in case
 even in - in (even in Bethsaida - in Bethsaida)
 even the - the (even the whole bull)
 even to - as far as?
 at evening - in the evening/evening of
-neither - nor (sorted up to LEV)
-neither shall - nor will (sorted up to EZE 43)
-went up from - went up from/left/stopped (sorted up to 2SM)
-went out from - left (sorted up to ???)
 spoken - said
 go in to - go in to [see]/enter
 go from - leave
@@ -85,7 +91,6 @@ the thing that - what
 its appointed season - the apointed time?
 entreat - beg/implore/beseech/plead with/supplicate/pray/ask
 
-### next ###
 come near to (the alter etc.) - approach
 maiden - young woman?
 shall it - it will/must
