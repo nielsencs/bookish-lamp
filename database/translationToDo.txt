@@ -1,13 +1,13 @@
 ########################################################
-############## don't forget to change to ###############
+################ don't forget to change ################
 
 LordOfMine{H0136} to Lord{H0136} and BACK AGAIN!
 
 ########################################################
-############## WEB comparison complete to ##############
-
+############### WEB comparison completed ###############
+GEN
 EXO
-
+GAL
 ########################################################
 
 ### current ###
@@ -56,7 +56,7 @@ you shall not - don\'t/you won\'t/you mustn\'t (sorted up to DEU)
 you shall .[regex] /do/you must/you will/you\'ll (sorted up to EXO)
 he shall - let him/he must/he should/he is to (sorted up to EXO)
 they shall - let them/they must/they should/they are to/they will (sorted up to EXO)
-[^y][^o][^u] shall[regex] - (delete)/will/is to/are to/may/can/let (sorted up to EXO 27:16)
+[^y][^o][^u] shall[regex] - (delete)/will/is to/are to/may/can/let (sorted up to EXO 35)
 
 make no - don\'t make any/not make any (sorted up to EXO)
 from year to year - every year (sorted up to EXO)
@@ -69,14 +69,14 @@ forefront - front (sorted up to EXO)
 
 ### next ###
 behold - behold/look/see/observe/note/get this?
+at evening - in the evening/evening of
 ; and .[regex] - . T/. H/. I[etc.] (sorted up to GEN 13)
 which are - (delete)
 were ...ed - had ...ed
 lest - for fear that/in case
 even in - in (even in Bethsaida - in Bethsaida)
 even the - the (even the whole bull)
-even to - as far as?
-at evening - in the evening/evening of
+even to - to/as far as?
 spoken - said
 go in to - go in to [see]/enter
 go from - leave
