@@ -440,8 +440,8 @@ def writeFileName(tFile1):
     return tWriteName
 
 def stripStrongs(tLine):
-    tStrongStart = '<'
-    tStrongEnd = '>'
+    tStrongStart = '{'
+    tStrongEnd = '}'
     tLeft = ''
     tRight = ''
     tDot = '.'
