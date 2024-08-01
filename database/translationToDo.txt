@@ -64,8 +64,8 @@ happen.* that[regex] - (delete) (sorted up to NUM)
 neither - nor (sorted up to LEV)
 neither shall - nor will (sorted up to EZE 43)
 went up from - went up from/left/stopped (sorted up to 2SM)
-went out from - left (sorted up to ???)
-forefront - front
+went out from - left (sorted up to EXO)
+forefront - front (sorted up to EXO)
 
 ### next ###
 behold - behold/look/see/observe/note/get this?
