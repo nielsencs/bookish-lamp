@@ -3,6 +3,12 @@ import PySimpleGUI as sg
 #globals
 tPath1 = 'generatedSQL'
 
+def stripParas(tString):
+    return tString.replace('<p>', '').replace('</p>', '')
+
+def stripQuotes(tString):
+    return tString.replace('\\\"\\\'', '')
+
 def writeBibleVerses():
     tFile1 = 'D:/Python/bookish-lamp/database/bibleVerses.sql'
 
@@ -13,6 +19,9 @@ def writeBibleVerses():
     tLine1 = fr1.readline()
 
     while tLine1:
+        tLine1 = stripParas(tLine1)
+        tLine1 = stripQuotes(tLine1)
+        
         tLine1, tDot = stripStrongs(tLine1)
         print(tDot, end='')
         fw.write(tLine1)
