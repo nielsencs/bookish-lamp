@@ -7,6 +7,7 @@ LordOfMine{H0136} to Lord{H0136} and BACK AGAIN!
 ############### WEB comparison completed ###############
 GEN
 EXO
+LEV 1-5
 GAL
 ########################################################
 
@@ -19,14 +20,15 @@ midst - midst/middle (sorted up to EXO)
 NEXT 3 IN THIS ORDER! *
 spoiler - raider (sorted up to JDG 2:14)*
 despoiled - plundered (sorted up to JDG 2:14)*
-spoil - plunder (sorted up to EXO)*
+spoil - plunder (sorted up to NUM 30)*
 besides - besides/in addition to (sorted up to LEV)
 the angel of ForeverOne{H3068} - ForeverOne{H3068}\'s angel (sorted up to NUM 22:22)
 of ForeverOne{H3068} - ForeverOne{H3068}\'s EXCEPT NAME (sorted up to EXO)
-pursued{H7291} after - pursued{H7291} (sorted up to EXO)
+pursued{H7291} after - pursued{H7291} (sorted up to DEU 10)
 over against - opposite (sorted up to NUM)
-after - according to (e.g. according to the shekel)(sorted up to LEV 5:15)
-doings - actions
+after - according to (e.g. according to the shekel)(sorted up to LEV)
+doings - actions (sorted up to DEU 27)
+the whole - all of it (e.g. offer all of it on the altar)(sorted up to LEV)
 
 #=# AFTER comparison with WEB #=#
 
@@ -56,7 +58,7 @@ you shall not - don\'t/you won\'t/you mustn\'t (sorted up to DEU)
 you shall .[regex] /do/you must/you will/you\'ll (sorted up to EXO)
 he shall - let him/he must/he should/he is to (sorted up to EXO)
 they shall - let them/they must/they should/they are to/they will (sorted up to EXO)
-[^y][^o][^u] shall[regex] - (delete)/will/is to/are to/may/can/let (sorted up to EXO 35)
+[^y][^o][^u] shall[regex] - (delete)/will/is to/are to/may/can/let (sorted up to EXO)
 
 make no - don\'t make any/not make any (sorted up to EXO)
 from year to year - every year (sorted up to EXO)
@@ -66,6 +68,10 @@ neither shall - nor will (sorted up to EZE 43)
 went up from - went up from/left/stopped (sorted up to 2SM)
 went out from - left (sorted up to EXO)
 forefront - front (sorted up to EXO)
+
+
+#######################################################################################
+
 
 ### next ###
 behold - behold/look/see/observe/note/get this?
@@ -184,3 +190,4 @@ do sacrifice - make sacrifices (sorted!)
 it happen that - (delete)/it happens (sorted!)
 let it happen.* that[regex] - May it be that (sorted!)
 that which - what (sorted!)
+blemish - defect (sorted!)
