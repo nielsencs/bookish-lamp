@@ -7,7 +7,7 @@ LordOfMine{H0136} to Lord{H0136} and BACK AGAIN!
 ############### WEB comparison completed ###############
 GEN
 EXO
-LEV 1-5
+LEV 1-8:8
 GAL
 ########################################################
 
