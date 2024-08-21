@@ -9,6 +9,9 @@ def stripParas(tString):
 def stripQuotes(tString):
     return tString.replace('\\\"\\\'', '')
 
+def swapLords(tString):
+    return tString.replace('LordOfMine{H0136}', 'Lord{H0136}')
+
 def writeBibleVerses():
     tFile1 = 'D:/Python/bookish-lamp/database/bibleVerses.sql'
 
@@ -21,6 +24,7 @@ def writeBibleVerses():
     while tLine1:
         tLine1 = stripParas(tLine1)
         tLine1 = stripQuotes(tLine1)
+        tLine1 = swapLords(tLine1)
         
         tLine1, tDot = stripStrongs(tLine1)
         print(tDot, end='')
