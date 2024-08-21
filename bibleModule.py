@@ -1,29 +1,29 @@
 import os
 
-def trimComments(tLine):
+def trimComments(t_line):
     comStart = '\\f'
     comEnd = '\\f*'
     com2Start = '\\x'
     com2End = '\\x*'
-    if comStart in tLine:
-        tLine=trimExtras(tLine, comStart, comEnd)
+    if comStart in t_line:
+        t_line=trimExtras(t_line, comStart, comEnd)
         print('+', end='')
     else:
         print('-', end='')
 
-    if com2Start in tLine:
-        tLine=trimExtras(tLine, com2Start, com2End)
+    if com2Start in t_line:
+        t_line=trimExtras(t_line, com2Start, com2End)
         print('#', end='')
     else:
         print('-', end='')
-    return tLine
+    return t_line
 
-def trimExtras(tLine, lDelim, rDelim):
-    while lDelim in tLine:
-        tLeft = tLine[0:tLine.find(lDelim)]
-        tRight = tLine[tLine.find(rDelim)+3:]
-        tLine = tLeft + tRight
-    return tLine
+def trimExtras(t_line, lDelim, rDelim):
+    while lDelim in t_line:
+        t_left = t_line[0:t_line.find(lDelim)]
+        t_right = t_line[t_line.find(rDelim)+3:]
+        t_line = t_left + t_right
+    return t_line
 
 def firstAlpha(line):
     #print(len(line), end='')
@@ -83,13 +83,13 @@ def trimAngleBrackets(line):
     bDoIt = True
     while bDoIt:
         if lAngle in line:
-            tLeft = line[0:line.find(lAngle)]
+            t_left = line[0:line.find(lAngle)]
             #print('left part:')
-            #print(tLeft)
-            tRight = line[line.find(rAngle)+1:]
+            #print(t_left)
+            t_right = line[line.find(rAngle)+1:]
             #print('right part:')
-            #print(tRight)
-            line = tLeft + tRight
+            #print(t_right)
+            line = t_left + t_right
             #print('joined:')
             #print(line)
         else:
@@ -348,21 +348,21 @@ def writeLine(fw, tBook, tChapter, tVerseNum, tVerseText):
     fw.write('INSERT INTO `verses` (`bookCode`, `chapter`, `verseNumber`, `verseText`) VALUES ')
     fw.write('(\'' + tBook + '\',' + tChapter + ',' + tVerseNum + ', \'' + tVerseText.strip() + '\');\n')
 
-def getLine(fr2, bGetStrongsFromFile):
-    tLine = fr2.readline()
-    tLine = handleStrongs(tLine, bGetStrongsFromFile)
-    return tLine
+def get_line(fr2, bGetStrongsFromFile):
+    t_line = fr2.readline()
+    t_line = handleStrongs(t_line, bGetStrongsFromFile)
+    return t_line
 
-def handleStrongs(tLine, bAddNumbers):
+def handleStrongs(t_line, bAddNumbers):
     tWordStart1 = '\\w '
     tWordStart2 = '\\+w '
     tWordEnd1 = '\\w*'
     tWordEnd2 = '\\+w*'
-    tLine = handleStrongs2(tLine, bAddNumbers, tWordStart1, tWordEnd1)
-    tLine = handleStrongs2(tLine, bAddNumbers, tWordStart2, tWordEnd2)
-    return tLine
+    t_line = handleStrongs2(t_line, bAddNumbers, tWordStart1, tWordEnd1)
+    t_line = handleStrongs2(t_line, bAddNumbers, tWordStart2, tWordEnd2)
+    return t_line
 
-def handleStrongs2(tLine, bAddNumbers, tWordStart, tWordEnd):
+def handleStrongs2(t_line, bAddNumbers, tWordStart, tWordEnd):
     atStrongs = [
                  'H0113',
                  'H0136',
@@ -411,13 +411,13 @@ def handleStrongs2(tLine, bAddNumbers, tWordStart, tWordEnd):
                  'G5547',
                  'G5580'
                 ]
-    tLeft = ''
+    t_left = ''
     tWord = ''
-    tRight = ''
-    while tWordStart in tLine:
+    t_right = ''
+    while tWordStart in t_line:
         iStrong = 0
-        tLeft = tLine[0:tLine.find(tWordStart)]
-        tStrongs = tLine[tLine.find(tWordStart)+3:tLine.find(tWordEnd):]
+        t_left = t_line[0:t_line.find(tWordStart)]
+        tStrongs = t_line[t_line.find(tWordStart)+3:t_line.find(tWordEnd):]
         iStrong = tStrongs.find('|strong=')
         tWord = tStrongs[0:iStrong]
         tStrongs = tStrongs[iStrong:]
@@ -427,10 +427,10 @@ def handleStrongs2(tLine, bAddNumbers, tWordStart, tWordEnd):
             tStrongs = '<' + tStrongs + '>'
         else:
             tStrongs = ''
-        # tRight = tLine[tLine.find(tWordEnd)+3:]
-        tRight = tLine[tLine.find(tWordEnd)+len(tWordEnd):]
-        tLine = tLeft + tWord + tStrongs + tRight
-    return tLine
+        # t_right = t_line[t_line.find(tWordEnd)+3:]
+        t_right = t_line[t_line.find(tWordEnd)+len(tWordEnd):]
+        t_line = t_left + tWord + tStrongs + t_right
+    return t_line
 
 def writeFileName(tFile1):
     tWriteName = ''
@@ -439,28 +439,28 @@ def writeFileName(tFile1):
     tWriteName = tWriteName + '.sql'
     return tWriteName
 
-def stripStrongs(tLine):
-    tStrongStart = '{'
-    tStrongEnd = '}'
-    tLeft = ''
-    tRight = ''
-    tDot = '.'
-    while tStrongStart in tLine:
-        tLeft = tLine[0:tLine.find(tStrongStart)]
-        tRight = tLine[tLine.find(tStrongEnd) + 1:]
-        tLine = tLeft + tRight
-        tDot = 's'
-    return tLine, tDot
+def stripStrongs(t_line):
+    t_strong_start = '{'
+    t_strong_end = '}'
+    t_left = ''
+    t_right = ''
+    t_dot = '.'
+    while t_strong_start in t_line:
+        t_left = t_line[0:t_line.find(t_strong_start)]
+        t_right = t_line[t_line.find(t_strong_end) + 1:]
+        t_line = t_left + t_right
+        t_dot = 's'
+    return t_line, t_dot
 
-def strip_strongs_old(tLine):
-    tStrongStart = '<'
-    tStrongEnd = '>'
-    tLeft = ''
-    tRight = ''
-    tDot = '.'
-    while tStrongStart in tLine:
-        tLeft = tLine[0:tLine.find(tStrongStart)]
-        tRight = tLine[tLine.find(tStrongEnd) + 1:]
-        tLine = tLeft + tRight
-        tDot = 's'
-    return tLine, tDot
+def strip_strongs_old(t_line):
+    t_strong_start = '<'
+    t_strong_end = '>'
+    t_left = ''
+    t_right = ''
+    t_dot = '.'
+    while t_strong_start in t_line:
+        t_left = t_line[0:t_line.find(t_strong_start)]
+        t_right = t_line[t_line.find(t_strong_end) + 1:]
+        t_line = t_left + t_right
+        t_dot = 's'
+    return t_line, t_dot
