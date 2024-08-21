@@ -451,3 +451,16 @@ def stripStrongs(tLine):
         tLine = tLeft + tRight
         tDot = 's'
     return tLine, tDot
+
+def strip_strongs_old(tLine):
+    tStrongStart = '<'
+    tStrongEnd = '>'
+    tLeft = ''
+    tRight = ''
+    tDot = '.'
+    while tStrongStart in tLine:
+        tLeft = tLine[0:tLine.find(tStrongStart)]
+        tRight = tLine[tLine.find(tStrongEnd) + 1:]
+        tLine = tLeft + tRight
+        tDot = 's'
+    return tLine, tDot
