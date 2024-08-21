@@ -3,33 +3,33 @@ import PySimpleGUI as sg
 #globals
 tPath1 = 'generatedSQL'
 
-def stripParas(tString):
-    return tString.replace('<p>', '').replace('</p>', '')
+def strip_paras(t_string):
+    return t_string.replace('<p>', '').replace('</p>', '')
 
-def stripQuotes(tString):
-    return tString.replace('\\\"\\\'', '')
+def strip_quotes(t_string):
+    return t_string.replace('\\\"\\\'', '')
 
-def swapLords(tString):
-    return tString.replace('LordOfMine{H0136}', 'Lord{H0136}')
+def swap_lords(t_string):
+    return t_string.replace('LordOfMine{H0136}', 'Lord{H0136}')
 
-def writeBibleVerses():
-    tFile1 = 'D:/Python/bookish-lamp/database/bibleVerses.sql'
+def write_bible_verses():
+    t_file_1 = 'D:/Python/bookish-lamp/database/bibleVerses.sql'
 
-    tWriteName = writeFileName(tFile1)
-    fw = open(tPath1 + '\\' + tWriteName, 'w', encoding="utf8")
+    t_write_name_1 = writeFileName(t_file_1)
+    fw = open(tPath1 + '\\' + t_write_name_1, 'w', encoding="utf8")
 
-    fr1 = open(tFile1, 'r', encoding="utf8")
-    tLine1 = fr1.readline()
+    fr1 = open(t_file_1, 'r', encoding="utf8")
+    t_line_1 = fr1.readline()
 
-    while tLine1:
-        tLine1 = stripParas(tLine1)
-        tLine1 = stripQuotes(tLine1)
-        tLine1 = swapLords(tLine1)
+    while t_line_1:
+        t_line_1 = strip_paras(t_line_1)
+        t_line_1 = strip_quotes(t_line_1)
+        t_line_1 = swap_lords(t_line_1)
         
-        tLine1, tDot = stripStrongs(tLine1)
-        print(tDot, end='')
-        fw.write(tLine1)
-        tLine1 = fr1.readline()
+        t_line_1, t_dot = stripStrongs(t_line_1)
+        print(t_dot, end='')
+        fw.write(t_line_1)
+        t_line_1 = fr1.readline()
 
     fr1.close()
     fw.close()
@@ -48,7 +48,7 @@ def gui():
         event, _ = window.read()
         if event:
             if event == 'bGO':
-                writeBibleVerses()
+                write_bible_verses()
         else:
             b_do_it = False
 
