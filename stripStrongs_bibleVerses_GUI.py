@@ -10,6 +10,9 @@ def strip_quotes(t_string):
     # return t_string.replace('\\\"', '').replace('\\\'', '') strips every \" and \' - too many!
     return t_string.replace('\\\"\\\'', '').replace('\\\"', '') # strips every \"\' and \" - just right?
 
+def swap_dont(t_string):
+    return t_string.replace('Don\\\'t', 'You shall not')
+
 def swap_lords(t_string):
     return t_string.replace('LordOfMine{H0136}', 'Lord{H0136}')
 
@@ -25,6 +28,7 @@ def write_bible_verses():
     while t_line_1:
         t_line_1 = strip_paras(t_line_1)
         t_line_1 = strip_quotes(t_line_1)
+        t_line_1 = swap_dont(t_line_1)
         t_line_1 = swap_lords(t_line_1)
         
         t_line_1, t_dot = stripStrongs(t_line_1)
