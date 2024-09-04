@@ -12,6 +12,8 @@ def strip_quotes(t_string):
 
 def swap_dont(t_string):
     return t_string.replace('Don\\\'t', 'You shall not')
+def swap_booths(t_string):
+    return t_string.replace('temporary-shelters', 'temporary shelters')
 
 def swap_lords(t_string):
     return t_string.replace('LordOfMine{H0136}', 'Lord{H0136}')
@@ -30,6 +32,7 @@ def write_bible_verses():
         t_line_1 = strip_quotes(t_line_1)
         t_line_1 = swap_dont(t_line_1)
         t_line_1 = swap_lords(t_line_1)
+        t_line_1 = swap_booths(t_line_1)
         
         t_line_1, t_dot = stripStrongs(t_line_1)
         print(t_dot, end='')
