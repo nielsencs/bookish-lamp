@@ -12,11 +12,21 @@ def strip_quotes(t_string):
 
 def swap_dont(t_string):
     return t_string.replace('Don\\\'t', 'You shall not')
+
 def swap_booths(t_string):
     return t_string.replace('temporary-shelters', 'temporary shelters')
 
+def swap_mustnt(t_string):
+    return t_string.replace('mustn\\\'t', 'shall not')
+
+def swap_enter(t_string):
+    return t_string.replace('enter', 'come into')
+
 def swap_lords(t_string):
     return t_string.replace('LordOfMine{H0136}', 'Lord{H0136}')
+
+def swap_chase(t_string):
+    return t_string.replace('pursue', 'chase')
 
 def write_bible_verses():
     t_file_1 = 'D:/Python/bookish-lamp/database/bibleVerses.sql'
@@ -33,6 +43,9 @@ def write_bible_verses():
         t_line_1 = swap_dont(t_line_1)
         t_line_1 = swap_lords(t_line_1)
         t_line_1 = swap_booths(t_line_1)
+        t_line_1 = swap_mustnt(t_line_1)
+        t_line_1 = swap_enter(t_line_1)
+        t_line_1 = swap_chase(t_line_1)
         
         t_line_1, t_dot = stripStrongs(t_line_1)
         print(t_dot, end='')
