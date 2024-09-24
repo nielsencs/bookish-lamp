@@ -10,65 +10,74 @@ GAL
 
 #=# BEFORE comparison with WEB #=#
 none like me - no one like me (sorted up to SON)
-midst - midst/middle (sorted up to EXO)
-: and .[regex] - . Y/. T/. I[etc.] (sorted up to LEV)
+midst - midst/middle (sorted up to NUM)
+: and .[regex] - . Y/. T/. I[etc.] (sorted up to NUM)
 
 NEXT 3 IN THIS ORDER! *
 spoiler - raider (sorted up to JDG 2:14)*
 despoiled - plundered (sorted up to JDG 2:14)*
-spoil - plunder (sorted up to NUM 30)*
+spoil - plunder (sorted up to NUM)*
 
-besides - besides/in addition to (sorted up to LEV)
-the angel of ForeverOne{H3068} - ForeverOne{H3068}\'s angel (sorted up to NUM 22:22)
-of ForeverOne{H3068} - ForeverOne{H3068}\'s EXCEPT NAME (sorted up to LEV)
+besides - besides/in addition to (sorted up to NUM)
+the angel of ForeverOne{H3068} - ForeverOne{H3068}\'s angel (sorted up to JOS)
+of ForeverOne{H3068} - ForeverOne{H3068}\'s EXCEPT NAME (sorted up to NUM)
 pursued{H7291} after - pursued{H7291} (sorted up to DEU 10)
 over against - opposite (sorted up to NUM)
-after - according to (e.g. according to the shekel)(sorted up to LEV)
-doings - actions (sorted up to DEU 27)
-the whole - all of it (e.g. offer all of it on the altar)(sorted up to LEV)
-drew near - came near (sorted up to LEV)
+drew near - came near (sorted up to DEU)
 
 #=# AFTER comparison with WEB #=#
+doings - actions (sorted up to DEU 27)
 
 NEXT 2 IN THIS ORDER! *
-came out of - left (sorted up to EXO)*
-out of - out of/from/in (sorted up to EXO)*
+came out of - left (sorted up to LEV)*
+go out of - leave (sorted up to LEV)*
 
-deal with - treat (sorted up to EXO)
-diminish - reduce (sorted up to EXO)
-no one shall - let no one (sorted up to EXO)
-moreover - furthermore/in addition (sorted up to EXO)
-by reason - because (sorted up to EXO)
-its increase - its produce (sorted up to EXO)
-speak to - speak to/tell (sorted up to EXO)
+to the end that - in order that (sorted up to LEV)
+
+NEXT 4 IN THIS ORDER! *
+bring.* out[regex] - bring/take ... out (sorted up to LEV)*
+brought.* out[regex] - brought/take/took/taken ... out (sorted up to LEV)*
+out of - out of/from/in (sorted up to LEV)*
+
+deal with - treat (sorted up to LEV)
+diminish - reduce (sorted up to LEV)
+moreover - furthermore/in addition (sorted up to LEV)
+by reason - because (sorted up to LEV)
+its increase - its produce (sorted up to LEV)
+increase of - produce of (sorted up to LEV)
+speak to - speak to/tell (sorted up to LEV)
 
 NEXT 5 IN THIS ORDER! *
-that he may - so he can/for him to/that he would/he would/so he would (sorted up to EXO)*
-that they may - so they can/so they/so they will (sorted up to EXO)*
-that they not - so they don\'t (sorted up to EXO)*
-that they - so they/to/they (sorted up to EXO)*
-that we may - to/so we can (sorted up to EXO)*
+that he may - so he can/for him to/that he would/he would/so he would (sorted up to LEV)*
+that they may - so they can/so they/so they will/to (sorted up to LEV)*
+that they not - so they don\'t (sorted up to LEV)*
+that they - so they/to/they (sorted up to LEV)*
+that we may - to/so we can (sorted up to LEV)*
 
-come to pass - (delete) (sorted up to EXO)
-bring it to pass - bring it about (sorted up to EXO)
+come to pass - (delete) (sorted up to LEV)
+bring it to pass - bring it about (sorted up to ISA 45)
+: I am ForeverOne{H3068} - . I am ForeverOne{H3068} (sorted up to LEV)
+Notwithstanding - Nevertheless (sorted up to LEV)
 
-you shall not - don\'t/you won\'t/you mustn\'t (sorted up to DEU)
-you shall .[regex] /do/you must/you will/you\'ll (sorted up to EXO)
+you shall not - don\'t/you won\'t/you mustn\'t (sorted up to DEU?)
+you shall .[regex] (delete)/do/you must/you will/you\'ll/you are to/you may (sorted up to LEV)
+
+afflict your souls - deny yourselves (sorted up to LEV)
+seven days - seven days/for seven days (sorted up to LEV)
+make no - don\'t make any/not make any (sorted up to NUM)
+from year to year - every year (sorted up to JOS)
+happen.* that[regex] - (delete) (sorted up to NUM)
+neither shall - nor will (sorted up to EZE 43)
+neither - nor (sorted up to LEV)
+went up from - went up from/left/stopped (sorted up to 2SM)
+went out from - left (sorted up to DEU)
+forefront - front (sorted up to DEU)
+was stayed - was halted (sorted up to LEV)
+
+#######################################################################################
 he shall - let him/he must/he should/he is to (sorted up to EXO)
 they shall - let them/they must/they should/they are to/they will (sorted up to EXO)
 [^y][^o][^u] shall[regex] - (delete)/will/is to/are to/may/can/let (sorted up to EXO)
-
-make no - don\'t make any/not make any (sorted up to EXO)
-from year to year - every year (sorted up to EXO)
-happen.* that[regex] - (delete) (sorted up to NUM)
-neither - nor (sorted up to LEV)
-neither shall - nor will (sorted up to EZE 43)
-went up from - went up from/left/stopped (sorted up to 2SM)
-went out from - left (sorted up to EXO)
-forefront - front (sorted up to EXO)
-
-
-#######################################################################################
 
 
 ### next ###
@@ -151,6 +160,8 @@ the name of ForeverOne - the name of ForeverOne/the name ForeverOne (remove 'of'
 ...said \"...\" - ...said &ldquo;...&rdquo;
 ...said \'...\' - ...said &lsquo;...&rsquo;
 pertain - associated with/belonging to?
+bring - bring/take*
+brought - brought/take*
 
 ### completed ###
 therein (sorted!)
@@ -189,3 +200,6 @@ it happen that - (delete)/it happens (sorted!)
 let it happen.* that[regex] - May it be that (sorted!)
 that which - what (sorted!)
 blemish - defect (sorted!)
+no one shall - let no one (sorted!)
+after the shekel - according to the shekel (sorted!)
+the whole - all of it (e.g. offer all of it on the altar) (sorted!)
