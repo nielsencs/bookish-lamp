@@ -39,7 +39,7 @@ def write_bible_verses():
 
     while t_line_1:
         t_line_1 = strip_paras(t_line_1)
-        t_line_1 = strip_quotes(t_line_1)
+        # t_line_1 = strip_quotes(t_line_1)
         t_line_1 = swap_dont(t_line_1)
         t_line_1 = swap_lords(t_line_1)
         t_line_1 = swap_booths(t_line_1)
