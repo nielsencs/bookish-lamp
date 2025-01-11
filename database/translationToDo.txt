@@ -3,6 +3,7 @@
 GEN
 EXO
 LEV
+NUM 1-3:40
 GAL
 ########################################################
 
@@ -78,7 +79,7 @@ was stayed - was halted (sorted up to LEV)
 he shall - let him/he must/he should/he is to (sorted up to EXO)
 they shall - let them/they must/they should/they are to/they will (sorted up to EXO)
 [^y][^o][^u] shall[regex] - (delete)/will/is to/are to/may/can/let (sorted up to EXO)
-
+it shall be that - (delete) e.g. JOS 6:5
 
 ### next ###
 behold - behold/look/see/observe/note/get this?
