@@ -56,19 +56,19 @@ def main():
                 print('')
                 fr2 = open(tPath1 + '\\' +filename, 'r', encoding="utf8")
 
-                buffer = getLine(fr2, bGetStrongsFromFile)
+                buffer = get_line(fr2, bGetStrongsFromFile)
                 while buffer:
                     if buffer.startswith('\\v') or buffer.startswith('\\c') or buffer.startswith('\\d') or buffer.startswith('\\p') or buffer.startswith('\\q') or buffer.startswith('\\ms1'):
                         tLine2 = buffer
-                        buffer = getLine(fr2, bGetStrongsFromFile)
+                        buffer = get_line(fr2, bGetStrongsFromFile)
                         if tLine2.startswith('\\ms1'): #psalm books
                             tVerse2 = lpadNum('0')
                             tLine2 = '[' + tLine2[5:].strip() + ']'
                             if buffer.startswith('\\d'):
                                 tLine2 = tLine2 + ' ' + trimComments(buffer[3:].strip())
-                                # buffer = getLine(fr2, bGetStrongsFromFile)
+                                # buffer = get_line(fr2, bGetStrongsFromFile)
                             writeLine(fw2, tBook2, tChapter2, tVerse2, tLine2)
-                            buffer = getLine(fr2, bGetStrongsFromFile)
+                            buffer = get_line(fr2, bGetStrongsFromFile)
                         if tLine2.startswith('\\d'):
                             if tBook2 == 'PSA' and tChapter2.strip() == '119':
                                 tLetterText = '[' + tLine2[3:].strip() + '] '
@@ -76,21 +76,21 @@ def main():
                                 tVerse2 = lpadNum('0')
                                 tLine2 = trimComments(tLine2[3:].strip())
                                 writeLine(fw2, tBook2, tChapter2, tVerse2, tLine2)
-                                buffer = getLine(fr2, bGetStrongsFromFile)
+                                buffer = get_line(fr2, bGetStrongsFromFile)
                         if tLine2.startswith('\\c'):
                             tChapter2 = lpadNum(tLine2[3:-1])
                         para = ''
                         while tLine2.startswith('\\p') or tLine2.startswith('\\q'):
                             para += tLine2[3:-1].strip() + ' '
                             tLine2 = buffer
-                            buffer = getLine(fr2, bGetStrongsFromFile)
+                            buffer = get_line(fr2, bGetStrongsFromFile)
                             if para > '':
                                 print('p', end='')
 
                         if tLine2.startswith('\\v'):
                             while buffer.startswith('\\p') or buffer.startswith('\\q'):
                                 para += buffer[3:-1].strip() + ' '
-                                buffer = getLine(fr2, bGetStrongsFromFile)
+                                buffer = get_line(fr2, bGetStrongsFromFile)
                             tVerse2 = tLine2[2:8].strip()
                             tVerse2 = lpadNum(tVerse2[0:tVerse2.find(' ')])
 
@@ -168,7 +168,7 @@ def main():
                         else:
                             print('.', end='')
                     else:
-                        buffer = getLine(fr2, bGetStrongsFromFile)
+                        buffer = get_line(fr2, bGetStrongsFromFile)
                 fr2.close()
                 print('')
     fw2.close()
