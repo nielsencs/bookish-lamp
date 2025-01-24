@@ -424,7 +424,7 @@ def handleStrongs2(t_line, bAddNumbers, tWordStart, tWordEnd):
         tStrongs = tStrongs[9:-1]
         tStrongs = tStrongs[0] + tStrongs[1:].zfill(4)
         if tStrongs in atStrongs and bAddNumbers:
-            tStrongs = '<' + tStrongs + '>'
+            tStrongs = '{' + tStrongs + '}'
         else:
             tStrongs = ''
         # t_right = t_line[t_line.find(tWordEnd)+3:]
