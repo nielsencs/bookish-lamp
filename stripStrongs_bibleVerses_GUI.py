@@ -7,7 +7,7 @@ def strip_paras(t_string):
     return t_string.replace('<p>', '').replace('</p>', '')
 
 def strip_quotes(t_string):
-    # return t_string.replace('\\\"', '').replace('\\\'', '') strips every \" and \' - too many!
+    # return t_string.replace('\\\"', '').replace('\\\'', '') # strips every \" and \' - too many!
     return t_string.replace('\\\"\\\'', '').replace('\\\"', '') # strips every \"\' and \" - just right?
 
 def swap_dont(t_string):
