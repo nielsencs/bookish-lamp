@@ -54,25 +54,29 @@ def swapQuotes(line):
     tChar2 = '”'
     tChar3 = '‘'
     tChar4 = '’'
+
+    tNewChar1 = "'"
+    tNewChar2 = '"'
+
     bDoIt1 = True
     bDoIt2 = True
     bDoIt3 = True
     bDoIt4 = True
     while bDoIt1 or bDoIt2 or bDoIt3 or bDoIt4:
         if tChar1 in line:
-            line = line[0:line.find(tChar1)] + '"' + line[line.find(tChar1)+1:]
+            line = line[0:line.find(tChar1)] + tNewChar2 + line[line.find(tChar1)+1:]
         else:
             bDoIt1 = False
         if tChar2 in line:
-            line = line[0:line.find(tChar2)] + '"' + line[line.find(tChar2)+1:]
+            line = line[0:line.find(tChar2)] + tNewChar2 + line[line.find(tChar2)+1:]
         else:
             bDoIt2 = False
         if tChar3 in line:
-            line = line[0:line.find(tChar3)] + "'" + line[line.find(tChar3)+1:]
+            line = line[0:line.find(tChar3)] + tNewChar1 + line[line.find(tChar3)+1:]
         else:
             bDoIt3 = False
         if tChar4 in line:
-            line = line[0:line.find(tChar4)] + "'" + line[line.find(tChar4)+1:]
+            line = line[0:line.find(tChar4)] + tNewChar1 + line[line.find(tChar4)+1:]
         else:
             bDoIt4 = False
     return line
