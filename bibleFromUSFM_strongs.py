@@ -115,11 +115,21 @@ def main():
 
                             if bOldTestament:
                                 if bGetStrongsFromFile:
-                                    tLine2 = swapWords(tLine2, 'Yahweh', 'ForeverOne')
+                                    tLine2 = swapWords(tLine2, 'Yahweh', 'ForeverOne') # up to 2024/??/??
+                                    #tLine2 = swapWords(tLine2, 'The LORD', 'ForeverOne')
+                                    #tLine2 = swapWords(tLine2, 'the LORD', 'ForeverOne')
+                                    #tLine2 = swapWords(tLine2, 'GOD', 'ForeverOne')
+                                    #tLine2 = swapWords(tLine2, 'LORD', 'ForeverOne')
+
                                     tLine2 = swapWords(tLine2, 'herb', 'vegetation')
                                     # tLine2 = swapWords(tLine2, 'Lord', 'MyLord')
                                 else:
-                                    tLine2 = swapWords(tLine2, 'Yahweh', 'ForeverOne{H3068}')
+                                    tLine2 = swapWords(tLine2, 'Yahweh', 'ForeverOne{H3068}') # up to 2024/??/??
+                                    #tLine2 = swapWords(tLine2, 'The LORD', 'ForeverOne{H3068}')
+                                    #tLine2 = swapWords(tLine2, 'the LORD', 'ForeverOne{H3068}')
+                                    #tLine2 = swapWords(tLine2, 'GOD', 'ForeverOne{H3068}')
+                                    #tLine2 = swapWords(tLine2, 'LORD', 'ForeverOne{H3068}')
+
                                     tLine2 = swapWords(tLine2, 'herb', 'vegetation{H6212}')
                                     tLine2 = addCode(tLine2, 'Lord', '{H0113}')
                                     tLine2 = addCode(tLine2, 'lord', '{H0113}')
