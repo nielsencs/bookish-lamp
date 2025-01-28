@@ -49,14 +49,14 @@ def trimChar(line, tChar):
             bDoIt = False
     return line
 
-def swapQuotes(line):
+def swapQuotes(line): #now swapping for nothing
     tChar1 = '“'
     tChar2 = '”'
     tChar3 = '‘'
     tChar4 = '’'
 
-    tNewChar1 = "'"
-    tNewChar2 = '"'
+    tNewChar1 = '' # "'"
+    tNewChar2 = '' # '"'
 
     bDoIt1 = True
     bDoIt2 = True
