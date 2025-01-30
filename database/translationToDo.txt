@@ -4,7 +4,7 @@ GEN
 EXO
 LEV
 NUM 1-3:40
-MAT 1-21
+MAT
 GAL
 ########################################################
 
@@ -27,18 +27,24 @@ pursued{H7291} after - pursued{H7291} (sorted up to DEU 10)
 over against - opposite (sorted up to NUM)
 drew near - came near (sorted up to DEU)
 
+
+
+
+
+
+
 #=# AFTER comparison with WEB #=#
 doings - actions (sorted up to DEU 27)
 
 NEXT 2 IN THIS ORDER! *
 came out of - left (sorted up to LEV)*
-go out of - leave (sorted up to LEV)*
+go out of - leave (sorted up to LEV and NT)*
 
-to the end that - in order that (sorted up to LEV)
+to the end that - in order that (sorted up to LEV and MAT)
 
 NEXT 4 IN THIS ORDER! *
-bring.* out[regex] - bring/take ... out (sorted up to LEV)*
-brought.* out[regex] - brought/take/took/taken ... out (sorted up to LEV)*
+bring.* out[regex] - bring/take ... out (sorted up to LEV and MAT)*
+brought.* out[regex] - brought/take/took/taken ... out (sorted up to LEV and MAT)*
 out of - out of/from/in (sorted up to LEV)*
 
 deal with - treat (sorted up to LEV)
@@ -106,6 +112,7 @@ the thing that - what
 its appointed season - the apointed time?
 entreat - beg/implore/beseech/plead with/supplicate/pray/ask
 Blessed - Happier
+iniquity - godlessness?
 
 come near to (the alter etc.) - approach
 maiden - young woman?
