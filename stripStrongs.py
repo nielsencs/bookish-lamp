@@ -1,7 +1,7 @@
 import tkinter as tk
 from tkinter import filedialog
 
-from bibleModule import writeFileName, stripStrongs, strip_strongs_old
+from bibleModule import writeFileName, stripStrongs, strip_strongs_old, strip_quotes
 
 oRoot = tk.Tk()
 oRoot.withdraw()
@@ -20,14 +20,16 @@ def main():
     fw = open(tPath1 + '\\' + tWriteName, 'w', encoding="utf8")
 
     fr1 = open(tFile1, 'r', encoding="utf8")
-    tLine1 = fr1.readline()
+    t_line_1 = fr1.readline()
 
-    while tLine1:
-        tLine1, tDot = stripStrongs(tLine1)
-        tLine1, tDot = strip_strongs_old(tLine1)
+    while t_line_1:
+        t_line_1, tDot = stripStrongs(t_line_1)
+        t_line_1, tDot = strip_strongs_old(t_line_1)
+        t_line_1 = strip_quotes(t_line_1)
+        
         print(tDot, end='')
-        fw.write(tLine1)
-        tLine1 = fr1.readline()
+        fw.write(t_line_1)
+        t_line_1 = fr1.readline()
 
     fr1.close()
     fw.close()
