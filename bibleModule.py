@@ -468,3 +468,7 @@ def strip_strongs_old(t_line):
         t_line = t_left + t_right
         t_dot = 's'
     return t_line, t_dot
+
+def strip_quotes(t_string):
+    return t_string.replace('\\\"', '').replace('\\\'', '') # strips every \" and \' - too many!
+    # return t_string.replace('\\\"\\\'', '').replace('\\\"', '') # strips every \"\' and \" - just right?
