@@ -3,7 +3,7 @@
 GEN
 EXO
 LEV
-NUM 1-3:40
+NUM 1-5
 MAT
 GAL
 ########################################################
@@ -45,7 +45,7 @@ to the end that - in order that (sorted up to LEV and MAT)
 NEXT 4 IN THIS ORDER! *
 bring.* out[regex] - bring/take ... out (sorted up to LEV and MAT)*
 brought.* out[regex] - brought/take/took/taken ... out (sorted up to LEV and MAT)*
-out of - out of/from/in (sorted up to LEV)*
+out of - out of/from/in (sorted up to LEV and MAT)*
 
 deal with - treat (sorted up to LEV)
 diminish - reduce (sorted up to LEV)
@@ -130,6 +130,7 @@ molten - molded/cast (e.g. molten calf)
 earth - earth/land/ground
 
 ### after that? ###
+faint - weary/exhausted
 forth - out/???
 whereas - although
 whereof - of?
