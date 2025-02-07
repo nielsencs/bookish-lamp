@@ -24,6 +24,10 @@ def swap_lords(t_string):
 def swap_chase(t_string):
     return t_string.replace('pursue', 'chase')
 
+def strip_squares(t_string):
+    t_string = t_string.replace('[', '')
+    return t_string.replace(']', '')
+
 def write_bible_verses():
     t_file_1 = 'D:/Python/bookish-lamp/database/bibleVerses.sql'
 
@@ -42,7 +46,8 @@ def write_bible_verses():
         t_line_1 = swap_mustnt(t_line_1)
         # t_line_1 = swap_enter(t_line_1)
         t_line_1 = swap_chase(t_line_1)
-        
+        t_line_1 = strip_squares(t_line_1)
+
         t_line_1, t_dot = stripStrongs(t_line_1)
         print(t_dot, end='')
         fw.write(t_line_1)
@@ -70,7 +75,7 @@ def gui():
             b_do_it = False
 
 
-def get_name (text):
+def get_name(text):
     return text.replace(" ", "").replace(":", "_").strip()
 
 gui()
