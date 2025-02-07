@@ -36,11 +36,11 @@ def main():
     fr2 = open(t_file_2, 'r', encoding="utf8")
     t_line_2 = fr2.readline()
     while not t_line_2[:12] == 'INSERT INTO ':
-        t_line_2 = fr1.readline()
+        t_line_2 = fr2.readline()
 
     fr3 = open(t_file_3, 'r', encoding="utf8")
     while not t_line_3[:12] == 'INSERT INTO ':
-        t_line_3 = fr1.readline()
+        t_line_3 = fr3.readline()
 
     while t_line_1 or t_line_2:
         t_book_new = t_line_1[82:85]
