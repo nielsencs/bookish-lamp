@@ -1,0 +1,14 @@
+automatically accept punctuation
+
+mine trimmed of strongs, quotes etc:
+INSERT INTO `verses` (`bookCode`, `chapter`, `verseNumber`, `verseText`) VALUES ('NUM',   8,  11, 'and Aaron shall offer the Levites before ForeverOne for a wave offering, on the behalf of the children of Israel, that it may be theirs to do the service of ForeverOne.');
+INSERT INTO `verses` (`bookCode`, `chapter`, `verseNumber`, `verseText`) VALUES ('NUM',   8,  12, 'The Levites shall lay their hands on the heads of the bulls, and you shall offer the one for a sin offering, and the other for a burnt offering to ForeverOne, to make atonement for the Levites.');
+INSERT INTO `verses` (`bookCode`, `chapter`, `verseNumber`, `verseText`) VALUES ('NUM',   8,  13, 'You shall set the Levites before Aaron, and before his sons, and offer them as a wave offering to ForeverOne.');
+theirs 2024:
+INSERT INTO `verses` (`bookCode`, `chapter`, `verseNumber`, `verseText`) VALUES ('NUM',   8,  11, 'and Aaron shall offer the Levites before ForeverOne for a wave offering on the behalf of the children of Israel, that it may be theirs to do the service of ForeverOne.');
+INSERT INTO `verses` (`bookCode`, `chapter`, `verseNumber`, `verseText`) VALUES ('NUM',   8,  12, 'The Levites shall lay their hands on the heads of the bulls, and you shall offer the one for a sin offering and the other for a burnt offering to ForeverOne, to make atonement for the Levites.');
+INSERT INTO `verses` (`bookCode`, `chapter`, `verseNumber`, `verseText`) VALUES ('NUM',   8,  13, 'You shall set the Levites before Aaron and before his sons, and offer them as a wave offering to ForeverOne.');
+mine:
+INSERT INTO `verses` (`bookCode`, `chapter`, `verseNumber`, `verseText`) VALUES ('NUM',   8,  11, 'and Aaron shall offer the Levites before ForeverOne{H3068} for a wave offering on the behalf of the children of Israel, that it may be theirs to do the service of ForeverOne{H3068}.</p>');
+INSERT INTO `verses` (`bookCode`, `chapter`, `verseNumber`, `verseText`) VALUES ('NUM',   8,  12, '<p>\"The Levites shall lay their hands on the heads of the bulls, and you shall offer the one for a sin offering and the other for a burnt offering to ForeverOne{H3068}, to make atonement for the Levites.');
+INSERT INTO `verses` (`bookCode`, `chapter`, `verseNumber`, `verseText`) VALUES ('NUM',   8,  13, 'You shall set the Levites before Aaron and his sons, and offer them as a wave offering to ForeverOne{H3068}.');
