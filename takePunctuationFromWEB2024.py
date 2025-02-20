@@ -33,9 +33,11 @@ def main():
                 print(".", end="")
                 fw.write(line_mine[:98] + '\n')
             else:
-                if change_is_punctuation(line_2024,line_mine):
-                    fw.write(line_2024)
+                t_punctuation_change = punctuation_change(line_2024,line_mine)
+                if t_punctuation_change.strip() > '':
                     fw.write(line_mine)
+                    fw.write(line_2024)
+                    fw.write(t_punctuation_change + '\n')
                     print("P", end="")
                 else:
                     fw.write(line_2024[:98] + '\n')
@@ -60,10 +62,11 @@ def get_my_line(fr3, target_line, current_line):
 
     return current_line
 
-def change_is_punctuation(line_2024, line_mine):
-    """if the ONLY change is punctuation, return the line, else just the first 98 chars"""
+def punctuation_change(line_2024, line_mine):
+    """if the ONLY change is punctuation, return the line stripped of everything but the punctuation, else blank"""
     is_punctuation = keep_checking = True
     i_2024 = i_mine = 99
+    t_punctuation_change = ' ' * i_mine
 
     while keep_checking and i_2024 < len(line_2024) and i_mine < len(line_mine):
         char_2024 = line_2024[i_2024]
@@ -74,18 +77,21 @@ def change_is_punctuation(line_2024, line_mine):
         elif char_mine == char_2024: # same character so move on
             i_2024 = i_2024 + 1
             i_mine = i_mine + 1
+            t_punctuation_change = t_punctuation_change + ' '
         else:
             if char_2024 in string.punctuation or char_mine in string.punctuation: # punctuation difference
                 if char_2024 in string.punctuation:
                     i_2024 = i_2024 + 1
+                    t_punctuation_change = t_punctuation_change + char_2024
                 elif char_mine in string.punctuation:
                     i_mine = i_mine + 1
+                    t_punctuation_change = t_punctuation_change + char_mine
             else: # alphabetic difference
                 is_punctuation = False
                 keep_checking = False
                 print_progress(char_2024, char_mine, i_2024, i_mine)
 
-    return is_punctuation
+    return t_punctuation_change
 
 def print_progress(char_2024, char_mine, i_2024, i_mine):
     # print (f"4:{i_2024},{char_2024};m{i_mine},{char_mine}") # this is for debugging
