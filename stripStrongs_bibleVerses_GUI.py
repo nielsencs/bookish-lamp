@@ -1,6 +1,7 @@
 from bibleModule import writeFileName, stripStrongs, strip_quotes
 import PySimpleGUI as sg
-#globals
+
+# globals
 tPath1 = 'generatedSQL'
 
 def strip_paras(t_string):
@@ -28,33 +29,31 @@ def strip_squares(t_string):
     t_string = t_string.replace('[', '')
     return t_string.replace(']', '')
 
+def process_line(t_line):
+    t_line = strip_paras(t_line)
+    t_line = strip_quotes(t_line)
+    # t_line = swap_dont(t_line)
+    t_line = swap_lords(t_line)
+    t_line = swap_booths(t_line)
+    t_line = swap_mustnt(t_line)
+    # t_line = swap_enter(t_line)
+    t_line = swap_chase(t_line)
+    t_line = strip_squares(t_line)
+    t_line, t_dot = stripStrongs(t_line)
+    return t_line, t_dot
+
 def write_bible_verses():
     t_file_1 = 'D:/Python/bookish-lamp/database/bibleVerses.sql'
-
     t_write_name_1 = writeFileName(t_file_1)
-    fw = open(tPath1 + '\\' + t_write_name_1, 'w', encoding="utf8")
 
-    fr1 = open(t_file_1, 'r', encoding="utf8")
-    t_line_1 = fr1.readline()
-
-    while t_line_1:
-        t_line_1 = strip_paras(t_line_1)
-        t_line_1 = strip_quotes(t_line_1)
-        # t_line_1 = swap_dont(t_line_1)
-        t_line_1 = swap_lords(t_line_1)
-        t_line_1 = swap_booths(t_line_1)
-        t_line_1 = swap_mustnt(t_line_1)
-        # t_line_1 = swap_enter(t_line_1)
-        t_line_1 = swap_chase(t_line_1)
-        t_line_1 = strip_squares(t_line_1)
-
-        t_line_1, t_dot = stripStrongs(t_line_1)
-        print(t_dot, end='')
-        fw.write(t_line_1)
-        t_line_1 = fr1.readline()
-
-    fr1.close()
-    fw.close()
+    try:
+        with open(t_file_1, 'r', encoding="utf8") as fr1, open(tPath1 + '\\' + t_write_name_1, 'w', encoding="utf8") as fw:
+            for t_line_1 in fr1:
+                t_line_1, t_dot = process_line(t_line_1)
+                print(t_dot, end='')
+                fw.write(t_line_1)
+    except IOError as e:
+        print(f"An error occurred: {e}")
 
 def gui():
     sg.theme('Dark Blue 3')
@@ -73,7 +72,6 @@ def gui():
                 write_bible_verses()
         else:
             b_do_it = False
-
 
 def get_name(text):
     return text.replace(" ", "").replace(":", "_").strip()
