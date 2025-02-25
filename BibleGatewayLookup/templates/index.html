@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Select Bible Verse</title>
+</head>
+<body>
+    <h1>Select a Bible Verse</h1>
+    <form method="POST">
+        <label for="book">Book:</label>
+        <select name="book" id="book">
+            {% for book in books %}
+                <option value="{{ book }}">{{ book }}</option>
+            {% endfor %}
+        </select>
+        <br>
+        <label for="chapter">Chapter:</label>
+        <input type="text" id="chapter" name="chapter" required>
+        <br>
+        <label for="verse">Verse:</label>
+        <input type="text" id="verse" name="verse" required>
+        <br>
+        <button type="submit">Look Up</button>
+    </form>
+</body>
+</html>
