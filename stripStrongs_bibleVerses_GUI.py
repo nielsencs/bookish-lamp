@@ -29,6 +29,12 @@ def strip_squares(t_string):
     t_string = t_string.replace('[', '')
     return t_string.replace(']', '')
 
+def swap_group(t_string):
+    return t_string.replace('group', 'company')
+
+def swap_murmur(t_string):
+    return t_string.replace('murmur', 'complain')
+
 def process_line(t_line):
     t_line = strip_paras(t_line)
     t_line = strip_quotes(t_line)
@@ -39,6 +45,8 @@ def process_line(t_line):
     # t_line = swap_enter(t_line)
     t_line = swap_chase(t_line)
     t_line = strip_squares(t_line)
+    t_line = swap_group(t_line)
+    t_line = swap_murmur(t_line)
     t_line, t_dot = stripStrongs(t_line)
     return t_line, t_dot
 
