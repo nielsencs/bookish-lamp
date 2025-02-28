@@ -35,6 +35,7 @@ drew near - came near (sorted up to DEU)
 
 #=# AFTER comparison with WEB #=#
 doings - actions (sorted up to DEU 27)
+take.*wife[regex] - get a wife/have a wife (sorted up to LEV 20:14)
 
 NEXT 2 IN THIS ORDER! *
 came out of - left (sorted up to LEV)*
@@ -89,6 +90,7 @@ they shall - let them/they must/they should/they are to/they will (sorted up to 
 it shall be that - (delete) e.g. JOS 6:5
 in that night - (on) that night
 physician - doctor
+[iI]t is I[ ,.';:!?)(][regex] - ('It is I' followed by a space or punctuation) to It\'s me!
 
 ### next ###
 behold - behold/look/see/observe/note/get this?
@@ -174,7 +176,10 @@ the name of ForeverOne - the name of ForeverOne/the name ForeverOne (remove 'of'
 ...said \'...\' - ...said &lsquo;...&rsquo;
 pertain - associated with/belonging to?
 bring - bring/take*
-brought - brought/take*
+brought - brought/took*
+into which - where
+certain - some (certain base men - some rough men?)
+contrary to - against
 
 ### completed ###
 therein (sorted!)
@@ -203,7 +208,6 @@ did ... - ...ed (sorted!)
 is fallen - has fallen (sorted!)
 thereon - on it (sorted!)
 cast - throw/threw/thrown/rejected/shed (sorted!)
-take a wife - get a wife/have a wife (sorted!)
 humbled her - humiliated her (sorted!)
 thereby - by/by them/by it/by there/that way (sorted!)
 neither shall you - don\'t/you won\'t/you mustn\'t/nor (sorted!)
