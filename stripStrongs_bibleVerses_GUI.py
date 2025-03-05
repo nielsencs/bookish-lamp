@@ -35,6 +35,16 @@ def swap_group(t_string):
 def swap_murmur(t_string):
     return t_string.replace('murmur', 'complain')
 
+def swap_testimony(t_string):
+    return t_string.replace('testimony', 'covenant')
+
+def swap_winepress(t_string):
+    return t_string.replace('winepress', 'wine press')
+
+def swap_throw(t_string):
+    return t_string.replace('throw', 'cast')
+
+
 def process_line(t_line):
     t_line = strip_paras(t_line)
     t_line = strip_quotes(t_line)
@@ -47,6 +57,10 @@ def process_line(t_line):
     t_line = strip_squares(t_line)
     t_line = swap_group(t_line)
     t_line = swap_murmur(t_line)
+    t_line = swap_testimony(t_line)
+    t_line = swap_winepress(t_line)
+    t_line = swap_throw(t_line)
+
     t_line, t_dot = stripStrongs(t_line)
     return t_line, t_dot
 
