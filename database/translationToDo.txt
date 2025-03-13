@@ -3,7 +3,7 @@
 GEN
 EXO
 LEV
-NUM 1-9 (punctuation to 32)
+NUM 1-22:22 (punctuation to 32)
 MAT
 GAL
 ########################################################
@@ -149,7 +149,6 @@ visiting the iniquity - ???
 thereto - to it
 does ... - ...s
 thus - (delete)/so/this/like this/these
-will I - I will
 were you - you were
 asked of him
 before - before/in front of
@@ -180,6 +179,7 @@ brought - brought/took*
 into which - where
 certain - some (certain base men - some rough men?)
 contrary to - against
+number - count
 
 ### completed ###
 therein (sorted!)
@@ -220,3 +220,5 @@ blemish - defect (sorted!)
 no one shall - let no one (sorted!)
 after the shekel - according to the shekel (sorted!)
 the whole - all of it (e.g. offer all of it on the altar) (sorted!)
+will I - I will (sorted!)
+neither will I - nor will I (sorted!)
