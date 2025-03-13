@@ -3,7 +3,8 @@
 GEN
 EXO
 LEV
-NUM 1-22:22 (punctuation to 32)
+NUM 1-24:6 (punctuation to 32)
+ruach {H7307} up to PSA 106:33 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 MAT
 GAL
 ########################################################
@@ -180,6 +181,7 @@ into which - where
 certain - some (certain base men - some rough men?)
 contrary to - against
 number - count
+exalted - lifted high
 
 ### completed ###
 therein (sorted!)
@@ -222,3 +224,4 @@ after the shekel - according to the shekel (sorted!)
 the whole - all of it (e.g. offer all of it on the altar) (sorted!)
 will I - I will (sorted!)
 neither will I - nor will I (sorted!)
+neither will - nor will (sorted!)
