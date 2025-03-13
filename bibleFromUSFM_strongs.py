@@ -1,12 +1,14 @@
 import os
-from bibleModule import *
+from bibleModule import doHeader, myBookAbbrFromWEB, notApocrypha, get_line, trimComments, lpadNum, writeLine, swapQuotes, firstAlphaOrQuote, swapWords, addCode, escapeQuotes
 
 import tkinter as tk
 from tkinter import filedialog
 
 oTkWindow = tk.Tk()
+oTkWindow.withdraw()
 oTkWindow.title('Generate SQL from USFM')
 oTkWindow.geometry('400x150')
+oTkWindow.deiconify()
 
 iAddStrongs = tk.IntVar()
 tTkPath1 = tk.StringVar()
@@ -21,7 +23,7 @@ def getPath():
 
 def main():
     tPath1 = tTkPath1.get()
-    print('using this folder:\'' + tPath1 + '\', do', end='')
+    print(f"using this folder: '{tPath1}', do", end='')
     if iAddStrongs.get() == 0:
         print('n\'t', end='')
     print(' get strongs numbers from USFM file')
@@ -35,7 +37,7 @@ def main():
 
     tPath2 = 'generatedSQL'
 
-    fw2 = open(tPath2 + '\\' + tFile, 'w', encoding="utf8")
+    fw2 = open(os.path.join(tPath2, tFile), 'w', encoding="utf8")
 
     bOldTestament = True
     tBook2 = ''
@@ -54,7 +56,7 @@ def main():
                 print('')
                 print('processing ' + filename + ':')
                 print('')
-                fr2 = open(tPath1 + '\\' +filename, 'r', encoding="utf8")
+                fr2 = open(os.path.join(tPath1, filename), 'r', encoding="utf8")
 
                 buffer = get_line(fr2, bGetStrongsFromFile)
                 while buffer:
