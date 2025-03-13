@@ -4,17 +4,14 @@ import PySimpleGUI as sg
 # globals
 tPath1 = 'generatedSQL'
 
-def strip_paras(t_string):
-    return t_string.replace('<p>', '').replace('</p>', '')
-
 def swap_dont(t_string):
     return t_string.replace('Don\\\'t', 'You shall not')
 
-def swap_booths(t_string):
-    return t_string.replace('temporary-shelters', 'temporary shelters')
-
 def swap_mustnt(t_string):
     return t_string.replace('mustn\\\'t', 'shall not')
+
+def swap_booths(t_string):
+    return t_string.replace('temporary-shelters', 'temporary shelters')
 
 def swap_enter(t_string):
     return t_string.replace('enter', 'come into')
@@ -24,10 +21,6 @@ def swap_lords(t_string):
 
 def swap_chase(t_string):
     return t_string.replace('pursue', 'chase')
-
-def strip_squares(t_string):
-    t_string = t_string.replace('[', '')
-    return t_string.replace(']', '')
 
 def swap_group(t_string):
     return t_string.replace('group', 'company')
@@ -44,22 +37,30 @@ def swap_winepress(t_string):
 def swap_throw(t_string):
     return t_string.replace('throw', 'cast')
 
+def strip_paras_plus(t_string):
+    return t_string.replace('<p>', '').replace('</p>', '').replace('<br>', '')
+
+def strip_squares(t_string):
+    t_string = t_string.replace('[', '')
+    return t_string.replace(']', '')
+
 
 def process_line(t_line):
-    t_line = strip_paras(t_line)
-    t_line = strip_quotes(t_line)
-    # t_line = swap_dont(t_line)
+    t_line = swap_dont(t_line)
+    t_line = swap_mustnt(t_line)
     t_line = swap_lords(t_line)
     t_line = swap_booths(t_line)
-    t_line = swap_mustnt(t_line)
-    # t_line = swap_enter(t_line)
+    t_line = swap_enter(t_line)
     t_line = swap_chase(t_line)
-    t_line = strip_squares(t_line)
     t_line = swap_group(t_line)
     t_line = swap_murmur(t_line)
     t_line = swap_testimony(t_line)
     t_line = swap_winepress(t_line)
     t_line = swap_throw(t_line)
+
+    t_line = strip_paras_plus(t_line)
+    t_line = strip_quotes(t_line)
+    t_line = strip_squares(t_line)
 
     t_line, t_dot = stripStrongs(t_line)
     return t_line, t_dot
