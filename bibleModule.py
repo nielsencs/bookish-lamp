@@ -368,52 +368,58 @@ def handleStrongs(t_line, bAddNumbers):
 
 def handleStrongs2(t_line, bAddNumbers, tWordStart, tWordEnd):
     atStrongs = [
-                 'H0113',
-                 'H0136',
-                 'H0403',
-                 'H0410',
-                 'H0426',
-                 'H0430',
-                 'H0433',
-                 'H1166',
-                 'H1167',
-                 'H1376',
-                 'H1814',
-                 'H2657',
-                 'H3050',
-                 'H3068',
-                 'H4756',
-                 'H4886',
-                 'H4899',
-                 'H5633',
-                 'H6212',
-                 'H7291',
-                 #'H7307',
-                 'H7706',
-                 'H8314',
-                 'G0025',
-                 'G0026',
-                 'G0027',
-                 'G0862',
-                 'G1203',
-                 'G1459',
-                 'G2209',
-                 'G2315',
-                 'G2519',
-                 'G2634',
-                 'G2960',
-                 'G2961',
-                 'G2962',
-                 'G3323',
-                 'G3841',
-                 'G4550',
-                 'G4657',
-                 'G4995',
-                 'G5349',
-                 'G5509',
-                 'G5546',
-                 'G5547',
-                 'G5580'
+                 'H0113', # 'adon', 'lord', 'Adon - lord or master as opposed to Adonai - MyLord
+                 'H0136', # 'Adonai', 'MyLord', 'Adonai - My Lord\r\n\r\nmy Lord\r\nAn emphatic form of \'adon{H0113}\'; the Lord (used as a proper name of God only) -- (my) Lord.\r\n\r\nsee HEBREW \'adon{113}\'
+                 'H0403', # 'aken', 'surely', 'Surely, truly, sometimes emphasising a contrast: however
+                 'H0410', # 'El', 'God', 'Singular God as opposed to the plural Elohim{H0430}
+                 'H0426', # 'Elah', 'God', 'Elah - singular of Elohim{H0430} God or god
+                 'H0430', # 'Elohim', 'God', 'Elohim - the plural of eloah, literally \'gods\' often used for the true God
+                 'H0433', # 'Eloah', 'God', 'Eloah - the singular of elohim{H430}, literally \'god\'.
+                 'H1166', # 'baal', 'Marry/Own', 'Marry/Own
+                 'H1167', # 'baal', 'Husband/Master/Owner', 'Husband/Master/Owner
+                 'H1376', # 'gevir', 'ruler', 'ruler, master. Not especially interesting perhaps in itself; were it not for the fact it is only used twice - in the story of Jacob as opposed to his brother, Esau - never of God or anyone else.
+                 'H1814', # 'dalaq', 'hotly-pursue', 'Hotly-pursue, burn, ignite, inflame
+                 'H2657', # 'Hepzibah', 'MyDelightIsInHer', 'Hepzibah = \"my delight is in her\"\r\n1) the queen of King Hezekiah and mother of Manasseh\r\n2) a name for Jesusalem (fig.)
+                 'H3050', # 'Yah', 'EverOne', 'Yah - An abbreviation of the proper name for God, Yahweh{H3068}
+                 'H3068', # 'Yahweh', 'ForeverOne', 'Yud-Heh-Vav-Heh (Yahweh) - The proper name for God. In Jewish circles never spoken; normally spoken as Adonai ({H136})
+                 'H4756', # 'mare', 'lord', 'Master;lord. Only occurs in Daniel
+                 'H4886', # 'mashach', 'anoint', 'to anoint (with oil)
+                 'H4899', # 'mashiach', 'anointed', 'anointed (Messiah) 
+                 'H5633', # 'ceren', 'Lord;tyrant', 'Lord/Tyrant
+                 'H6212', # 'esev', 'plant', 'plant, vegetation
+                 'H7291', # 'radaph', 'pursue', 'Pursue, follow closely, chase
+                 'H7307', # 'ruach', 'spirit/breath/breeze', 'ruach - wind, breath, spirit.
+                 'H7706', # 'Shaddai', 'Almighty', 'Almighty - usually God almighty.
+                 'H8314', # 'seraphim', 'burningones', 'Fiery; Burning; burningones
+                 'H8392', # 'tevah', 'vessel', 'The ark - the vessel which Noah built; the basket vessel in which Moses was placed.
+                 'G0025', # 'agapeo', 'Will-Love', 'Determined, active loving that has more to do with willing good for others than any emotional feeling. The verb of {G0026}
+                 'G0026', # 'agape', 'Will-Love', 'The determined active love that has more to do with willing good for others than any emotional feeling. The noun of {G0025}
+                 'G0027', # 'agapetos', 'dear, dear-ones', 'Beloved, recipients of the greatest love{G0026}, loved
+                 'G0444', # 'anthropos', 'people', 'Often translated \'men\' but is not gender specific - so humans, people, humankind.
+                 'G0862', # 'afthartos', 'permanent', 'Un-temporary; imperishable; imortal; permanent
+                 'G1203', # 'Despotes', 'Master', 'Master - the English \'despot\' comes from this word.
+                 'G1459', # 'Enkataleipo', 'Abandon', 'Abandon or Forsake 
+                 'G2209', # 'zemia', 'damage', '\'damage/loss\' loss, damage
+                 'G2315', # 'Theopneustos', 'Godbreathed', 'Literally the breath/wind/spirit-making of God. God breathed as one word. Only occurs once in 2 Timothy 3:16
+                 'G2519', # 'kathegetes', 'teacher', 'teacher
+                 'G2634', # 'katakurieuo', 'master', 'master - \'against-lord\'
+                 'G2823', # 'klibanos', 'fire-oven', 'This was an earthenware pot for baking bread. It was broader at the bottom than at the top, and with a fire lit inside, the dough was baked by being spread on the outside.
+                 'G2960', # 'Kuriakos', 'Master', 'Pertaining to the Lord
+                 'G2961', # 'kurieuo', 'dominate', 'master, lord, dominate
+                 'G2962', # 'Kurios', 'Lord', 'Lord. Notably this may stand for Yahweh{H3068} as the Jewish tradition to never say Yahweh{H3068}, and say Adonai{H0136} (Lord) instead, was in place long before the New Testament (about 300 BC)
+                 'G3107', # 'makarios', 'happier', 'Often translated Blessed, a bit old fashioned now, it is an emphatic form of happy.
+                 'G3126', # 'mammon', 'your-savings', 'TrustTreasure - what you rely on, your-savings, investment.
+                 'G3323', # 'Messias', 'Messiah', 'Greek transliteration of the Hebrew {H4899}, Mashiach, Messiah. Anointed; Messiah (in Jewish tradition not THE messiah). Only found in John 1 and 4. Equivalent to {G5547}
+                 'G3339', # 'metamorfoo', 'transformed', 'This is the Greek root word for the English word Metamorphose.
+                 'G3841', # 'Pantokrator', 'Almighty', 'Almighty - only applied (obviously!) to God. Equivalent to {H7706}
+                 'G4550', # 'sapros', 'rotten', 'This has a strongly negative meaning- not just rotten but corrupting or causing disease or being diseased.
+                 'G4657', # 'skubalon', 'filth', 'Disgusting rubbish; rotten; filth; refuse; dung. This can refer to any of a number of rotten, decaying things that must be disposed of. It is only used in Philippians 3:8.
+                 'G4995', # 'sofronismos', 'soundness-of-mind', 'This is subtle and can mean soundness-of-mind, self-discipline, prudence, wisdom. It is only used in 2 timothy 1:7.
+                 'G5349', # 'fthartos', 'temporary', 'Temporary or mortal; not lasting, perishable, impermanent.
+                 'G5509', # 'chiton', 'tunic', 'Strictly a tunic but often the main or only garment worn, either by men or women. Robe; clothing; undergarment.
+                 'G5546', # 'kristianos', 'christian', 'Christian; \'one belonging to Christ\'; Messianic believer;
+                 'G5547', # 'Kristos', 'AnointedOne', 'AnointedOne; Christ, anointed one, Messiah
+                 'G5580'  # 'pseudokristos', 'pretend-anointed-ones', 'Christ and Messiah both mean anointed one. Ungodly imitators of Jesus Christ will come who make bold claims but are not Him.
                 ]
     t_left = ''
     tWord = ''
