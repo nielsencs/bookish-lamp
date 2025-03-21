@@ -3,8 +3,8 @@
 GEN
 EXO
 LEV
-NUM 1-24:6 (punctuation to 32)
-ruach {H7307} up to PSA 106:33 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+NUM 1-26 (punctuation to 32)
+ruach {H7307} up to ECC 6:9 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 MAT
 GAL
 ########################################################
@@ -99,7 +99,7 @@ at evening - in the evening/evening of
 ; and .[regex] - . T/. H/. I[etc.] (sorted up to GEN 13)
 which are - (delete)
 were ...ed - had ...ed
-lest - for fear that/in case
+lest - for fear that/in case/otherwise
 even in - in (even in Bethsaida - in Bethsaida)
 even the - the (even the whole bull)
 even to - to/as far as?
