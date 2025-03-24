@@ -1,0 +1,14 @@
+"pre-ample" => "preamble"
+
+Formatting Inconsistencies
+Events 1-14 formatted "Event n." (period) Thereafter "Event n:" (colon) except Events 15 (see below), 34 (period), 62 (see below), 71 (see below)
+"Event: 15:" => "Event 15:" (extra colon)
+First "Event 46" (Jesus dines at the house of Simon the Pharisee) => "Event 45" (wrong number)
+"Event: 62" => "Event 62:" (misplaced colon)
+"Event 71" => "Event 71:" (missing colon)
+Second "Event 131:" (Jesus appears to the disciples with Thomas) => "Event 133:" (wrong number)
+
+Query
+in Event 26 the time is "spring A.D." should that be "spring 31 A.D."?
+
+Jesus's => Jesus' - Events 14, 16, 
