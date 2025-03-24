@@ -7,8 +7,10 @@ First "Event 46" (Jesus dines at the house of Simon the Pharisee) => "Event 45" 
 "Event: 62" => "Event 62:" (misplaced colon)
 "Event 71" => "Event 71:" (missing colon)
 Second "Event 131:" (Jesus appears to the disciples with Thomas) => "Event 133:" (wrong number)
-
-Query
-in Event 26 the time is "spring A.D." should that be "spring 31 A.D."?
+Event 134 "Place:" before "Time:"
 
 Jesus's => Jesus' - Events 14, 16, 
+
+Queries
+in Event 26 the time is "spring A.D." should that be "spring 31 A.D."?
+in Event 136 you include Acts 1:1-12, yet in Event 126 you don't include the Acts 1:18–19 account
