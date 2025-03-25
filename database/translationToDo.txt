@@ -3,8 +3,8 @@
 GEN
 EXO
 LEV
-NUM 1-31:20 (punctuation to 36)
-ruach {H7307} up to ISA 26:9 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+NUM 1-31 (punctuation to 36)
+ruach {H7307} up to ISA !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 MAT
 GAL
 ########################################################
@@ -22,9 +22,7 @@ despoiled - plundered (sorted up to JDG 2:14)*
 spoil - plunder (sorted up to NUM)*
 
 besides - besides/in addition to (sorted up to NUM)
-the angel of ForeverOne{H3068} - ForeverOne{H3068}\'s angel (sorted up to JOS)
 of ForeverOne{H3068} - ForeverOne{H3068}\'s EXCEPT NAME (sorted up to NUM)
-pursued{H7291} after - pursued{H7291} (sorted up to DEU 10)
 over against - opposite (sorted up to NUM)
 drew near - came near (sorted up to DEU)
 
@@ -225,3 +223,5 @@ the whole - all of it (e.g. offer all of it on the altar) (sorted!)
 will I - I will (sorted!)
 neither will I - nor will I (sorted!)
 neither will - nor will (sorted!)
+pursued{H7291} after - pursued{H7291} (sorted!)
+the angel of ForeverOne{H3068} - ForeverOne{H3068}\'s angel (sorted!)
