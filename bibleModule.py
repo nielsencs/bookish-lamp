@@ -385,6 +385,7 @@ def handleStrongs2(t_line, bAddNumbers, tWordStart, tWordEnd):
                  'H4756', # 'mare', 'lord', 'Master;lord. Only occurs in Daniel
                  'H4886', # 'mashach', 'anoint', 'to anoint (with oil)
                  'H4899', # 'mashiach', 'anointed', 'anointed (Messiah) 
+                 'H5542', # 'selah', 'SolidRock', 'The meaning of this word is unclear. It is used in psalms as some form of exclamation or perhaps a musical instruction. I have chosen SolidRock as a non-transliterative placeholder.');
                  'H5633', # 'ceren', 'Lord;tyrant', 'Lord/Tyrant
                  'H6212', # 'esev', 'plant', 'plant, vegetation
                  'H7291', # 'radaph', 'pursue', 'Pursue, follow closely, chase
