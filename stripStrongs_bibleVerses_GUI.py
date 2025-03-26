@@ -50,11 +50,11 @@ def process_line(t_line):
     t_line = swap_mustnt(t_line)
     t_line = swap_lords(t_line)
     t_line = swap_booths(t_line)
-    t_line = swap_enter(t_line)
+    # t_line = swap_enter(t_line)
     t_line = swap_chase(t_line)
-    t_line = swap_group(t_line)
+    # t_line = swap_group(t_line)
     t_line = swap_murmur(t_line)
-    t_line = swap_testimony(t_line)
+    # t_line = swap_testimony(t_line)
     t_line = swap_winepress(t_line)
     t_line = swap_throw(t_line)
 
@@ -83,7 +83,7 @@ def gui():
     app_name = 'stripStrongs_bibleVerses_GUI.py'
 
     layout = [
-                [sg.Button('Cut bibleVerses Strong\'s', key='bGO')],
+                [sg.Button('Process bibleVerses.sql', key='bGO')],
             ]
 
     window = sg.Window(app_name, layout)
