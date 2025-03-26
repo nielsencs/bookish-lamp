@@ -3,8 +3,8 @@
 GEN
 EXO
 LEV
-NUM 1-31 (punctuation to 36)
-ruach {H7307} up to ISA !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+NUM
+ruach {H7307} up to DAN 5:11 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 MAT
 GAL
 ########################################################
@@ -180,6 +180,8 @@ certain - some (certain base men - some rough men?)
 contrary to - against
 number - count
 exalted - lifted high
+went from - left
+
 
 ### completed ###
 therein (sorted!)
