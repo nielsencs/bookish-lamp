@@ -420,7 +420,7 @@ def handleStrongs2(t_line, bAddNumbers, tWordStart, tWordEnd):
                  'G5509', # 'chiton', 'tunic', 'Strictly a tunic but often the main or only garment worn, either by men or women. Robe; clothing; undergarment.
                  'G5546', # 'kristianos', 'christian', 'Christian; \'one belonging to Christ\'; Messianic believer;
                  'G5547', # 'Kristos', 'AnointedOne', 'AnointedOne; Christ, anointed one, Messiah
-                 'G5580'  # 'pseudokristos', 'pretend-anointed-ones', 'Christ and Messiah both mean anointed one. Ungodly imitators of Jesus Christ will come who make bold claims but are not Him.
+                 'G5580'  # 'pseudokristos', 'false-anointed-ones', 'Christ and Messiah both mean anointed one. Ungodly imitators of Jesus Christ will come who make bold claims but are not Him.
                 ]
     t_left = ''
     tWord = ''
