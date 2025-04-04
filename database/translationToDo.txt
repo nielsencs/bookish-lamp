@@ -4,9 +4,18 @@ GEN
 EXO
 LEV
 NUM
-anthropos {G0444} up to MAT 5:16 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 MAT
 GAL
+JAM
+
+shortcomings{G0266}(hamartia) JAM !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+man{G0435}(aner) JAM !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+human{G0444}(anthropos) up to MAT 5:16 + JAM !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+law{G3551}(nomos) JAM !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+tempting{G3985}(peirazo) JAM !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+AVYous(you-all) JAM !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
 ########################################################
 
 ### current ###
@@ -227,3 +236,5 @@ neither will I - nor will I (sorted!)
 neither will - nor will (sorted!)
 pursued{H7291} after - pursued{H7291} (sorted!)
 the angel of ForeverOne{H3068} - ForeverOne{H3068}\'s angel (sorted!)
+slander{G2635}(katalaleo) (sorted!)
+testing{G3986}(peirasmos) (sorted!)
