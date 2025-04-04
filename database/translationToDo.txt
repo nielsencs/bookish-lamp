@@ -9,6 +9,7 @@ GAL
 JAM
 
 shortcomings{G0266}(hamartia) JAM !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+shortcomer{G0268}(hamartolos) JAM !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 man{G0435}(aner) JAM !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 human{G0444}(anthropos) up to MAT 5:16 + JAM !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 law{G3551}(nomos) JAM !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
