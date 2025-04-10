@@ -1,5 +1,6 @@
 ########################################################
 ############### WEB comparison completed ###############
+########################################################
 GEN
 EXO
 LEV
@@ -7,19 +8,26 @@ NUM
 MAT
 GAL
 JAM
-
-shortcomings{G0266}(hamartia) JAM !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-shortcomer{G0268}(hamartolos) JAM !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-man{G0435}(aner) JAM !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-human{G0444}(anthropos) up to MAT 5:16 + JAM !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-law{G3551}(nomos) JAM !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-tempting{G3985}(peirazo) JAM !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-
-AVYous(you-all) JAM !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-
 ########################################################
 
-### current ###
+########################################################
+################# Key Words completed ##################
+########################################################
+shortcomings{G0266}(hamartia) MAT + JAM
+shortcomer{G0268}(hamartolos) MAT + JAM
+man{G0435}(aner) MAT, GAL, JAM
+human{G0444}(anthropos) up to MAT 5:16, GAL, JAM
+law{G3551}(nomos) MAT, GAL, EPH, PHP, JAM
+tempting{G3985}(peirazo) MAT + JAM
+########################################################
+
+########################################################
+######### AVYous(you-all) comparison completed #########
+########################################################
+you-all up to MAT 5 + JAM
+########################################################
+
+### current work ###
 
 #=# BEFORE comparison with WEB #=#
 none like me - no one like me (sorted up to SON)
@@ -91,6 +99,7 @@ went up from - went up from/left/stopped (sorted up to 2SM)
 went out from - left (sorted up to DEU)
 forefront - front (sorted up to DEU)
 was stayed - was halted (sorted up to LEV)
+rod - stick/staff (sorted up to NUM)
 
 #######################################################################################
 he shall - let him/he must/he should/he is to (sorted up to EXO)
@@ -239,3 +248,4 @@ pursued{H7291} after - pursued{H7291} (sorted!)
 the angel of ForeverOne{H3068} - ForeverOne{H3068}\'s angel (sorted!)
 slander{G2635}(katalaleo) (sorted!)
 testing{G3986}(peirasmos) (sorted!)
+fall-short{G0264}(hamartano) (sorted!)
