@@ -53,6 +53,7 @@ drew near - came near (sorted up to DEU)
 #=# AFTER comparison with WEB #=#
 doings - actions (sorted up to DEU 27)
 take.*wife[regex] - get a wife/have a wife (sorted up to LEV 20:14)
+spoken - said/told (sorted up to LEV)
 
 NEXT 2 IN THIS ORDER! *
 came out of - left (sorted up to LEV)*
@@ -100,6 +101,7 @@ went out from - left (sorted up to DEU)
 forefront - front (sorted up to DEU)
 was stayed - was halted (sorted up to LEV)
 rod - stick/staff (sorted up to NUM)
+{H7291} after[search for that and change] follow(ed){H7291} after - pursue(d){H7291} [etc.] (sorted up to 1KI)
 
 #######################################################################################
 he shall - let him/he must/he should/he is to (sorted up to EXO)
@@ -120,7 +122,6 @@ lest - for fear that/in case/otherwise
 even in - in (even in Bethsaida - in Bethsaida)
 even the - the (even the whole bull)
 even to - to/as far as?
-spoken - said
 go in to - go in to [see]/enter
 go from - leave
 grievous - dreadful/severe
@@ -200,7 +201,8 @@ contrary to - against
 number - count
 exalted - lifted high
 went from - left
-
+bowels - guts
+children of - people of (eg children of Israel/children of the Amorites)
 
 ### completed ###
 therein (sorted!)
@@ -249,3 +251,4 @@ the angel of ForeverOne{H3068} - ForeverOne{H3068}\'s angel (sorted!)
 slander{G2635}(katalaleo) (sorted!)
 testing{G3986}(peirasmos) (sorted!)
 fall-short{G0264}(hamartano) (sorted!)
+pursue{H7291} after - pursue{H7291} (sorted!)
