@@ -29,12 +29,12 @@ def main():
                 book = new_book
                 print(f"\n{book}")
 
-            if line_2024 == line_mine:
+            if line_2024.strip() == line_mine.strip():
                 print(".", end="")
                 fw.write(line_mine[:98] + '\n')
             else:
-                t_punctuation_change = punctuation_change(line_2024,line_mine)
-                if t_punctuation_change.strip() > '':
+                t_punctuation_change = punctuation_change(line_2024, line_mine)
+                if t_punctuation_change.strip():
                     fw.write(line_mine)
                     fw.write(line_2024)
                     fw.write(t_punctuation_change + '\n')
