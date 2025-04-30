@@ -66,7 +66,8 @@ def process_line(t_line):
     return t_line, t_dot
 
 def write_bible_verses():
-    t_file_1 = 'D:/Python/bookish-lamp/database/bibleVerses.sql'
+    t_file_1 = 'D:/Python/bookish-lamp/database/bibleVerses.sql' # for use on desktop
+    # t_file_1 = 'C:/Users/Carl/Documents/GitHub/bookish-lamp/database/bibleVerses.sql' # for use on laptop
     t_write_name_1 = writeFileName(t_file_1)
 
     try:
