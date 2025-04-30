@@ -27,6 +27,7 @@ you-all up to MAT 5 + JAM
 ### current work ###
 
 #=# BEFORE comparison with WEB #=#
+Thus says ... - ... says (sorted up to JER)
 none like me - no one like me (sorted up to SON)
 midst - midst/middle (sorted up to DEU)
 : and .[regex] - . Y/. T/. I[etc.] (sorted up to DEU)
