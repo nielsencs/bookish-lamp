@@ -851,7 +851,7 @@ if __name__ == "__main__":
     # Default file paths
     default_file1 = os.path.join("generatedSQL", "bibleVersesNS.sql")
     default_file2 = os.path.join("comparisons", "2024_WEB_Changes.sql")
-    default_master_file = os.path.join("database", "bibleVersesNS.sql")
+    default_master_file = os.path.join("database", "bibleVerses.sql")
     
     # Create the application with default files
     app = BibleHarmonyApp(default_file1, default_file2, default_master_file)
