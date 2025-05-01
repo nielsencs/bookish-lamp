@@ -832,20 +832,37 @@ class BibleHarmonyApp(tk.Tk):
             # Save unprocessed master file
             with open(default_master_file, "w", encoding=ENCODING) as outfile:
                 # Write SQL header
-                outfile.write("SET SQL_MODE = \"NO_AUTO_VALUE_ON_ZERO\";\n")
-                outfile.write("START TRANSACTION;\n")
-                outfile.write("SET time_zone = \"+00:00\";\n\n")
+                outfile.write("DROP TABLE IF EXISTS `verses`;\n")
+                outfile.write("CREATE TABLE `verses` (\n")
+                outfile.write("  `verseID` int(11) NOT NULL AUTO_INCREMENT,\n")
+                outfile.write("  `bookCode` varchar(3) NOT NULL,\n")
+                outfile.write("  `chapter` smallint(4) NOT NULL,\n")
+                outfile.write("  `verseNumber` smallint(4) NOT NULL,\n")
+                outfile.write("  `verseText` text NOT NULL,\n")
+                outfile.write("  PRIMARY KEY (`verseID`),\n")
+                outfile.write("  UNIQUE KEY `book-chapter-verse` (`bookCode`,`chapter`,`verseNumber`)\n")
+                outfile.write(") ENGINE=MyISAM DEFAULT CHARSET=latin1;\n\n")
                 
                 # Write original master lines without processing
                 for line in self.lines_master:
                     outfile.write(line)
+                
+                # Add COMMIT statement at the end
+                outfile.write("\nCOMMIT;\n")
                     
             # Save processed version to file1 location
             with open(default_file1, "w", encoding=ENCODING) as outfile:
                 # Write SQL header
-                outfile.write("SET SQL_MODE = \"NO_AUTO_VALUE_ON_ZERO\";\n")
-                outfile.write("START TRANSACTION;\n")
-                outfile.write("SET time_zone = \"+00:00\";\n\n")
+                outfile.write("DROP TABLE IF EXISTS `verses`;\n")
+                outfile.write("CREATE TABLE `verses` (\n")
+                outfile.write("  `verseID` int(11) NOT NULL AUTO_INCREMENT,\n")
+                outfile.write("  `bookCode` varchar(3) NOT NULL,\n")
+                outfile.write("  `chapter` smallint(4) NOT NULL,\n")
+                outfile.write("  `verseNumber` smallint(4) NOT NULL,\n")
+                outfile.write("  `verseText` text NOT NULL,\n")
+                outfile.write("  PRIMARY KEY (`verseID`),\n")
+                outfile.write("  UNIQUE KEY `book-chapter-verse` (`bookCode`,`chapter`,`verseNumber`)\n")
+                outfile.write(") ENGINE=MyISAM DEFAULT CHARSET=latin1;\n\n")
                 
                 # Write processed lines
                 for line in self.lines_master:
@@ -859,13 +876,13 @@ class BibleHarmonyApp(tk.Tk):
                         text = self.swap_words(text)
                     # Write processed line
                     outfile.write(f"{COMMON_PREFIX}'{book}', {chapter}, {verse}, '{text}'{COMMON_SUFFIX}\n")
+                
+                # Add COMMIT statement at the end
+                outfile.write("\nCOMMIT;\n")
                     
             tk.messagebox.showinfo("Success", "Files saved successfully")
         except Exception as e:
             tk.messagebox.showerror("Error", f"Failed to save files: {e}")
-
-    def process_master_line(self, line):
-        return line# f"{COMMON_PREFIX}'{book}', {chapter}, {verse}, '{text}'{COMMON_SUFFIX}"
 
 if __name__ == "__main__":
     import os
