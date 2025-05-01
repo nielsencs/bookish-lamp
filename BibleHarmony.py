@@ -210,7 +210,7 @@ class BibleHarmonyApp(tk.Tk):
         controls_frame = tk.LabelFrame(self, text="Controls")
         controls_frame.grid(row=5, column=0, columnspan=2, sticky="EW", padx=PADDING, pady=5)
         
-        self.save_button = tk.Button(controls_frame, text="Save", command=self.save_processed)
+        self.save_button = tk.Button(controls_frame, text="Save", command=self.save_master_and_processed)
         self.save_button.pack(side="top", pady=2)
         
         buttons_frame = tk.Frame(controls_frame)
@@ -822,22 +822,47 @@ class BibleHarmonyApp(tk.Tk):
         except Exception:
             return None
 
-    def save_processed(self):
-        """Save the master file and the processed copy for comparison."""
+    def save_master_and_processed(self):
+        """Save the unprocessed master file and the processed copy."""
         if not hasattr(self, 'lines_master'):
             tk.messagebox.showerror("Error", "No master file loaded")
             return
             
         try:
+            # Save unprocessed master file
             with open(default_master_file, "w", encoding=ENCODING) as outfile:
-                # Process and write master lines
+                # Write SQL header
+                outfile.write("SET SQL_MODE = \"NO_AUTO_VALUE_ON_ZERO\";\n")
+                outfile.write("START TRANSACTION;\n")
+                outfile.write("SET time_zone = \"+00:00\";\n\n")
+                
+                # Write original master lines without processing
                 for line in self.lines_master:
-                    processed_line = self.process_master_line(line)
-                    outfile.write(processed_line + '\n')
+                    outfile.write(line)
                     
-            tk.messagebox.showinfo("Success", f"Processed file saved to {output_path}")
+            # Save processed version to file1 location
+            with open(default_file1, "w", encoding=ENCODING) as outfile:
+                # Write SQL header
+                outfile.write("SET SQL_MODE = \"NO_AUTO_VALUE_ON_ZERO\";\n")
+                outfile.write("START TRANSACTION;\n")
+                outfile.write("SET time_zone = \"+00:00\";\n\n")
+                
+                # Write processed lines
+                for line in self.lines_master:
+                    book, chapter, verse, text = self.extract_verse_info(line)
+                    # Apply processing to text only
+                    if self.strip_strongs_var.get():
+                        text = self.strip_strongs(text)
+                    if self.strip_formatting_var.get():
+                        text = self.strip_formatting(text)
+                    if self.swap_words_var.get():
+                        text = self.swap_words(text)
+                    # Write processed line
+                    outfile.write(f"{COMMON_PREFIX}'{book}', {chapter}, {verse}, '{text}'{COMMON_SUFFIX}\n")
+                    
+            tk.messagebox.showinfo("Success", "Files saved successfully")
         except Exception as e:
-            tk.messagebox.showerror("Error", f"Failed to save file: {e}")
+            tk.messagebox.showerror("Error", f"Failed to save files: {e}")
 
     def process_master_line(self, line):
         return line# f"{COMMON_PREFIX}'{book}', {chapter}, {verse}, '{text}'{COMMON_SUFFIX}"
