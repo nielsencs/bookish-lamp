@@ -121,81 +121,121 @@ class BibleHarmonyApp(tk.Tk):
         self.grid_columnconfigure(1, weight=0)
 
         # Navigation Frame
-        nav_frame = tk.Frame(self)
+        nav_frame = tk.LabelFrame(self, text="Navigation")
         nav_frame.grid(row=0, column=0, columnspan=2, sticky="EW", padx=PADDING)
 
         # Book navigation
-        tk.Label(nav_frame, text="Book:").pack(side="left", padx=2)
-        self.book_combo = ttk.Combobox(nav_frame, width=5)
-        self.book_combo.pack(side="left", padx=2)
-        self.prev_B_button = tk.Button(nav_frame, text="Prev B", command=self.prev_book)
-        self.prev_B_button.pack(side="left", padx=2)
-        self.next_B_button = tk.Button(nav_frame, text="Next B", command=self.next_book)
-        self.next_B_button.pack(side="left", padx=2)
+        book_frame = tk.Frame(nav_frame)
+        book_frame.pack(side="left", padx=5)
+        tk.Label(book_frame, text="Book:").pack(side="left")
+        self.book_combo = ttk.Combobox(book_frame, width=5)
+        self.book_combo.pack(side="left")
+        self.prev_B_button = tk.Button(book_frame, text="Prev B", command=self.prev_book)
+        self.prev_B_button.pack(side="left")
+        self.next_B_button = tk.Button(book_frame, text="Next B", command=self.next_book)
+        self.next_B_button.pack(side="left")
 
-        tk.Label(nav_frame, text="Chapter:").pack(side="left", padx=2)
-        self.chapter_combo = ttk.Combobox(nav_frame, width=3)
-        self.chapter_combo.pack(side="left", padx=2)
-        self.prev_c_button = tk.Button(nav_frame, text="Prev C", command=self.prev_chapter)
-        self.prev_c_button.pack(side="left", padx=2)
-        self.next_button = tk.Button(nav_frame, text="Next C", command=self.next_chapter)
-        self.next_button.pack(side="left", padx=2)
+        # Chapter navigation
+        chapter_frame = tk.Frame(nav_frame)
+        chapter_frame.pack(side="left", padx=5)
+        tk.Label(chapter_frame, text="Chapter:").pack(side="left")
+        self.chapter_combo = ttk.Combobox(chapter_frame, width=3)
+        self.chapter_combo.pack(side="left")
+        self.prev_c_button = tk.Button(chapter_frame, text="Prev C", command=self.prev_chapter)
+        self.prev_c_button.pack(side="left")
+        self.next_button = tk.Button(chapter_frame, text="Next C", command=self.next_chapter)
+        self.next_button.pack(side="left")
 
+        # Verse navigation
+        verse_frame = tk.Frame(nav_frame)
+        verse_frame.pack(side="left", padx=5)
+        tk.Label(verse_frame, text="Verse:").pack(side="left")
+        self.verse_combo = ttk.Combobox(verse_frame, width=3)
+        self.verse_combo.pack(side="left")
+        self.prev_button = tk.Button(verse_frame, text="Prev", command=self.prev_line)
+        self.prev_button.pack(side="left")
+        self.next_button = tk.Button(verse_frame, text="Next", command=self.next_line)
+        self.next_button.pack(side="left")
 
-        tk.Label(nav_frame, text="Verse:").pack(side="left", padx=2)
-        self.verse_combo = ttk.Combobox(nav_frame, width=3)
-        self.verse_combo.pack(side="left", padx=2)
-
-        self.prev_button = tk.Button(nav_frame, text="Prev", command=self.prev_line)
-        self.prev_button.pack(side="left", padx=2)
-
-        self.next_button = tk.Button(nav_frame, text="Next", command=self.next_line)
-        self.next_button.pack(side="left", padx=2)
-
-        # File 1 Text Field
-        file1_frame = tk.Frame(self)
-        file1_frame.grid(row=1, column=0, columnspan=2, sticky="EW", padx=PADDING, pady=PADDING)
-        self.file1_label = tk.Label(file1_frame, text="File 1")
-        self.file1_label.pack(side="left")
-        self.file1_button = tk.Button(file1_frame, text="Select File", command=self.select_file1)
+        # File 1 Frame
+        file1_frame = tk.LabelFrame(self, text="File 1")
+        file1_frame.grid(row=1, column=0, columnspan=2, sticky="NSEW", padx=PADDING, pady=5)
+        
+        file1_header = tk.Frame(file1_frame)
+        file1_header.pack(fill="x", padx=5, pady=2)
+        self.file1_name_label = tk.Label(file1_header, text=NO_FILE_MSG, anchor="w")
+        self.file1_name_label.pack(side="left", fill="x", expand=True)
+        self.file1_button = tk.Button(file1_header, text="Select File", command=self.select_file1)
         self.file1_button.pack(side="right")
+        
+        self.file1_text = tk.Text(file1_frame, height=TEXT_HEIGHT, wrap="word", state="disabled")
+        self.file1_text.pack(fill="both", expand=True, padx=5, pady=2)
 
-        self.file1_name_label = tk.Label(self, text=NO_FILE_MSG, anchor="w")
-        self.file1_name_label.grid(row=2, column=0, columnspan=2, sticky="EW", padx=PADDING)
+        # File 2 Frame
+        file2_frame = tk.LabelFrame(self, text="File 2")
+        file2_frame.grid(row=2, column=0, columnspan=2, sticky="NSEW", padx=PADDING, pady=5)
+        
+        file2_header = tk.Frame(file2_frame)
+        file2_header.pack(fill="x", padx=5, pady=2)
+        self.file2_name_label = tk.Label(file2_header, text=NO_FILE_MSG, anchor="w")
+        self.file2_name_label.pack(side="left", fill="x", expand=True)
+        self.file2_button = tk.Button(file2_header, text="Select File", command=self.select_file2)
+        self.file2_button.pack(side="right")
+        
+        self.file2_text = tk.Text(file2_frame, height=TEXT_HEIGHT, wrap="word", state="disabled")
+        self.file2_text.pack(fill="both", expand=True, padx=5, pady=2)
 
-        self.file1_text = tk.Text(self, height=TEXT_HEIGHT, wrap="word", state="disabled")
-        self.file1_text.grid(row=3, column=0, columnspan=2, padx=PADDING, pady=5, sticky="EW")
+        # Master File Frame
+        master_frame = tk.LabelFrame(self, text="Master File")
+        master_frame.grid(row=3, column=0, columnspan=2, sticky="NSEW", padx=PADDING, pady=5)
 
-        # File 2 Text Field
-        self.file2_label = tk.Label(self, text="File 2")
-        self.file2_label.grid(row=4, column=0, sticky="W", padx=PADDING)
-        self.file2_button = tk.Button(self, text="Select File", command=self.select_file2)
-        self.file2_button.grid(row=4, column=1, padx=PADDING, sticky="E")
-        self.file2_name_label = tk.Label(self, text=NO_FILE_MSG, anchor="w")
-        self.file2_name_label.grid(row=5, column=0, columnspan=2, sticky="EW", padx=PADDING)
+        master_header = tk.Frame(master_frame)
+        master_header.pack(fill="x", padx=5, pady=2)
+        self.master_name_label = tk.Label(master_header, text=NO_FILE_MSG, anchor="w")
+        self.master_name_label.pack(side="left", fill="x", expand=True)
+        self.master_button = tk.Button(master_header, text="Select File", command=self.select_master_file)
+        self.master_button.pack(side="right")
 
-        self.file2_text = tk.Text(self, height=TEXT_HEIGHT, wrap="word", state="disabled")
-        self.file2_text.grid(row=6, column=0, columnspan=2, padx=PADDING, pady=5, sticky="EW")
+        self.selected_text = tk.Text(master_frame, height=TEXT_HEIGHT, wrap="word", state="disabled")
+        self.selected_text.pack(fill="both", expand=True, padx=5, pady=2)
 
-        # Selected Line Text Field
-        self.selected_label = tk.Label(self, text="Selected Line")
-        self.selected_label.grid(row=7, column=0, sticky="W", padx=PADDING)
-        self.selected_text = tk.Text(self, height=TEXT_HEIGHT, wrap="word", state="disabled")
-        self.selected_text.grid(row=8, column=0, columnspan=2, padx=PADDING, pady=5, sticky="EW")
+        # Controls Frame
+        controls_frame = tk.LabelFrame(self, text="Controls")
+        controls_frame.grid(row=4, column=0, columnspan=2, sticky="EW", padx=PADDING, pady=5)
+        
+        self.merge_button = tk.Button(controls_frame, text="Merge", command=self.merge_line)
+        self.merge_button.pack(side="top", pady=2)
+        
+        buttons_frame = tk.Frame(controls_frame)
+        buttons_frame.pack(fill="x", padx=5, pady=2)
+        self.use_file1_button = tk.Button(buttons_frame, text="Use File 1", command=self.use_file1)
+        self.use_file1_button.pack(side="left", expand=True)
+        self.use_file2_button = tk.Button(buttons_frame, text="Use File 2", command=self.use_file2)
+        self.use_file2_button.pack(side="right", expand=True)
 
-        # Buttons
-        self.merge_button = tk.Button(self, text="Merge", command=self.merge_line)
-        self.merge_button.grid(row=9, column=0, sticky="", padx=PADDING, pady=10)
+        # Text Processing Frame
+        processing_frame = tk.LabelFrame(self, text="Text Processing")
+        processing_frame.grid(row=5, column=0, columnspan=2, sticky="EW", padx=PADDING, pady=5)
 
-        self.use_file1_button = tk.Button(self, text="Use File 1", command=self.use_file1)
-        self.use_file1_button.grid(row=10, column=0, sticky="W", padx=PADDING, pady=5)
+        self.strip_strongs_var = tk.BooleanVar(value=True)
+        self.strip_formatting_var = tk.BooleanVar(value=True)
+        self.swap_words_var = tk.BooleanVar(value=True)
 
-        self.use_file2_button = tk.Button(self, text="Use File 2", command=self.use_file2)
-        self.use_file2_button.grid(row=10, column=1, sticky="E", padx=PADDING, pady=5)
+        tk.Checkbutton(processing_frame, text="Strip Strong's Numbers", 
+                    variable=self.strip_strongs_var,
+                    command=self.show_line).pack(side="left", padx=5)
+        tk.Checkbutton(processing_frame, text="Strip Formatting", 
+                    variable=self.strip_formatting_var,
+                    command=self.show_line).pack(side="left", padx=5)
+        tk.Checkbutton(processing_frame, text="Swap Words",
+                    variable=self.swap_words_var, 
+                    command=self.show_line).pack(side="left", padx=5)
 
         # Status Bar
-        self.status_bar = tk.Label(self, text="Line 1 of 100", anchor="w")
-        self.status_bar.grid(row=11, column=0, columnspan=2, sticky="EW", padx=10, pady=5)
+        status_frame = tk.LabelFrame(self, text="Status")
+        status_frame.grid(row=6, column=0, columnspan=2, sticky="EW", padx=PADDING, pady=5)
+        self.status_bar = tk.Label(status_frame, text="Line 1 of 100", anchor="w")
+        self.status_bar.pack(fill="x", padx=5, pady=2)
 
         # Show the first line
         self.show_line()
@@ -246,6 +286,21 @@ class BibleHarmonyApp(tk.Tk):
         """Open a file dialog to select the second file."""
         self.select_file(2)
 
+    def select_master_file(self):
+        """Open a file dialog to select the master file."""
+        file_path = filedialog.askopenfilename(title="Select Master File")
+        if file_path:
+            try:
+                with open(file_path, "r", encoding=ENCODING, errors=ERRORS_POLICY):
+                    self.master_file = file_path
+                    self.master_name_label.config(text=file_path)
+                    self.lines_master = self.read_and_filter_lines(file_path)
+                    self.filter_and_validate_lines()
+                    self.current_line = 0
+                    self.show_line()
+            except Exception as e:
+                tk.messagebox.showerror("Error", f"Failed to open Master File: {e}")
+
     def read_and_filter_lines(self, file_path):
         """Read lines from a file and filter for INSERT INTO statements.
 
@@ -258,7 +313,7 @@ class BibleHarmonyApp(tk.Tk):
         try:
             with open(file_path, "r", encoding=ENCODING, errors=ERRORS_POLICY) as f:
                 lines = f.readlines()
-            return [line for line in lines if INSERT_KEYWORD in line]
+            return lines #[line for line in lines if INSERT_KEYWORD in line]
         except Exception as e:
             tk.messagebox.showerror("Error", f"Failed to read file: {e}")
             return []
@@ -267,6 +322,21 @@ class BibleHarmonyApp(tk.Tk):
         """Display the current line from both files and highlight differences."""
         try:
             line1, line2 = self.get_current_lines()
+# --------------------- needs to be for master file -------------------
+            # Apply text processing based on checkbox states
+            if self.strip_strongs_var.get():
+                line1 = self.strip_strongs(line1)
+                line2 = self.strip_strongs(line2)
+                
+            if self.strip_formatting_var.get():
+                line1 = self.strip_formatting(line1)
+                line2 = self.strip_formatting(line2)
+                
+            if self.swap_words_var.get():
+                line1 = self.swap_words(line1)
+                line2 = self.swap_words(line2)
+# --------------------- needs to be for master file -------------------
+            
             self.update_text_field(self.file1_text, line1)
             self.update_text_field(self.file2_text, line2)
             self.highlight_differences(line1, line2)
@@ -791,15 +861,70 @@ class BibleHarmonyApp(tk.Tk):
         if not combo.get():
             combo.set(sorted_values[0])
 
+    def strip_strongs(self, text):
+        """Strip Strong's numbers from text.
+        
+        Args:
+            text (str): Text containing Strong's numbers
+            
+        Returns:
+            str: Text with Strong's numbers removed
+        """
+        # Strip {H####} and {G####} patterns
+        text = re.sub(r'\{[HG]\d+\}', '', text)
+        return text
+
+    def strip_formatting(self, text):
+        """Strip formatting tags from text.
+        
+        Args:
+            text (str): Text containing formatting tags
+            
+        Returns:
+            str: Clean text
+        """
+        # Strip <p>, </p>, <br>, [, ] tags
+        text = text.replace('<p>', '').replace('</p>', '')
+        text = text.replace('<br>', '')
+        text = text.replace('[', '').replace(']', '')
+        text = text.replace('\\add', '').replace('\\add*', '')
+        return text
+
+    def swap_words(self, text):
+        """Apply word substitutions.
+        
+        Args:
+            text (str): Original text
+            
+        Returns:
+            str: Text with words swapped
+        """
+        replacements = {
+            'group': 'company',
+            'murmur': 'complain',
+            'testimony': 'covenant', 
+            'winepress': 'wine press',
+            'throw': 'cast',
+            'Don\'t': 'You shall not',
+            'mustn\'t': 'shall not',
+            'enter': 'come into',
+            'LordOfMine{H0136}': 'Lord{H0136}',
+            'pursue': 'chase'
+        }
+        
+        for old, new in replacements.items():
+            text = text.replace(old, new)
+        return text
+
 if __name__ == "__main__":
     import os
 
     # Get the base directory (where the script is located)
     base_dir = os.path.dirname(os.path.abspath(__file__))
     
-    # Default file paths using os.path.join for proper path separators
-    default_file1 = os.path.join(base_dir, "..", "bookish-lamp", "generatedSQL", "bibleVersesNS.sql")
-    default_file2 = os.path.join(base_dir, "..", "bookish-lamp", "comparisons", "2024_WEB_Changes.sql")
+    # Default file paths
+    default_file1 = os.path.join("generatedSQL", "bibleVersesNS.sql")
+    default_file2 = os.path.join("comparisons", "2024_WEB_Changes.sql")
     
     # Create the application with default files
     app = BibleHarmonyApp(default_file1, default_file2)
