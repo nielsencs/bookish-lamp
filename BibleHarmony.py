@@ -4,11 +4,9 @@ TODO List:
    - Add Strong's number stripping
    - Merge GUI elements from stripStrongs
    - Keep verse text comparison features
-
-   selecting use file 1 or 2 to add back stripped sql stuff
-   editable text boxes
-    - Add button to strip Strong's numbers
-    - Add toggle to hide identical lines
+   - editable text boxes
+   - Add button to strip Strong's numbers
+   - Add toggle to hide identical lines
 
 2. Add master file handling:
    - Add third file panel for master reference
@@ -160,6 +158,12 @@ class BibleHarmonyApp(tk.Tk):
         self.next_button = tk.Button(verse_frame, text="Next", command=self.next_line)
         self.next_button.pack(side="left")
 
+        # Add to the options frame after other checkboxes
+        self.hide_identical_var = tk.BooleanVar(value=False)
+        tk.Checkbutton(nav_frame, text="Hide Identical Lines", 
+                       variable=self.hide_identical_var,
+                       command=self.show_line).pack(side="left", padx=5)
+
         # File 1 Frame
         file1_frame = tk.LabelFrame(self, text="File 1")
         file1_frame.grid(row=1, column=0, columnspan=2, sticky="NSEW", padx=PADDING, pady=5)
@@ -228,6 +232,23 @@ class BibleHarmonyApp(tk.Tk):
         
         self.save_master_button = tk.Button(save_frame, text="Save Master", command=self.save_master)
         self.save_master_button.pack(side="left", padx=2)
+
+        # Add processing options frame
+        options_frame = tk.LabelFrame(controls_frame, text="Processing Options")
+        options_frame.pack(fill="x", padx=5, pady=2)
+        
+        # Initialize checkbox variables
+        self.strip_strongs_var = tk.BooleanVar(value=True)
+        self.strip_formatting_var = tk.BooleanVar(value=True)
+        self.swap_words_var = tk.BooleanVar(value=True)
+        
+        # Add checkboxes
+        tk.Checkbutton(options_frame, text="Strip Strong's Numbers", 
+                       variable=self.strip_strongs_var).pack(side="left", padx=5)
+        tk.Checkbutton(options_frame, text="Strip Formatting", 
+                       variable=self.strip_formatting_var).pack(side="left", padx=5)
+        tk.Checkbutton(options_frame, text="Swap Words", 
+                       variable=self.swap_words_var).pack(side="left", padx=5)
 
         # Status Bar
         status_frame = tk.LabelFrame(self, text="Status")
@@ -654,12 +675,21 @@ class BibleHarmonyApp(tk.Tk):
         """Move to the previous line if available."""
         if self.current_line > 0:
             self.current_line -= 1
+            # Skip identical lines if option is enabled
+            if self.hide_identical_var.get():
+                while self.current_line > 0 and self.are_lines_identical(self.current_line):
+                    self.current_line -= 1
         self.show_line()
 
     def next_line(self):
         """Move to the next line if available."""
         if self.current_line < self.total_lines - 1:
             self.current_line += 1
+            # Skip identical lines if option is enabled
+            if self.hide_identical_var.get():
+                while (self.current_line < self.total_lines - 1 and 
+                       self.are_lines_identical(self.current_line)):
+                    self.current_line += 1
         self.show_line()
 
     def filter_lines(self, lines):
@@ -971,6 +1001,22 @@ class BibleHarmonyApp(tk.Tk):
             tk.messagebox.showerror("Error", "Could not find matching verse in master file")
         except Exception as e:
             tk.messagebox.showerror("Error", f"Failed to save changes: {e}")
+
+    def are_lines_identical(self, line_index):
+        """Check if lines at the given index are identical.
+        
+        Args:
+            line_index (int): Index of lines to compare
+            
+        Returns:
+            bool: True if lines are identical, False otherwise
+        """
+        try:
+            _, _, _, text1 = self.extract_verse_info(self.lines1[line_index])
+            _, _, _, text2 = self.extract_verse_info(self.lines2[line_index])
+            return text1.strip() == text2.strip()
+        except:
+            return False
 
 if __name__ == "__main__":
     import os
