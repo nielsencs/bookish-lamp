@@ -94,22 +94,25 @@ BIBLE_BOOKS_ORDER = {
 class BibleHarmonyApp(tk.Tk):
     """A tkinter application for comparing and editing Bible verse files."""
 
-    def __init__(self, file1, file2):
-        """Initialize the application with two files to compare.
+    def __init__(self, file1, file2, master_file):
+        """Initialize the application with two files to compare and the master file.
 
         Args:
-            file1 (str): Path to the first file
-            file2 (str): Path to the second file
+            file1       (str): Path to the first file
+            file2       (str): Path to the second file
+            master_file (str): Path to the master file
         """
         super().__init__()
 
         self.title("BibleHarmony")  # Set the window title
         self.file1 = file1
         self.file2 = file2
+        self.master_file = master_file
         self.current_line = 0
         self.total_lines = 0
+
+        # Initialize the line lists
         self.merged_lines = []
-        # Add these lines to initialize the line lists
         self.lines1 = []
         self.lines2 = []
         
@@ -196,44 +199,22 @@ class BibleHarmonyApp(tk.Tk):
         self.master_button = tk.Button(master_header, text="Select File", command=self.select_master_file)
         self.master_button.pack(side="right")
 
-        self.selected_text = tk.Text(master_frame, height=TEXT_HEIGHT, wrap="word", state="disabled")
-        self.selected_text.pack(fill="both", expand=True, padx=5, pady=2)
+        self.master_text = tk.Text(master_frame, height=TEXT_HEIGHT, wrap="word", state="disabled")
+        self.master_text.pack(fill="both", expand=True, padx=5, pady=2)
 
         # Controls Frame
         controls_frame = tk.LabelFrame(self, text="Controls")
-        controls_frame.grid(row=4, column=0, columnspan=2, sticky="EW", padx=PADDING, pady=5)
+        controls_frame.grid(row=5, column=0, columnspan=2, sticky="EW", padx=PADDING, pady=5)
         
-        self.merge_button = tk.Button(controls_frame, text="Merge", command=self.merge_line)
-        self.merge_button.pack(side="top", pady=2)
+        self.save_button = tk.Button(controls_frame, text="Save", command=self.save_processed)
+        self.save_button.pack(side="top", pady=2)
         
         buttons_frame = tk.Frame(controls_frame)
         buttons_frame.pack(fill="x", padx=5, pady=2)
-        self.use_file1_button = tk.Button(buttons_frame, text="Use File 1", command=self.use_file1)
-        self.use_file1_button.pack(side="left", expand=True)
-        self.use_file2_button = tk.Button(buttons_frame, text="Use File 2", command=self.use_file2)
-        self.use_file2_button.pack(side="right", expand=True)
-
-        # Text Processing Frame
-        processing_frame = tk.LabelFrame(self, text="Text Processing")
-        processing_frame.grid(row=5, column=0, columnspan=2, sticky="EW", padx=PADDING, pady=5)
-
-        self.strip_strongs_var = tk.BooleanVar(value=True)
-        self.strip_formatting_var = tk.BooleanVar(value=True)
-        self.swap_words_var = tk.BooleanVar(value=True)
-
-        tk.Checkbutton(processing_frame, text="Strip Strong's Numbers", 
-                    variable=self.strip_strongs_var,
-                    command=self.show_line).pack(side="left", padx=5)
-        tk.Checkbutton(processing_frame, text="Strip Formatting", 
-                    variable=self.strip_formatting_var,
-                    command=self.show_line).pack(side="left", padx=5)
-        tk.Checkbutton(processing_frame, text="Swap Words",
-                    variable=self.swap_words_var, 
-                    command=self.show_line).pack(side="left", padx=5)
 
         # Status Bar
         status_frame = tk.LabelFrame(self, text="Status")
-        status_frame.grid(row=6, column=0, columnspan=2, sticky="EW", padx=PADDING, pady=5)
+        status_frame.grid(row=7, column=0, columnspan=2, sticky="EW", padx=PADDING, pady=5)
         self.status_bar = tk.Label(status_frame, text="Line 1 of 100", anchor="w")
         self.status_bar.pack(fill="x", padx=5, pady=2)
 
@@ -241,8 +222,6 @@ class BibleHarmonyApp(tk.Tk):
         self.show_line()
 
         self.bind("<Return>", lambda event: self.merge_line())
-        self.bind("Control-1", lambda event: self.use_file1())
-        self.bind("Control-2", lambda event: self.use_file2())
         self.bind("<Control-s>", lambda event: self.merge_line())
         self.bind("<Control-Left>", lambda event: self.prev_line())
         self.bind("<Control-Right>", lambda event: self.next_line())
@@ -313,43 +292,36 @@ class BibleHarmonyApp(tk.Tk):
         try:
             with open(file_path, "r", encoding=ENCODING, errors=ERRORS_POLICY) as f:
                 lines = f.readlines()
-            return lines #[line for line in lines if INSERT_KEYWORD in line]
+            return [line for line in lines if INSERT_KEYWORD in line]
         except Exception as e:
             tk.messagebox.showerror("Error", f"Failed to read file: {e}")
             return []
 
     def show_line(self):
-        """Display the current line from both files and highlight differences."""
+        """Display the current line from all files and highlight differences."""
         try:
             line1, line2 = self.get_current_lines()
-# --------------------- needs to be for master file -------------------
-            # Apply text processing based on checkbox states
-            if self.strip_strongs_var.get():
-                line1 = self.strip_strongs(line1)
-                line2 = self.strip_strongs(line2)
-                
-            if self.strip_formatting_var.get():
-                line1 = self.strip_formatting(line1)
-                line2 = self.strip_formatting(line2)
-                
-            if self.swap_words_var.get():
-                line1 = self.swap_words(line1)
-                line2 = self.swap_words(line2)
-# --------------------- needs to be for master file -------------------
-            
+            # Get the master line if available
+            master_line = None
+            if hasattr(self, 'lines_master'):
+                master_line = self.lines_master[self.current_line] if self.current_line < len(self.lines_master) else None
+
+            # Update text fields
             self.update_text_field(self.file1_text, line1)
             self.update_text_field(self.file2_text, line2)
+            self.update_text_field(self.master_text, master_line if master_line else "No master verse found")
+            
             self.highlight_differences(line1, line2)
-            self.update_selected_text(line1, line2)
             self.update_status()
             self.update_navigation_options()
         except Exception as e:
             tk.messagebox.showerror("Error", f"Failed to process files: {e}")
 
     def read_files(self):
-        """Read the contents of both input files into memory."""
-        app.file1_name_label.config(text=default_file1)
-        app.file2_name_label.config(text=default_file2)
+        """Read the contents of both input files and master file into memory."""
+        self.file1_name_label.config(text=default_file1)
+        self.file2_name_label.config(text=default_file2)
+        self.master_name_label.config(text=default_master_file)
         try:
             if not self.file1 or not self.file2:
                 tk.messagebox.showerror("Error", "Both file paths must be selected before reading files.")
@@ -359,11 +331,15 @@ class BibleHarmonyApp(tk.Tk):
                 self.lines1 = [line for line in f1 if INSERT_KEYWORD in line]
             with open(self.file2, "r", encoding=ENCODING, errors=ERRORS_POLICY) as f2:
                 self.lines2 = [line for line in f2 if INSERT_KEYWORD in line]
+            with open(self.master_file, "r", encoding=ENCODING, errors=ERRORS_POLICY) as fmaster:
+                self.master_lines = [line for line in fmaster]
+                self.master_file = fmaster.name
             return True
         except Exception as e:
         # Reset labels if file loading fails
             app.file1_name_label.config(text=NO_FILE_MSG)
             app.file2_name_label.config(text=NO_FILE_MSG)
+            app.master_name_label.config(text=NO_FILE_MSG)
             tk.messagebox.showerror("Error", f"Failed to read files: {e}")
             return False
 
@@ -502,21 +478,6 @@ class BibleHarmonyApp(tk.Tk):
         self.file1_text.tag_config(highlight_type, background=HIGHLIGHT_COLORS[highlight_type])
         self.file2_text.tag_config(highlight_type, background=HIGHLIGHT_COLORS[highlight_type])
 
-    def update_selected_text(self, line1, line2):
-        """Update the selected text field based on user's choice.
-
-        Args:
-            line1 (str): Line from first file
-            line2 (str): Line from second file
-        """
-        self.selected_text.config(state="normal")
-        self.selected_text.delete(1.0, tk.END)
-        if (self.current_line, 1) in self.merged_lines:
-            self.selected_text.insert(tk.END, line1)
-        elif (self.current_line, 2) in self.merged_lines:
-            self.selected_text.insert(tk.END, line2)
-        self.selected_text.config(state="disabled")
-
     def update_text_field(self, text_widget, content):
         """Update a text widget with new content.
 
@@ -534,52 +495,18 @@ class BibleHarmonyApp(tk.Tk):
         current_book = self.book_combo.get() or "?"
         current_chapter = self.chapter_combo.get() or "?"
         current_verse = self.verse_combo.get() or "?"
+        
+        master_status = ""
+        if hasattr(self, 'lines_master'):
+            master_status = f" | Master: {len(self.lines_master)} lines"
+            
         self.status_bar.config(
             text=f"{current_book} {current_chapter}:{current_verse} | "
                  f"Line {self.current_line + 1} of {self.total_lines} | "
                  f"File 1: {len(self.lines1)} lines, File 2: {len(self.lines2)} lines"
+                 f"{master_status}"
         )
 
-    def use_file(self, source):
-        """Mark the current line as selected from specified source and preserve SQL structure.
-
-        Args:
-            source (int): Source identifier (1 for file1, 2 for file2)
-        """
-        # Get the raw line from the appropriate file
-        raw_line = self.lines2[self.current_line] if source == 2 else self.lines1[self.current_line]
-        clean_line = raw_line.strip()
-        
-        # Remove any existing COMMON_PREFIX and COMMON_SUFFIX if present
-        if clean_line.startswith(COMMON_PREFIX):
-            clean_line = clean_line[len(COMMON_PREFIX):]
-        if clean_line.endswith(COMMON_SUFFIX):
-            clean_line = clean_line[:-len(COMMON_SUFFIX)]
-            
-        # Reconstruct the full SQL line by reattaching prefix and suffix
-        full_sql_line = f"{COMMON_PREFIX}{clean_line}{COMMON_SUFFIX}"
-        
-        # Remove any existing selection for the current line
-        self.merged_lines = [(line, src) for line, src in self.merged_lines if line != self.current_line]
-        
-        # Add the new selection with the full SQL line
-        self.merged_lines.append((self.current_line, source))
-        
-        # Update selected text to show full SQL
-        self.selected_text.config(state="normal")
-        self.selected_text.delete(1.0, tk.END)
-        self.selected_text.insert(tk.END, full_sql_line)
-        self.selected_text.config(state="disabled")
-        
-        self.show_line()
-
-    def use_file1(self):
-        """Select the current line from file 1."""
-        self.use_file(1)
-
-    def use_file2(self):
-        """Select the current line from file 2."""
-        self.use_file(2)
 
     def navigate_book(self, direction):
         """Move to the next or previous book if available.
@@ -916,6 +843,48 @@ class BibleHarmonyApp(tk.Tk):
             text = text.replace(old, new)
         return text
 
+    def get_master_line(self):
+        """Get the corresponding verse from the master file."""
+        try:
+            if not hasattr(self, 'lines_master'):
+                return None
+                
+            # Get current verse info
+            current_line = self.lines1[self.current_line]
+            book, chapter, verse, _ = self.extract_verse_info(current_line)
+            
+            # Search for matching verse in master file
+            for line in self.lines_master:
+                master_book, master_chapter, master_verse, master_text = self.extract_verse_info(line)
+                if (master_book == book and 
+                    str(master_chapter) == str(chapter) and 
+                    str(master_verse) == str(verse)):
+                    return master_text
+                    
+            return None
+        except Exception:
+            return None
+
+    def save_processed(self):
+        """Save the master file and the processed copy for comparison."""
+        if not hasattr(self, 'lines_master'):
+            tk.messagebox.showerror("Error", "No master file loaded")
+            return
+            
+        try:
+            with open(default_master_file, "w", encoding=ENCODING) as outfile:
+                # Process and write master lines
+                for line in self.lines_master:
+                    processed_line = self.process_master_line(line)
+                    outfile.write(processed_line + '\n')
+                    
+            tk.messagebox.showinfo("Success", f"Processed file saved to {output_path}")
+        except Exception as e:
+            tk.messagebox.showerror("Error", f"Failed to save file: {e}")
+
+    def process_master_line(self, line):
+        return line# f"{COMMON_PREFIX}'{book}', {chapter}, {verse}, '{text}'{COMMON_SUFFIX}"
+
 if __name__ == "__main__":
     import os
 
@@ -925,9 +894,10 @@ if __name__ == "__main__":
     # Default file paths
     default_file1 = os.path.join("generatedSQL", "bibleVersesNS.sql")
     default_file2 = os.path.join("comparisons", "2024_WEB_Changes.sql")
+    default_master_file = os.path.join("database", "bibleVersesNS.sql")
     
     # Create the application with default files
-    app = BibleHarmonyApp(default_file1, default_file2)
+    app = BibleHarmonyApp(default_file1, default_file2, default_master_file)
     
     # Try to load the files immediately
     try:
