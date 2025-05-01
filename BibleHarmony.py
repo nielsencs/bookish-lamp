@@ -535,10 +535,13 @@ class BibleHarmonyApp(tk.Tk):
             text_widget (tk.Text): Text widget to update
             content (str): New content to display
         """
-        text_widget.config(state="normal")
+        text_widget.config(state="normal")  # Make widget editable
         text_widget.delete(1.0, tk.END)
         text_widget.insert(tk.END, content)
-        text_widget.config(state="disabled")
+        
+        # Only disable if it's an error or empty message
+        if content in ["No verses loaded", "Error displaying verse", "No master verse found"]:
+            text_widget.config(state="disabled")
 
     def update_status(self):
         """Update the status bar with current line numbers and file statistics."""
