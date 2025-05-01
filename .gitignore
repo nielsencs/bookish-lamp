@@ -132,3 +132,4 @@ dmypy.json
 # generatedSQL
 generatedSQL/bibleVersesNS.sql
 /generatedSQL/
+*.docx#
