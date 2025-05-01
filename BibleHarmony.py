@@ -171,7 +171,7 @@ class BibleHarmonyApp(tk.Tk):
         self.file1_button = tk.Button(file1_header, text="Select File", command=self.select_file1)
         self.file1_button.pack(side="right")
         
-        self.file1_text = tk.Text(file1_frame, height=TEXT_HEIGHT, wrap="word", state="disabled")
+        self.file1_text = tk.Text(file1_frame, height=TEXT_HEIGHT, wrap="word")
         self.file1_text.pack(fill="both", expand=True, padx=5, pady=2)
 
         # File 2 Frame
@@ -185,7 +185,7 @@ class BibleHarmonyApp(tk.Tk):
         self.file2_button = tk.Button(file2_header, text="Select File", command=self.select_file2)
         self.file2_button.pack(side="right")
         
-        self.file2_text = tk.Text(file2_frame, height=TEXT_HEIGHT, wrap="word", state="disabled")
+        self.file2_text = tk.Text(file2_frame, height=TEXT_HEIGHT, wrap="word")
         self.file2_text.pack(fill="both", expand=True, padx=5, pady=2)
 
         # Master File Frame
@@ -203,7 +203,7 @@ class BibleHarmonyApp(tk.Tk):
 #         self.master_button = tk.Button(master_header, text="Select File", command=self.select_master_file)
 #         self.master_button.pack(side="right")
 
-        self.master_text = tk.Text(master_frame, height=TEXT_HEIGHT, wrap="word", state="disabled")
+        self.master_text = tk.Text(master_frame, height=TEXT_HEIGHT, wrap="word")
         self.master_text.pack(fill="both", expand=True, padx=5, pady=2)
 
         # Controls Frame
@@ -215,6 +215,19 @@ class BibleHarmonyApp(tk.Tk):
         
         buttons_frame = tk.Frame(controls_frame)
         buttons_frame.pack(fill="x", padx=5, pady=2)
+
+        # Add save buttons
+        save_frame = tk.Frame(controls_frame)
+        save_frame.pack(fill="x", padx=5, pady=2)
+        
+        self.save_file1_button = tk.Button(save_frame, text="Save File 1", command=self.save_file1)
+        self.save_file1_button.pack(side="left", padx=2)
+        
+        self.save_file2_button = tk.Button(save_frame, text="Save File 2", command=self.save_file2)
+        self.save_file2_button.pack(side="left", padx=2)
+        
+        self.save_master_button = tk.Button(save_frame, text="Save Master", command=self.save_master)
+        self.save_master_button.pack(side="left", padx=2)
 
         # Status Bar
         status_frame = tk.LabelFrame(self, text="Status")
@@ -230,6 +243,11 @@ class BibleHarmonyApp(tk.Tk):
         self.bind("<Control-Right>", lambda event: self.next_line())
         self.bind("<Control-Up>", lambda event: self.prev_chapter())
         self.bind("<Control-Down>", lambda event: self.next_chapter())
+
+        # Add keyboard shortcuts
+        self.bind("<Control-1>", lambda e: self.save_file1())
+        self.bind("<Control-2>", lambda e: self.save_file2())
+        self.bind("<Control-m>", lambda e: self.save_master())
 
         # Automate lookup from book, chapter & verse combos
         self.book_combo.bind('<<ComboboxSelected>>', lambda e: self.navigate_to_verse())
@@ -303,11 +321,33 @@ class BibleHarmonyApp(tk.Tk):
     def show_line(self):
         """Display the current line from all files and highlight differences."""
         try:
+            # Check if we have any lines to display
+            if not self.lines1:
+                self.update_text_field(self.file1_text, "No verses loaded in File 1")
+                self.update_text_field(self.file2_text, "No verses loaded in File 2")
+                self.update_text_field(self.master_text, "No verses loaded in Master")
+                self.update_verse_display("", "", "")
+                return
+
+            # Make sure current_line is within bounds
+            if self.current_line >= len(self.lines1):
+                self.current_line = len(self.lines1) - 1
+                
             line1, line2 = self.get_current_lines()
-            # Get the master line if available
+            
+            # Get the verse reference from the current line in file1
+            current_book, current_chapter, current_verse, _ = self.extract_verse_info(self.lines1[self.current_line])
+            
+            # Find matching master verse by reference
             master_line = None
             if hasattr(self, 'lines_master'):
-                master_line = self.lines_master[self.current_line] if self.current_line < len(self.lines_master) else None
+                for line in self.lines_master:
+                    master_book, master_chapter, master_verse, _ = self.extract_verse_info(line)
+                    if (master_book == current_book and 
+                        str(master_chapter) == str(current_chapter) and 
+                        str(master_verse) == str(current_verse)):
+                        master_line = line
+                        break
 
             # Update text fields
             self.update_text_field(self.file1_text, line1)
@@ -319,6 +359,9 @@ class BibleHarmonyApp(tk.Tk):
             self.update_navigation_options()
         except Exception as e:
             tk.messagebox.showerror("Error", f"Failed to process files: {e}")
+            self.update_text_field(self.file1_text, "Error displaying verse")
+            self.update_text_field(self.file2_text, "Error displaying verse")
+            self.update_text_field(self.master_text, "Error displaying verse")
 
     def read_files(self):
         """Read the contents of both input files and master file into memory."""
@@ -353,6 +396,8 @@ class BibleHarmonyApp(tk.Tk):
         # First filter for SQL statements
         self.lines1 = self.filter_lines(self.lines1)
         self.lines2 = self.filter_lines(self.lines2)
+        if hasattr(self, 'lines_master'):  # Leave master file as-is
+            self.lines_master = self.filter_lines(self.lines_master)
 
         # Create dictionaries to map (book, chapter, verse) to line content
         verses1 = {}
@@ -379,7 +424,7 @@ class BibleHarmonyApp(tk.Tk):
 
         all_verses = sorted(set(verses1.keys()) | set(verses2.keys()), key=verse_key)
         
-        # Rebuild lines with empty placeholders for missing verses
+        # Rebuild comparison files with empty placeholders for missing verses
         self.lines1 = []
         self.lines2 = []
         empty_line = f"{COMMON_PREFIX}'',0,0,''{COMMON_SUFFIX}\n"
@@ -878,6 +923,51 @@ class BibleHarmonyApp(tk.Tk):
             tk.messagebox.showinfo("Success", "Files saved successfully")
         except Exception as e:
             tk.messagebox.showerror("Error", f"Failed to save files: {e}")
+
+    def save_file1(self):
+        """Save changes made to file 1."""
+        try:
+            current_text = self.file1_text.get("1.0", tk.END).strip()
+            book, chapter, verse, _ = self.extract_verse_info(self.lines1[self.current_line])
+            new_line = f"{COMMON_PREFIX}'{book}', {chapter}, {verse}, '{current_text}'{COMMON_SUFFIX}\n"
+            self.lines1[self.current_line] = new_line
+            tk.messagebox.showinfo("Success", "Changes saved to file 1")
+        except Exception as e:
+            tk.messagebox.showerror("Error", f"Failed to save changes: {e}")
+
+    def save_file2(self):
+        """Save changes made to file 2."""
+        try:
+            current_text = self.file2_text.get("1.0", tk.END).strip()
+            book, chapter, verse, _ = self.extract_verse_info(self.lines2[self.current_line])
+            new_line = f"{COMMON_PREFIX}'{book}', {chapter}, {verse}, '{current_text}'{COMMON_SUFFIX}\n"
+            self.lines2[self.current_line] = new_line
+            tk.messagebox.showinfo("Success", "Changes saved to file 2")
+        except Exception as e:
+            tk.messagebox.showerror("Error", f"Failed to save changes: {e}")
+
+    def save_master(self):
+        """Save changes made to master file."""
+        try:
+            current_text = self.master_text.get("1.0", tk.END).strip()
+            # Find matching master verse
+            current_line = self.lines1[self.current_line]
+            book, chapter, verse, _ = self.extract_verse_info(current_line)
+            
+            # Update the matching master line
+            for i, line in enumerate(self.lines_master):
+                master_book, master_chapter, master_verse, _ = self.extract_verse_info(line)
+                if (master_book == book and 
+                    str(master_chapter) == str(chapter) and 
+                    str(master_verse) == str(verse)):
+                    new_line = f"{COMMON_PREFIX}'{book}', {chapter}, {verse}, '{current_text}'{COMMON_SUFFIX}\n"
+                    self.lines_master[i] = new_line
+                    tk.messagebox.showinfo("Success", "Changes saved to master file")
+                    return
+            
+            tk.messagebox.showerror("Error", "Could not find matching verse in master file")
+        except Exception as e:
+            tk.messagebox.showerror("Error", f"Failed to save changes: {e}")
 
 if __name__ == "__main__":
     import os
