@@ -196,8 +196,12 @@ class BibleHarmonyApp(tk.Tk):
         master_header.pack(fill="x", padx=5, pady=2)
         self.master_name_label = tk.Label(master_header, text=NO_FILE_MSG, anchor="w")
         self.master_name_label.pack(side="left", fill="x", expand=True)
-        self.master_button = tk.Button(master_header, text="Select File", command=self.select_master_file)
-        self.master_button.pack(side="right")
+# self.master_button = tk.Button(master_header, text="Select File", command=self.select_master_file)
+# self.master_button.pack(side="right")
+#         self.master_button = tk.Button(master_header, text="Select File", command=self.select_master_file)
+#         self.master_button.pack(side="right")
+#         self.master_button = tk.Button(master_header, text="Select File", command=self.select_master_file)
+#         self.master_button.pack(side="right")
 
         self.master_text = tk.Text(master_frame, height=TEXT_HEIGHT, wrap="word", state="disabled")
         self.master_text.pack(fill="both", expand=True, padx=5, pady=2)
@@ -221,7 +225,6 @@ class BibleHarmonyApp(tk.Tk):
         # Show the first line
         self.show_line()
 
-        self.bind("<Return>", lambda event: self.merge_line())
         self.bind("<Control-s>", lambda event: self.merge_line())
         self.bind("<Control-Left>", lambda event: self.prev_line())
         self.bind("<Control-Right>", lambda event: self.next_line())
@@ -319,10 +322,12 @@ class BibleHarmonyApp(tk.Tk):
 
     def read_files(self):
         """Read the contents of both input files and master file into memory."""
-        self.file1_name_label.config(text=default_file1)
-        self.file2_name_label.config(text=default_file2)
-        self.master_name_label.config(text=default_master_file)
         try:
+            # Update labels with actual file paths
+            self.file1_name_label.config(text=self.file1 or NO_FILE_MSG)
+            self.file2_name_label.config(text=self.file2 or NO_FILE_MSG)
+            self.master_name_label.config(text=self.master_file or NO_FILE_MSG)
+
             if not self.file1 or not self.file2:
                 tk.messagebox.showerror("Error", "Both file paths must be selected before reading files.")
                 return False
@@ -331,15 +336,15 @@ class BibleHarmonyApp(tk.Tk):
                 self.lines1 = [line for line in f1 if INSERT_KEYWORD in line]
             with open(self.file2, "r", encoding=ENCODING, errors=ERRORS_POLICY) as f2:
                 self.lines2 = [line for line in f2 if INSERT_KEYWORD in line]
-            with open(self.master_file, "r", encoding=ENCODING, errors=ERRORS_POLICY) as fmaster:
-                self.master_lines = [line for line in fmaster]
-                self.master_file = fmaster.name
+            if self.master_file:
+                with open(self.master_file, "r", encoding=ENCODING, errors=ERRORS_POLICY) as fmaster:
+                    self.lines_master = [line for line in fmaster if INSERT_KEYWORD in line]
             return True
         except Exception as e:
-        # Reset labels if file loading fails
-            app.file1_name_label.config(text=NO_FILE_MSG)
-            app.file2_name_label.config(text=NO_FILE_MSG)
-            app.master_name_label.config(text=NO_FILE_MSG)
+            # Reset labels if fileloading fails
+            self.file1_name_label.config(text=NO_FILE_MSG)
+            self.file2_name_label.config(text=NO_FILE_MSG)
+            self.master_name_label.config(text=NO_FILE_MSG)
             tk.messagebox.showerror("Error", f"Failed to read files: {e}")
             return False
 
@@ -608,54 +613,6 @@ class BibleHarmonyApp(tk.Tk):
         if self.current_line < self.total_lines - 1:
             self.current_line += 1
         self.show_line()
-
-    def merge_line(self):
-        """Save the merged file with user selections."""
-        output_path = filedialog.asksaveasfilename(defaultextension=".txt", title="Save Merged File")
-        if not output_path:
-            return  # User canceled the save dialog
-
-        try:
-            with open(output_path, "w") as outfile:
-                self.write_merged_lines(outfile)
-            tk.messagebox.showinfo("Success", f"Merged file saved to {output_path}")
-        except Exception as e:
-            tk.messagebox.showerror("Error", f"Failed to save merged file: {e}")
-
-    def write_merged_lines(self, outfile):
-        """Write the merged lines to the output file.
-
-        Args:
-            outfile (file): Open file object to write to
-        """
-        # Ensure selections are sorted by line number
-        self.merged_lines.sort(key=lambda x: x[0])
-        selected_lines = {line: source for line, source in self.merged_lines}
-
-        for i in range(self.total_lines):
-            line = self.get_line_to_write(i, selected_lines)
-            outfile.write(line)
-
-    def get_line_to_write(self, index, selected_lines):
-        """Determine which line to write for a given index.
-
-        Args:
-            index (int): Line index
-            selected_lines (dict): Dictionary of user selections
-
-        Returns:
-            str: The line to write
-        """
-        # Get the line based on selection or default
-        if index in selected_lines:
-            line = self.lines1[index] if selected_lines[index] == 1 else self.lines2[index]
-        else:
-            line = self.lines1[index] if index < len(self.lines1) else self.lines2[index]
-
-        # Ensure line ends with newline but doesn't have extra ones
-        line = line.rstrip('\n') + '\n'
-        
-        return line
 
     def filter_lines(self, lines):
         """Filter lines to keep only those containing INSERT statements.
