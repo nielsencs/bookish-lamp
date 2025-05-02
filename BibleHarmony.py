@@ -256,6 +256,11 @@ class BibleHarmonyApp(tk.Tk):
         self.chapter_combo.bind('<<ComboboxSelected>>', lambda e: self.navigate_to_verse())
         self.verse_combo.bind('<<ComboboxSelected>>', lambda e: self.navigate_to_verse())
 
+        # Add current location tracking
+        self.current_book = "GEN"
+        self.current_chapter = "1"
+        self.current_verse = "1"
+
     def select_file(self, file_number):
         """Open a file dialog to select a file and update the display.
         
@@ -345,9 +350,9 @@ class BibleHarmonyApp(tk.Tk):
             if hasattr(self, 'lines_master'):
                 for line in self.lines_master:
                     master_book, master_chapter, master_verse, _ = self.extract_verse_info(line)
-                    if (master_book == current_book and 
-                        str(master_chapter) == str(current_chapter) and 
-                        str(master_verse) == str(current_verse)):
+                    if (master_book == self.current_book and 
+                        str(master_chapter) == str(self.current_chapter) and 
+                        str(master_verse) == str(self.current_verse)):
                         master_line = line
                         break
 
@@ -715,26 +720,26 @@ class BibleHarmonyApp(tk.Tk):
     def navigate_to_verse(self):
         """Navigate to the selected book, chapter, and verse."""
         try:
-            target_book = self.book_combo.get()
-            target_chapter = self.chapter_combo.get()
-            target_verse = self.verse_combo.get()
+            self.current_book = self.book_combo.get()
+            self.current_chapter = self.chapter_combo.get()
+            self.current_verse = self.verse_combo.get()
             
-            if not all([target_book, target_chapter, target_verse]):
+            if not all([self.current_book, self.current_chapter, self.current_verse]):
                 tk.messagebox.showwarning("Warning", "Please select book, chapter and verse")
                 return
             
             # Search through lines to find matching verse
             for i, line in enumerate(self.lines1):
                 book, chapter, verse, _ = self.extract_verse_info(line)
-                if (book == target_book and 
-                    str(chapter) == str(target_chapter) and 
-                    str(verse) == str(target_verse)):
+                if (book == self.current_book and 
+                    str(chapter) == str(self.current_chapter) and 
+                    str(verse) == str(self.current_verse)):
                     self.current_line = i
                     self.show_line()
                     return
             
             tk.messagebox.showinfo("Not Found", 
-                f"Verse {target_book} {target_chapter}:{target_verse} not found")
+                f"Verse {self.current_book} {self.current_chapter}:{self.current_verse} not found")
         except Exception as e:
             tk.messagebox.showerror("Error", f"Navigation failed: {e}")
 
@@ -917,25 +922,21 @@ class BibleHarmonyApp(tk.Tk):
             tk.messagebox.showerror("Error", f"Failed to save files: {e}")
 
     def store_master(self, event=None):
-        # """Store changes made to master file."""
-        # try:
-        #     book, chapter, verse, _ = self.extract_verse_info(self.lines1[self.current_line])
-            
-        #     # Update matching master line
-        #     for i, line in enumerate(self.lines_master):
-        #         master_book, master_chapter, master_verse, _ = self.extract_verse_info(line)
-        #         if (master_book == book and 
-        #             str(master_chapter) == str(chapter) and 
-        #             str(master_verse) == str(verse)):
-        #             self.lines_master[i] = self.lines1[self.current_line]
-        #             self.master_text.edit_modified(False)  # Reset modified flag
-        #             return
+        """Store changes made to master file."""
+        try:
+            # Update matching master line
+            for i, line in enumerate(self.lines_master):
+                master_book, master_chapter, master_verse, _ = self.extract_verse_info(line)
+                if (master_book == self.current_book and 
+                    str(master_chapter) == str(self.current_chapter) and 
+                    str(master_verse) == str(self.current_verse)):
+                    self.lines_master[i] = self.master_text.get("1.0", "end-1c") # Get the text from the master text widget
+                    self.master_text.edit_modified(False)  # Reset modified flag
+                    return
 
-        #     tk.messagebox.showerror("Error", "Could not find matching verse in master file")
-        # except Exception as e:
-        #     tk.messagebox.showerror("Error", f"Failed to save changes: {e}")
-        self.master_text.get("1.0", "end-1c")
-
+            tk.messagebox.showerror("Error", "Could not find matching verse in master file")
+        except Exception as e:
+            tk.messagebox.showerror("Error", f"Failed to save changes: {e}")
 
     def are_lines_identical(self, line_index):
         """Check if lines at the given index are identical.
