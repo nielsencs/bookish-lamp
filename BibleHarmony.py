@@ -1,6 +1,7 @@
 """
 TODO List:
 1. Incorporate stripStrongs_bibleVerses_GUI functionality: DONE!
+    - make word swaps selectable
 
 2. Add master file handling: DONE!
     - on saving reopen file1 and get it to the correct verse
@@ -985,21 +986,21 @@ class BibleHarmonyApp(tk.Tk):
             return
             
         try:
+            # # Store current location
+            # current_book = self.current_book
+            # current_chapter = self.current_chapter
+            # current_verse = self.current_verse
+                
             # Save unprocessed master file
             with open(default_master_file, "w", encoding=ENCODING) as outfile:
                 self.write_sql_header(outfile)
-                
-                # Write original master lines without processing
                 for line in self.lines_master:
                     outfile.write(line)
-                
                 outfile.write("\nCOMMIT;\n")
                     
             # Save processed version to file1 location
             with open(default_file1, "w", encoding=ENCODING) as outfile:
                 self.write_sql_header(outfile)
-                
-                # Write processed lines
                 for line in self.lines_master:
                     book, chapter, verse, text = self.extract_verse_info(line)
                     # Apply processing to text only
@@ -1013,9 +1014,19 @@ class BibleHarmonyApp(tk.Tk):
                         text = self.swap_words(text)
                     # Write processed line
                     outfile.write(f"{COMMON_PREFIX}'{book}', {chapter}, {verse}, '{text}'{COMMON_SUFFIX}\n")
-                
                 outfile.write("\nCOMMIT;\n")
                     
+            # Reload file1
+            # self.file1 = default_file1
+            self.read_files()
+            self.filter_and_validate_lines()
+            
+            # # Restore location
+            # self.current_book = current_book
+            # self.current_chapter = current_chapter
+            # self.current_verse = current_verse
+            self.navigate_to_verse()
+                
             tk.messagebox.showinfo("Success", "Files saved successfully")
         except Exception as e:
             tk.messagebox.showerror("Error", f"Failed to save files: {e}")
