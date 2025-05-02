@@ -158,7 +158,7 @@ class BibleHarmonyApp(tk.Tk):
         self.next_button = tk.Button(verse_frame, text="Next", command=self.next_line)
         self.next_button.pack(side="left")
 
-        # Add to the options frame after other checkboxes
+        # 'Hide Identical Lines' option
         self.hide_identical_var = tk.BooleanVar(value=False)
         tk.Checkbutton(nav_frame, text="Hide Identical Lines", 
                        variable=self.hide_identical_var,
@@ -175,7 +175,7 @@ class BibleHarmonyApp(tk.Tk):
         self.file1_button = tk.Button(file1_header, text="Select File", command=self.select_file1)
         self.file1_button.pack(side="right")
         
-        self.file1_text = tk.Text(file1_frame, height=TEXT_HEIGHT, wrap="word")
+        self.file1_text = tk.Text(file1_frame, height=TEXT_HEIGHT, wrap="word", state="disabled")
         self.file1_text.pack(fill="both", expand=True, padx=5, pady=2)
 
         # File 2 Frame
@@ -189,7 +189,7 @@ class BibleHarmonyApp(tk.Tk):
         self.file2_button = tk.Button(file2_header, text="Select File", command=self.select_file2)
         self.file2_button.pack(side="right")
         
-        self.file2_text = tk.Text(file2_frame, height=TEXT_HEIGHT, wrap="word")
+        self.file2_text = tk.Text(file2_frame, height=TEXT_HEIGHT, wrap="word", state="disabled")
         self.file2_text.pack(fill="both", expand=True, padx=5, pady=2)
 
         # Master File Frame
@@ -200,16 +200,11 @@ class BibleHarmonyApp(tk.Tk):
         master_header.pack(fill="x", padx=5, pady=2)
         self.master_name_label = tk.Label(master_header, text=NO_FILE_MSG, anchor="w")
         self.master_name_label.pack(side="left", fill="x", expand=True)
-# self.master_button = tk.Button(master_header, text="Select File", command=self.select_master_file)
-# self.master_button.pack(side="right")
-#         self.master_button = tk.Button(master_header, text="Select File", command=self.select_master_file)
-#         self.master_button.pack(side="right")
-#         self.master_button = tk.Button(master_header, text="Select File", command=self.select_master_file)
-#         self.master_button.pack(side="right")
 
         self.master_text = tk.Text(master_frame, height=TEXT_HEIGHT, wrap="word")
         self.master_text.pack(fill="both", expand=True, padx=5, pady=2)
-
+        self.master_text.bind('<<Modified>>', self.store_master)
+        
         # Controls Frame
         controls_frame = tk.LabelFrame(self, text="Controls")
         controls_frame.grid(row=5, column=0, columnspan=2, sticky="EW", padx=PADDING, pady=5)
@@ -224,15 +219,6 @@ class BibleHarmonyApp(tk.Tk):
         save_frame = tk.Frame(controls_frame)
         save_frame.pack(fill="x", padx=5, pady=2)
         
-        self.save_file1_button = tk.Button(save_frame, text="Save File 1", command=self.save_file1)
-        self.save_file1_button.pack(side="left", padx=2)
-        
-        self.save_file2_button = tk.Button(save_frame, text="Save File 2", command=self.save_file2)
-        self.save_file2_button.pack(side="left", padx=2)
-        
-        self.save_master_button = tk.Button(save_frame, text="Save Master", command=self.save_master)
-        self.save_master_button.pack(side="left", padx=2)
-
         # Add processing options frame
         options_frame = tk.LabelFrame(controls_frame, text="Processing Options")
         options_frame.pack(fill="x", padx=5, pady=2)
@@ -264,11 +250,6 @@ class BibleHarmonyApp(tk.Tk):
         self.bind("<Control-Right>", lambda event: self.next_line())
         self.bind("<Control-Up>", lambda event: self.prev_chapter())
         self.bind("<Control-Down>", lambda event: self.next_chapter())
-
-        # Add keyboard shortcuts
-        self.bind("<Control-1>", lambda e: self.save_file1())
-        self.bind("<Control-2>", lambda e: self.save_file2())
-        self.bind("<Control-m>", lambda e: self.save_master())
 
         # Automate lookup from book, chapter & verse combos
         self.book_combo.bind('<<ComboboxSelected>>', lambda e: self.navigate_to_verse())
@@ -878,28 +859,6 @@ class BibleHarmonyApp(tk.Tk):
             text = text.replace(old, new)
         return text
 
-    def get_master_line(self):
-        """Get the corresponding verse from the master file."""
-        try:
-            if not hasattr(self, 'lines_master'):
-                return None
-                
-            # Get current verse info
-            current_line = self.lines1[self.current_line]
-            book, chapter, verse, _ = self.extract_verse_info(current_line)
-            
-            # Search for matching verse in master file
-            for line in self.lines_master:
-                master_book, master_chapter, master_verse, master_text = self.extract_verse_info(line)
-                if (master_book == book and 
-                    str(master_chapter) == str(chapter) and 
-                    str(master_verse) == str(verse)):
-                    return master_text
-                    
-            return None
-        except Exception:
-            return None
-
     def write_sql_header(self, outfile):
         """Write the SQL header for table creation.
         
@@ -957,50 +916,26 @@ class BibleHarmonyApp(tk.Tk):
         except Exception as e:
             tk.messagebox.showerror("Error", f"Failed to save files: {e}")
 
-    def save_file1(self):
-        """Save changes made to file 1."""
-        try:
-            current_text = self.file1_text.get("1.0", tk.END).strip()
-            book, chapter, verse, _ = self.extract_verse_info(self.lines1[self.current_line])
-            new_line = f"{COMMON_PREFIX}'{book}', {chapter}, {verse}, '{current_text}'{COMMON_SUFFIX}\n"
-            self.lines1[self.current_line] = new_line
-            tk.messagebox.showinfo("Success", "Changes saved to file 1")
-        except Exception as e:
-            tk.messagebox.showerror("Error", f"Failed to save changes: {e}")
-
-    def save_file2(self):
-        """Save changes made to file 2."""
-        try:
-            current_text = self.file2_text.get("1.0", tk.END).strip()
-            book, chapter, verse, _ = self.extract_verse_info(self.lines2[self.current_line])
-            new_line = f"{COMMON_PREFIX}'{book}', {chapter}, {verse}, '{current_text}'{COMMON_SUFFIX}\n"
-            self.lines2[self.current_line] = new_line
-            tk.messagebox.showinfo("Success", "Changes saved to file 2")
-        except Exception as e:
-            tk.messagebox.showerror("Error", f"Failed to save changes: {e}")
-
-    def save_master(self):
-        """Save changes made to master file."""
-        try:
-            current_text = self.master_text.get("1.0", tk.END).strip()
-            # Find matching master verse
-            current_line = self.lines1[self.current_line]
-            book, chapter, verse, _ = self.extract_verse_info(current_line)
+    def store_master(self, event=None):
+        # """Store changes made to master file."""
+        # try:
+        #     book, chapter, verse, _ = self.extract_verse_info(self.lines1[self.current_line])
             
-            # Update the matching master line
-            for i, line in enumerate(self.lines_master):
-                master_book, master_chapter, master_verse, _ = self.extract_verse_info(line)
-                if (master_book == book and 
-                    str(master_chapter) == str(chapter) and 
-                    str(master_verse) == str(verse)):
-                    new_line = f"{COMMON_PREFIX}'{book}', {chapter}, {verse}, '{current_text}'{COMMON_SUFFIX}\n"
-                    self.lines_master[i] = new_line
-                    tk.messagebox.showinfo("Success", "Changes saved to master file")
-                    return
-            
-            tk.messagebox.showerror("Error", "Could not find matching verse in master file")
-        except Exception as e:
-            tk.messagebox.showerror("Error", f"Failed to save changes: {e}")
+        #     # Update matching master line
+        #     for i, line in enumerate(self.lines_master):
+        #         master_book, master_chapter, master_verse, _ = self.extract_verse_info(line)
+        #         if (master_book == book and 
+        #             str(master_chapter) == str(chapter) and 
+        #             str(master_verse) == str(verse)):
+        #             self.lines_master[i] = self.lines1[self.current_line]
+        #             self.master_text.edit_modified(False)  # Reset modified flag
+        #             return
+
+        #     tk.messagebox.showerror("Error", "Could not find matching verse in master file")
+        # except Exception as e:
+        #     tk.messagebox.showerror("Error", f"Failed to save changes: {e}")
+        self.master_text.get("1.0", "end-1c")
+
 
     def are_lines_identical(self, line_index):
         """Check if lines at the given index are identical.
