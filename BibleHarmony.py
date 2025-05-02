@@ -986,7 +986,14 @@ class BibleHarmonyApp(tk.Tk):
         outfile.write(") ENGINE=MyISAM DEFAULT CHARSET=latin1;\n\n")
 
     def save_master_and_processed(self):
-        """Save the unprocessed master file and the processed copy."""
+        """Save the unprocessed master file and the processed copy.
+        
+        Processing order is critical:
+        1. Word swaps MUST be applied first (to match patterns in original text)
+        2. Formatting can be stripped next
+        3. Quotes can be stripped
+        4. Strong's numbers should be stripped last
+        """
         if not hasattr(self, 'lines_master'):
             tk.messagebox.showerror("Error", "No master file loaded")
             return
@@ -1004,17 +1011,23 @@ class BibleHarmonyApp(tk.Tk):
                 self.write_sql_header(outfile)
                 for line in self.lines_master:
                     book, chapter, verse, text = self.extract_verse_info(line)
-                    # swap_words MUST be done before everything else
+                    
+                    # Process in mandatory order:
+                    # 1. Word swaps (must be first to match original patterns)
                     if self.swap_words_var.get():
                         text = self.swap_words(text)
+                    # 2. Strip formatting
                     if self.strip_formatting_var.get():
                         text = self.strip_formatting(text)
+                    # 3. Strip quotes
                     if self.strip_quotes_var.get():
                         text = self.strip_quotes(text)
+                    # 4. Strip Strong's numbers (must be last)
                     if self.strip_strongs_var.get():
                         text = self.strip_strongs(text)
-                    # Write processed line
+                        
                     outfile.write(f"{COMMON_PREFIX}'{book}', {chapter}, {verse}, '{text}'{COMMON_SUFFIX}\n")
+                    
                 outfile.write("\nCOMMIT;\n")
                     
             # Reload file1
