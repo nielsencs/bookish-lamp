@@ -486,14 +486,14 @@ class BibleHarmonyApp(tk.Tk):
         for line in self.lines1:
             book, chapter, verse, _ = self.extract_verse_info(line)
             if book and chapter and verse:
-                key = (book, int(chapter), int(verse))
+                key = (book, str(chapter), str(verse))
                 verses1[key] = line
                 
         # Process file 2
         for line in self.lines2:
             book, chapter, verse, _ = self.extract_verse_info(line)
             if book and chapter and verse:
-                key = (book, int(chapter), int(verse))
+                key = (book, str(chapter), str(verse))
                 verses2[key] = line
 
         # Get all verse references in Bible order
@@ -506,11 +506,17 @@ class BibleHarmonyApp(tk.Tk):
         # Rebuild comparison files with empty placeholders for missing verses
         self.lines1 = []
         self.lines2 = []
+        self.verse_index1 = {}  # Clear and rebuild indices
+        self.verse_index2 = {}
         empty_line = f"{COMMON_PREFIX}'',0,0,''{COMMON_SUFFIX}\n"
         
-        for verse_key in all_verses:
-            self.lines1.append(verses1.get(verse_key, empty_line))
-            self.lines2.append(verses2.get(verse_key, empty_line))
+        for i, verse_key in enumerate(all_verses):
+            line1 = verses1.get(verse_key, empty_line)
+            line2 = verses2.get(verse_key, empty_line)
+            self.lines1.append(line1)
+            self.lines2.append(line2)
+            self.verse_index1[verse_key] = i  # Update indices
+            self.verse_index2[verse_key] = i
 
         self.total_lines = len(all_verses)
         self.current_line = max(0, min(self.current_line, self.total_lines - 1))
@@ -811,17 +817,17 @@ class BibleHarmonyApp(tk.Tk):
                 tk.messagebox.showwarning("Warning", "Please select book, chapter, and verse")
                 return
 
-            # Search for the matching line in file1
-            for i, line in enumerate(self.lines1):
-                book, chapter, verse, _ = self.extract_verse_info(line)
-                if (book == self.current_book and 
-                    str(chapter) == str(self.current_chapter) and 
-                    str(verse) == str(self.current_verse)):
-                    self.current_line = i
-                    self.show_line()
-                    return
+            # Use the verse index for direct lookup
+            key = (self.current_book, str(self.current_chapter), str(self.current_verse))
+            index = self.verse_index1.get(key)
+            
+            if index is not None:
+                self.current_line = index
+                self.show_line()
+                return
 
-            tk.messagebox.showinfo("Not Found", f"Verse {self.current_book} {self.current_chapter}:{self.current_verse} not found")
+            tk.messagebox.showinfo("Not Found", 
+                f"Verse {self.current_book} {self.current_chapter}:{self.current_verse} not found")
         except Exception as e:
             tk.messagebox.showerror("Error", f"Navigation failed: {e}")
 
@@ -917,7 +923,7 @@ class BibleHarmonyApp(tk.Tk):
         text = text.replace('<p>', '').replace('</p>', '')
         text = text.replace('<br>', '')
         text = text.replace('[', '').replace(']', '')
-        text = text.replace('\\add', '').replace('\\add*', '')
+        text.replace('\\add', '').replace('\\add*', '')
         return text
 
     def strip_quotes(self, text):
