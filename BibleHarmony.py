@@ -49,7 +49,6 @@ HIGHLIGHT_COLORS = {
     "other": "#FFB6C1",        # Light pink
 }
 
-# Update the BIBLE_BOOKS_ORDER constant with traditional ordering
 BIBLE_BOOKS_ORDER = {
     'GEN':  1, 'EXO':  2, 'LEV':  3, 'NUM':  4, 'DEU':  5,
     'JOS':  6, 'JDG':  7, 'RUT':  8, '1SA':  9, '2SA': 10,
@@ -66,7 +65,7 @@ BIBLE_BOOKS_ORDER = {
     '1PE': 60, '2PE': 61, '1JN': 62, '2JN': 63, '3JN': 64,
     'JUD': 65, 'REV': 66,
 
-    # my alternate codes!
+    # My alternate codes!
     '1SM':  9,  # 1 Samuel
     '2SM': 10,  # 2 Samuel
     'SON': 22,  # Song of Songs
@@ -353,7 +352,7 @@ class BibleHarmonyApp(tk.Tk):
                     if (master_book == self.current_book and 
                         str(master_chapter) == str(self.current_chapter) and 
                         str(master_verse) == str(self.current_verse)):
-                        master_line = line  # Use the complete SQL line
+                        master_line = line
                         break
 
             # Update text fields
