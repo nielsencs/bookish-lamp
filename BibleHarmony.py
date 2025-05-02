@@ -260,6 +260,11 @@ class BibleHarmonyApp(tk.Tk):
         self.current_chapter = "1"
         self.current_verse = "1"
 
+        # Add verse index dictionaries
+        self.verse_index1 = {}  # For file1
+        self.verse_index2 = {}  # For file2
+        self.verse_index_master = {}  # For master file
+
     def select_file(self, file_number):
         """Open a file dialog to select a file and update the display.
         
@@ -332,26 +337,19 @@ class BibleHarmonyApp(tk.Tk):
                 self.update_text_field(self.file1_text, "No verses loaded in File 1")
                 self.update_text_field(self.file2_text, "No verses loaded in File 2")
                 self.update_text_field(self.master_text, "No verses loaded in Master")
-                self.update_verse_display("", "", "")
                 return
 
-            # Make sure current_line is within bounds
-            if self.current_line >= len(self.lines1):
-                self.current_line = len(self.lines1) - 1
-                
+            # Get the current lines
             line1, line2 = self.get_current_lines()
-            
-            # Get the verse reference from the current line in file1
-            current_book, current_chapter, current_verse, _ = self.extract_verse_info(self.lines1[self.current_line])
-            
-            # Find matching master verse by reference
+
+            # Find the matching master line
             master_line = None
             if hasattr(self, 'lines_master'):
                 for line in self.lines_master:
-                    master_book, master_chapter, master_verse, _ = self.extract_verse_info(line)
-                    if (master_book == self.current_book and 
-                        str(master_chapter) == str(self.current_chapter) and 
-                        str(master_verse) == str(self.current_verse)):
+                    book, chapter, verse, _ = self.extract_verse_info(line)
+                    if (book == self.current_book and 
+                        str(chapter) == str(self.current_chapter) and 
+                        str(verse) == str(self.current_verse)):
                         master_line = line
                         break
 
@@ -359,43 +357,39 @@ class BibleHarmonyApp(tk.Tk):
             self.update_text_field(self.file1_text, line1)
             self.update_text_field(self.file2_text, line2)
             self.update_text_field(self.master_text, master_line if master_line else "No master verse found")
-            
-            self.highlight_differences(line1, line2)
+
+            # Update navigation display
+            self.update_verse_display(self.current_book, self.current_chapter, self.current_verse)
             self.update_status()
-            self.update_navigation_options()
         except Exception as e:
             tk.messagebox.showerror("Error", f"Failed to process files: {e}")
-            self.update_text_field(self.file1_text, "Error displaying verse")
-            self.update_text_field(self.file2_text, "Error displaying verse")
-            self.update_text_field(self.master_text, "Error displaying verse")
 
     def get_current_lines(self):
-        """Get the current line from both files with metadata stripped."""
-        # Get raw lines first
-        raw_line1 = self.lines1[self.current_line] if self.current_line < len(self.lines1) else ""
-        raw_line2 = self.lines2[self.current_line] if self.current_line < len(self.lines2) else ""
-
-        # Update verse info display based on selected file or default to file1
-        if (self.current_line, 2) in self.merged_lines and raw_line2:
-            # Use file2's verse info if it's selected
-            book, chapter, verse, text2 = self.extract_verse_info(raw_line2)
-            self.update_verse_display(book, chapter, verse)
-            _, _, _, text1 = self.extract_verse_info(raw_line1) if raw_line1 else ("", "", "", "")
-            return text1, text2
-        elif raw_line1:
-            # Default to file1's verse info
-            book, chapter, verse, text1 = self.extract_verse_info(raw_line1)
-            self.update_verse_display(book, chapter, verse)
-            _, _, _, text2 = self.extract_verse_info(raw_line2) if raw_line2 else ("", "", "", "")
-            return text1, text2
+        """Get lines using direct index lookup."""
+        key = (self.current_book, str(self.current_chapter), str(self.current_verse))
+        
+        # Direct index lookups instead of searching
+        index1 = self.verse_index1.get(key)
+        index2 = self.verse_index2.get(key)
+        
+        line1 = self.lines1[index1] if index1 is not None else None
+        line2 = self.lines2[index2] if index2 is not None else None
+        
+        # Extract verse info
+        if line1:
+            _, _, _, text1 = self.extract_verse_info(line1)
         else:
-            # Clear comboboxes if no valid lines
-            self.update_verse_display("", "", "")
-            return ("File 1 is empty or contains no valid lines.", 
-                    "File 2 is empty or contains no valid lines.")
+            text1 = "No matching verse in File 1."
+            
+        if line2:
+            _, _, _, text2 = self.extract_verse_info(line2)
+        else:
+            text2 = "No matching verse in File 2."
+            
+        return text1, text2
 
     def read_files(self):
-        """Read the contents of both input files and master file into memory."""
+        """Read files and build verse indices."""
         try:
             # Update labels with actual file paths
             self.file1_name_label.config(text=self.file1 or NO_FILE_MSG)
@@ -413,6 +407,24 @@ class BibleHarmonyApp(tk.Tk):
             if self.master_file:
                 with open(self.master_file, "r", encoding=ENCODING, errors=ERRORS_POLICY) as fmaster:
                     self.lines_master = [line for line in fmaster if INSERT_KEYWORD in line]
+                    
+            # Build indices
+            for i, line in enumerate(self.lines1):
+                book, chapter, verse, _ = self.extract_verse_info(line)
+                key = (book, str(chapter), str(verse))
+                self.verse_index1[key] = i
+                
+            for i, line in enumerate(self.lines2):
+                book, chapter, verse, _ = self.extract_verse_info(line)
+                key = (book, str(chapter), str(verse))
+                self.verse_index2[key] = i
+                
+            if hasattr(self, 'lines_master'):
+                for i, line in enumerate(self.lines_master):
+                    book, chapter, verse, _ = self.extract_verse_info(line)
+                    key = (book, str(chapter), str(verse))
+                    self.verse_index_master[key] = i
+                    
             return True
         except Exception as e:
             # Reset labels if fileloading fails
@@ -656,26 +668,47 @@ class BibleHarmonyApp(tk.Tk):
         """Move to the previous chapter if available."""
         self.navigate_chapter(-1)
 
+########################### keep for reference! ############################
+    # def prev_line(self):
+    #     """Move to the previous line if available."""
+    #     if self.current_line > 0:
+    #         self.current_line -= 1
+    #         # Skip identical lines if option is enabled
+    #         if self.hide_identical_var.get():
+    #             while self.current_line > 0 and self.are_lines_identical(self.current_line):
+    #                 self.current_line -= 1
+    #     self.show_line()
+
+    # def next_line(self):
+    #     """Move to the next line if available."""
+    #     if self.current_line < self.total_lines - 1:
+    #         self.current_line += 1
+    #         # Skip identical lines if option is enabled
+    #         if self.hide_identical_var.get():
+    #             while (self.current_line < self.total_lines - 1 and 
+    #                    self.are_lines_identical(self.current_line)):
+    #                 self.current_line += 1
+    #     self.show_line()
+########################### keep for reference! ############################
     def prev_line(self):
         """Move to the previous line if available."""
         if self.current_line > 0:
             self.current_line -= 1
-            # Skip identical lines if option is enabled
-            if self.hide_identical_var.get():
-                while self.current_line > 0 and self.are_lines_identical(self.current_line):
-                    self.current_line -= 1
-        self.show_line()
+            book, chapter, verse, _ = self.extract_verse_info(self.lines1[self.current_line])
+            self.current_book = book
+            self.current_chapter = chapter
+            self.current_verse = verse
+            self.show_line()
 
     def next_line(self):
         """Move to the next line if available."""
         if self.current_line < self.total_lines - 1:
             self.current_line += 1
-            # Skip identical lines if option is enabled
-            if self.hide_identical_var.get():
-                while (self.current_line < self.total_lines - 1 and 
-                       self.are_lines_identical(self.current_line)):
-                    self.current_line += 1
-        self.show_line()
+            book, chapter, verse, _ = self.extract_verse_info(self.lines1[self.current_line])
+            self.current_book = book
+            self.current_chapter = chapter
+            self.current_verse = verse
+            self.show_line()
 
     def filter_lines(self, lines):
         """Filter lines to keep only those containing INSERT statements.
@@ -722,12 +755,12 @@ class BibleHarmonyApp(tk.Tk):
             self.current_book = self.book_combo.get()
             self.current_chapter = self.chapter_combo.get()
             self.current_verse = self.verse_combo.get()
-            
+
             if not all([self.current_book, self.current_chapter, self.current_verse]):
-                tk.messagebox.showwarning("Warning", "Please select book, chapter and verse")
+                tk.messagebox.showwarning("Warning", "Please select book, chapter, and verse")
                 return
-            
-            # Search through lines to find matching verse
+
+            # Search for the matching line in file1
             for i, line in enumerate(self.lines1):
                 book, chapter, verse, _ = self.extract_verse_info(line)
                 if (book == self.current_book and 
@@ -736,9 +769,8 @@ class BibleHarmonyApp(tk.Tk):
                     self.current_line = i
                     self.show_line()
                     return
-            
-            tk.messagebox.showinfo("Not Found", 
-                f"Verse {self.current_book} {self.current_chapter}:{self.current_verse} not found")
+
+            tk.messagebox.showinfo("Not Found", f"Verse {self.current_book} {self.current_chapter}:{self.current_verse} not found")
         except Exception as e:
             tk.messagebox.showerror("Error", f"Navigation failed: {e}")
 
@@ -925,11 +957,11 @@ class BibleHarmonyApp(tk.Tk):
         try:
             # Update matching master line
             for i, line in enumerate(self.lines_master):
-                master_book, master_chapter, master_verse, _ = self.extract_verse_info(line)
-                if (master_book == self.current_book and 
-                    str(master_chapter) == str(self.current_chapter) and 
-                    str(master_verse) == str(self.current_verse)):
-                    self.lines_master[i] = self.master_text.get("1.0", "end-1c") # Get the text from the master text widget
+                book, chapter, verse, _ = self.extract_verse_info(line)
+                if (book == self.current_book and 
+                    str(chapter) == str(self.current_chapter) and 
+                    str(verse) == str(self.current_verse)):
+                    self.lines_master[i] = self.master_text.get("1.0", "end-1c")  # Get the full SQL line
                     self.master_text.edit_modified(False)  # Reset modified flag
                     return
 
