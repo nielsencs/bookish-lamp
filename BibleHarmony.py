@@ -225,6 +225,7 @@ class BibleHarmonyApp(tk.Tk):
         # Initialize checkbox variables
         self.strip_strongs_var = tk.BooleanVar(value=True)     # Strip Strong's numbers
         self.strip_formatting_var = tk.BooleanVar(value=True)  # Strip HTML formatting (<p>, <br>, etc.)
+        self.strip_quotes_var = tk.BooleanVar(value=True)      # Strip quotes from the verse text
         self.swap_words_var = tk.BooleanVar(value=True)        # Swap words in the verse text (eg "group" for "company")
         
         # Add checkboxes
@@ -232,6 +233,8 @@ class BibleHarmonyApp(tk.Tk):
                        variable=self.strip_strongs_var).pack(side="left", padx=5)
         tk.Checkbutton(options_frame, text="Strip Formatting", 
                        variable=self.strip_formatting_var).pack(side="left", padx=5)
+        tk.Checkbutton(options_frame, text="Strip Quotes", 
+                       variable=self.strip_quotes_var).pack(side="left", padx=5)
         tk.Checkbutton(options_frame, text="Swap Words", 
                        variable=self.swap_words_var).pack(side="left", padx=5)
 
@@ -889,6 +892,19 @@ class BibleHarmonyApp(tk.Tk):
         text = text.replace('\\add', '').replace('\\add*', '')
         return text
 
+    def strip_quotes(self, text):
+        """Strip quotes from text.
+        
+        Args:
+            text (str): Text escaped quotes ("\"" and "\'")
+            
+        Returns:
+            str: Clean text
+        """
+        # Strip ("\"" and "\'") quotes
+        text = text.replace('\\\"', '').replace('\\\'', '')
+        return text
+
     def swap_words(self, text):
         """Apply word substitutions.
         
@@ -963,6 +979,8 @@ class BibleHarmonyApp(tk.Tk):
                         text = self.strip_strongs(text)
                     if self.strip_formatting_var.get():
                         text = self.strip_formatting(text)
+                    if self.strip_quotes_var.get():
+                        text = self.strip_quotes(text)
                     if self.swap_words_var.get():
                         text = self.swap_words(text)
                     # Write processed line
