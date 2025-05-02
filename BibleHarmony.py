@@ -283,7 +283,7 @@ class BibleHarmonyApp(tk.Tk):
         self.verse_combo.bind('<<ComboboxSelected>>', lambda e: self.navigate_to_verse())
 
         # Add current location tracking
-        self.current_book = "GEN"
+        self.current_book = "NEH"
         self.current_chapter = "1"
         self.current_verse = "1"
 
