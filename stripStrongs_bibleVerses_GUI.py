@@ -45,15 +45,15 @@ def strip_squares(t_string):
     return t_string.replace(']', '')
 
 
-def process_line(t_line):
-    t_line = swap_dont(t_line)
+def process_line(t_line): #you must swap words before stripping
+    # t_line = swap_dont(t_line)
     t_line = swap_mustnt(t_line)
     t_line = swap_lords(t_line)
     t_line = swap_booths(t_line)
     # t_line = swap_enter(t_line)
     t_line = swap_chase(t_line)
     # t_line = swap_group(t_line)
-    t_line = swap_murmur(t_line)
+    # t_line = swap_murmur(t_line)
     # t_line = swap_testimony(t_line)
     t_line = swap_winepress(t_line)
     t_line = swap_throw(t_line)

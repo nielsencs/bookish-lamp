@@ -949,20 +949,21 @@ class BibleHarmonyApp(tk.Tk):
             str: Text with words swapped
         """
         replacements = {
-            'group': 'company',
-            'murmur': 'complain',
-            'testimony': 'covenant', 
+            # 'Don\\\'t': 'You shall not',
+            'mustn\\\'t': 'shall not',
+            'LordOfMine{H0136}': 'Lord{H0136}',
+            'temporary-shelters': 'temporary shelters',
+            # 'enter': 'come into',
+            'pursue': 'chase',
+            # 'group': 'company',
+            # 'murmur': 'complain',
+            # 'testimony': 'covenant', 
             'winepress': 'wine press',
             'throw': 'cast',
-            'Don\'t': 'You shall not',
-            'mustn\'t': 'shall not',
-            'enter': 'come into',
-            'LordOfMine{H0136}': 'Lord{H0136}',
-            'pursue': 'chase',
-            # Add more word pairs here
+            #Add more word pairs here
         }
-        
-        # Apply all replacements
+
+                # Apply all replacements
         for old, new in replacements.items():
             text = text.replace(old, new)
         return text
@@ -1003,15 +1004,15 @@ class BibleHarmonyApp(tk.Tk):
                 self.write_sql_header(outfile)
                 for line in self.lines_master:
                     book, chapter, verse, text = self.extract_verse_info(line)
-                    # Apply processing to text only
-                    if self.strip_strongs_var.get():
-                        text = self.strip_strongs(text)
+                    # swap_words MUST be done before everything else
+                    if self.swap_words_var.get():
+                        text = self.swap_words(text)
                     if self.strip_formatting_var.get():
                         text = self.strip_formatting(text)
                     if self.strip_quotes_var.get():
                         text = self.strip_quotes(text)
-                    if self.swap_words_var.get():
-                        text = self.swap_words(text)
+                    if self.strip_strongs_var.get():
+                        text = self.strip_strongs(text)
                     # Write processed line
                     outfile.write(f"{COMMON_PREFIX}'{book}', {chapter}, {verse}, '{text}'{COMMON_SUFFIX}\n")
                 outfile.write("\nCOMMIT;\n")
@@ -1023,7 +1024,7 @@ class BibleHarmonyApp(tk.Tk):
             # Go to the correct verse
             self.navigate_to_verse()
                 
-            tk.messagebox.showinfo("Success", "Files saved successfully")
+            # tk.messagebox.showinfo("Success", "Files saved successfully") # we only need to know if there's a problem!
         except Exception as e:
             tk.messagebox.showerror("Error", f"Failed to save files: {e}")
 
