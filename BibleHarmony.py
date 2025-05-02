@@ -195,8 +195,9 @@ class BibleHarmonyApp(tk.Tk):
         file1_header.pack(fill="x", padx=5, pady=2)
         self.file1_name_label = tk.Label(file1_header, text=NO_FILE_MSG, anchor="w")
         self.file1_name_label.pack(side="left", fill="x", expand=True)
-        self.file1_button = tk.Button(file1_header, text="Select File", command=self.select_file1)
-        self.file1_button.pack(side="right")
+        # # Uncomment the following lines if you want to add a button to select file1
+        # self.file1_button = tk.Button(file1_header, text="Select File", command=self.select_file1)
+        # self.file1_button.pack(side="right")
         
         self.file1_text = tk.Text(file1_frame, height=TEXT_HEIGHT, wrap="word", state="disabled")
         self.file1_text.pack(fill="both", expand=True, padx=5, pady=2)
