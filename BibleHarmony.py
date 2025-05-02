@@ -673,28 +673,6 @@ class BibleHarmonyApp(tk.Tk):
         """Move to the previous chapter if available."""
         self.navigate_chapter(-1)
 
-########################### keep for reference! ############################
-    # def prev_line(self):
-    #     """Move to the previous line if available."""
-    #     if self.current_line > 0:
-    #         self.current_line -= 1
-    #         # Skip identical lines if option is enabled
-    #         if self.hide_identical_var.get():
-    #             while self.current_line > 0 and self.are_lines_identical(self.current_line):
-    #                 self.current_line -= 1
-    #     self.show_line()
-
-    # def next_line(self):
-    #     """Move to the next line if available."""
-    #     if self.current_line < self.total_lines - 1:
-    #         self.current_line += 1
-    #         # Skip identical lines if option is enabled
-    #         if self.hide_identical_var.get():
-    #             while (self.current_line < self.total_lines - 1 and 
-    #                    self.are_lines_identical(self.current_line)):
-    #                 self.current_line += 1
-    #     self.show_line()
-########################### keep for reference! ############################
     def prev_line(self):
         """Move to the previous line if available."""
         if self.current_line > 0:
