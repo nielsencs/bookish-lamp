@@ -223,9 +223,9 @@ class BibleHarmonyApp(tk.Tk):
         options_frame.pack(fill="x", padx=5, pady=2)
         
         # Initialize checkbox variables
-        self.strip_strongs_var = tk.BooleanVar(value=True)
-        self.strip_formatting_var = tk.BooleanVar(value=True)
-        self.swap_words_var = tk.BooleanVar(value=True)
+        self.strip_strongs_var = tk.BooleanVar(value=True)     # Strip Strong's numbers
+        self.strip_formatting_var = tk.BooleanVar(value=True)  # Strip HTML formatting (<p>, <br>, etc.)
+        self.swap_words_var = tk.BooleanVar(value=True)        # Swap words in the verse text (eg "group" for "company")
         
         # Add checkboxes
         tk.Checkbutton(options_frame, text="Strip Strong's Numbers", 
