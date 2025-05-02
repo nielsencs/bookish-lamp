@@ -1,24 +1,11 @@
 """
 TODO List:
-1. Incorporate stripStrongs_bibleVerses_GUI functionality:
-   - Add Strong's number stripping
-   - Merge GUI elements from stripStrongs
-   - Keep verse text comparison features
-   - editable text boxes
-   - Add button to strip Strong's numbers
-   - Add toggle to hide identical lines
+1. Incorporate stripStrongs_bibleVerses_GUI functionality: DONE!
 
-2. Add master file handling:
-   - Add third file panel for master reference
-   - Implement verse comparison against master
-   - Add master file selection controls
-   - Update merge logic to handle master file
+2. Add master file handling: DONE!
+    - on saving reopen file1 and get it to the correct verse
 
-3. Improve GUI layout:
-   - Add LabelFrame widgets around file sections
-   - Group navigation controls in frame
-   - Add frame around merge controls
-   - Better visual separation of components
+3. Improve GUI layout: DONE!
 
 4. Future Enhancements:
    - Add configuration for default paths
