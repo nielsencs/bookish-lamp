@@ -8,14 +8,15 @@ TODO List:
 3. Improve GUI layout: DONE!
 
 4. Future Enhancements:
-   - Add configuration for default paths
+   - Add configuration for default paths DONE!
+   - Add configuration for default window size DONE!
    - Save/restore last used settings
 """
 
 PADDING = 10
 TEXT_HEIGHT = 5
-WINDOW_MIN_WIDTH = 600
-WINDOW_MIN_HEIGHT = 400
+WINDOW_MIN_WIDTH = 770
+WINDOW_MIN_HEIGHT = 660
 COMMON_PREFIX = "INSERT INTO `verses` (`bookCode`, `chapter`, `verseNumber`, `verseText`) VALUES ("
 COMMON_SUFFIX = ");"
 ENCODING = "utf-8"
@@ -29,6 +30,8 @@ import tkinter as tk
 from tkinter import filedialog
 from tkinter import ttk
 import difflib  # Add this import to use difflib for highlighting differences
+import json
+import os
 
 HIGHLIGHT_COLORS = {
     "case": "#90EE90",         # Light green
@@ -75,23 +78,57 @@ BIBLE_BOOKS_ORDER = {
     'PHI': 50  # Philippians
 }
 
+CONFIG_FILE = "config.json"
+
+def load_config():
+    """Load configuration from JSON file."""
+    try:
+        with open(CONFIG_FILE, 'r') as f:
+            return json.load(f)
+    except FileNotFoundError:
+        # Create default config if file doesn't exist
+        config = {
+            "default_paths": {
+                "file1": os.path.join("generatedSQL", "bibleVersesNS.sql"),
+                "file2": os.path.join("comparisons", "2024_WEB_Changes.sql"),
+                "master": os.path.join("database", "bibleVerses.sql")
+            },
+            "last_used": {
+                "file1": "",
+                "file2": "",
+                "master": ""
+            },
+            "window": {
+                "width": WINDOW_MIN_WIDTH,
+                "height": WINDOW_MIN_HEIGHT
+            }
+        }
+        save_config(config)
+        return config
+
+def save_config(config):
+    """Save configuration to JSON file."""
+    with open(CONFIG_FILE, 'w') as f:
+        json.dump(config, f, indent=4)
+
 class BibleHarmonyApp(tk.Tk):
     """A tkinter application for comparing and editing Bible verse files."""
 
     def __init__(self, file1, file2, master_file):
-        """Initialize the application with two files to compare and the master file.
-
-        Args:
-            file1       (str): Path to the first file
-            file2       (str): Path to the second file
-            master_file (str): Path to the master file
-        """
         super().__init__()
+        
+        # Load configuration
+        self.config = load_config()
+        
+        # Use last used paths if available, otherwise use defaults
+        self.file1 = self.config["last_used"]["file1"] or file1 or self.config["default_paths"]["file1"]
+        self.file2 = self.config["last_used"]["file2"] or file2 or self.config["default_paths"]["file2"]
+        self.master_file = self.config["last_used"]["master"] or master_file or self.config["default_paths"]["master"]
+        
+        # Set window size from config
+        self.geometry(f"{self.config['window']['width']}x{self.config['window']['height']}")
 
         self.title("BibleHarmony")  # Set the window title
-        self.file1 = file1
-        self.file2 = file2
-        self.master_file = master_file
         self.current_line = 0
         self.total_lines = 0
 
@@ -256,12 +293,12 @@ class BibleHarmonyApp(tk.Tk):
         self.verse_index_master = {}  # For master file
 
     def select_file(self, file_number):
-        """Open a file dialog to select a file and update the display.
-        
-        Args:
-            file_number (int): The file number (1 or 2) to select
-        """
-        file_path = filedialog.askopenfilename(title=f"Select File {file_number}")
+        """Open a file dialog to select a file and update the display."""
+        file_path = filedialog.askopenfilename(
+            title=f"Select File {file_number}",
+            initialdir=os.path.dirname(self.config["last_used"][f"file{file_number}"] or 
+                                     self.config["default_paths"][f"file{file_number}"])
+        )
         if file_path:
             try:
                 with open(file_path, "r", encoding=ENCODING, errors=ERRORS_POLICY):
@@ -271,6 +308,10 @@ class BibleHarmonyApp(tk.Tk):
                     else:
                         self.file2 = file_path
                         self.file2_name_label.config(text=file_path)
+                    
+                    # Update last used paths in config
+                    self.config["last_used"][f"file{file_number}"] = file_path
+                    save_config(self.config)
                     
                     self.read_files()
                     self.filter_and_validate_lines()

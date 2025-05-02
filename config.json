@@ -1,0 +1,16 @@
+{
+    "default_paths": {
+        "file1": "generatedSQL/bibleVersesNS.sql",
+        "file2": "comparisons/2024_WEB_Changes.sql",
+        "master": "database/bibleVerses.sql"
+    },
+    "last_used": {
+        "file1": "",
+        "file2": "",
+        "master": ""
+    },
+    "window": {
+        "width": 770,
+        "height": 660
+    }
+}
