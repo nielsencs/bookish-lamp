@@ -353,7 +353,7 @@ class BibleHarmonyApp(tk.Tk):
                     if (master_book == self.current_book and 
                         str(master_chapter) == str(self.current_chapter) and 
                         str(master_verse) == str(self.current_verse)):
-                        master_line = line
+                        master_line = line  # Use the complete SQL line
                         break
 
             # Update text fields
@@ -369,6 +369,31 @@ class BibleHarmonyApp(tk.Tk):
             self.update_text_field(self.file1_text, "Error displaying verse")
             self.update_text_field(self.file2_text, "Error displaying verse")
             self.update_text_field(self.master_text, "Error displaying verse")
+
+    def get_current_lines(self):
+        """Get the current line from both files with metadata stripped."""
+        # Get raw lines first
+        raw_line1 = self.lines1[self.current_line] if self.current_line < len(self.lines1) else ""
+        raw_line2 = self.lines2[self.current_line] if self.current_line < len(self.lines2) else ""
+
+        # Update verse info display based on selected file or default to file1
+        if (self.current_line, 2) in self.merged_lines and raw_line2:
+            # Use file2's verse info if it's selected
+            book, chapter, verse, text2 = self.extract_verse_info(raw_line2)
+            self.update_verse_display(book, chapter, verse)
+            _, _, _, text1 = self.extract_verse_info(raw_line1) if raw_line1 else ("", "", "", "")
+            return text1, text2
+        elif raw_line1:
+            # Default to file1's verse info
+            book, chapter, verse, text1 = self.extract_verse_info(raw_line1)
+            self.update_verse_display(book, chapter, verse)
+            _, _, _, text2 = self.extract_verse_info(raw_line2) if raw_line2 else ("", "", "", "")
+            return text1, text2
+        else:
+            # Clear comboboxes if no valid lines
+            self.update_verse_display("", "", "")
+            return ("File 1 is empty or contains no valid lines.", 
+                    "File 2 is empty or contains no valid lines.")
 
     def read_files(self):
         """Read the contents of both input files and master file into memory."""
@@ -442,31 +467,6 @@ class BibleHarmonyApp(tk.Tk):
 
         self.total_lines = len(all_verses)
         self.current_line = max(0, min(self.current_line, self.total_lines - 1))
-
-    def get_current_lines(self):
-        """Get the current line from both files with metadata stripped."""
-        # Get raw lines first
-        raw_line1 = self.lines1[self.current_line] if self.current_line < len(self.lines1) else ""
-        raw_line2 = self.lines2[self.current_line] if self.current_line < len(self.lines2) else ""
-
-        # Update verse info display based on selected file or default to file1
-        if (self.current_line, 2) in self.merged_lines and raw_line2:
-            # Use file2's verse info if it's selected
-            book, chapter, verse, text2 = self.extract_verse_info(raw_line2)
-            self.update_verse_display(book, chapter, verse)
-            _, _, _, text1 = self.extract_verse_info(raw_line1) if raw_line1 else ("", "", "", "")
-            return text1, text2
-        elif raw_line1:
-            # Default to file1's verse info
-            book, chapter, verse, text1 = self.extract_verse_info(raw_line1)
-            self.update_verse_display(book, chapter, verse)
-            _, _, _, text2 = self.extract_verse_info(raw_line2) if raw_line2 else ("", "", "", "")
-            return text1, text2
-        else:
-            # Clear comboboxes if no valid lines
-            self.update_verse_display("", "", "")
-            return ("File 1 is empty or contains no valid lines.", 
-                    "File 2 is empty or contains no valid lines.")
 
     def update_verse_display(self, book, chapter, verse):
         """Update the verse navigation comboboxes to show current verse.
