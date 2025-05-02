@@ -5,12 +5,12 @@
         "master": "database/bibleVerses.sql"
     },
     "last_used": {
-        "file1": "",
+        "file1": "D:/Python/bookish-lamp/generatedSQL/bibleVersesNS.sql",
         "file2": "",
         "master": ""
     },
     "window": {
-        "width": 770,
+        "width": 1070,
         "height": 660
     }
 }

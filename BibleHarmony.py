@@ -99,7 +99,7 @@ def load_config():
                 "master": ""
             },
             "window": {
-                "width": WINDOW_MIN_WIDTH,
+                "width": WINDOW_MIN_WIDTH + 300,
                 "height": WINDOW_MIN_HEIGHT
             }
         }
@@ -271,11 +271,11 @@ class BibleHarmonyApp(tk.Tk):
         # Show the first line
         self.show_line()
 
-        self.bind("<Control-s>", lambda event: self.merge_line())
-        self.bind("<Control-Left>", lambda event: self.prev_line())
-        self.bind("<Control-Right>", lambda event: self.next_line())
-        self.bind("<Control-Up>", lambda event: self.prev_chapter())
-        self.bind("<Control-Down>", lambda event: self.next_chapter())
+        self.bind("<Control-s>", lambda event: self.save_master_and_processed())
+        self.bind("<Alt-Left>", lambda event: self.prev_line())
+        self.bind("<Alt-Right>", lambda event: self.next_line())
+        # self.bind("<Control-Up>", lambda event: self.prev_chapter())
+        # self.bind("<Control-Down>", lambda event: self.next_chapter())
 
         # Automate lookup from book, chapter & verse combos
         self.book_combo.bind('<<ComboboxSelected>>', lambda e: self.navigate_to_verse())
