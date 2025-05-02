@@ -340,7 +340,11 @@ class BibleHarmonyApp(tk.Tk):
                 return
 
             # Get the current lines
-            line1, line2 = self.get_current_lines()
+            text1, text2, line1, line2 = self.get_current_lines()
+
+            # Update text fields
+            self.update_text_field(self.file1_text, text1)
+            self.update_text_field(self.file2_text, text2)
 
             # Find the matching master line
             master_line = None
@@ -353,10 +357,11 @@ class BibleHarmonyApp(tk.Tk):
                         master_line = line
                         break
 
-            # Update text fields
-            self.update_text_field(self.file1_text, line1)
-            self.update_text_field(self.file2_text, line2)
             self.update_text_field(self.master_text, master_line if master_line else "No master verse found")
+            
+            # Highlight differences between text1 and text2
+            if text1 and text2 and text1 != "No matching verse in File 1." and text2 != "No matching verse in File 2.":
+                self.highlight_differences(text1, text2)
 
             # Update navigation display
             self.update_verse_display(self.current_book, self.current_chapter, self.current_verse)
@@ -386,7 +391,7 @@ class BibleHarmonyApp(tk.Tk):
         else:
             text2 = "No matching verse in File 2."
             
-        return text1, text2
+        return text1, text2, line1, line2  # Return both text and full lines
 
     def read_files(self):
         """Read files and build verse indices."""
@@ -698,6 +703,16 @@ class BibleHarmonyApp(tk.Tk):
             self.current_book = book
             self.current_chapter = chapter
             self.current_verse = verse
+            
+            # Skip identical lines if option is enabled
+            if self.hide_identical_var.get():
+                while self.current_line > 0 and self.are_lines_identical(self.current_line):
+                    self.current_line -= 1
+                    book, chapter, verse, _ = self.extract_verse_info(self.lines1[self.current_line])
+                    self.current_book = book
+                    self.current_chapter = chapter
+                    self.current_verse = verse
+                    
             self.show_line()
 
     def next_line(self):
@@ -708,7 +723,34 @@ class BibleHarmonyApp(tk.Tk):
             self.current_book = book
             self.current_chapter = chapter
             self.current_verse = verse
+            
+            # Skip identical lines if option is enabled
+            if self.hide_identical_var.get():
+                while (self.current_line < self.total_lines - 1 and 
+                       self.are_lines_identical(self.current_line)):
+                    self.current_line += 1
+                    book, chapter, verse, _ = self.extract_verse_info(self.lines1[self.current_line])
+                    self.current_book = book
+                    self.current_chapter = chapter
+                    self.current_verse = verse
+                    
             self.show_line()
+
+    def are_lines_identical(self, line_index):
+        """Check if lines at the given index are identical.
+        
+        Args:
+            line_index (int): Index of lines to compare
+            
+        Returns:
+            bool: True if lines are identical, False otherwise
+        """
+        try:
+            _, _, _, text1 = self.extract_verse_info(self.lines1[line_index])
+            _, _, _, text2 = self.extract_verse_info(self.lines2[line_index])
+            return text1.strip() == text2.strip()
+        except:
+            return False
 
     def filter_lines(self, lines):
         """Filter lines to keep only those containing INSERT statements.
@@ -968,22 +1010,6 @@ class BibleHarmonyApp(tk.Tk):
             tk.messagebox.showerror("Error", "Could not find matching verse in master file")
         except Exception as e:
             tk.messagebox.showerror("Error", f"Failed to save changes: {e}")
-
-    def are_lines_identical(self, line_index):
-        """Check if lines at the given index are identical.
-        
-        Args:
-            line_index (int): Index of lines to compare
-            
-        Returns:
-            bool: True if lines are identical, False otherwise
-        """
-        try:
-            _, _, _, text1 = self.extract_verse_info(self.lines1[line_index])
-            _, _, _, text2 = self.extract_verse_info(self.lines2[line_index])
-            return text1.strip() == text2.strip()
-        except:
-            return False
 
 if __name__ == "__main__":
     import os
