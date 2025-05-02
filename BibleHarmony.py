@@ -18,6 +18,7 @@ PADDING = 10
 TEXT_HEIGHT = 5
 WINDOW_MIN_WIDTH = 770
 WINDOW_MIN_HEIGHT = 660
+
 COMMON_PREFIX = "INSERT INTO `verses` (`bookCode`, `chapter`, `verseNumber`, `verseText`) VALUES ("
 COMMON_SUFFIX = ");"
 ENCODING = "utf-8"
@@ -72,8 +73,6 @@ BIBLE_BOOKS_ORDER = {
 
     # Other alternate codes
     'PSL': 19,  # Psalms
-    'SON': 22,  # Song of Solomon
-    'EZE': 26,  # Ezekiel
     'NAM': 34,  # Nahum
     'JHO': 43,  # John
     'PHI': 50  # Philippians
@@ -372,7 +371,7 @@ class BibleHarmonyApp(tk.Tk):
                 return
 
             # Get the current lines
-            text1, text2, line1, line2 = self.get_current_lines()
+            text1, text2, _, _ = self.get_current_lines()
 
             # Update text fields
             self.update_text_field(self.file1_text, text1)
@@ -986,11 +985,6 @@ class BibleHarmonyApp(tk.Tk):
             return
             
         try:
-            # # Store current location
-            # current_book = self.current_book
-            # current_chapter = self.current_chapter
-            # current_verse = self.current_verse
-                
             # Save unprocessed master file
             with open(default_master_file, "w", encoding=ENCODING) as outfile:
                 self.write_sql_header(outfile)
@@ -1017,14 +1011,10 @@ class BibleHarmonyApp(tk.Tk):
                 outfile.write("\nCOMMIT;\n")
                     
             # Reload file1
-            # self.file1 = default_file1
             self.read_files()
             self.filter_and_validate_lines()
             
-            # # Restore location
-            # self.current_book = current_book
-            # self.current_chapter = current_chapter
-            # self.current_verse = current_verse
+            # Go to the correct verse
             self.navigate_to_verse()
                 
             tk.messagebox.showinfo("Success", "Files saved successfully")
