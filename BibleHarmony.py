@@ -908,9 +908,11 @@ class BibleHarmonyApp(tk.Tk):
             'mustn\'t': 'shall not',
             'enter': 'come into',
             'LordOfMine{H0136}': 'Lord{H0136}',
-            'pursue': 'chase'
+            'pursue': 'chase',
+            # Add more word pairs here
         }
         
+        # Apply all replacements
         for old, new in replacements.items():
             text = text.replace(old, new)
         return text
