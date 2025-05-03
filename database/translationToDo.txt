@@ -28,25 +28,14 @@ you-all up to MAT 5 + JAM
 ### current work ###
 
 #=# BEFORE comparison with WEB #=#
-Thus says ... - ... says (sorted up to JER)
-none like me - no one like me (sorted up to SON)
+Thus says ... - ... says (sorted up to EZE 5)
 midst - midst/middle (sorted up to DEU)
-: and .[regex] - . Y/. T/. I[etc.] (sorted up to DEU)
-
-NEXT 3 IN THIS ORDER! *
-spoiler - raider (sorted up to JDG)*
-despoiled - plundered (sorted up to JDG)*
-spoil - plunder (sorted up to JDG)*
+: and .[regex] - . Y/. T/. I[etc.] (sorted up to DEU+NEH)
 
 besides - besides/in addition to (sorted up to JDG)
 of ForeverOne{H3068} - ForeverOne{H3068}\'s EXCEPT NAME (sorted up to NUM)
 over against - opposite (sorted up to NUM)
 drew near - came near (sorted up to DEU)
-
-
-
-
-
 
 
 #=# AFTER comparison with WEB #=#
@@ -104,6 +93,7 @@ forefront - front (sorted up to DEU)
 was stayed - was halted (sorted up to LEV)
 rod - stick/staff (sorted up to NUM)
 {H7291} after[search for that and change] follow(ed){H7291} after - pursue(d){H7291} [etc.] (sorted up to 1KI)
+quotes put back in (sorted for EZE up to chapter 5)
 
 #######################################################################################
 in that night - (on) that night
@@ -255,3 +245,7 @@ pertained - belonged (sorted!)
 the causes - the cases (sorted!)
 none else - no one else (sorted!)
 Nethinim - temple servants (sorted!)
+none like me - no one like me (sorted!)
+spoiler - raider (sorted!)
+despoiled - plundered (sorted!)
+spoil - plunder (sorted!)
