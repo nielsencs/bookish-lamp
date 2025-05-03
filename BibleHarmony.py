@@ -273,10 +273,10 @@ class BibleHarmonyApp(tk.Tk):
         self.show_line()
 
         self.bind("<Control-s>", lambda event: self.save_master_and_processed())
-        self.bind("<Alt-Left>", lambda event: self.prev_line())
-        self.bind("<Alt-Right>", lambda event: self.next_line())
-        # self.bind("<Control-Up>", lambda event: self.prev_chapter())
-        # self.bind("<Control-Down>", lambda event: self.next_chapter())
+        self.bind("<Up>", lambda event: self.prev_line())
+        self.bind("<Down>", lambda event: self.next_line())
+        self.bind("<Control-Up>", lambda event: self.prev_chapter())
+        self.bind("<Control-Down>", lambda event: self.next_chapter())
 
         # Automate lookup from book, chapter & verse combos
         self.book_combo.bind('<<ComboboxSelected>>', lambda e: self.navigate_to_verse())
@@ -285,8 +285,8 @@ class BibleHarmonyApp(tk.Tk):
 
         # Add current location tracking
         self.current_book = "NEH"
-        self.current_chapter = "1"
-        self.current_verse = "1"
+        self.current_chapter = "3"
+        self.current_verse = "5"
 
         # Add verse index dictionaries
         self.verse_index1 = {}  # For file1
