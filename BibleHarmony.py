@@ -141,7 +141,6 @@ class BibleHarmonyApp(tk.Tk):
         self.total_lines = 0
 
         # Initialize the line lists
-        self.merged_lines = []
         self.lines1 = []
         self.lines2 = []
         
@@ -428,6 +427,26 @@ class BibleHarmonyApp(tk.Tk):
             
         return text1, text2, line1, line2  # Return both text and full lines
 
+    def process_master(self):
+        """Process the master file to create lines1 in memory."""
+        self.lines1 = []
+        for line in self.lines_master:
+            book, chapter, verse, text = self.extract_verse_info(line)
+            
+            # Apply processing in correct order
+            if self.swap_words_var.get():
+                text = self.swap_words(text)
+            if self.strip_formatting_var.get():
+                text = self.strip_formatting(text)
+            if self.strip_quotes_var.get():
+                text = self.strip_quotes(text)
+            if self.strip_strongs_var.get():
+                text = self.strip_strongs(text)
+                
+            # Create processed line
+            processed_line = f"{COMMON_PREFIX}'{book}', {chapter}, {verse}, '{text}'{COMMON_SUFFIX}\n"
+            self.lines1.append(processed_line)
+
     def read_files(self):
         """Read files and build verse indices."""
         try:
@@ -447,23 +466,7 @@ class BibleHarmonyApp(tk.Tk):
                 self.lines_master = [line for line in fmaster if INSERT_KEYWORD in line]
 
             # Process master file to create lines1 in memory
-            self.lines1 = []
-            for line in self.lines_master:
-                book, chapter, verse, text = self.extract_verse_info(line)
-                
-                # Apply processing in correct order
-                if self.swap_words_var.get():
-                    text = self.swap_words(text)
-                if self.strip_formatting_var.get():
-                    text = self.strip_formatting(text)
-                if self.strip_quotes_var.get():
-                    text = self.strip_quotes(text)
-                if self.strip_strongs_var.get():
-                    text = self.strip_strongs(text)
-                    
-                # Create processed line
-                processed_line = f"{COMMON_PREFIX}'{book}', {chapter}, {verse}, '{text}'{COMMON_SUFFIX}\n"
-                self.lines1.append(processed_line)
+            self.process_master()
                     
             return True
         except Exception as e:
