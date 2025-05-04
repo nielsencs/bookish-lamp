@@ -1,12 +1,10 @@
 {
     "default_paths": {
-        "file1": "generatedSQL/bibleVersesNS.sql",
-        "file2": "comparisons/2024_WEB_Changes.sql",
-        "master": "database/bibleVerses.sql"
+        "comparison": "comparisons\\2024_WEB_Changes.sql",
+        "master": "database\\bibleVerses.sql"
     },
     "last_used": {
-        "file1": "D:/Python/bookish-lamp/generatedSQL/bibleVersesNS.sql",
-        "file2": "",
+        "comparison": "",
         "master": ""
     },
     "window": {
