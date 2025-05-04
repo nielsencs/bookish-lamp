@@ -342,7 +342,7 @@ class BibleHarmonyApp(tk.Tk):
 
     def select_master_file(self):
         """Open a file dialog to select the master file."""
-        file_path = filedialog.askopenfilename(title="Select Master File")
+        file_path = filedialog.askopenfilename
         if file_path:
             try:
                 with open(file_path, "r", encoding=ENCODING, errors=ERRORS_POLICY):
@@ -439,46 +439,42 @@ class BibleHarmonyApp(tk.Tk):
     def read_files(self):
         """Read files and build verse indices."""
         try:
-            # Update labels with actual file paths
-            self.file1_name_label.config(text=self.file1 or NO_FILE_MSG)
+            # Update labels
             self.file2_name_label.config(text=self.file2 or NO_FILE_MSG)
             self.master_name_label.config(text=self.master_file or NO_FILE_MSG)
+            self.file1_name_label.config(text="Processed Master File")  # New label
 
-            if not self.file1 or not self.file2:
-                tk.messagebox.showerror("Error", "Both file paths must be selected before reading files.")
+            if not self.file2 or not self.master_file:
+                tk.messagebox.showerror("Error", "Both comparison and master files must be selected.")
                 return False
 
-            with open(self.file1, "r", encoding=ENCODING, errors=ERRORS_POLICY) as f1:
-                self.lines1 = [line for line in f1 if INSERT_KEYWORD in line]
+            # Read comparison and master files
             with open(self.file2, "r", encoding=ENCODING, errors=ERRORS_POLICY) as f2:
                 self.lines2 = [line for line in f2 if INSERT_KEYWORD in line]
-            if self.master_file:
-                with open(self.master_file, "r", encoding=ENCODING, errors=ERRORS_POLICY) as fmaster:
-                    self.lines_master = [line for line in fmaster if INSERT_KEYWORD in line]
+            with open(self.master_file, "r", encoding=ENCODING, errors=ERRORS_POLICY) as fmaster:
+                self.lines_master = [line for line in fmaster if INSERT_KEYWORD in line]
+
+            # Process master file to create lines1 in memory
+            self.lines1 = []
+            for line in self.lines_master:
+                book, chapter, verse, text = self.extract_verse_info(line)
+                
+                # Apply processing in correct order
+                if self.swap_words_var.get():
+                    text = self.swap_words(text)
+                if self.strip_formatting_var.get():
+                    text = self.strip_formatting(text)
+                if self.strip_quotes_var.get():
+                    text = self.strip_quotes(text)
+                if self.strip_strongs_var.get():
+                    text = self.strip_strongs(text)
                     
-            # Build indices
-            for i, line in enumerate(self.lines1):
-                book, chapter, verse, _ = self.extract_verse_info(line)
-                key = (book, str(chapter), str(verse))
-                self.verse_index1[key] = i
-                
-            for i, line in enumerate(self.lines2):
-                book, chapter, verse, _ = self.extract_verse_info(line)
-                key = (book, str(chapter), str(verse))
-                self.verse_index2[key] = i
-                
-            if hasattr(self, 'lines_master'):
-                for i, line in enumerate(self.lines_master):
-                    book, chapter, verse, _ = self.extract_verse_info(line)
-                    key = (book, str(chapter), str(verse))
-                    self.verse_index_master[key] = i
+                # Create processed line
+                processed_line = f"{COMMON_PREFIX}'{book}', {chapter}, {verse}, '{text}'{COMMON_SUFFIX}\n"
+                self.lines1.append(processed_line)
                     
             return True
         except Exception as e:
-            # Reset labels if fileloading fails
-            self.file1_name_label.config(text=NO_FILE_MSG)
-            self.file2_name_label.config(text=NO_FILE_MSG)
-            self.master_name_label.config(text=NO_FILE_MSG)
             tk.messagebox.showerror("Error", f"Failed to read files: {e}")
             return False
 
@@ -998,18 +994,11 @@ class BibleHarmonyApp(tk.Tk):
         outfile.write(") ENGINE=MyISAM DEFAULT CHARSET=latin1;\n\n")
 
     def save_master_and_processed(self):
-        """Save the unprocessed master file and the processed copy.
-        
-        Processing order is critical:
-        1. Word swaps MUST be applied first (to match patterns in original text)
-        2. Formatting can be stripped next
-        3. Quotes can be stripped
-        4. Strong's numbers should be stripped last
-        """
+        """Save the master file and reprocess in-memory version."""
         if not hasattr(self, 'lines_master'):
             tk.messagebox.showerror("Error", "No master file loaded")
             return
-            
+        
         try:
             # Save unprocessed master file
             with open(default_master_file, "w", encoding=ENCODING) as outfile:
@@ -1017,39 +1006,14 @@ class BibleHarmonyApp(tk.Tk):
                 for line in self.lines_master:
                     outfile.write(line)
                 outfile.write("\nCOMMIT;\n")
-                    
-            # Save processed version to file1 location
-            with open(default_file1, "w", encoding=ENCODING) as outfile:
-                self.write_sql_header(outfile)
-                for line in self.lines_master:
-                    book, chapter, verse, text = self.extract_verse_info(line)
-                    
-                    # Process in mandatory order:
-                    # 1. Word swaps (must be first to match original patterns)
-                    if self.swap_words_var.get():
-                        text = self.swap_words(text)
-                    # 2. Strip formatting
-                    if self.strip_formatting_var.get():
-                        text = self.strip_formatting(text)
-                    # 3. Strip quotes
-                    if self.strip_quotes_var.get():
-                        text = self.strip_quotes(text)
-                    # 4. Strip Strong's numbers (must be last)
-                    if self.strip_strongs_var.get():
-                        text = self.strip_strongs(text)
-                        
-                    outfile.write(f"{COMMON_PREFIX}'{book}', {chapter}, {verse}, '{text}'{COMMON_SUFFIX}\n")
-                    
-                outfile.write("\nCOMMIT;\n")
-                    
-            # Reload file1
+                
+            # Reprocess master file in memory
             self.read_files()
             self.filter_and_validate_lines()
             
             # Go to the correct verse
             self.navigate_to_verse()
                 
-            # tk.messagebox.showinfo("Success", "Files saved successfully") # we only need to know if there's a problem!
         except Exception as e:
             tk.messagebox.showerror("Error", f"Failed to save files: {e}")
 
