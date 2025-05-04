@@ -8,7 +8,7 @@ TODO List:
 3. Improve GUI layout: DONE!
 
 4. Improve Editing
-    - ctrl-z to undo, ctrl-y to redo (it already has ctrl-a to select all, ctrl-c to copy, ctrl-v to paste)
+    - ctrl-z to undo, ctrl-y to redo (it already has ctrl-a to select all, ctrl-c to copy, ctrl-v to paste) DONE!
     - automatic acceptance of file 2 punctuation or other differences possibly based on highlighting
 
 
