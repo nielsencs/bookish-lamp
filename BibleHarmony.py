@@ -8,13 +8,16 @@ TODO List:
 
 3. Improve GUI layout: DONE!
 
-4. Future Enhancements:
+4. Improve Editing
+    - ctrl-z to undo, ctrl-y to redo (it already has ctrl-a to select all, ctrl-c to copy, ctrl-v to paste)
+    - automatic acceptance of file 2 punctuation or other differences possibly based on highlighting
+
+
+N. Future Enhancements:
     - Add configuration for default paths DONE!
     - Add configuration for default window size DONE!
     - Save/restore last used settings - especially current book, chapter and verse (see 2 above)
     - remove the actual file1 - it's just a processed master file - process at load time rather than save time
-    - improve editing - ctrl-z to undo, ctrl-y to redo (it already has ctrl-a to select all, ctrl-c to copy, ctrl-v to paste)
-    - improve editing - automatic acceptance of file 2 punctuation or other differences possibly based on highlighting
     - smart copying of text from file2 to master file - only copy the selected text, not the whole line
     - rename File 1 to processed Master File or something similar
     - rename File 2 to Comparison File or something similar
