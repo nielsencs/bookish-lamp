@@ -1003,7 +1003,7 @@ class BibleHarmonyApp(tk.Tk):
                 outfile.write("\nCOMMIT;\n")
                 
             # Reprocess master file in memory
-            self.read_files()
+            self.process_master()
             self.filter_and_validate_lines()
             
             # Go to the correct verse
