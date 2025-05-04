@@ -1,7 +1,7 @@
 {
     "default_paths": {
-        "comparison": "comparisons/2024_WEB_Changes.sql",
-        "master": "database/bibleVerses.sql"
+        "comparison": "comparisons\\2024_WEB_Changes.sql",
+        "master": "database\\bibleVerses.sql"
     },
     "last_used": {
         "comparison": "",

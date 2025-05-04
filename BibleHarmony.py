@@ -4,7 +4,6 @@ TODO List:
     - make word swaps selectable
 
 2. Add master file handling: DONE!
-    - on saving reopen file1 and get it to the correct verse
 
 3. Improve GUI layout: DONE!
 
@@ -18,7 +17,7 @@ N. Future Enhancements:
     - Add configuration for default window size DONE!
     - Save/restore last used settings - especially current book, chapter and verse (see 2 above)
     - remove the actual file1 - it's just a processed master file - process at load time rather than save time DONE!
-    - smart copying of text from file2 to master file - only copy the selected text, not the whole line
+    - smart copying of text from comparison_file to master file - only copy the selected text, not the whole line
     - rename File 1 to processed Master File or something similar
     - rename File 2 to Comparison File or something similar
     - process Comparison file on loading
@@ -100,13 +99,11 @@ def load_config():
         # Create default config if file doesn't exist
         config = {
             "default_paths": {
-                "file1": os.path.join("generatedSQL", "bibleVersesNS.sql"),
-                "file2": os.path.join("comparisons", "2024_WEB_Changes.sql"),
+                "comparison": os.path.join("comparisons", "2024_WEB_Changes.sql"),
                 "master": os.path.join("database", "bibleVerses.sql")
             },
             "last_used": {
-                "file1": "",
-                "file2": "",
+                "comparison": "",
                 "master": ""
             },
             "window": {
@@ -125,15 +122,15 @@ def save_config(config):
 class BibleHarmonyApp(tk.Tk):
     """A tkinter application for comparing and editing Bible verse files."""
 
-    def __init__(self, file1, file2, master_file):
+    def __init__(self, comparison_file, master_file):
         super().__init__()
         
         # Load configuration
         self.config = load_config()
         
         # Use last used paths if available, otherwise use defaults
-        self.file1 = self.config["last_used"]["file1"] or file1 or self.config["default_paths"]["file1"]
-        self.file2 = self.config["last_used"]["file2"] or file2 or self.config["default_paths"]["file2"]
+        # self.file1 = self.config["last_used"]["file1"] or file1 or self.config["default_paths"]["file1"]
+        self.comparison_file = self.config["last_used"]["comparison"] or comparison_file or self.config["default_paths"]["comparison"]
         self.master_file = self.config["last_used"]["master"] or master_file or self.config["default_paths"]["master"]
         
         # Set window size from config
@@ -206,9 +203,6 @@ class BibleHarmonyApp(tk.Tk):
         file1_header.pack(fill="x", padx=5, pady=2)
         self.file1_name_label = tk.Label(file1_header, text=NO_FILE_MSG, anchor="w")
         self.file1_name_label.pack(side="left", fill="x", expand=True)
-        # # Uncomment the following lines if you want to add a button to select file1
-        # self.file1_button = tk.Button(file1_header, text="Select File", command=self.select_file1)
-        # self.file1_button.pack(side="right")
         
         self.file1_text = tk.Text(file1_frame, height=TEXT_HEIGHT, wrap="word", state="disabled")
         self.file1_text.pack(fill="both", expand=True, padx=5, pady=2)
@@ -221,7 +215,7 @@ class BibleHarmonyApp(tk.Tk):
         file2_header.pack(fill="x", padx=5, pady=2)
         self.file2_name_label = tk.Label(file2_header, text=NO_FILE_MSG, anchor="w")
         self.file2_name_label.pack(side="left", fill="x", expand=True)
-        self.file2_button = tk.Button(file2_header, text="Select File", command=self.select_file2)
+        self.file2_button = tk.Button(file2_header, text="Select File", command=self.select_file)
         self.file2_button.pack(side="right")
         
         self.file2_text = tk.Text(file2_frame, height=TEXT_HEIGHT, wrap="word", state="disabled")
@@ -236,15 +230,15 @@ class BibleHarmonyApp(tk.Tk):
         self.master_name_label = tk.Label(master_header, text=NO_FILE_MSG, anchor="w")
         self.master_name_label.pack(side="left", fill="x", expand=True)
 
-        self.master_text = tk.Text(master_frame, height=TEXT_HEIGHT, wrap="word")
+        self.master_text = tk.Text(master_frame, height=TEXT_HEIGHT, wrap="word", undo=True, maxundo=-1)
         self.master_text.pack(fill="both", expand=True, padx=5, pady=2)
         self.master_text.bind('<<Modified>>', self.store_master)
-        
+
         # Controls Frame
         controls_frame = tk.LabelFrame(self, text="Controls")
         controls_frame.grid(row=5, column=0, columnspan=2, sticky="EW", padx=PADDING, pady=5)
         
-        self.save_button = tk.Button(controls_frame, text="Save", command=self.save_master_and_processed)
+        self.save_button = tk.Button(controls_frame, text="Save", command=self.save_master_file)
         self.save_button.pack(side="top", pady=2)
         
         buttons_frame = tk.Frame(controls_frame)
@@ -283,7 +277,7 @@ class BibleHarmonyApp(tk.Tk):
         # Show the first line
         self.show_line()
 
-        self.bind("<Control-s>", lambda event: self.save_master_and_processed())
+        self.bind("<Control-s>", lambda event: self.save_master_file())
         self.bind("<Up>", lambda event: self.prev_line())
         self.bind("<Down>", lambda event: self.next_line())
         self.bind("<Control-Up>", lambda event: self.prev_chapter())
@@ -300,29 +294,25 @@ class BibleHarmonyApp(tk.Tk):
         self.current_verse = "18"
 
         # Add verse index dictionaries
-        self.verse_index1 = {}  # For file1
-        self.verse_index2 = {}  # For file2
+        self.verse_index1 = {}  # For processed master file
+        self.verse_index2 = {}  # For comparison_file
         self.verse_index_master = {}  # For master file
 
-    def select_file(self, file_number):
+    def select_file(self):
         """Open a file dialog to select a file and update the display."""
         file_path = filedialog.askopenfilename(
-            title=f"Select File {file_number}",
-            initialdir=os.path.dirname(self.config["last_used"][f"file{file_number}"] or 
-                                     self.config["default_paths"][f"file{file_number}"])
+            title="Select Comparison File",
+            initialdir=os.path.dirname(self.config["last_used"]["comparison_file"] or 
+                                     self.config["default_paths"]["comparison_file"])
         )
         if file_path:
             try:
                 with open(file_path, "r", encoding=ENCODING, errors=ERRORS_POLICY):
-                    if file_number == 1:
-                        self.file1 = file_path
-                        self.file1_name_label.config(text=file_path)
-                    else:
-                        self.file2 = file_path
-                        self.file2_name_label.config(text=file_path)
+                    self.comparison_file = file_path
+                    self.file2_name_label.config(text=file_path)
                     
                     # Update last used paths in config
-                    self.config["last_used"][f"file{file_number}"] = file_path
+                    self.config["last_used"]["comparison_file"] = file_path
                     save_config(self.config)
                     
                     self.read_files()
@@ -330,19 +320,15 @@ class BibleHarmonyApp(tk.Tk):
                     self.current_line = 0
                     self.show_line()
             except Exception as e:
-                tk.messagebox.showerror("Error", f"Failed to open File {file_number}: {e}")
-
-    def select_file1(self):
-        """Open a file dialog to select the first file."""
-        self.select_file(1)
-
-    def select_file2(self):
-        """Open a file dialog to select the second file."""
-        self.select_file(2)
+                tk.messagebox.showerror("Error", f"Failed to open comparison file: {e}")
 
     def select_master_file(self):
         """Open a file dialog to select the master file."""
-        file_path = filedialog.askopenfilename
+        file_path = filedialog.askopenfilename(
+            title="Select Master File",
+            initialdir=os.path.dirname(self.config["last_used"]["master"] or 
+                                 self.config["default_paths"]["master"])
+        )
         if file_path:
             try:
                 with open(file_path, "r", encoding=ENCODING, errors=ERRORS_POLICY):
@@ -352,6 +338,10 @@ class BibleHarmonyApp(tk.Tk):
                     self.filter_and_validate_lines()
                     self.current_line = 0
                     self.show_line()
+                
+                # Update last used paths in config
+                self.config["last_used"]["master"] = file_path
+                save_config(self.config)
             except Exception as e:
                 tk.messagebox.showerror("Error", f"Failed to open Master File: {e}")
 
@@ -380,6 +370,7 @@ class BibleHarmonyApp(tk.Tk):
                 self.update_text_field(self.file1_text, "No verses loaded in File 1")
                 self.update_text_field(self.file2_text, "No verses loaded in File 2")
                 self.update_text_field(self.master_text, "No verses loaded in Master")
+                self.master_text.edit_reset()  # Reset the undo stack
                 return
 
             # Get the current lines
@@ -401,6 +392,7 @@ class BibleHarmonyApp(tk.Tk):
                         break
 
             self.update_text_field(self.master_text, master_line if master_line else "No master verse found")
+            self.master_text.edit_reset()  # Reset the undo stack
             
             # Highlight differences between text1 and text2
             if text1 and text2 and text1 != "No matching verse in File 1." and text2 != "No matching verse in File 2.":
@@ -440,16 +432,16 @@ class BibleHarmonyApp(tk.Tk):
         """Read files and build verse indices."""
         try:
             # Update labels
-            self.file2_name_label.config(text=self.file2 or NO_FILE_MSG)
+            self.file2_name_label.config(text=self.comparison_file or NO_FILE_MSG)
             self.master_name_label.config(text=self.master_file or NO_FILE_MSG)
             self.file1_name_label.config(text="Processed Master File")  # New label
 
-            if not self.file2 or not self.master_file:
+            if not self.comparison_file or not self.master_file:
                 tk.messagebox.showerror("Error", "Both comparison and master files must be selected.")
                 return False
 
             # Read comparison and master files
-            with open(self.file2, "r", encoding=ENCODING, errors=ERRORS_POLICY) as f2:
+            with open(self.comparison_file, "r", encoding=ENCODING, errors=ERRORS_POLICY) as f2:
                 self.lines2 = [line for line in f2 if INSERT_KEYWORD in line]
             with open(self.master_file, "r", encoding=ENCODING, errors=ERRORS_POLICY) as fmaster:
                 self.lines_master = [line for line in fmaster if INSERT_KEYWORD in line]
@@ -850,12 +842,12 @@ class BibleHarmonyApp(tk.Tk):
         self.update_combo_values(self.verse_combo, verses, convert_to_int=True)
 
     def get_available_books(self):
-        """Get set of available book codes from file1.
+        """Get set of available book codes from master file.
         
         Returns:
             set: Available book codes
         """
-        return {book for line in self.lines1 
+        return {book for line in self.lines_master 
                 if (book := self.extract_verse_info(line)[0])}
 
     def get_available_chapters(self, current_book):
@@ -993,7 +985,7 @@ class BibleHarmonyApp(tk.Tk):
         outfile.write("  UNIQUE KEY `book-chapter-verse` (`bookCode`,`chapter`,`verseNumber`)\n")
         outfile.write(") ENGINE=MyISAM DEFAULT CHARSET=latin1;\n\n")
 
-    def save_master_and_processed(self):
+    def save_master_file(self):
         """Save the master file and reprocess in-memory version."""
         if not hasattr(self, 'lines_master'):
             tk.messagebox.showerror("Error", "No master file loaded")
@@ -1018,7 +1010,7 @@ class BibleHarmonyApp(tk.Tk):
             tk.messagebox.showerror("Error", f"Failed to save files: {e}")
 
     def store_master(self, event=None):
-        """Store changes made to master file."""
+        """Store changes made to master text widget."""
         try:
             # Update matching master line
             for i, line in enumerate(self.lines_master):
@@ -1041,12 +1033,11 @@ if __name__ == "__main__":
     base_dir = os.path.dirname(os.path.abspath(__file__))
     
     # Default file paths
-    default_file1 = os.path.join("generatedSQL", "bibleVersesNS.sql")
-    default_file2 = os.path.join("comparisons", "2024_WEB_Changes.sql")
+    default_comparison_file = os.path.join("comparisons", "2024_WEB_Changes.sql")
     default_master_file = os.path.join("database", "bibleVerses.sql")
     
     # Create the application with default files
-    app = BibleHarmonyApp(default_file1, default_file2, default_master_file)
+    app = BibleHarmonyApp(default_comparison_file, default_master_file)
     
     # Try to load the files immediately
     try:
