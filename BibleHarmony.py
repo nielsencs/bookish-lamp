@@ -17,7 +17,7 @@ N. Future Enhancements:
     - Add configuration for default paths DONE!
     - Add configuration for default window size DONE!
     - Save/restore last used settings - especially current book, chapter and verse (see 2 above)
-    - remove the actual file1 - it's just a processed master file - process at load time rather than save time
+    - remove the actual file1 - it's just a processed master file - process at load time rather than save time DONE!
     - smart copying of text from file2 to master file - only copy the selected text, not the whole line
     - rename File 1 to processed Master File or something similar
     - rename File 2 to Comparison File or something similar
