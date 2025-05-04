@@ -141,8 +141,8 @@ class BibleHarmonyApp(tk.Tk):
         self.total_lines = 0
 
         # Initialize the line lists
-        self.lines1 = []
-        self.lines2 = []
+        self.processed_lines = []
+        self.comparison_lines = []
         
         # Set a minimum size for the window
         self.minsize(WINDOW_MIN_WIDTH, WINDOW_MIN_HEIGHT)
@@ -365,7 +365,7 @@ class BibleHarmonyApp(tk.Tk):
         """Display the current line from all files and highlight differences."""
         try:
             # Check if we have any lines to display
-            if not self.lines1:
+            if not self.processed_lines:
                 self.update_text_field(self.file1_text, "No verses loaded in File 1")
                 self.update_text_field(self.file2_text, "No verses loaded in File 2")
                 self.update_text_field(self.master_text, "No verses loaded in Master")
@@ -411,8 +411,8 @@ class BibleHarmonyApp(tk.Tk):
         index1 = self.verse_index1.get(key)
         index2 = self.verse_index2.get(key)
         
-        line1 = self.lines1[index1] if index1 is not None else None
-        line2 = self.lines2[index2] if index2 is not None else None
+        line1 = self.processed_lines[index1] if index1 is not None else None
+        line2 = self.comparison_lines[index2] if index2 is not None else None
         
         # Extract verse info
         if line1:
@@ -428,8 +428,8 @@ class BibleHarmonyApp(tk.Tk):
         return text1, text2, line1, line2  # Return both text and full lines
 
     def process_master(self):
-        """Process the master file to create lines1 in memory."""
-        self.lines1 = []
+        """Process the master file to create processed_lines in memory."""
+        self.processed_lines = []
         for line in self.lines_master:
             book, chapter, verse, text = self.extract_verse_info(line)
             
@@ -445,7 +445,7 @@ class BibleHarmonyApp(tk.Tk):
                 
             # Create processed line
             processed_line = f"{COMMON_PREFIX}'{book}', {chapter}, {verse}, '{text}'{COMMON_SUFFIX}\n"
-            self.lines1.append(processed_line)
+            self.processed_lines.append(processed_line)
 
     def read_files(self):
         """Read files and build verse indices."""
@@ -461,11 +461,11 @@ class BibleHarmonyApp(tk.Tk):
 
             # Read comparison and master files
             with open(self.comparison_file, "r", encoding=ENCODING, errors=ERRORS_POLICY) as f2:
-                self.lines2 = [line for line in f2 if INSERT_KEYWORD in line]
+                self.comparison_lines = [line for line in f2 if INSERT_KEYWORD in line]
             with open(self.master_file, "r", encoding=ENCODING, errors=ERRORS_POLICY) as fmaster:
                 self.lines_master = [line for line in fmaster if INSERT_KEYWORD in line]
 
-            # Process master file to create lines1 in memory
+            # Process master file to create processed_lines in memory
             self.process_master()
                     
             return True
@@ -476,48 +476,48 @@ class BibleHarmonyApp(tk.Tk):
     def filter_and_validate_lines(self):
         """Filter lines for SQL statements and ensure verses are aligned between files."""
         # First filter for SQL statements
-        self.lines1 = self.filter_lines(self.lines1)
-        self.lines2 = self.filter_lines(self.lines2)
+        self.processed_lines = self.filter_lines(self.processed_lines)
+        self.comparison_lines = self.filter_lines(self.comparison_lines)
         if hasattr(self, 'lines_master'):  # Leave master file as-is
             self.lines_master = self.filter_lines(self.lines_master)
 
         # Create dictionaries to map (book, chapter, verse) to line content
-        verses1 = {}
-        verses2 = {}
+        processed_verses = {}
+        comparison_verses = {}
         
         # Process file 1
-        for line in self.lines1:
+        for line in self.processed_lines:
             book, chapter, verse, _ = self.extract_verse_info(line)
             if book and chapter and verse:
                 key = (book, str(chapter), str(verse))
-                verses1[key] = line
+                processed_verses[key] = line
                 
         # Process file 2
-        for line in self.lines2:
+        for line in self.comparison_lines:
             book, chapter, verse, _ = self.extract_verse_info(line)
             if book and chapter and verse:
                 key = (book, str(chapter), str(verse))
-                verses2[key] = line
+                comparison_verses[key] = line
 
         # Get all verse references in Bible order
         def verse_key(verse_tuple):
             book, chapter, verse = verse_tuple
             return (BIBLE_BOOKS_ORDER.get(book, 999), int(chapter), int(verse))
 
-        all_verses = sorted(set(verses1.keys()) | set(verses2.keys()), key=verse_key)
+        all_verses = sorted(set(processed_verses.keys()) | set(comparison_verses.keys()), key=verse_key)
         
         # Rebuild comparison files with empty placeholders for missing verses
-        self.lines1 = []
-        self.lines2 = []
+        self.processed_lines = []
+        self.comparison_lines = []
         self.verse_index1 = {}  # Clear and rebuild indices
         self.verse_index2 = {}
         empty_line = f"{COMMON_PREFIX}'',0,0,''{COMMON_SUFFIX}\n"
         
         for i, verse_key in enumerate(all_verses):
-            line1 = verses1.get(verse_key, empty_line)
-            line2 = verses2.get(verse_key, empty_line)
-            self.lines1.append(line1)
-            self.lines2.append(line2)
+            line1 = processed_verses.get(verse_key, empty_line)
+            line2 = comparison_verses.get(verse_key, empty_line)
+            self.processed_lines.append(line1)
+            self.comparison_lines.append(line2)
             self.verse_index1[verse_key] = i  # Update indices
             self.verse_index2[verse_key] = i
 
@@ -619,7 +619,7 @@ class BibleHarmonyApp(tk.Tk):
         self.status_bar.config(
             text=f"{current_book} {current_chapter}:{current_verse} | "
                  f"Line {self.current_line + 1} of {self.total_lines} | "
-                 f"File 1: {len(self.lines1)} lines, File 2: {len(self.lines2)} lines"
+                 f"File 1: {len(self.processed_lines)} lines, File 2: {len(self.comparison_lines)} lines"
                  f"{master_status}"
         )
 
@@ -717,7 +717,7 @@ class BibleHarmonyApp(tk.Tk):
         """Move to the previous line if available."""
         if self.current_line > 0:
             self.current_line -= 1
-            book, chapter, verse, _ = self.extract_verse_info(self.lines1[self.current_line])
+            book, chapter, verse, _ = self.extract_verse_info(self.processed_lines[self.current_line])
             self.current_book = book
             self.current_chapter = chapter
             self.current_verse = verse
@@ -726,7 +726,7 @@ class BibleHarmonyApp(tk.Tk):
             if self.hide_identical_var.get():
                 while self.current_line > 0 and self.are_lines_identical(self.current_line):
                     self.current_line -= 1
-                    book, chapter, verse, _ = self.extract_verse_info(self.lines1[self.current_line])
+                    book, chapter, verse, _ = self.extract_verse_info(self.processed_lines[self.current_line])
                     self.current_book = book
                     self.current_chapter = chapter
                     self.current_verse = verse
@@ -737,7 +737,7 @@ class BibleHarmonyApp(tk.Tk):
         """Move to the next line if available."""
         if self.current_line < self.total_lines - 1:
             self.current_line += 1
-            book, chapter, verse, _ = self.extract_verse_info(self.lines1[self.current_line])
+            book, chapter, verse, _ = self.extract_verse_info(self.processed_lines[self.current_line])
             self.current_book = book
             self.current_chapter = chapter
             self.current_verse = verse
@@ -747,7 +747,7 @@ class BibleHarmonyApp(tk.Tk):
                 while (self.current_line < self.total_lines - 1 and 
                        self.are_lines_identical(self.current_line)):
                     self.current_line += 1
-                    book, chapter, verse, _ = self.extract_verse_info(self.lines1[self.current_line])
+                    book, chapter, verse, _ = self.extract_verse_info(self.processed_lines[self.current_line])
                     self.current_book = book
                     self.current_chapter = chapter
                     self.current_verse = verse
@@ -764,8 +764,8 @@ class BibleHarmonyApp(tk.Tk):
             bool: True if lines are identical, False otherwise
         """
         try:
-            _, _, _, text1 = self.extract_verse_info(self.lines1[line_index])
-            _, _, _, text2 = self.extract_verse_info(self.lines2[line_index])
+            _, _, _, text1 = self.extract_verse_info(self.processed_lines[line_index])
+            _, _, _, text2 = self.extract_verse_info(self.comparison_lines[line_index])
             return text1.strip() == text2.strip()
         except:
             return False
@@ -862,7 +862,7 @@ class BibleHarmonyApp(tk.Tk):
         Returns:
             set: Available chapter numbers
         """
-        return {chapter for line in self.lines1 
+        return {chapter for line in self.processed_lines 
                 if (book := self.extract_verse_info(line)[0]) == current_book
                 and (chapter := self.extract_verse_info(line)[1])}
 
@@ -876,7 +876,7 @@ class BibleHarmonyApp(tk.Tk):
         Returns:
             set: Available verse numbers
         """
-        return {verse for line in self.lines1 
+        return {verse for line in self.processed_lines 
                 if (book := self.extract_verse_info(line)[0]) == current_book
                 and (chapter := self.extract_verse_info(line)[1]) == current_chapter
                 and (verse := self.extract_verse_info(line)[2])}
