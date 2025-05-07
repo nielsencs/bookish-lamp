@@ -10,7 +10,7 @@ TODO List:
 4. Improve Editing
     - ctrl-z to undo, ctrl-y to redo (it already has ctrl-a to select all, ctrl-c to copy, ctrl-v to paste) DONE!
     - automatic acceptance of file 2 punctuation or other differences possibly based on highlighting
-
+    - improve the way the text is highlighted - overdone in verse NEH 5:15 - too long
 
 N. Future Enhancements:
     - Add configuration for default paths DONE!
@@ -812,9 +812,15 @@ class BibleHarmonyApp(tk.Tk):
     def navigate_to_verse(self):
         """Navigate to the selected book, chapter, and verse."""
         try:
-            self.current_book = self.book_combo.get()
-            self.current_chapter = self.chapter_combo.get()
-            self.current_verse = self.verse_combo.get()
+            new_book = self.book_combo.get()
+            if new_book != self.current_book:
+                self.current_book = new_book
+                self.current_chapter=1
+                self.current_verse=1
+                self.update_navigation_options()
+            else:
+                self.current_chapter = self.chapter_combo.get()
+                self.current_verse = self.verse_combo.get()
 
             if not all([self.current_book, self.current_chapter, self.current_verse]):
                 tk.messagebox.showwarning("Warning", "Please select book, chapter, and verse")
