@@ -10,7 +10,7 @@ TODO List:
 4. Improve Editing
     - ctrl-z to undo, ctrl-y to redo (it already has ctrl-a to select all, ctrl-c to copy, ctrl-v to paste) DONE!
     - automatic acceptance of file 2 punctuation or other differences possibly based on highlighting
-    - improve the way the text is highlighted - overdone in verse NEH 5:15 - too long
+    - improve the way the text is highlighted - overdone in verse NEH 5:15 - too long (actually fine!)
 
 N. Future Enhancements:
     - Add configuration for default paths DONE!
@@ -220,9 +220,24 @@ class BibleHarmonyApp(tk.Tk):
         self.file2_text = tk.Text(file2_frame, height=TEXT_HEIGHT, wrap="word", state="disabled")
         self.file2_text.pack(fill="both", expand=True, padx=5, pady=2)
 
-        # Master File Frame
+        # Add auto-accept buttons frame between File 2 and Master
+        auto_accept_frame = tk.LabelFrame(self, text="Auto Accept")
+        auto_accept_frame.grid(row=3, column=0, columnspan=2, sticky="EW", padx=PADDING, pady=5)
+
+        # Add buttons for each difference type
+        tk.Button(auto_accept_frame, text="Accept Case", 
+                  command=lambda: self.accept_differences("case"),
+                  bg=HIGHLIGHT_COLORS["case"]).pack(side="left", padx=5)
+        tk.Button(auto_accept_frame, text="Accept Punctuation", 
+                  command=lambda: self.accept_differences("punctuation"),
+                  bg=HIGHLIGHT_COLORS["punctuation"]).pack(side="left", padx=5)
+        tk.Button(auto_accept_frame, text="Accept Other", 
+                  command=lambda: self.accept_differences("other"),
+                  bg=HIGHLIGHT_COLORS["other"]).pack(side="left", padx=5)
+
+        # Master File Frame (now at row 4)
         master_frame = tk.LabelFrame(self, text="Master File")
-        master_frame.grid(row=3, column=0, columnspan=2, sticky="NSEW", padx=PADDING, pady=5)
+        master_frame.grid(row=4, column=0, columnspan=2, sticky="NSEW", padx=PADDING, pady=5)
 
         master_header = tk.Frame(master_frame)
         master_header.pack(fill="x", padx=5, pady=2)
@@ -1026,6 +1041,49 @@ class BibleHarmonyApp(tk.Tk):
             tk.messagebox.showerror("Error", "Could not find matching verse in master file")
         except Exception as e:
             tk.messagebox.showerror("Error", f"Failed to save changes: {e}")
+
+    def accept_differences(self, diff_type):
+        """Accept differences of specified type from File 2.
+    
+        Args:
+            diff_type (str): Type of difference to accept ("case", "punctuation", "other")
+        """
+        try:
+            # Get text from master and File 2
+            master_text = self.master_text.get("1.0", "end-1c")
+            file2_text = self.file2_text.get("1.0", "end-1c")
+            
+            # Get ranges for the specified difference type
+            ranges = self.file2_text.tag_ranges(diff_type)
+            
+            # Process ranges in pairs (start, end) from last to first
+            for i in range(len(ranges)-2, -1, -2):
+                start = ranges[i]
+                end = ranges[i+1]
+                
+                # Get the text from File 2 for this difference
+                diff_text = self.file2_text.get(start, end)
+                
+                # Convert tkinter indices to row/column
+                start_row, start_col = map(int, str(start).split('.'))
+                end_row, end_col = map(int, str(end).split('.'))
+                
+                # Since we're only dealing with single-line text, we can use column numbers
+                master_text = master_text[:start_col] + diff_text + master_text[end_col:]
+            
+            # Update master text with modified text
+            self.master_text.delete("1.0", tk.END)
+            self.master_text.insert("1.0", master_text)
+            
+            # Save changes
+            self.store_master()
+            
+            # Show updated verse
+            self.show_line()
+            
+        except Exception as e:
+            tk.messagebox.showerror("Error", f"Failed to accept differences: {e}")
+
 
 if __name__ == "__main__":
     import os
