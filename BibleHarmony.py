@@ -1043,15 +1043,11 @@ class BibleHarmonyApp(tk.Tk):
             tk.messagebox.showerror("Error", f"Failed to save changes: {e}")
 
     def accept_differences(self, diff_type):
-        """Accept differences of specified type from File 2.
-    
-        Args:
-            diff_type (str): Type of difference to accept ("case", "punctuation", "other")
-        """
+        """Accept differences of specified type from File 2."""
         try:
-            # Get text from master and File 2
-            master_text = self.master_text.get("1.0", "end-1c")
-            file2_text = self.file2_text.get("1.0", "end-1c")
+            # Get current master text and extract just the verse text
+            master_line = self.master_text.get("1.0", "end-1c")
+            _, _, _, master_verse_text = self.extract_verse_info(master_line)
             
             # Get ranges for the specified difference type
             ranges = self.file2_text.tag_ranges(diff_type)
@@ -1068,12 +1064,15 @@ class BibleHarmonyApp(tk.Tk):
                 start_row, start_col = map(int, str(start).split('.'))
                 end_row, end_col = map(int, str(end).split('.'))
                 
-                # Since we're only dealing with single-line text, we can use column numbers
-                master_text = master_text[:start_col] + diff_text + master_text[end_col:]
+                # Apply the change to just the verse text
+                master_verse_text = master_verse_text[:start_col] + diff_text + master_verse_text[end_col:]
             
-            # Update master text with modified text
+            # Reconstruct the full SQL line with the modified verse text
+            new_master_line = f"{COMMON_PREFIX}'{self.current_book}', {self.current_chapter}, {self.current_verse}, '{master_verse_text}'{COMMON_SUFFIX}"
+            
+            # Update master text with modified line
             self.master_text.delete("1.0", tk.END)
-            self.master_text.insert("1.0", master_text)
+            self.master_text.insert("1.0", new_master_line)
             
             # Save changes
             self.store_master()
