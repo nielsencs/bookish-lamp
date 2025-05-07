@@ -542,54 +542,46 @@ class BibleHarmonyApp(tk.Tk):
             self.chapter_combo.set('')
             self.verse_combo.set('')
 
-    def highlight_differences(self, line1, line2):
-        """Highlight differences between two lines using different colors.
-
+    def highlight_differences(self, text1, text2):
+        """Highlight differences between two texts using different colors.
+        
         Args:
-            line1 (str): Line from first file
-            line2 (str): Line from second file
+            text1 (str): Text from first file
+            text2 (str): Text from second file
         """
-        # Clear all existing highlights
-        self.file1_text.tag_delete("case", "punctuation", "other")
-        self.file2_text.tag_delete("case", "punctuation", "other")
+        # Clear existing highlights
+        for tag in HIGHLIGHT_COLORS.keys():
+            self.file1_text.tag_remove(tag, "1.0", tk.END)
+            self.file2_text.tag_remove(tag, "1.0", tk.END)
 
-        matcher = difflib.SequenceMatcher(None, line1, line2)
+        # Configure highlight tags
+        for tag, color in HIGHLIGHT_COLORS.items():
+            self.file1_text.tag_configure(tag, background=color)
+            self.file2_text.tag_configure(tag, background=color)
+
+        # Compare texts using SequenceMatcher
+        matcher = difflib.SequenceMatcher(None, text1, text2)
         for tag, i1, i2, j1, j2 in matcher.get_opcodes():
             if tag in ("replace", "insert", "delete"):
-                # First, check for exact differences
-                if line1[i1:i2] == line2[j1:j2]:
-                    continue  # Skip if the text is identical
+                # Get the differing segments
+                seg1 = text1[i1:i2]
+                seg2 = text2[j1:j2]
+                
+                # Skip if segments are identical
+                if seg1 == seg2:
+                    continue
                     
-                # Check for case differences only
-                if line1[i1:i2].lower() == line2[j1:j2].lower():
-                    self.apply_highlight("case", i1, i2, j1, j2)
-                    continue
-
-                # Check for punctuation differences only
-                stripped_line1 = line1[i1:i2].translate(str.maketrans("", "", ".,!?:;"))
-                stripped_line2 = line2[j1:j2].translate(str.maketrans("", "", ".,!?:;"))
-                if stripped_line1.lower() == stripped_line2.lower():
-                    self.apply_highlight("punctuation", i1, i2, j1, j2)
-                    continue
-
-                # If neither case nor punctuation, mark as other
-                self.apply_highlight("other", i1, i2, j1, j2)
-
-    def apply_highlight(self, highlight_type, i1, i2, j1, j2):
-        """Apply a highlight of specified type to regions in both text widgets.
-
-        Args:
-            highlight_type (str): Type of highlight ("case", "punctuation", or "other")
-            i1 (int): Start index in first line
-            i2 (int): End index in first line
-            j1 (int): Start index in second line
-            j2 (int): End index in second line
-        """
-        # Apply the highlight using a specific tag for the type
-        self.file1_text.tag_add(highlight_type, f"1.{i1}", f"1.{i2}")
-        self.file2_text.tag_add(highlight_type, f"1.{j1}", f"1.{j2}")
-        self.file1_text.tag_config(highlight_type, background=HIGHLIGHT_COLORS[highlight_type])
-        self.file2_text.tag_config(highlight_type, background=HIGHLIGHT_COLORS[highlight_type])
+                # Determine type of difference
+                if seg1.lower() == seg2.lower():
+                    highlight_type = "case"
+                elif seg1.translate(str.maketrans("", "", ".,!?:;")) == seg2.translate(str.maketrans("", "", ".,!?:;")):
+                    highlight_type = "punctuation"
+                else:
+                    highlight_type = "other"
+                
+                # Apply highlights
+                self.file1_text.tag_add(highlight_type, f"1.{i1}", f"1.{i2}")
+                self.file2_text.tag_add(highlight_type, f"1.{j1}", f"1.{j2}")
 
     def update_text_field(self, text_widget, content):
         """Update a text widget with new content.
