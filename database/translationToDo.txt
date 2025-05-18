@@ -2,7 +2,7 @@
 ############### WEB comparison completed ###############
 ########################################################
 GEN-DEU 1:18
-NEH 6:1
+NEH 8:16
 MAT
 GAL
 JAM
@@ -17,6 +17,7 @@ man{G0435}(aner) MAT, GAL, JAM
 human{G0444}(anthropos) up to MAT 5:16, GAL, JAM
 law{G3551}(nomos) MAT, GAL, EPH, PHP, JAM
 tempting{G3985}(peirazo) MAT + JAM
+wide-place{H7339} maybe?
 ########################################################
 
 ########################################################
@@ -32,7 +33,6 @@ Thus says ... - ... says (sorted up to EZE 5)
 midst - midst/middle (sorted up to DEU)
 : and .[regex] - . Y/. T/. I[etc.] (sorted up to DEU+NEH)
 
-besides - besides/in addition to (sorted up to JDG)
 of ForeverOne{H3068} - ForeverOne{H3068}\'s EXCEPT NAME (sorted up to NUM)
 over against - opposite (sorted up to NUM)
 drew near - came near (sorted up to DEU)
@@ -250,3 +250,5 @@ spoiler - raider (sorted!)
 despoiled - plundered (sorted!)
 spoil - plunder (sorted!)
 porters - gatekeepers (sorted!)
+besides - besides/in addition to (sorted!)
+broad place - wide-place (sorted!)
