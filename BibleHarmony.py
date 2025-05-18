@@ -965,15 +965,16 @@ class BibleHarmonyApp(tk.Tk):
             str: Text with words swapped
         """
         replacements = {
-            # 'Don\\\'t': 'You shall not',
+            'Don\\\'t': 'You shall not',
             'mustn\\\'t': 'shall not',
             'LordOfMine{H0136}': 'Lord{H0136}',
             'temporary-shelters': 'temporary shelters',
-            # 'enter': 'come into',
+            'wide-place': 'wide place',
+            'enter': 'come into',
             'pursue': 'chase',
-            # 'group': 'company',
-            # 'murmur': 'complain',
-            # 'testimony': 'covenant', 
+            'group': 'company',
+            'murmur': 'complain',
+            'testimony': 'covenant', 
             'winepress': 'wine press',
             'throw': 'cast',
             #Add more word pairs here
