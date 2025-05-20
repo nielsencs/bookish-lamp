@@ -44,6 +44,7 @@ from tkinter import ttk
 import difflib  # Add this import to use difflib for highlighting differences
 import json
 import os
+import webbrowser
 
 HIGHLIGHT_COLORS = {
     "case": "#90EE90",         # Light green
@@ -314,6 +315,11 @@ class BibleHarmonyApp(tk.Tk):
         self.verse_index2 = {}  # For comparison_file
         self.verse_index_master = {}  # For master file
 
+        # Browser button
+        self.ui_btn_browser = tk.Button(ui_nav_frame, 
+                                       text="🌐 BG All Versions", 
+                                       command=self.open_in_browser)
+        self.ui_btn_browser.pack(side="left", padx=5)
     def select_file(self):
         """Open a file dialog to select a file and update the display."""
         file_path = filedialog.askopenfilename(
@@ -1045,6 +1051,20 @@ class BibleHarmonyApp(tk.Tk):
             tk.messagebox.showerror("Error", "Could not find matching verse in master file")
         except Exception as e:
             tk.messagebox.showerror("Error", f"Failed to save changes: {e}")
+
+    def open_in_browser(self):
+        """Open current verse in browser."""
+        try:
+            # BibleGateway URL single (WEB) version
+            # url = f"https://www.biblegateway.com/passage/?search={self.current_book}+{self.current_chapter}:{self.current_verse}&version=WEB"
+            # BibleGateway URL all versions
+            url = f'https://www.biblegateway.com/verse/en/{self.current_book}%20{self.current_chapter}%3A{self.current_verse}'
+            # Blue Letter Bible URL single (KJV) version
+            # url = f'https://www.blueletterbible.org/kjv/{self.current_book}/{self.current_chapter}/{self.current_verse}/'
+            webbrowser.open(url)
+            
+        except Exception as e:
+            tk.messagebox.showerror("Error", f"Failed to open browser: {e}")
 
 ########################### needs fixing ###########################
     # def accept_differences(self, diff_type):
