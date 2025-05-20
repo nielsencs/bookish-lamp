@@ -152,121 +152,121 @@ class BibleHarmonyApp(tk.Tk):
         self.grid_columnconfigure(1, weight=0)
 
         # Navigation Frame
-        nav_frame = tk.LabelFrame(self, text="Navigation")
-        nav_frame.grid(row=0, column=0, columnspan=2, sticky="EW", padx=PADDING)
+        ui_nav_frame = tk.LabelFrame(self, text="Navigation")
+        ui_nav_frame.grid(row=0, column=0, columnspan=2, sticky="EW", padx=PADDING)
 
         # Book navigation
-        book_frame = tk.Frame(nav_frame)
-        book_frame.pack(side="left", padx=5)
-        tk.Label(book_frame, text="Book:").pack(side="left")
-        self.book_combo = ttk.Combobox(book_frame, width=5)
-        self.book_combo.pack(side="left")
-        self.prev_B_button = tk.Button(book_frame, text="Prev B", command=self.prev_book)
-        self.prev_B_button.pack(side="left")
-        self.next_B_button = tk.Button(book_frame, text="Next B", command=self.next_book)
-        self.next_B_button.pack(side="left")
+        ui_book_frame = tk.Frame(ui_nav_frame)
+        ui_book_frame.pack(side="left", padx=5)
+        tk.Label(ui_book_frame, text="Book:").pack(side="left")
+        self.ui_book_combo = ttk.Combobox(ui_book_frame, width=5)
+        self.ui_book_combo.pack(side="left")
+        self.ui_prev_B_button = tk.Button(ui_book_frame, text="Prev B", command=self.prev_book)
+        self.ui_prev_B_button.pack(side="left")
+        self.ui_next_B_button = tk.Button(ui_book_frame, text="Next B", command=self.next_book)
+        self.ui_next_B_button.pack(side="left")
 
         # Chapter navigation
-        chapter_frame = tk.Frame(nav_frame)
-        chapter_frame.pack(side="left", padx=5)
-        tk.Label(chapter_frame, text="Chapter:").pack(side="left")
-        self.chapter_combo = ttk.Combobox(chapter_frame, width=3)
-        self.chapter_combo.pack(side="left")
-        self.prev_c_button = tk.Button(chapter_frame, text="Prev C", command=self.prev_chapter)
-        self.prev_c_button.pack(side="left")
-        self.next_button = tk.Button(chapter_frame, text="Next C", command=self.next_chapter)
-        self.next_button.pack(side="left")
+        ui_chapter_frame = tk.Frame(ui_nav_frame)
+        ui_chapter_frame.pack(side="left", padx=5)
+        tk.Label(ui_chapter_frame, text="Chapter:").pack(side="left")
+        self.ui_chapter_combo = ttk.Combobox(ui_chapter_frame, width=3)
+        self.ui_chapter_combo.pack(side="left")
+        self.ui_prev_c_button = tk.Button(ui_chapter_frame, text="Prev C", command=self.prev_chapter)
+        self.ui_prev_c_button.pack(side="left")
+        self.ui_next_c_button = tk.Button(ui_chapter_frame, text="Next C", command=self.next_chapter)
+        self.ui_next_c_button.pack(side="left")
 
         # Verse navigation
-        verse_frame = tk.Frame(nav_frame)
-        verse_frame.pack(side="left", padx=5)
-        tk.Label(verse_frame, text="Verse:").pack(side="left")
-        self.verse_combo = ttk.Combobox(verse_frame, width=3)
-        self.verse_combo.pack(side="left")
-        self.prev_button = tk.Button(verse_frame, text="Prev", command=self.prev_line)
-        self.prev_button.pack(side="left")
-        self.next_button = tk.Button(verse_frame, text="Next", command=self.next_line)
-        self.next_button.pack(side="left")
+        ui_verse_frame = tk.Frame(ui_nav_frame)
+        ui_verse_frame.pack(side="left", padx=5)
+        tk.Label(ui_verse_frame, text="Verse:").pack(side="left")
+        self.ui_verse_combo = ttk.Combobox(ui_verse_frame, width=3)
+        self.ui_verse_combo.pack(side="left")
+        self.ui_prev_button = tk.Button(ui_verse_frame, text="Prev", command=self.prev_line)
+        self.ui_prev_button.pack(side="left")
+        self.ui_next_button = tk.Button(ui_verse_frame, text="Next", command=self.next_line)
+        self.ui_next_button.pack(side="left")
 
         # 'Hide Identical Lines' option
         self.hide_identical_var = tk.BooleanVar(value=False)
-        tk.Checkbutton(nav_frame, text="Hide Identical Lines", 
+        tk.Checkbutton(ui_nav_frame, text="Hide Identical Lines", 
                        variable=self.hide_identical_var,
                        command=self.show_line).pack(side="left", padx=5)
 
         # File 1 Frame
-        file1_frame = tk.LabelFrame(self, text="File 1")
-        file1_frame.grid(row=1, column=0, columnspan=2, sticky="NSEW", padx=PADDING, pady=5)
+        ui_file1_frame = tk.LabelFrame(self, text="File 1")
+        ui_file1_frame.grid(row=1, column=0, columnspan=2, sticky="NSEW", padx=PADDING, pady=5)
         
-        file1_header = tk.Frame(file1_frame)
-        file1_header.pack(fill="x", padx=5, pady=2)
-        self.file1_name_label = tk.Label(file1_header, text=NO_FILE_MSG, anchor="w")
-        self.file1_name_label.pack(side="left", fill="x", expand=True)
+        ui_file1_header = tk.Frame(ui_file1_frame)
+        ui_file1_header.pack(fill="x", padx=5, pady=2)
+        self.ui_file1_name_label = tk.Label(ui_file1_header, text=NO_FILE_MSG, anchor="w")
+        self.ui_file1_name_label.pack(side="left", fill="x", expand=True)
         
-        self.file1_text = tk.Text(file1_frame, height=TEXT_HEIGHT, wrap="word", state="disabled")
-        self.file1_text.pack(fill="both", expand=True, padx=5, pady=2)
+        self.ui_file1_text = tk.Text(ui_file1_frame, height=TEXT_HEIGHT, wrap="word", state="disabled")
+        self.ui_file1_text.pack(fill="both", expand=True, padx=5, pady=2)
 
         # File 2 Frame
-        file2_frame = tk.LabelFrame(self, text="File 2")
-        file2_frame.grid(row=2, column=0, columnspan=2, sticky="NSEW", padx=PADDING, pady=5)
+        ui_file2_frame = tk.LabelFrame(self, text="File 2")
+        ui_file2_frame.grid(row=2, column=0, columnspan=2, sticky="NSEW", padx=PADDING, pady=5)
         
-        file2_header = tk.Frame(file2_frame)
-        file2_header.pack(fill="x", padx=5, pady=2)
-        self.file2_name_label = tk.Label(file2_header, text=NO_FILE_MSG, anchor="w")
-        self.file2_name_label.pack(side="left", fill="x", expand=True)
-        self.file2_button = tk.Button(file2_header, text="Select File", command=self.select_file)
-        self.file2_button.pack(side="right")
+        ui_file2_header = tk.Frame(ui_file2_frame)
+        ui_file2_header.pack(fill="x", padx=5, pady=2)
+        self.ui_file2_name_label = tk.Label(ui_file2_header, text=NO_FILE_MSG, anchor="w")
+        self.ui_file2_name_label.pack(side="left", fill="x", expand=True)
+        self.ui_file2_button = tk.Button(ui_file2_header, text="Select File", command=self.select_file)
+        self.ui_file2_button.pack(side="right")
         
-        self.file2_text = tk.Text(file2_frame, height=TEXT_HEIGHT, wrap="word", state="disabled")
-        self.file2_text.pack(fill="both", expand=True, padx=5, pady=2)
+        self.ui_file2_text = tk.Text(ui_file2_frame, height=TEXT_HEIGHT, wrap="word", state="disabled")
+        self.ui_file2_text.pack(fill="both", expand=True, padx=5, pady=2)
 
 ########################### needs fixing ###########################
         # # Add auto-accept buttons frame between File 2 and Master
-        # auto_accept_frame = tk.LabelFrame(self, text="Auto Accept")
-        # auto_accept_frame.grid(row=3, column=0, columnspan=2, sticky="EW", padx=PADDING, pady=5)
+        # ui_auto_accept_frame = tk.LabelFrame(self, text="Auto Accept")
+        # ui_auto_accept_frame.grid(row=3, column=0, columnspan=2, sticky="EW", padx=PADDING, pady=5)
         #
         # # Add buttons for each difference type
-        # tk.Button(auto_accept_frame, text="Accept Case", 
+        # tk.Button(ui_auto_accept_frame, text="Accept Case", 
         #           command=lambda: self.accept_differences("case"),
         #           bg=HIGHLIGHT_COLORS["case"]).pack(side="left", padx=5)
-        # tk.Button(auto_accept_frame, text="Accept Punctuation", 
+        # tk.Button(ui_auto_accept_frame, text="Accept Punctuation", 
         #           command=lambda: self.accept_differences("punctuation"),
         #           bg=HIGHLIGHT_COLORS["punctuation"]).pack(side="left", padx=5)
-        # tk.Button(auto_accept_frame, text="Accept Other", 
+        # tk.Button(ui_auto_accept_frame, text="Accept Other", 
         #           command=lambda: self.accept_differences("other"),
         #           bg=HIGHLIGHT_COLORS["other"]).pack(side="left", padx=5)
 ########################### needs fixing ###########################
 
         # Master File Frame (now at row 4)
-        master_frame = tk.LabelFrame(self, text="Master File")
-        master_frame.grid(row=4, column=0, columnspan=2, sticky="NSEW", padx=PADDING, pady=5)
+        ui_master_frame = tk.LabelFrame(self, text="Master File")
+        ui_master_frame.grid(row=4, column=0, columnspan=2, sticky="NSEW", padx=PADDING, pady=5)
 
-        master_header = tk.Frame(master_frame)
-        master_header.pack(fill="x", padx=5, pady=2)
-        self.master_name_label = tk.Label(master_header, text=NO_FILE_MSG, anchor="w")
-        self.master_name_label.pack(side="left", fill="x", expand=True)
+        ui_master_header = tk.Frame(ui_master_frame)
+        ui_master_header.pack(fill="x", padx=5, pady=2)
+        self.ui_master_name_label = tk.Label(ui_master_header, text=NO_FILE_MSG, anchor="w")
+        self.ui_master_name_label.pack(side="left", fill="x", expand=True)
 
-        self.master_text = tk.Text(master_frame, height=TEXT_HEIGHT, wrap="word", undo=True, maxundo=-1)
-        self.master_text.pack(fill="both", expand=True, padx=5, pady=2)
-        self.master_text.bind('<<Modified>>', self.store_master)
+        self.ui_master_text = tk.Text(ui_master_frame, height=TEXT_HEIGHT, wrap="word", undo=True, maxundo=-1)
+        self.ui_master_text.pack(fill="both", expand=True, padx=5, pady=2)
+        self.ui_master_text.bind('<<Modified>>', self.store_master)
 
         # Controls Frame
-        controls_frame = tk.LabelFrame(self, text="Controls")
-        controls_frame.grid(row=5, column=0, columnspan=2, sticky="EW", padx=PADDING, pady=5)
+        ui_controls_frame = tk.LabelFrame(self, text="Controls")
+        ui_controls_frame.grid(row=5, column=0, columnspan=2, sticky="EW", padx=PADDING, pady=5)
         
-        self.save_button = tk.Button(controls_frame, text="Save", command=self.save_master_file)
-        self.save_button.pack(side="top", pady=2)
+        self.ui_save_button = tk.Button(ui_controls_frame, text="Save", command=self.save_master_file)
+        self.ui_save_button.pack(side="top", pady=2)
         
-        buttons_frame = tk.Frame(controls_frame)
-        buttons_frame.pack(fill="x", padx=5, pady=2)
+        ui_buttons_frame = tk.Frame(ui_controls_frame)
+        ui_buttons_frame.pack(fill="x", padx=5, pady=2)
 
         # Add save buttons
-        save_frame = tk.Frame(controls_frame)
-        save_frame.pack(fill="x", padx=5, pady=2)
+        ui_save_frame = tk.Frame(ui_controls_frame)
+        ui_save_frame.pack(fill="x", padx=5, pady=2)
         
         # Add processing options frame
-        options_frame = tk.LabelFrame(controls_frame, text="Processing Options")
-        options_frame.pack(fill="x", padx=5, pady=2)
+        ui_options_frame = tk.LabelFrame(ui_controls_frame, text="Processing Options")
+        ui_options_frame.pack(fill="x", padx=5, pady=2)
         
         # Initialize checkbox variables
         self.strip_strongs_var = tk.BooleanVar(value=True)     # Strip Strong's numbers
@@ -275,20 +275,20 @@ class BibleHarmonyApp(tk.Tk):
         self.swap_words_var = tk.BooleanVar(value=True)        # Swap words in the verse text (eg "group" for "company")
         
         # Add checkboxes
-        tk.Checkbutton(options_frame, text="Strip Strong's Numbers", 
+        tk.Checkbutton(ui_options_frame, text="Strip Strong's Numbers", 
                        variable=self.strip_strongs_var).pack(side="left", padx=5)
-        tk.Checkbutton(options_frame, text="Strip Formatting", 
+        tk.Checkbutton(ui_options_frame, text="Strip Formatting", 
                        variable=self.strip_formatting_var).pack(side="left", padx=5)
-        tk.Checkbutton(options_frame, text="Strip Quotes", 
+        tk.Checkbutton(ui_options_frame, text="Strip Quotes", 
                        variable=self.strip_quotes_var).pack(side="left", padx=5)
-        tk.Checkbutton(options_frame, text="Swap Words", 
+        tk.Checkbutton(ui_options_frame, text="Swap Words", 
                        variable=self.swap_words_var).pack(side="left", padx=5)
 
         # Status Bar
-        status_frame = tk.LabelFrame(self, text="Status")
-        status_frame.grid(row=7, column=0, columnspan=2, sticky="EW", padx=PADDING, pady=5)
-        self.status_bar = tk.Label(status_frame, text="Line 1 of 100", anchor="w")
-        self.status_bar.pack(fill="x", padx=5, pady=2)
+        ui_status_frame = tk.LabelFrame(self, text="Status")
+        ui_status_frame.grid(row=7, column=0, columnspan=2, sticky="EW", padx=PADDING, pady=5)
+        self.ui_status_bar = tk.Label(ui_status_frame, text="Line 1 of 100", anchor="w")
+        self.ui_status_bar.pack(fill="x", padx=5, pady=2)
 
         # Show the first line
         self.show_line()
@@ -300,9 +300,9 @@ class BibleHarmonyApp(tk.Tk):
         self.bind("<Control-Down>", lambda event: self.next_chapter())
 
         # Automate lookup from book, chapter & verse combos
-        self.book_combo.bind('<<ComboboxSelected>>', lambda e: self.navigate_to_verse())
-        self.chapter_combo.bind('<<ComboboxSelected>>', lambda e: self.navigate_to_verse())
-        self.verse_combo.bind('<<ComboboxSelected>>', lambda e: self.navigate_to_verse())
+        self.ui_book_combo.bind('<<ComboboxSelected>>', lambda e: self.navigate_to_verse())
+        self.ui_chapter_combo.bind('<<ComboboxSelected>>', lambda e: self.navigate_to_verse())
+        self.ui_verse_combo.bind('<<ComboboxSelected>>', lambda e: self.navigate_to_verse())
 
         # Add current location tracking
         self.current_book = "NEH"
@@ -325,7 +325,7 @@ class BibleHarmonyApp(tk.Tk):
             try:
                 with open(file_path, "r", encoding=ENCODING, errors=ERRORS_POLICY):
                     self.comparison_file = file_path
-                    self.file2_name_label.config(text=file_path)
+                    self.ui_file2_name_label.config(text=file_path)
                     
                     # Update last used paths in config
                     self.config["last_used"]["comparison_file"] = file_path
@@ -349,7 +349,7 @@ class BibleHarmonyApp(tk.Tk):
             try:
                 with open(file_path, "r", encoding=ENCODING, errors=ERRORS_POLICY):
                     self.master_file = file_path
-                    self.master_name_label.config(text=file_path)
+                    self.ui_master_name_label.config(text=file_path)
                     self.lines_master = self.read_and_filter_lines(file_path)
                     self.filter_and_validate_lines()
                     self.current_line = 0
@@ -383,18 +383,18 @@ class BibleHarmonyApp(tk.Tk):
         try:
             # Check if we have any lines to display
             if not self.processed_lines:
-                self.update_text_field(self.file1_text, "No verses loaded in File 1")
-                self.update_text_field(self.file2_text, "No verses loaded in File 2")
-                self.update_text_field(self.master_text, "No verses loaded in Master")
-                self.master_text.edit_reset()  # Reset the undo stack
+                self.update_text_field(self.ui_file1_text, "No verses loaded in File 1")
+                self.update_text_field(self.ui_file2_text, "No verses loaded in File 2")
+                self.update_text_field(self.ui_master_text, "No verses loaded in Master")
+                self.ui_master_text.edit_reset()  # Reset the undo stack
                 return
 
             # Get the current lines
             text1, text2, _, _ = self.get_current_lines()
 
             # Update text fields
-            self.update_text_field(self.file1_text, text1)
-            self.update_text_field(self.file2_text, text2)
+            self.update_text_field(self.ui_file1_text, text1)
+            self.update_text_field(self.ui_file2_text, text2)
 
             # Find the matching master line
             master_line = None
@@ -407,8 +407,8 @@ class BibleHarmonyApp(tk.Tk):
                         master_line = line
                         break
 
-            self.update_text_field(self.master_text, master_line if master_line else "No master verse found")
-            self.master_text.edit_reset()  # Reset the undo stack
+            self.update_text_field(self.ui_master_text, master_line if master_line else "No master verse found")
+            self.ui_master_text.edit_reset()  # Reset the undo stack
             
             # Highlight differences between text1 and text2
             if text1 and text2 and text1 != "No matching verse in File 1." and text2 != "No matching verse in File 2.":
@@ -468,9 +468,9 @@ class BibleHarmonyApp(tk.Tk):
         """Read files and build verse indices."""
         try:
             # Update labels
-            self.file2_name_label.config(text=self.comparison_file or NO_FILE_MSG)
-            self.master_name_label.config(text=self.master_file or NO_FILE_MSG)
-            self.file1_name_label.config(text="Processed Master File")  # New label
+            self.ui_file2_name_label.config(text=self.comparison_file or NO_FILE_MSG)
+            self.ui_master_name_label.config(text=self.master_file or NO_FILE_MSG)
+            self.ui_file1_name_label.config(text="Processed Master File")  # New label
 
             if not self.comparison_file or not self.master_file:
                 tk.messagebox.showerror("Error", "Both comparison and master files must be selected.")
@@ -550,14 +550,14 @@ class BibleHarmonyApp(tk.Tk):
             verse (str): Verse number
         """
         if book and chapter and verse:
-            self.book_combo.set(book)
-            self.chapter_combo.set(chapter)
-            self.verse_combo.set(verse)
+            self.ui_book_combo.set(book)
+            self.ui_chapter_combo.set(chapter)
+            self.ui_verse_combo.set(verse)
             self.update_navigation_options()
         else:
-            self.book_combo.set('')
-            self.chapter_combo.set('')
-            self.verse_combo.set('')
+            self.ui_book_combo.set('')
+            self.ui_chapter_combo.set('')
+            self.ui_verse_combo.set('')
 
     def highlight_differences(self, text1, text2):
         """Highlight differences between two texts using different colors.
@@ -568,13 +568,13 @@ class BibleHarmonyApp(tk.Tk):
         """
         # Clear existing highlights
         for tag in HIGHLIGHT_COLORS.keys():
-            self.file1_text.tag_remove(tag, "1.0", tk.END)
-            self.file2_text.tag_remove(tag, "1.0", tk.END)
+            self.ui_file1_text.tag_remove(tag, "1.0", tk.END)
+            self.ui_file2_text.tag_remove(tag, "1.0", tk.END)
 
         # Configure highlight tags
         for tag, color in HIGHLIGHT_COLORS.items():
-            self.file1_text.tag_configure(tag, background=color)
-            self.file2_text.tag_configure(tag, background=color)
+            self.ui_file1_text.tag_configure(tag, background=color)
+            self.ui_file2_text.tag_configure(tag, background=color)
 
         # Compare texts using SequenceMatcher
         matcher = difflib.SequenceMatcher(None, text1, text2)
@@ -597,8 +597,8 @@ class BibleHarmonyApp(tk.Tk):
                     highlight_type = "other"
                 
                 # Apply highlights
-                self.file1_text.tag_add(highlight_type, f"1.{i1}", f"1.{i2}")
-                self.file2_text.tag_add(highlight_type, f"1.{j1}", f"1.{j2}")
+                self.ui_file1_text.tag_add(highlight_type, f"1.{i1}", f"1.{i2}")
+                self.ui_file2_text.tag_add(highlight_type, f"1.{j1}", f"1.{j2}")
 
     def update_text_field(self, text_widget, content):
         """Update a text widget with new content.
@@ -617,15 +617,15 @@ class BibleHarmonyApp(tk.Tk):
 
     def update_status(self):
         """Update the status bar with current line numbers and file statistics."""
-        current_book = self.book_combo.get() or "?"
-        current_chapter = self.chapter_combo.get() or "?"
-        current_verse = self.verse_combo.get() or "?"
+        current_book = self.ui_book_combo.get() or "?"
+        current_chapter = self.ui_chapter_combo.get() or "?"
+        current_verse = self.ui_verse_combo.get() or "?"
         
         master_status = ""
         if hasattr(self, 'lines_master'):
             master_status = f" | Master: {len(self.lines_master)} lines"
             
-        self.status_bar.config(
+        self.ui_status_bar.config(
             text=f"{current_book} {current_chapter}:{current_verse} | "
                  f"Line {self.current_line + 1} of {self.total_lines} | "
                  f"File 1: {len(self.processed_lines)} lines, File 2: {len(self.comparison_lines)} lines"
@@ -639,7 +639,7 @@ class BibleHarmonyApp(tk.Tk):
         Args:
             direction (int): 1 for next book, -1 for previous book
         """
-        current_book = self.book_combo.get()
+        current_book = self.ui_book_combo.get()
         if not current_book:
             return
 
@@ -665,15 +665,15 @@ class BibleHarmonyApp(tk.Tk):
                 target_book = max(prev_books)[1]
         
         if target_book:
-            self.book_combo.set(target_book)
+            self.ui_book_combo.set(target_book)
             # Set to first chapter of new book
             chapters = sorted(self.get_available_chapters(target_book), key=int)
             if chapters:
-                self.chapter_combo.set(chapters[0])
+                self.ui_chapter_combo.set(chapters[0])
                 # Set to first verse of new chapter
                 verses = sorted(self.get_available_verses(target_book, chapters[0]), key=int)
                 if verses:
-                    self.verse_combo.set(verses[0])
+                    self.ui_verse_combo.set(verses[0])
                     self.navigate_to_verse()
 
     def next_book(self):
@@ -690,8 +690,8 @@ class BibleHarmonyApp(tk.Tk):
         Args:
             direction (int): 1 for next chapter, -1 for previous chapter
         """
-        current_book = self.book_combo.get()
-        current_chapter = self.chapter_combo.get()
+        current_book = self.ui_book_combo.get()
+        current_chapter = self.ui_chapter_combo.get()
         
         if not current_book or not current_chapter:
             return
@@ -705,11 +705,11 @@ class BibleHarmonyApp(tk.Tk):
                 (direction < 0 and current_index > 0)):
                 # Move to next/previous chapter
                 target_chapter = chapters[current_index + direction]
-                self.chapter_combo.set(target_chapter)
+                self.ui_chapter_combo.set(target_chapter)
                 # Set to first verse of new chapter
                 verses = sorted(self.get_available_verses(current_book, target_chapter), key=int)
                 if verses:
-                    self.verse_combo.set(verses[0])
+                    self.ui_verse_combo.set(verses[0])
                     self.navigate_to_verse()
         except ValueError:
             pass
@@ -821,15 +821,15 @@ class BibleHarmonyApp(tk.Tk):
     def navigate_to_verse(self):
         """Navigate to the selected book, chapter, and verse."""
         try:
-            new_book = self.book_combo.get()
+            new_book = self.ui_book_combo.get()
             if new_book != self.current_book:
                 self.current_book = new_book
                 self.current_chapter=1
                 self.current_verse=1
                 self.update_navigation_options()
             else:
-                self.current_chapter = self.chapter_combo.get()
-                self.current_verse = self.verse_combo.get()
+                self.current_chapter = self.ui_chapter_combo.get()
+                self.current_verse = self.ui_verse_combo.get()
 
             if not all([self.current_book, self.current_chapter, self.current_verse]):
                 tk.messagebox.showwarning("Warning", "Please select book, chapter, and verse")
@@ -852,12 +852,12 @@ class BibleHarmonyApp(tk.Tk):
     def update_navigation_options(self):
         """Update the navigation comboboxes with available options."""
         books = self.get_available_books()
-        chapters = self.get_available_chapters(self.book_combo.get())
-        verses = self.get_available_verses(self.book_combo.get(), self.chapter_combo.get())
+        chapters = self.get_available_chapters(self.ui_book_combo.get())
+        verses = self.get_available_verses(self.ui_book_combo.get(), self.ui_chapter_combo.get())
         
-        self.update_combo_values(self.book_combo, books)
-        self.update_combo_values(self.chapter_combo, chapters, convert_to_int=True)
-        self.update_combo_values(self.verse_combo, verses, convert_to_int=True)
+        self.update_combo_values(self.ui_book_combo, books)
+        self.update_combo_values(self.ui_chapter_combo, chapters, convert_to_int=True)
+        self.update_combo_values(self.ui_verse_combo, verses, convert_to_int=True)
 
     def get_available_books(self):
         """Get set of available book codes from master file.
@@ -1037,8 +1037,8 @@ class BibleHarmonyApp(tk.Tk):
                 if (book == self.current_book and 
                     str(chapter) == str(self.current_chapter) and 
                     str(verse) == str(self.current_verse)):
-                    self.lines_master[i] = self.master_text.get("1.0", "end-1c")  # Get the full SQL line
-                    self.master_text.edit_modified(False)  # Reset modified flag
+                    self.lines_master[i] = self.ui_master_text.get("1.0", "end-1c")  # Get the full SQL line
+                    self.ui_master_text.edit_modified(False)  # Reset modified flag
                     return
 
             tk.messagebox.showerror("Error", "Could not find matching verse in master file")
@@ -1050,11 +1050,11 @@ class BibleHarmonyApp(tk.Tk):
     #     """Accept differences of specified type from File 2."""
     #     try:
     #         # Get current master text and extract just the verse text
-    #         master_line = self.master_text.get("1.0", "end-1c")
+    #         master_line = self.ui_master_text.get("1.0", "end-1c")
     #         _, _, _, master_verse_text = self.extract_verse_info(master_line)
     #
     #         # Get ranges for the specified difference type
-    #         ranges = self.file2_text.tag_ranges(diff_type)
+    #         ranges = self.ui_file2_text.tag_ranges(diff_type)
     #
     #         # Process ranges in pairs (start, end) from last to first
     #         for i in range(len(ranges)-2, -1, -2):
@@ -1062,7 +1062,7 @@ class BibleHarmonyApp(tk.Tk):
     #             end = ranges[i+1]
     #
     #             # Get the text from File 2 for this difference
-    #             diff_text = self.file2_text.get(start, end)
+    #             diff_text = self.ui_file2_text.get(start, end)
     #
     #             # Get the indices in the processed text
     #             start_idx = int(float(str(start).split('.')[1]))
@@ -1084,8 +1084,8 @@ class BibleHarmonyApp(tk.Tk):
     #         new_master_line = f"{COMMON_PREFIX}'{self.current_book}', {self.current_chapter}, {self.current_verse}, '{master_verse_text}'{COMMON_SUFFIX}"
     #
     #         # Update master text with modified line
-    #         self.master_text.delete("1.0", tk.END)
-    #         self.master_text.insert("1.0", new_master_line)
+    #         self.ui_master_text.delete("1.0", tk.END)
+    #         self.ui_master_text.insert("1.0", new_master_line)
     #
     #         # Save changes
     #         self.store_master()
