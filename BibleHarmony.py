@@ -47,9 +47,10 @@ import os
 import webbrowser
 
 HIGHLIGHT_COLORS = {
-    "case": "#90EE90",         # Light green
-    "punctuation": "#FFFF00",  # Bright yellow
-    "other": "#FFB6C1",        # Light pink
+    "identical": "#DDFFDD",    # Pale green for identical verses
+    "case": "#90EE90",        # Light green
+    "punctuation": "#FFFF00", # Bright yellow
+    "other": "#FFB6C1",      # Light pink
 }
 
 BIBLE_BOOKS_ORDER = {
@@ -572,28 +573,33 @@ class BibleHarmonyApp(tk.Tk):
             text1 (str): Text from first file
             text2 (str): Text from second file
         """
-        # Clear existing highlights
-        for tag in HIGHLIGHT_COLORS.keys():
-            self.ui_file1_text.tag_remove(tag, "1.0", tk.END)
-            self.ui_file2_text.tag_remove(tag, "1.0", tk.END)
+        try:
+            # Clear existing highlights
+            for tag in HIGHLIGHT_COLORS.keys():
+                self.ui_file1_text.tag_remove(tag, "1.0", tk.END)
+                self.ui_file2_text.tag_remove(tag, "1.0", tk.END)
 
-        # Configure highlight tags
-        for tag, color in HIGHLIGHT_COLORS.items():
-            self.ui_file1_text.tag_configure(tag, background=color)
-            self.ui_file2_text.tag_configure(tag, background=color)
+            # Configure highlight tags
+            for tag, color in HIGHLIGHT_COLORS.items():
+                self.ui_file1_text.tag_configure(tag, background=color)
+                self.ui_file2_text.tag_configure(tag, background=color)
 
-        # Compare texts using SequenceMatcher
-        matcher = difflib.SequenceMatcher(None, text1, text2)
-        for tag, i1, i2, j1, j2 in matcher.get_opcodes():
-            if tag in ("replace", "insert", "delete"):
+            # If texts are identical, highlight both in green
+            if text1.strip() == text2.strip():
+                self.ui_file1_text.tag_add("identical", "1.0", tk.END)
+                self.ui_file2_text.tag_add("identical", "1.0", tk.END)
+                return
+
+            # Compare texts using SequenceMatcher
+            matcher = difflib.SequenceMatcher(None, text1, text2)
+            for tag, i1, i2, j1, j2 in matcher.get_opcodes():
+                if tag == "equal":
+                    continue
+                
                 # Get the differing segments
                 seg1 = text1[i1:i2]
                 seg2 = text2[j1:j2]
                 
-                # Skip if segments are identical
-                if seg1 == seg2:
-                    continue
-                    
                 # Determine type of difference
                 if seg1.lower() == seg2.lower():
                     highlight_type = "case"
@@ -605,6 +611,8 @@ class BibleHarmonyApp(tk.Tk):
                 # Apply highlights
                 self.ui_file1_text.tag_add(highlight_type, f"1.{i1}", f"1.{i2}")
                 self.ui_file2_text.tag_add(highlight_type, f"1.{j1}", f"1.{j2}")
+        except Exception as e:
+            tk.messagebox.showerror("Error", f"Failed to highlight differences: {e}")
 
     def update_text_field(self, text_widget, content):
         """Update a text widget with new content.
