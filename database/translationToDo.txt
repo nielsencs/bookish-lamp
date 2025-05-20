@@ -2,7 +2,7 @@
 ############### WEB comparison completed ###############
 ########################################################
 GEN-DEU 1:18
-NEH 8:16
+NEH 9
 MAT
 GAL
 JAM
@@ -252,3 +252,4 @@ spoil - plunder (sorted!)
 porters - gatekeepers (sorted!)
 besides - besides/in addition to (sorted!)
 broad place - wide-place (sorted!)
+Og the king - Og king (sorted!)
