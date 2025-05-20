@@ -1059,7 +1059,8 @@ class BibleHarmonyApp(tk.Tk):
             # url = f"https://www.biblegateway.com/passage/?search={self.current_book}+{self.current_chapter}:{self.current_verse}&version=WEB"
             # BibleGateway URL all versions
             url = f'https://www.biblegateway.com/verse/en/{self.current_book}%20{self.current_chapter}%3A{self.current_verse}'
-
+            # Blue Letter Bible URL single (KJV) version
+            # url = f'https://www.blueletterbible.org/kjv/{self.current_book}/{self.current_chapter}/{self.current_verse}/'
             webbrowser.open(url)
             
         except Exception as e:
