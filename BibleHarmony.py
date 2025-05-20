@@ -220,20 +220,22 @@ class BibleHarmonyApp(tk.Tk):
         self.file2_text = tk.Text(file2_frame, height=TEXT_HEIGHT, wrap="word", state="disabled")
         self.file2_text.pack(fill="both", expand=True, padx=5, pady=2)
 
-        # Add auto-accept buttons frame between File 2 and Master
-        auto_accept_frame = tk.LabelFrame(self, text="Auto Accept")
-        auto_accept_frame.grid(row=3, column=0, columnspan=2, sticky="EW", padx=PADDING, pady=5)
-
-        # Add buttons for each difference type
-        tk.Button(auto_accept_frame, text="Accept Case", 
-                  command=lambda: self.accept_differences("case"),
-                  bg=HIGHLIGHT_COLORS["case"]).pack(side="left", padx=5)
-        tk.Button(auto_accept_frame, text="Accept Punctuation", 
-                  command=lambda: self.accept_differences("punctuation"),
-                  bg=HIGHLIGHT_COLORS["punctuation"]).pack(side="left", padx=5)
-        tk.Button(auto_accept_frame, text="Accept Other", 
-                  command=lambda: self.accept_differences("other"),
-                  bg=HIGHLIGHT_COLORS["other"]).pack(side="left", padx=5)
+########################### needs fixing ###########################
+        # # Add auto-accept buttons frame between File 2 and Master
+        # auto_accept_frame = tk.LabelFrame(self, text="Auto Accept")
+        # auto_accept_frame.grid(row=3, column=0, columnspan=2, sticky="EW", padx=PADDING, pady=5)
+        #
+        # # Add buttons for each difference type
+        # tk.Button(auto_accept_frame, text="Accept Case", 
+        #           command=lambda: self.accept_differences("case"),
+        #           bg=HIGHLIGHT_COLORS["case"]).pack(side="left", padx=5)
+        # tk.Button(auto_accept_frame, text="Accept Punctuation", 
+        #           command=lambda: self.accept_differences("punctuation"),
+        #           bg=HIGHLIGHT_COLORS["punctuation"]).pack(side="left", padx=5)
+        # tk.Button(auto_accept_frame, text="Accept Other", 
+        #           command=lambda: self.accept_differences("other"),
+        #           bg=HIGHLIGHT_COLORS["other"]).pack(side="left", padx=5)
+########################### needs fixing ###########################
 
         # Master File Frame (now at row 4)
         master_frame = tk.LabelFrame(self, text="Master File")
@@ -1043,46 +1045,57 @@ class BibleHarmonyApp(tk.Tk):
         except Exception as e:
             tk.messagebox.showerror("Error", f"Failed to save changes: {e}")
 
-    def accept_differences(self, diff_type):
-        """Accept differences of specified type from File 2."""
-        try:
-            # Get current master text and extract just the verse text
-            master_line = self.master_text.get("1.0", "end-1c")
-            _, _, _, master_verse_text = self.extract_verse_info(master_line)
-            
-            # Get ranges for the specified difference type
-            ranges = self.file2_text.tag_ranges(diff_type)
-            
-            # Process ranges in pairs (start, end) from last to first
-            for i in range(len(ranges)-2, -1, -2):
-                start = ranges[i]
-                end = ranges[i+1]
-                
-                # Get the text from File 2 for this difference
-                diff_text = self.file2_text.get(start, end)
-                
-                # Convert tkinter indices to row/column
-                start_row, start_col = map(int, str(start).split('.'))
-                end_row, end_col = map(int, str(end).split('.'))
-                
-                # Apply the change to just the verse text
-                master_verse_text = master_verse_text[:start_col] + diff_text + master_verse_text[end_col:]
-            
-            # Reconstruct the full SQL line with the modified verse text
-            new_master_line = f"{COMMON_PREFIX}'{self.current_book}', {self.current_chapter}, {self.current_verse}, '{master_verse_text}'{COMMON_SUFFIX}"
-            
-            # Update master text with modified line
-            self.master_text.delete("1.0", tk.END)
-            self.master_text.insert("1.0", new_master_line)
-            
-            # Save changes
-            self.store_master()
-            
-            # Show updated verse
-            self.show_line()
-            
-        except Exception as e:
-            tk.messagebox.showerror("Error", f"Failed to accept differences: {e}")
+########################### needs fixing ###########################
+    # def accept_differences(self, diff_type):
+    #     """Accept differences of specified type from File 2."""
+    #     try:
+    #         # Get current master text and extract just the verse text
+    #         master_line = self.master_text.get("1.0", "end-1c")
+    #         _, _, _, master_verse_text = self.extract_verse_info(master_line)
+    #
+    #         # Get ranges for the specified difference type
+    #         ranges = self.file2_text.tag_ranges(diff_type)
+    #
+    #         # Process ranges in pairs (start, end) from last to first
+    #         for i in range(len(ranges)-2, -1, -2):
+    #             start = ranges[i]
+    #             end = ranges[i+1]
+    #
+    #             # Get the text from File 2 for this difference
+    #             diff_text = self.file2_text.get(start, end)
+    #
+    #             # Get the indices in the processed text
+    #             start_idx = int(float(str(start).split('.')[1]))
+    #             end_idx = int(float(str(end).split('.')[1]))
+    #
+    #             # Find this same text in the original master text
+    #             orig_text = processed_master[start_idx:end_idx]
+    #             replace_idx = master_verse_text.find(orig_text)
+    #
+    #             if replace_idx >= 0:
+    #                 # Replace just this portion in the original master text
+    #                 master_verse_text = (
+    #                     master_verse_text[:replace_idx] + 
+    #                     diff_text + 
+    #                     master_verse_text[replace_idx + len(orig_text):]
+    #                 )
+    #
+    #         # Reconstruct the full SQL line with the modified verse text
+    #         new_master_line = f"{COMMON_PREFIX}'{self.current_book}', {self.current_chapter}, {self.current_verse}, '{master_verse_text}'{COMMON_SUFFIX}"
+    #
+    #         # Update master text with modified line
+    #         self.master_text.delete("1.0", tk.END)
+    #         self.master_text.insert("1.0", new_master_line)
+    #
+    #         # Save changes
+    #         self.store_master()
+    #
+    #         # Show updated verse
+    #         self.show_line()
+    #
+    #     except Exception as e:
+    #         tk.messagebox.showerror("Error", f"Failed to accept differences: {e}")
+########################### needs fixing ###########################
 
 
 if __name__ == "__main__":
