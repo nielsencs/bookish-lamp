@@ -972,6 +972,7 @@ class BibleHarmonyApp(tk.Tk):
             'LordOfMine{H0136}': 'Lord{H0136}',
             'temporary-shelters': 'temporary shelters',
             'wide-place': 'wide place',
+            'cast-metal': 'cast metal',
             'enter': 'come into',
             'pursue': 'chase',
             'group': 'company',
