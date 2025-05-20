@@ -1,29 +1,3 @@
-"""
-TODO List:
-1. Incorporate stripStrongs_bibleVerses_GUI functionality: DONE!
-    - make word swaps selectable
-
-2. Add master file handling: DONE!
-
-3. Improve GUI layout: DONE!
-
-4. Improve Editing
-    - ctrl-z to undo, ctrl-y to redo (it already has ctrl-a to select all, ctrl-c to copy, ctrl-v to paste) DONE!
-    - automatic acceptance of file 2 punctuation or other differences possibly based on highlighting
-    - improve the way the text is highlighted - overdone in verse NEH 5:15 - too long (actually fine!)
-
-N. Future Enhancements:
-    - Add configuration for default paths DONE!
-    - Add configuration for default window size DONE!
-    - Save/restore last used settings - especially current book, chapter and verse (see 2 above)
-    - remove the actual file1 - it's just a processed master file - process at load time rather than save time DONE!
-    - smart copying of text from comparison_file to master file - only copy the selected text, not the whole line
-    - rename File 1 to processed Master File or something similar
-    - rename File 2 to Comparison File or something similar
-    - process Comparison file on loading
-
-"""
-
 PADDING = 10
 TEXT_HEIGHT = 5
 WINDOW_MIN_WIDTH = 770
@@ -196,8 +170,8 @@ class BibleHarmonyApp(tk.Tk):
                        variable=self.hide_identical_var,
                        command=self.show_line).pack(side="left", padx=5)
 
-        # File 1 Frame
-        ui_file1_frame = tk.LabelFrame(self, text="File 1")
+        # Processed Master Frame
+        ui_file1_frame = tk.LabelFrame(self, text="Processed Master")
         ui_file1_frame.grid(row=1, column=0, columnspan=2, sticky="NSEW", padx=PADDING, pady=5)
         
         ui_file1_header = tk.Frame(ui_file1_frame)
@@ -208,8 +182,8 @@ class BibleHarmonyApp(tk.Tk):
         self.ui_file1_text = tk.Text(ui_file1_frame, height=TEXT_HEIGHT, wrap="word", state="disabled")
         self.ui_file1_text.pack(fill="both", expand=True, padx=5, pady=2)
 
-        # File 2 Frame
-        ui_file2_frame = tk.LabelFrame(self, text="File 2")
+        # Comparison File Frame
+        ui_file2_frame = tk.LabelFrame(self, text="Comparison File")
         ui_file2_frame.grid(row=2, column=0, columnspan=2, sticky="NSEW", padx=PADDING, pady=5)
         
         ui_file2_header = tk.Frame(ui_file2_frame)
@@ -223,7 +197,7 @@ class BibleHarmonyApp(tk.Tk):
         self.ui_file2_text.pack(fill="both", expand=True, padx=5, pady=2)
 
 ########################### needs fixing ###########################
-        # # Add auto-accept buttons frame between File 2 and Master
+        # # Add auto-accept buttons frame between Comparison File and Master
         # ui_auto_accept_frame = tk.LabelFrame(self, text="Auto Accept")
         # ui_auto_accept_frame.grid(row=3, column=0, columnspan=2, sticky="EW", padx=PADDING, pady=5)
         #
@@ -390,8 +364,8 @@ class BibleHarmonyApp(tk.Tk):
         try:
             # Check if we have any lines to display
             if not self.processed_lines:
-                self.update_text_field(self.ui_file1_text, "No verses loaded in File 1")
-                self.update_text_field(self.ui_file2_text, "No verses loaded in File 2")
+                self.update_text_field(self.ui_file1_text, "No verses loaded in Processed Master")
+                self.update_text_field(self.ui_file2_text, "No verses loaded in Comparison File")
                 self.update_text_field(self.ui_master_text, "No verses loaded in Master")
                 self.ui_master_text.edit_reset()  # Reset the undo stack
                 return
@@ -418,7 +392,7 @@ class BibleHarmonyApp(tk.Tk):
             self.ui_master_text.edit_reset()  # Reset the undo stack
             
             # Highlight differences between text1 and text2
-            if text1 and text2 and text1 != "No matching verse in File 1." and text2 != "No matching verse in File 2.":
+            if text1 and text2 and text1 != "No matching verse in Processed Master." and text2 != "No matching verse in Comparison File.":
                 self.highlight_differences(text1, text2)
 
             # Update navigation display
@@ -442,12 +416,12 @@ class BibleHarmonyApp(tk.Tk):
         if line1:
             _, _, _, text1 = self.extract_verse_info(line1)
         else:
-            text1 = "No matching verse in File 1."
+            text1 = "No matching verse in Processed Master."
             
         if line2:
             _, _, _, text2 = self.extract_verse_info(line2)
         else:
-            text2 = "No matching verse in File 2."
+            text2 = "No matching verse in Comparison File."
             
         return text1, text2, line1, line2  # Return both text and full lines
 
@@ -1076,7 +1050,7 @@ class BibleHarmonyApp(tk.Tk):
 
 ########################### needs fixing ###########################
     # def accept_differences(self, diff_type):
-    #     """Accept differences of specified type from File 2."""
+    #     """Accept differences of specified type from Comparison File."""
     #     try:
     #         # Get current master text and extract just the verse text
     #         master_line = self.ui_master_text.get("1.0", "end-1c")
@@ -1090,7 +1064,7 @@ class BibleHarmonyApp(tk.Tk):
     #             start = ranges[i]
     #             end = ranges[i+1]
     #
-    #             # Get the text from File 2 for this difference
+    #             # Get the text from Comparison File for this difference
     #             diff_text = self.ui_file2_text.get(start, end)
     #
     #             # Get the indices in the processed text
