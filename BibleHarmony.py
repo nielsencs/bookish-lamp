@@ -817,35 +817,32 @@ class BibleHarmonyApp(tk.Tk):
         return "", "", "", line
 
     def navigate_to_verse(self):
-        """Navigate to the selected book, chapter, and verse."""
+        """Navigate to the selected verse."""
         try:
-            new_book = self.ui_book_combo.get()
-            if new_book != self.current_book:
-                self.current_book = new_book
-                self.current_chapter=1
-                self.current_verse=1
-                self.update_navigation_options()
-            else:
-                self.current_chapter = self.ui_chapter_combo.get()
-                self.current_verse = self.ui_verse_combo.get()
+            book = self.ui_book_combo.get()
+            chapter = self.ui_chapter_combo.get()
+            verse = self.ui_verse_combo.get()
 
-            if not all([self.current_book, self.current_chapter, self.current_verse]):
-                tk.messagebox.showwarning("Warning", "Please select book, chapter, and verse")
+            if not all([book, chapter, verse]):
                 return
 
-            # Use the verse index for direct lookup
-            key = (self.current_book, str(self.current_chapter), str(self.current_verse))
+            # Single source of truth
+            key = (book, str(chapter), str(verse))
             index = self.verse_index1.get(key)
             
             if index is not None:
                 self.current_line = index
+                self.current_book = book
+                self.current_chapter = chapter
+                self.current_verse = verse
                 self.show_line()
-                return
+                return True
 
-            tk.messagebox.showinfo("Not Found", 
-                f"Verse {self.current_book} {self.current_chapter}:{self.current_verse} not found")
+            return False
+
         except Exception as e:
             tk.messagebox.showerror("Error", f"Navigation failed: {e}")
+            return False
 
     def update_navigation_options(self):
         """Update the navigation comboboxes with available options."""
