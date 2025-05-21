@@ -1064,6 +1064,14 @@ class BibleHarmonyApp(tk.Tk):
         })
         save_config(self.config)
 
+    def __del__(self):
+        """Clean up resources."""
+        # Save window size
+        if hasattr(self, 'config'):
+            self.config["window"]["width"] = self.winfo_width()
+            self.config["window"]["height"] = self.winfo_height()
+            save_config(self.config)
+
 ########################### needs fixing ###########################
     # def accept_differences(self, diff_type):
     #     """Accept differences of specified type from Comparison File."""
