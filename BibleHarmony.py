@@ -80,7 +80,10 @@ def load_config():
             },
             "last_used": {
                 "comparison": "",
-                "master": ""
+                "master": "",
+                "book": "GEN",
+                "chapter": "1",
+                "verse": "1"
             },
             "window": {
                 "width": WINDOW_MIN_WIDTH + 300,
@@ -280,10 +283,10 @@ class BibleHarmonyApp(tk.Tk):
         self.ui_chapter_combo.bind('<<ComboboxSelected>>', lambda e: self.navigate_to_verse())
         self.ui_verse_combo.bind('<<ComboboxSelected>>', lambda e: self.navigate_to_verse())
 
-        # Add current location tracking
-        self.current_book = "NEH"
-        self.current_chapter = "5"
-        self.current_verse = "18"
+        # Initialize with last used location from config
+        self.current_book = self.config["last_used"].get("book", "GEN")
+        self.current_chapter = self.config["last_used"].get("chapter", "1")
+        self.current_verse = self.config["last_used"].get("verse", "1")
 
         # Add verse index dictionaries
         self.verse_index1 = {}  # For processed master file
@@ -295,6 +298,7 @@ class BibleHarmonyApp(tk.Tk):
                                        text="🌐 BG All Versions", 
                                        command=self.open_in_browser)
         self.ui_btn_browser.pack(side="left", padx=5)
+
     def select_file(self):
         """Open a file dialog to select a file and update the display."""
         file_path = filedialog.askopenfilename(
@@ -395,6 +399,12 @@ class BibleHarmonyApp(tk.Tk):
             if text1 and text2 and text1 != "No matching verse in Processed Master." and text2 != "No matching verse in Comparison File.":
                 self.highlight_differences(text1, text2)
 
+            # Save current location to config
+            self.config["last_used"]["book"] = self.current_book
+            self.config["last_used"]["chapter"] = str(self.current_chapter)
+            self.config["last_used"]["verse"] = str(self.current_verse)
+            save_config(self.config)
+            
             # Update navigation display
             self.update_verse_display(self.current_book, self.current_chapter, self.current_verse)
             self.update_status()
