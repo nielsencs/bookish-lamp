@@ -1055,6 +1055,15 @@ class BibleHarmonyApp(tk.Tk):
         except Exception as e:
             tk.messagebox.showerror("Error", f"Failed to open browser: {e}")
 
+    def update_config(self):
+        """Update config with current state."""
+        self.config["last_used"].update({
+            "book": self.current_book,
+            "chapter": str(self.current_chapter),
+            "verse": str(self.current_verse)
+        })
+        save_config(self.config)
+
 ########################### needs fixing ###########################
     # def accept_differences(self, diff_type):
     #     """Accept differences of specified type from Comparison File."""
