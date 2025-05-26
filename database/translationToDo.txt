@@ -1,9 +1,9 @@
 ########################################################
 ############### WEB comparison completed ###############
 ########################################################
-GEN-DEU 1:18
-2KI 2
-NEH 12:38
+GEN-DEU 2:3
+2KI 5:16
+NEH
 MAT
 GAL
 JAM
@@ -42,7 +42,7 @@ drew near - came near (sorted up to DEU)
 #=# AFTER comparison with WEB #=#
 doings - actions (sorted up to DEU 27)
 take.*wife[regex] - get a wife/have a wife (sorted up to NUM)
-spoken - said/told (sorted up to NUM)
+spoke - said/told
 
 NEXT 6 IN THIS ORDER! *
 came out of - left (sorted up to DEU and MAT)*
@@ -193,6 +193,9 @@ went from - left
 bowels - guts
 children of - people of (eg children of Israel/children of the Amorites)
 also - as well
+told.*saying[regex] - told?
+old and upward - and over?
+thus - this?
 
 ### completed ###
 therein (sorted!)
