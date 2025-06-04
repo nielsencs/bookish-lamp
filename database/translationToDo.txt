@@ -52,6 +52,7 @@ bring.* out[regex] - bring/take ... out (sorted up to NUM and MAT)*
 brought.* out[regex] - brought/take/took/taken ... out (sorted up to NUM and MAT)*
 out of - out of/from/in (sorted up to NUM and MAT)*
 
+lest - for fear that/in case/otherwise (sorted up to GEN 14:23)
 neither shall - nor will (sorted up to EZE 43)
 you shall not - don\'t/you won\'t/you mustn\'t (sorted up to DEU)
 you shall .[regex] (delete)/do/you must/you will/you\'ll/you are to/you may (sorted up to DEU)
@@ -107,7 +108,6 @@ at evening - in the evening/evening of
 ; and .[regex] - . T/. H/. I[etc.] (sorted up to GEN 13)
 which are - (delete)
 were ...ed - had ...ed
-lest - for fear that/in case/otherwise
 even in - in (even in Bethsaida - in Bethsaida)
 even the - the (even the whole bull)
 even to - to/as far as
