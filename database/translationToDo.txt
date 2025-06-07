@@ -63,6 +63,8 @@ they shall - let them/they must/they should/they are to/they will (sorted up to 
 it shall be that - (delete) e.g. JOS 6:5
 
 to the end that - in order that (sorted up to NUM and MAT)
+bore - carried/gave birth (sorted up to GEN - BUT NOT THE BIRTH ASPECT!)
+bear - carry/give birth (sorted up to GEN - BUT NOT THE BIRTH ASPECT!)
 
 deal with - treat (sorted up to NUM)
 diminish - reduce (sorted up to ISA)
@@ -172,8 +174,6 @@ border - territory?
 ; - ,
 have come on you - have happened?
 flesh - meat?
-bore - carried
-bear - carry/give birth
 tell/told - ask/say
 brass/bronze - copper-alloy?
 cast out demons - throw out demons?
@@ -197,6 +197,7 @@ also - as well
 told.*saying[regex] - told?
 old and upward - and over?
 thus - this?
+cake - loaf?
 
 ### completed ###
 therein (sorted!)
@@ -258,3 +259,4 @@ porters - gatekeepers (sorted!)
 besides - besides/in addition to (sorted!)
 broad place - wide-place (sorted!)
 Og the king - Og king (sorted!)
+for a memorial - as a memorial (sorted!)
