@@ -85,7 +85,7 @@ come to pass - (delete) (sorted up to LEV)
 bring it to pass - bring it about (sorted up to ISA 45)
 : I am ForeverOne{H3068} - . I am ForeverOne{H3068} (sorted up to LEV)
 Notwithstanding - Nevertheless (sorted up to LEV)
-
+its length ... - ... long (sorted up to LEV)
 afflict your souls - deny yourselves (sorted up to LEV)
 seven days - seven days/for seven days (sorted up to LEV)
 make no - don\'t make any/not make any (sorted up to NUM)
@@ -177,7 +177,8 @@ flesh - meat?
 tell/told - ask/say
 brass/bronze - copper-alloy?
 cast out demons - throw out demons?
-cubit - cubit/a forearm's worth/50cm/
+cubit - cubit/forearm/a forearm's worth/50cm/18inches/?
+span - ???
 you\'ll/isn\'t - you&apos;ll/isn&apos;t
 the name of ForeverOne - the name of ForeverOne/the name ForeverOne (remove 'of'! e.g. proclaim the name ForeverOne)
 ...said \"...\" - ...said &ldquo;...&rdquo;
