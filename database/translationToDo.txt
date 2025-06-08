@@ -43,6 +43,8 @@ drew near - came near (sorted up to DEU)
 doings - actions (sorted up to DEU 27)
 take.*wife[regex] - get a wife/have a wife (sorted up to NUM)
 spoke - said/told
+altar of incense - incense altar (sorted up to EXO)
+altar of burnt offering - burnt offering altar (sorted up to 2KI)
 
 NEXT 6 IN THIS ORDER! *
 came out of - left (sorted up to DEU and MAT)*
