@@ -201,6 +201,7 @@ told.*saying[regex] - told?
 old and upward - and over?
 thus - this?
 cake - loaf?
+accounted - considered/included/counted as
 
 ### completed ###
 therein (sorted!)
