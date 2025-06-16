@@ -1,7 +1,7 @@
 ########################################################
 ############### WEB comparison completed ###############
 ########################################################
-GEN-DEU 3
+GEN-DEU 4:31
 2KI 5:16
 NEH
 MAT
@@ -33,7 +33,6 @@ you-all up to MAT 5 + JAM
 Thus says ... - ... says (sorted up to EZE 5)
 midst - midst/middle (sorted up to DEU)
 : and .[regex] - . Y/. T/. I[etc.] (sorted up to DEU+NEH)
-
 of ForeverOne{H3068} - ForeverOne{H3068}\'s EXCEPT NAME (sorted up to NUM)
 over against - opposite (sorted up to NUM)
 drew near - came near (sorted up to DEU)
