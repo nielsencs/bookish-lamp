@@ -1,7 +1,7 @@
 ########################################################
 ############### WEB comparison completed ###############
 ########################################################
-GEN-DEU 4:31
+GEN-DEU 4
 2KI 5:16
 NEH
 MAT
@@ -202,6 +202,8 @@ thus - this?
 cake - loaf?
 accounted - considered/included/counted as
 northward/southward/eastward/westward (lose the ward!)
+spied - saw
+flee - run?
 
 ### completed ###
 therein (sorted!)
