@@ -1,7 +1,7 @@
 ########################################################
 ############### WEB comparison completed ###############
 ########################################################
-GEN-DEU 5:11
+GEN-DEU 5
 2KI 5:16
 NEH
 MAT
@@ -12,7 +12,6 @@ JAM
 ########################################################
 ################# Key Words completed ##################
 ########################################################
-empty/emptily/emptiness{H7723} GEN-PSA
 shortcomings{G0266}(hamartia) MAT + JAM
 shortcomer{G0268}(hamartolos) MAT + JAM
 man{G0435}(aner) MAT, GAL, JAM
@@ -32,7 +31,7 @@ you-all up to MAT 5 + JAM
 
 #=# BEFORE comparison with WEB #=#
 Thus says ... - ... says (sorted up to EZE 5)
-midst - midst/middle (sorted up to DEU)
+midst - midst/middle/among (sorted up to DEU)
 : and .[regex] - . Y/. T/. I[etc.] (sorted up to DEU+NEH)
 of ForeverOne{H3068} - ForeverOne{H3068}\'s EXCEPT NAME (sorted up to NUM)
 over against - opposite (sorted up to NUM)
@@ -45,6 +44,9 @@ take.*wife[regex] - get a wife/have a wife (sorted up to NUM)
 spoke - said/told
 altar of incense - incense altar (sorted up to EXO)
 altar of burnt offering - burnt offering altar (sorted up to 2KI)
+the third part - a third (sorted up to NUM)
+the fourth part - a quarter (sorted up to NUM)
+
 
 NEXT 6 IN THIS ORDER! *
 came out of - left (sorted up to DEU and MAT)*
@@ -58,7 +60,7 @@ lest - for fear that/in case/otherwise (sorted up to GEN 42:4)
 even - (delete) (sorted up to GEN)
 neither shall - nor will (sorted up to EZE 43)
 you shall not - don\'t/you won\'t/you mustn\'t (sorted up to DEU)
-you shall .[regex] (delete)/do/you must/you will/you\'ll/you are to/you may (sorted up to DEU)
+you shall .[regex] (delete)/do/you must/you will/you\'ll/you are to/you may (sorted up to NUM 18:26)
 he shall - let him/he must/he should/he is to (sorted up to EXO)
 they shall - let them/they must/they should/they are to/they will (sorted up to EXO)
 [^y][^o][^u] shall[regex] - (delete)/will/is to/are to/may/can/let (sorted up to EXO)
@@ -121,7 +123,6 @@ go from - leave
 grievous - dreadful/severe
 thrust.*out[regex] - thrown out/ejected/chucked out/deported?
 under the mountain - at the base of the mountain
-fourth - quarter
 depart from - leave
 residue - rest
 in which - where
@@ -138,7 +139,7 @@ shall not - will not/mustn\'t/won\'t
 should - would
 shed no blood - don't spill any blood?
 in want of - lacking?
-travail - labor
+travail - give birth/labor/labour?
 offspring - descendants
 house - household
 them of - those of
@@ -168,6 +169,7 @@ before - before/in front of
 this day - today
 save - except
 pervert - corrupt
+labor - work/give birth?
 
 ### to be considered ###
 gathered themselves together - gathered/assembled/got together/crowded?
@@ -206,6 +208,7 @@ northward/southward/eastward/westward (lose the ward!)
 spied - saw
 flee - run?
 alien - foreigner?
+heave - lift/drag/haul/pull/raise?
 
 ### completed ###
 therein (sorted!)
@@ -269,3 +272,6 @@ broad place - wide-place (sorted!)
 Og the king - Og king (sorted!)
 for a memorial - as a memorial (sorted!)
 goodly - fine (sorted!)
+one fourth of - a quarter of (sorted!)
+which I give - that I am giving (sorted!)
+empty/emptily/emptiness{H7723} (sorted!)
