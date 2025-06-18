@@ -1,7 +1,7 @@
 ########################################################
 ############### WEB comparison completed ###############
 ########################################################
-GEN-DEU 5:5
+GEN-DEU 5:11
 2KI 5:16
 NEH
 MAT
@@ -12,6 +12,7 @@ JAM
 ########################################################
 ################# Key Words completed ##################
 ########################################################
+empty/emptily/emptiness{H7723} GEN-PSA
 shortcomings{G0266}(hamartia) MAT + JAM
 shortcomer{G0268}(hamartolos) MAT + JAM
 man{G0435}(aner) MAT, GAL, JAM
@@ -204,6 +205,7 @@ accounted - considered/included/counted as
 northward/southward/eastward/westward (lose the ward!)
 spied - saw
 flee - run?
+alien - foreigner?
 
 ### completed ###
 therein (sorted!)
