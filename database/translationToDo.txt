@@ -1,7 +1,7 @@
 ########################################################
 ############### WEB comparison completed ###############
 ########################################################
-GEN-DEU 7:8
+GEN-DEU 7
 2KI 5:16
 NEH
 MAT
@@ -60,7 +60,7 @@ lest - for fear that/in case/otherwise (sorted up to GEN 42:4)
 even - (delete) (sorted up to GEN)
 neither shall - nor will (sorted up to EZE 43)
 you shall not - don\'t/you won\'t/you mustn\'t (sorted up to DEU)
-you shall .[regex] (delete)/do/you must/you will/you\'ll/you are to/you may (sorted up to NUM 18:26)
+you shall .[regex] (delete)/do/you must/you will/you\'ll/you are to/you may (sorted up to NUM 30)
 he shall - let him/he must/he should/he is to (sorted up to EXO)
 they shall - let them/they must/they should/they are to/they will (sorted up to EXO)
 [^y][^o][^u] shall[regex] - (delete)/will/is to/are to/may/can/let (sorted up to EXO)
@@ -72,7 +72,7 @@ bear - carry/give birth (sorted up to GEN - BUT NOT THE BIRTH ASPECT!)
 
 deal with - treat (sorted up to NUM)
 diminish - reduce (sorted up to ISA)
-moreover - furthermore/in addition/also (sorted up to LEV)
+moreover - furthermore/in addition/also (sorted up to DEU)
 by reason - because (sorted up to LEV)
 its increase - its produce (sorted up to LEV)
 increase of - produce of (sorted up to LEV)
