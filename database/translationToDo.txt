@@ -1,7 +1,7 @@
 ########################################################
 ############### WEB comparison completed ###############
 ########################################################
-GEN-DEU 7
+GEN-DEU 8
 2KI 5:16
 NEH
 MAT
@@ -58,17 +58,26 @@ out of - out of/from/in (sorted up to NUM and MAT)*
 
 lest - for fear that/in case/otherwise (sorted up to GEN 42:4)
 even - (delete) (sorted up to GEN)
+
+NEXT 2 IN THIS ORDER! *
+that in which ... - what ... in (sorted up to EST)
+in which - where/that/when (sorted up to GEN)
+
+to the end that - in order that (sorted up to NUM and MAT)
+bore - carried/gave birth (sorted up to GEN - BUT NOT THE BIRTH ASPECT!)
+bear - carry/give birth (sorted up to GEN - BUT NOT THE BIRTH ASPECT!)
+
+NEXT 10 IN THIS ORDER! *
 neither shall - nor will (sorted up to EZE 43)
 you shall not - don\'t/you won\'t/you mustn\'t (sorted up to DEU)
 you shall .[regex] (delete)/do/you must/you will/you\'ll/you are to/you may (sorted up to NUM 30)
 he shall - let him/he must/he should/he is to (sorted up to EXO)
 they shall - let them/they must/they should/they are to/they will (sorted up to EXO)
 [^y][^o][^u] shall[regex] - (delete)/will/is to/are to/may/can/let (sorted up to EXO)
-it shall be that - (delete) e.g. JOS 6:5
-
-to the end that - in order that (sorted up to NUM and MAT)
-bore - carried/gave birth (sorted up to GEN - BUT NOT THE BIRTH ASPECT!)
-bear - carry/give birth (sorted up to GEN - BUT NOT THE BIRTH ASPECT!)
+it shall be that - (delete) (e.g. JOS 6:5) (sorted up to EXO)
+shall it - it will/must (sorted up to DEU)
+shall not - will not/shouldn\'t/mustn\'t/won\'t (sorted up to EXO)
+shall - shall(what shall I give you)/will/are to/should/must (sorted up to EXO)
 
 deal with - treat (sorted up to NUM)
 diminish - reduce (sorted up to ISA)
@@ -89,7 +98,7 @@ come to pass - (delete) (sorted up to LEV)
 bring it to pass - bring it about (sorted up to ISA 45)
 : I am ForeverOne{H3068} - . I am ForeverOne{H3068} (sorted up to LEV)
 Notwithstanding - Nevertheless (sorted up to LEV)
-its length ... - ... long (sorted up to LEV)
+its length ... - ... long (sorted up to 2SM)
 afflict your souls - deny yourselves (sorted up to LEV)
 seven days - seven days/for seven days (sorted up to LEV)
 make no - don\'t make any/not make any (sorted up to NUM)
@@ -125,7 +134,6 @@ thrust.*out[regex] - thrown out/ejected/chucked out/deported?
 under the mountain - at the base of the mountain
 depart from - leave
 residue - rest
-in which - where
 the thing that - what
 its appointed season - the apointed time?
 entreat - beg/implore/beseech/plead with/supplicate/pray/ask
@@ -134,8 +142,6 @@ iniquity - godlessness?
 
 come near to (the alter etc.) - approach
 maiden - young woman?
-shall it - it will/must
-shall not - will not/mustn\'t/won\'t
 should - would
 shed no blood - don't spill any blood?
 in want of - lacking?
@@ -209,6 +215,7 @@ spied - saw
 flee - run?
 alien - foreigner?
 heave - lift/drag/haul/pull/raise?
+.hen.*years were fulfilled[regex] - When n years had gone by?
 
 ### completed ###
 therein (sorted!)
@@ -275,3 +282,5 @@ goodly - fine (sorted!)
 one fourth of - a quarter of (sorted!)
 which I give - that I am giving (sorted!)
 empty/emptily/emptiness{H7723} (sorted!)
+bewail - mourn (sorted!)
+that in which he has sinned - where he has fallen short (sorted!)
