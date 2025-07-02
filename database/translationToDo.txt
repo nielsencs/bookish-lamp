@@ -1,7 +1,7 @@
 ########################################################
 ############### WEB comparison completed ###############
 ########################################################
-GEN-DEU 9
+GEN-DEU 10:12
 2KI 5:16
 NEH
 MAT
@@ -217,6 +217,7 @@ alien - foreigner?
 heave - lift/drag/haul/pull/raise?
 .hen.*years were fulfilled[regex] - When n years had gone by?
 came to pass - happened
+according to - like?
 
 ### completed ###
 therein (sorted!)
