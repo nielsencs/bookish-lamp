@@ -1,7 +1,7 @@
 ########################################################
 ############### WEB comparison completed ###############
 ########################################################
-GEN-DEU 11:9
+GEN-DEU 11
 2KI 5:16
 NEH
 MAT
@@ -218,6 +218,7 @@ heave - lift/drag/haul/pull/raise?
 .hen.*years were fulfilled[regex] - When n years had gone by?
 came to pass - happened
 according to - like?
+dwell - live?
 
 ### completed ###
 therein (sorted!)
