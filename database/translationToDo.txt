@@ -1,7 +1,7 @@
 ########################################################
 ############### WEB comparison completed ###############
 ########################################################
-GEN-DEU 12:5
+GEN-DEU 12
 2KI 5:16
 NEH
 MAT
@@ -46,7 +46,7 @@ altar of incense - incense altar (sorted up to EXO)
 altar of burnt offering - burnt offering altar (sorted up to 2KI)
 the third part - a third (sorted up to NUM)
 the fourth part - a quarter (sorted up to NUM)
-
+shall choose - chooses (sorted up to JOB)
 
 NEXT 6 IN THIS ORDER! *
 came out of - left (sorted up to DEU and MAT)*
@@ -288,3 +288,4 @@ empty/emptily/emptiness{H7723} (sorted!)
 bewail - mourn (sorted!)
 that in which he has sinned - where he has fallen short (sorted!)
 on him who - on the one who/on someone who (sorted!)
+Dorcas - Gazelle{G1393} (sorted!)
