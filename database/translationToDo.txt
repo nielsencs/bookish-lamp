@@ -1,7 +1,7 @@
 ########################################################
 ############### WEB comparison completed ###############
 ########################################################
-GEN-DEU 12
+GEN-DEU 13:15
 2KI 5:16
 NEH
 MAT
@@ -37,8 +37,9 @@ of ForeverOne{H3068} - ForeverOne{H3068}\'s EXCEPT NAME (sorted up to NUM)
 over against - opposite (sorted up to NUM)
 drew near - came near (sorted up to DEU)
 
-
 #=# AFTER comparison with WEB #=#
+dwell - live[Match case] (sorted up to GEN)
+Dwell - Live[Match case] (sorted up to GEN)
 doings - actions (sorted up to DEU 27)
 take.*wife[regex] - get a wife/have a wife (sorted up to NUM)
 spoke - said/told
@@ -218,7 +219,7 @@ heave - lift/drag/haul/pull/raise?
 .hen.*years were fulfilled[regex] - When n years had gone by?
 came to pass - happened
 according to - like?
-dwell - live?
+the midst of - among?
 
 ### completed ###
 therein (sorted!)
