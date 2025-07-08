@@ -1,7 +1,7 @@
 ########################################################
 ############### WEB comparison completed ###############
 ########################################################
-GEN-DEU 14
+GEN-DEU 15
 2KI 5:16
 NEH
 MAT
@@ -292,5 +292,7 @@ on him who - on the one who/on someone who (sorted!)
 Dorcas - Gazelle{G1393} (sorted!)
 place which... cause his name to dwell there - place where... cause his name to reside (sorted!)
 name to dwell there - name to reside there (sorted!)
+harts - deer (sorted!)
+hart - deer (sorted!)
 
-\' - &apos; (needs checking! - checked up to EXO 3+DEU)
+\' - &apos; (needs checking! - checked up to EXO 7+DEU)
