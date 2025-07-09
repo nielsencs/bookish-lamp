@@ -1,10 +1,10 @@
 ########################################################
 ############### WEB comparison completed ###############
 ########################################################
-GEN-DEU 15
+GEN-DEU 16
 2KI 5:16
 NEH
-MAT
+MAT-MAR 6
 GAL
 JAM
 ########################################################
@@ -295,4 +295,4 @@ name to dwell there - name to reside there (sorted!)
 harts - deer (sorted!)
 hart - deer (sorted!)
 
-\' - &apos; (needs checking! - checked up to EXO 7+DEU)
+\' - &apos; (needs checking! - checked up to EXO 9+DEU)
