@@ -1,10 +1,10 @@
 ########################################################
 ############### WEB comparison completed ###############
 ########################################################
-GEN-DEU 16
+GEN-DEU 17
 2KI 5:16
 NEH
-MAT-MAR 8
+MAT-MAR 9 (quick pass)
 GAL
 JAM
 ########################################################
@@ -292,7 +292,7 @@ on him who - on the one who/on someone who (sorted!)
 Dorcas - Gazelle{G1393} (sorted!)
 place which... cause his name to dwell there - place where... cause his name to reside (sorted!)
 name to dwell there - name to reside there (sorted!)
-harts - deer (sorted!)
+harts - deer (correct plural! sorted!)
 hart - deer (sorted!)
 
-\' - &apos; (needs checking! - checked up to EXO 10+DEU)
+\' - &apos; (needs checking! - checked up to EXO 11+DEU)
