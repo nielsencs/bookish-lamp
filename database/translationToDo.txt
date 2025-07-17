@@ -1,10 +1,10 @@
 ########################################################
 ############### WEB comparison completed ###############
 ########################################################
-GEN-DEU 17
+GEN-DEU 19
 2KI 5:16
 NEH
-MAT-MAR 9 (quick pass)
+MAT-MAR (quick pass)
 GAL
 JAM
 ########################################################
@@ -294,5 +294,7 @@ place which... cause his name to dwell there - place where... cause his name to 
 name to dwell there - name to reside there (sorted!)
 harts - deer (correct plural! sorted!)
 hart - deer (sorted!)
+in time past - previously (sorted!)
+do after - imitate (sorted!)
 
-\' - &apos; (needs checking! - checked up to EXO 11+DEU)
+\' - &apos; (needs checking! - checked up to EXO 14+DEU)
