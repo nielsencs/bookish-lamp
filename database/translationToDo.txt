@@ -1,7 +1,7 @@
 ########################################################
 ############### WEB comparison completed ###############
 ########################################################
-GEN-DEU 19
+GEN-DEU 20
 2KI 5:16
 NEH
 MAT-MAR (quick pass)
@@ -33,7 +33,7 @@ you-all up to MAT 5 + JAM
 Thus says ... - ... says (sorted up to EZE 5)
 midst - midst/middle/among (sorted up to DEU)
 : and .[regex] - . Y/. T/. I[etc.] (sorted up to DEU+NEH)
-of ForeverOne{H3068} - ForeverOne{H3068}&apos;s EXCEPT NAME (sorted up to NUM)
+of ForeverOne{H3068} - ForeverOne{H3068}&apos;s EXCEPT NAME (sorted up to NUM 9)
 over against - opposite (sorted up to NUM)
 drew near - came near (sorted up to DEU)
 
@@ -91,7 +91,7 @@ speak to - speak to/tell (sorted up to LEV)
 NEXT 5 IN THIS ORDER! *
 that he may - so he can/for him to/that he would/he would/so he would (sorted up to LEV)*
 that they may - so they can/so they/so they will/to (sorted up to LEV)*
-that they not - so they don&apos;t (sorted up to LEV)*
+that they not - so they don&apos;t (sorted up to JUD)*
 that they - so they/to/they (sorted up to LEV)*
 that we may - to/so we can (sorted up to LEV)*
 
