@@ -33,7 +33,7 @@ you-all up to MAT 5 + JAM
 Thus says ... - ... says (sorted up to EZE 5)
 midst - midst/middle/among (sorted up to DEU)
 : and .[regex] - . Y/. T/. I[etc.] (sorted up to DEU+NEH)
-of ForeverOne{H3068} - ForeverOne{H3068}\'s EXCEPT NAME (sorted up to NUM)
+of ForeverOne{H3068} - ForeverOne{H3068}&apos;s EXCEPT NAME (sorted up to NUM)
 over against - opposite (sorted up to NUM)
 drew near - came near (sorted up to DEU)
 
@@ -70,14 +70,14 @@ bear - carry/give birth (sorted up to GEN - BUT NOT THE BIRTH ASPECT!)
 
 NEXT 10 IN THIS ORDER! *
 neither shall - nor will (sorted up to EZE 43)
-you shall not - don\'t/you won\'t/you mustn\'t (sorted up to DEU)
-you shall .[regex] (delete)/do/you must/you will/you\'ll/you are to/you may (sorted up to NUM 30)
+you shall not - don&apos;t/you won&apos;t/you mustn&apos;t (sorted up to DEU)
+you shall .[regex] (delete)/do/you must/you will/you&apos;ll/you are to/you may (sorted up to NUM 30)
 he shall - let him/he must/he should/he is to (sorted up to EXO)
 they shall - let them/they must/they should/they are to/they will (sorted up to EXO)
 [^y][^o][^u] shall[regex] - (delete)/will/is to/are to/may/can/let (sorted up to EXO)
 it shall be that - (delete) (e.g. JOS 6:5) (sorted up to EXO)
 shall it - it will/must (sorted up to DEU)
-shall not - will not/shouldn\'t/mustn\'t/won\'t (sorted up to EXO)
+shall not - will not/shouldn&apos;t/mustn&apos;t/won&apos;t (sorted up to EXO)
 shall - shall(what shall I give you)/will/are to/should/must (sorted up to EXO)
 
 deal with - treat (sorted up to NUM)
@@ -91,7 +91,7 @@ speak to - speak to/tell (sorted up to LEV)
 NEXT 5 IN THIS ORDER! *
 that he may - so he can/for him to/that he would/he would/so he would (sorted up to LEV)*
 that they may - so they can/so they/so they will/to (sorted up to LEV)*
-that they not - so they don\'t (sorted up to LEV)*
+that they not - so they don&apos;t (sorted up to LEV)*
 that they - so they/to/they (sorted up to LEV)*
 that we may - to/so we can (sorted up to LEV)*
 
@@ -102,7 +102,7 @@ Notwithstanding - Nevertheless (sorted up to LEV)
 its length ... - ... long (sorted up to 2SM)
 afflict your souls - deny yourselves (sorted up to LEV)
 seven days - seven days/for seven days (sorted up to LEV)
-make no - don\'t make any/not make any (sorted up to NUM)
+make no - don&apos;t make any/not make any (sorted up to NUM)
 from year to year - every year (sorted up to JOS)
 happen.* that[regex] - (delete) (sorted up to NUM)
 neither - nor (sorted up to LEV)
@@ -117,7 +117,7 @@ quotes put back in (sorted for EZE up to chapter 5)
 #######################################################################################
 in that night - (on) that night
 physician - doctor
-[iI]t is I[ ,.';:!?)(][regex] - ('It is I' followed by a space or punctuation) to It\'s me!
+[iI]t is I[ ,.';:!?)(][regex] - ('It is I' followed by a space or punctuation) to It&apos;s me!
 
 ### next ###
 behold - behold/look/see/observe/note/get this?
@@ -190,7 +190,6 @@ brass/bronze - copper-alloy?
 cast out demons - throw out demons?
 cubit - cubit/forearm/a forearm's worth/50cm/18inches/?
 span - ???
-you\'ll/isn\'t - you&apos;ll/isn&apos;t
 the name of ForeverOne - the name of ForeverOne/the name ForeverOne (remove 'of'! e.g. proclaim the name ForeverOne)
 ...said \"...\" - ...said &ldquo;...&rdquo;
 ...said \'...\' - ...said &lsquo;...&rsquo;
@@ -250,7 +249,7 @@ thereon - on it (sorted!)
 cast - throw/threw/thrown/rejected/shed (sorted!)
 humbled her - humiliated her (sorted!)
 thereby - by/by them/by it/by there/that way (sorted!)
-neither shall you - don\'t/you won\'t/you mustn\'t/nor (sorted!)
+neither shall you - don&apos;t/you won&apos;t/you mustn&apos;t/nor (sorted!)
 stripes - lashes (sorted!)
 do sacrifice - make sacrifices (sorted!)
 it happen that - (delete)/it happens (sorted!)
@@ -264,7 +263,7 @@ will I - I will (sorted!)
 neither will I - nor will I (sorted!)
 neither will - nor will (sorted!)
 pursued{H7291} after - pursued{H7291} (sorted!)
-the angel of ForeverOne{H3068} - ForeverOne{H3068}\'s angel (sorted!)
+the angel of ForeverOne{H3068} - ForeverOne{H3068}&apos;s angel (sorted!)
 slander{G2635}(katalaleo) (sorted!)
 testing{G3986}(peirasmos) (sorted!)
 fall-short{G0264}(hamartano) (sorted!)
@@ -290,11 +289,14 @@ bewail - mourn (sorted!)
 that in which he has sinned - where he has fallen short (sorted!)
 on him who - on the one who/on someone who (sorted!)
 Dorcas - Gazelle{G1393} (sorted!)
+you\'ll/isn\'t [etc.] - you&apos;ll/isn&apos;t [etc.] (sorted!)
 place which... cause his name to dwell there - place where... cause his name to reside (sorted!)
 name to dwell there - name to reside there (sorted!)
 harts - deer (correct plural! sorted!)
 hart - deer (sorted!)
 in time past - previously (sorted!)
 do after - imitate (sorted!)
+lest he die - otherwise he might die (sorted!)
+gives you for an inheritance - is giving you for an inheritance (sorted!)
 
-\' - &apos; (needs checking! - checked up to EXO 14+DEU)
+\' - &apos; (needs checking! - checked up to EXO 18+DEU)
