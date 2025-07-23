@@ -1,12 +1,23 @@
+Translation 'passes':
+1. Compare my version, TCSB (The CleanSlate Bible), with WEB 2024, making sure TCSB is at least as clear
+2. Index Key words (may be done independantly of pass 1 - especially if no conflict e.g. apostle to ambassador)
+3. Semi-automatic changes - plural you-all/present tense in NT
+4. Hand-craft new version from original Hebrew, Greek or Aramaic
 ########################################################
 ############### WEB comparison completed ###############
 ########################################################
-GEN-DEU 20
+GEN-DEU 23
 2KI 5:16
 NEH
 MAT-MAR (quick pass)
 GAL
 JAM
+########################################################
+
+########################################################
+######### AVYous(you-all) comparison completed #########
+########################################################
+you-all up to MAT 6 + JAM
 ########################################################
 
 ########################################################
@@ -21,19 +32,13 @@ tempting{G3985}(peirazo) MAT + JAM
 wide-place{H7339} maybe?
 ########################################################
 
-########################################################
-######### AVYous(you-all) comparison completed #########
-########################################################
-you-all up to MAT 5 + JAM
-########################################################
-
 ### current work ###
 
 #=# BEFORE comparison with WEB #=#
 Thus says ... - ... says (sorted up to EZE 5)
 midst - midst/middle/among (sorted up to DEU)
 : and .[regex] - . Y/. T/. I[etc.] (sorted up to DEU+NEH)
-of ForeverOne{H3068} - ForeverOne{H3068}&apos;s EXCEPT NAME (sorted up to NUM 9)
+of ForeverOne{H3068} - ForeverOne{H3068}&apos;s EXCEPT NAME (sorted up to DEU 23)
 over against - opposite (sorted up to NUM)
 drew near - came near (sorted up to DEU)
 
@@ -219,6 +224,8 @@ heave - lift/drag/haul/pull/raise?
 came to pass - happened
 according to - like?
 the midst of - among?
+slain - killed/dead
+put away - purge/removed
 
 ### completed ###
 therein (sorted!)
@@ -298,5 +305,6 @@ in time past - previously (sorted!)
 do after - imitate (sorted!)
 lest he die - otherwise he might die (sorted!)
 gives you for an inheritance - is giving you for an inheritance (sorted!)
+put her away - send her away/sent her away (sorted!)
 
-\' - &apos; (needs checking! - checked up to EXO 18+DEU)
+\' - &apos; (needs checking! - checked up to EXO 20+DEU)
