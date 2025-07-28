@@ -6,7 +6,7 @@ Translation 'passes':
 ########################################################
 ############### WEB comparison completed ###############
 ########################################################
-GEN-DEU 23
+GEN-DEU 25
 2KI 5:16
 NEH
 MAT-MAR (quick pass)
@@ -41,10 +41,11 @@ midst - midst/middle/among (sorted up to DEU)
 of ForeverOne{H3068} - ForeverOne{H3068}&apos;s EXCEPT NAME (sorted up to DEU 23)
 over against - opposite (sorted up to NUM)
 drew near - came near (sorted up to DEU)
+blot out - wipe (sorted up to DEU)
 
 #=# AFTER comparison with WEB #=#
-dwell - live[Match case] (sorted up to GEN)
-Dwell - Live[Match case] (sorted up to GEN)
+dwell - live[Match case] (sorted up to DEU)
+Dwell - Live[Match case] (sorted up to DEU)
 doings - actions (sorted up to DEU 27)
 take.*wife[regex] - get a wife/have a wife (sorted up to NUM)
 spoke - said/told
@@ -53,6 +54,8 @@ altar of burnt offering - burnt offering altar (sorted up to 2KI)
 the third part - a third (sorted up to NUM)
 the fourth part - a quarter (sorted up to NUM)
 shall choose - chooses (sorted up to JOB)
+land which ForeverOne{H3068} your God{H0430} gives you - land which ForeverOne{H3068} your God{H0430} is giving you (sorted up to DEU 25)
+on the way - on the way/on the journey (sorted up to DEU)
 
 NEXT 6 IN THIS ORDER! *
 came out of - left (sorted up to DEU and MAT)*
@@ -226,6 +229,7 @@ according to - like?
 the midst of - among?
 slain - killed/dead
 put away - purge/removed
+Take heed - Be careful
 
 ### completed ###
 therein (sorted!)
@@ -306,5 +310,6 @@ do after - imitate (sorted!)
 lest he die - otherwise he might die (sorted!)
 gives you for an inheritance - is giving you for an inheritance (sorted!)
 put her away - send her away/sent her away (sorted!)
+bill - certificate (of divorce) (sorted!)
 
-\' - &apos; (needs checking! - checked up to EXO 20+DEU)
+\' - &apos; (needs checking! - checked up to EXO 23+DEU)
