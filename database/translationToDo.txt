@@ -92,8 +92,10 @@ deal with - treat (sorted up to NUM)
 diminish - reduce (sorted up to ISA)
 moreover - furthermore/in addition/also (sorted up to DEU)
 by reason - because (sorted up to LEV)
-its increase - its produce (sorted up to LEV)
+
+its increase - its produce (...yield its increase)(sorted up to PSA 66)
 increase of - produce of (sorted up to LEV)
+increase - produce/crop/young
 speak to - speak to/tell (sorted up to LEV)
 
 NEXT 5 IN THIS ORDER! *
@@ -158,7 +160,6 @@ travail - give birth/labor/labour?
 offspring - descendants
 house - household
 them of - those of
-increase - produce (...yield its increase)
 molten - molded/cast (e.g. molten calf)
 earth - earth/land/ground
 
@@ -311,5 +312,7 @@ lest he die - otherwise he might die (sorted!)
 gives you for an inheritance - is giving you for an inheritance (sorted!)
 put her away - send her away/sent her away (sorted!)
 bill - certificate (of divorce) (sorted!)
+according to all that - exactly as (sorted!)
+with all your heart and with all your soul - with all your heart and all your soul (only 1 with) (sorted!)
 
-\' - &apos; (needs checking! - checked up to EXO 23+DEU)
+\' - &apos; (needs checking! - checked up to EXO 28+DEU)
