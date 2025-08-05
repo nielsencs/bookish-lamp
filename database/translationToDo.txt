@@ -6,7 +6,7 @@ Translation 'passes':
 ########################################################
 ############### WEB comparison completed ###############
 ########################################################
-GEN-DEU 25
+GEN-DEU 26
 2KI 5:16
 NEH
 MAT-MAR (quick pass)
@@ -314,5 +314,8 @@ put her away - send her away/sent her away (sorted!)
 bill - certificate (of divorce) (sorted!)
 according to all that - exactly as (sorted!)
 with all your heart and with all your soul - with all your heart and all your soul (only 1 with) (sorted!)
+an alien - a foreigner (sorted!)
+alien - foreigner (sorted!)
+worship before - worship before/worship in front of (sorted!)
 
 \' - &apos; (needs checking! - checked up to EXO 28+DEU)
