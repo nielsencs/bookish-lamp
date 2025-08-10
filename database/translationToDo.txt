@@ -6,7 +6,7 @@ Translation 'passes':
 ########################################################
 ############### WEB comparison completed ###############
 ########################################################
-GEN-DEU 28
+GEN-DEU 29
 2KI 5:16
 NEH
 MAT-MAR (quick pass)
@@ -66,7 +66,7 @@ brought.* out[regex] - brought/take/took/taken ... out (sorted up to NUM and MAT
 out of - out of/from/in (sorted up to NUM and MAT)*
 
 lest - for fear that/in case/otherwise (sorted up to GEN 42:4)
-even - (delete) (sorted up to GEN)
+even - yes/(delete) (sorted up to GEN)
 
 NEXT 2 IN THIS ORDER! *
 that in which ... - what ... in (sorted up to EST)
@@ -319,5 +319,6 @@ alien - foreigner (sorted!)
 worship before - worship before/worship in front of (sorted!)
 pass over the Jordan - cross the Jordan (sorted!)
 slain - slaughtered (sorted!)
+shoe - sandal (sorted!) (maybe we should go back to shoe+lace from sandal+strap)
 
-\' - &apos; (needs checking! - checked up to LEV 10+DEU)
+\' - &apos; (needs checking! - checked up to LEV+DEU)
