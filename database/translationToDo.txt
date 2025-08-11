@@ -6,7 +6,7 @@ Translation 'passes':
 ########################################################
 ############### WEB comparison completed ###############
 ########################################################
-GEN-DEU 29
+GEN-DEU 30
 2KI 5:16
 NEH
 MAT-MAR (quick pass)
@@ -321,4 +321,4 @@ pass over the Jordan - cross the Jordan (sorted!)
 slain - slaughtered (sorted!)
 shoe - sandal (sorted!) (maybe we should go back to shoe+lace from sandal+strap)
 
-\' - &apos; (needs checking! - checked up to LEV+DEU)
+\' - &apos; (needs checking! - checked up to NUM 1+DEU)
