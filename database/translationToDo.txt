@@ -6,7 +6,7 @@ Translation 'passes':
 ########################################################
 ############### WEB comparison completed ###############
 ########################################################
-GEN-DEU 32:37
+GEN-DEU 32
 2KI 5:16
 NEH
 MAT-MAR (quick pass)
@@ -39,7 +39,7 @@ Thus says ... - ... says (sorted up to EZE 5)
 midst - midst/middle/among (sorted up to DEU)
 : and .[regex] - . Y/. T/. I[etc.] (sorted up to DEU+NEH)
 of ForeverOne{H3068} - ForeverOne{H3068}&apos;s EXCEPT NAME (sorted up to DEU 23)
-over against - opposite (sorted up to NUM)
+over against - opposite (sorted up to DEU)
 drew near - came near (sorted up to DEU)
 blot out - wipe (sorted up to DEU)
 
@@ -324,4 +324,4 @@ bore the ark - carried the ark (sorted!)
 bear the ark - carry the ark (sorted!)
 forsook - abandoned (sorted!)
 
-\' - &apos; (needs checking! - checked up to NUM 11+DEU)
+\' - &apos; (needs checking! - checked up to NUM 14+DEU)
