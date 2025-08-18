@@ -6,7 +6,8 @@ Translation 'passes':
 ########################################################
 ############### WEB comparison completed ###############
 ########################################################
-GEN-DEU
+GEN-DEU (quick pass)
+NUM 1-4:20 
 2KI 5:16
 NEH
 MAT-MAR (quick pass)
@@ -44,19 +45,18 @@ drew near - came near (sorted up to DEU)
 blot out - wipe (sorted up to DEU)
 
 #=# AFTER comparison with WEB #=#
+encamp[^m][regex] - camp...(camp/camped/camping etc.) (sorted up to DEU)
 dwell - live[Match case] (sorted up to DEU)
 Dwell - Live[Match case] (sorted up to DEU)
-doings - actions (sorted up to DEU 27)
-take.*wife[regex] - get a wife/have a wife (sorted up to NUM)
-spoke - said/told
-altar of incense - incense altar (sorted up to EXO)
+doings - actions (sorted up to DEU)
+take.*wife[regex] - get a wife/have a wife (sorted up to DEU)
+spoke - spoke/said/told
+altar of incense - incense altar (sorted up to 2KI)
 altar of burnt offering - burnt offering altar (sorted up to 2KI)
-the third part - a third (sorted up to NUM)
-the fourth part - a quarter (sorted up to NUM)
+behold - behold/look/see/observe/note/get this?
 shall choose - chooses (sorted up to JOB)
-land which ForeverOne{H3068} your God{H0430} gives you - land which ForeverOne{H3068} your God{H0430} is giving you (sorted up to DEU 25)
 on the way - on the way/on the journey (sorted up to DEU)
-
+with which - with which/(delete)/...with (sorted up to EXO)
 NEXT 6 IN THIS ORDER! *
 came out of - left (sorted up to DEU and MAT)*
 go out of - leave (sorted up to 2SM and NT)*
@@ -80,7 +80,7 @@ NEXT 10 IN THIS ORDER! *
 neither shall - nor will (sorted up to EZE 43)
 you shall not - don&apos;t/you won&apos;t/you mustn&apos;t (sorted up to DEU)
 you shall .[regex] (delete)/do/you must/you will/you&apos;ll/you are to/you may (sorted up to DEU)
-he shall - let him/he must/he should/he is to (sorted up to LEV 3:10)
+he shall - let him/he must/he should/he is to/then (sorted up to LEV 4:22)
 they shall - let them/they must/they should/they are to/they will (sorted up to EXO)
 [^y][^o][^u] shall[regex] - (delete)/will/is to/are to/may/can/let (sorted up to EXO)
 it shall be that - (delete) (e.g. JOS 6:5) (sorted up to EXO)
@@ -130,7 +130,6 @@ physician - doctor
 [iI]t is I[ ,.';:!?)(][regex] - ('It is I' followed by a space or punctuation) to It&apos;s me!
 
 ### next ###
-behold - behold/look/see/observe/note/get this?
 at evening - in the evening/evening of
 ; and .[regex] - . T/. H/. I[etc.] (sorted up to GEN 13)
 which are - (delete)
@@ -323,5 +322,17 @@ shoe - sandal (sorted!) (maybe we should go back to shoe+lace from sandal+strap)
 bore the ark - carried the ark (sorted!)
 bear the ark - carry the ark (sorted!)
 forsook - abandoned (sorted!)
+land which ForeverOne{H3068} your God{H0430} gives you - land which ForeverOne{H3068} your God{H0430} is giving you (sorted!)
+the offerings of ForeverOne{H3068} - ForeverOne{H3068}&apos;s offerings (sorted!)
+ambassador{G0652}(apostolos) (sorted!)
+this is the history of the - these are the (sorted!)
+is become - has become (sorted!)
+are become - have become (sorted!)
+, and those who were counted of them, -  as listed (sorted!)
+old and upward - old and older (sorted!)
+the third part - a third (sorted!)
+the fourth part - a quarter (sorted!)
+the fifth part - a fifth (sorted!)
+the sixth part - a sixth (sorted!)
 
 \' - &apos; (needs checking! - checked up to NUM 16+DEU)
