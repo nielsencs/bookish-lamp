@@ -7,12 +7,14 @@ Translation 'passes':
 ############### WEB comparison completed ###############
 ########################################################
 GEN-DEU (quick pass)
-NUM 1-4:20 
+NUM 1-4
 2KI 5:16
 NEH
 MAT-MAR (quick pass)
 GAL
 JAM
+
+<p>, </p>, <br /> in Psalms up to 19,60-68
 ########################################################
 
 ########################################################
@@ -334,5 +336,7 @@ the third part - a third (sorted!)
 the fourth part - a quarter (sorted!)
 the fifth part - a fifth (sorted!)
 the sixth part - a sixth (sorted!)
+and older even until - to (sorted!)
+and older even to - to (sorted!)
 
-\' - &apos; (needs checking! - checked up to NUM 16+DEU)
+\' - &apos; (needs checking! - checked up to NUM 19+DEU)
