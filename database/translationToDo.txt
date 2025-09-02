@@ -2,7 +2,7 @@ Translation 'passes':
 1. Compare my version, TCSB (The CleanSlate Bible), with WEB 2024, making sure TCSB is at least as clear
 2. Index Key words (may be done independantly of pass 1 - especially if no conflict e.g. apostle to ambassador)
 3. Semi-automatic changes - plural you-all/present tense in NT
-4. Hand-craft new version from original Hebrew, Greek or Aramaic
+4. Hand-craft new version from original Hebrew, Greek or Aramaic - an example from Genesis 1:3 God said, "Light is!" and light became!
 ########################################################
 ############### WEB comparison completed ###############
 ########################################################
@@ -339,4 +339,4 @@ the sixth part - a sixth (sorted!)
 and older even until - to (sorted!)
 and older even to - to (sorted!)
 
-\' - &apos; (needs checking! - checked up to NUM 19+DEU)
+\' - &apos; (needs checking! - checked up to NUM 22+DEU)
