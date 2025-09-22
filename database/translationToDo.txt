@@ -7,7 +7,7 @@ Translation 'passes':
 ############### WEB comparison completed ###############
 ########################################################
 GEN-DEU (quick pass)
-NUM 1-5:7
+NUM 1-5
 2KI 5:16
 NEH
 MAT-MAR (quick pass)
@@ -33,6 +33,7 @@ human{G0444}(anthropos) up to MAT 5:16, GAL, JAM
 law{G3551}(nomos) MAT, GAL, EPH, PHP, JAM
 tempting{G3985}(peirazo) MAT + JAM
 wide-place{H7339} maybe?
+Amen{H0543} GEN-MAL
 ########################################################
 
 ### current work ###
@@ -68,7 +69,7 @@ bring.* out[regex] - bring/take ... out (sorted up to NUM and MAT)*
 brought.* out[regex] - brought/take/took/taken ... out (sorted up to NUM and MAT)*
 out of - out of/from/in (sorted up to NUM and MAT)*
 
-before ForeverOne{H3068} - in ForeverOne{H3068}&apos;s presence (sorted up to LEV 14)
+before ForeverOne{H3068} - in ForeverOne{H3068}&apos;s presence (sorted up to LEV 23)
 lest - for fear that/in case/otherwise (sorted up to GEN 42:4)
 even - yes/(delete) (sorted up to GEN)
 
@@ -341,5 +342,8 @@ the sixth part - a sixth (sorted!)
 and older even until - to (sorted!)
 and older even to - to (sorted!)
 carnally - sexually (sorted!)
+least even to the - least to the (sorted!)
+love(s/d){G0025} - selflessly-love(s/d){G0025} (sorted!)
+love{G0026} - selfless-love{G0026} (sorted!)
 
-\' - &apos; (needs checking! - checked up to DEU)
+\' - &apos; (needs checking! - checked up to JOS 1)
