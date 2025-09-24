@@ -33,7 +33,6 @@ human{G0444}(anthropos) up to MAT 5:16, GAL, JAM
 law{G3551}(nomos) MAT, GAL, EPH, PHP, JAM
 tempting{G3985}(peirazo) MAT + JAM
 wide-place{H7339} maybe?
-Amen{G0281} MAT-ACT
 ########################################################
 
 ### current work ###
@@ -346,5 +345,6 @@ least even to the - least to the (sorted!)
 love(s/d){G0025} - selflessly-love(s/d){G0025} (sorted!)
 love{G0026} - selfless-love{G0026} (sorted!)
 Amen{H0543} (sorted!)
+Amen{G0281} (sorted!)
 
-\' - &apos; (needs checking! - checked up to JOS 6)
+\' - &apos; (needs checking! - checked up to JOS 10)
