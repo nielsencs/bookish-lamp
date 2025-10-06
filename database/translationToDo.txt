@@ -7,10 +7,10 @@ Translation 'passes':
 ############### WEB comparison completed ###############
 ########################################################
 GEN-DEU (quick pass)
-NUM 1-6:11
+NUM 1-6:16
 2KI 5:16
 NEH
-MAT-MAR (quick pass)
+MAT-MAR + ROM 1-6 (quick pass)
 GAL
 JAM
 
