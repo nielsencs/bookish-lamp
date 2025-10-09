@@ -10,7 +10,7 @@ GEN-DEU (quick pass)
 NUM 1-6:16
 2KI 5:16
 NEH
-MAT-MAR + ROM 1-6 (quick pass)
+MAT-MAR + ROM 1-7 (quick pass)
 GAL
 JAM
 
@@ -346,5 +346,6 @@ love(s/d){G0025} - selflessly-love(s/d){G0025} (sorted!)
 love{G0026} - selfless-love{G0026} (sorted!)
 Amen{H0543} (sorted!)
 Amen{G0281} (sorted!)
+May it never be! - Absolutely not! (sorted!)
 
 \' - &apos; (needs checking! - checked up to JOS 10)
