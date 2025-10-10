@@ -10,7 +10,9 @@ GEN-DEU (quick pass)
 NUM 1-6:16
 2KI 5:16
 NEH
-MAT-MAR + ROM 1-7 (quick pass)
+
+MAT-MAR, ROM (quick pass)
+ROM 8:1-6
 GAL
 JAM
 
@@ -26,11 +28,13 @@ you-all up to MAT 6 + JAM
 ########################################################
 ################# Key Words completed ##################
 ########################################################
-shortcomings{G0266}(hamartia) MAT + JAM
-shortcomer{G0268}(hamartolos) MAT + JAM
-man{G0435}(aner) MAT, GAL, JAM
-human{G0444}(anthropos) up to MAT 5:16, GAL, JAM
-law{G3551}(nomos) MAT, GAL, EPH, PHP, JAM
+praise{G2127}(eulogeo)
+praise{G2129}(eulogia)
+shortcomings{G0266}(hamartia) MAT, ROM, JAM
+shortcomer{G0268}(hamartolos) MAT, ROM, JAM
+man{G0435}(aner) MAT, ROM, GAL, JAM
+human{G0444}(anthropos) up to MAT 5:16, ROM, GAL, JAM
+law{G3551}(nomos) MAT, ROM 1-4, GAL, EPH, PHP, JAM
 tempting{G3985}(peirazo) MAT + JAM
 wide-place{H7339} maybe?
 ########################################################
@@ -347,5 +351,8 @@ love{G0026} - selfless-love{G0026} (sorted!)
 Amen{H0543} (sorted!)
 Amen{G0281} (sorted!)
 May it never be! - Absolutely not! (sorted!)
+shortcoming{G0265}(hamartema) (sorted!)
+praiseworthy{G2128}(eulogetos) (sorted!)
+Greek/Gentile{G1672}(Hellen) (sorted!)
 
-\' - &apos; (needs checking! - checked up to JOS 10)
+\' - &apos; (needs checking! - checked up to JOS 16)
