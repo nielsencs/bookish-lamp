@@ -12,7 +12,7 @@ NUM 1-6:16
 NEH
 
 MAT-MAR, ROM (quick pass)
-ROM 8:1-6
+ROM 8:1-25
 GAL
 JAM
 
@@ -36,6 +36,7 @@ man{G0435}(aner) MAT, ROM, GAL, JAM
 human{G0444}(anthropos) up to MAT 5:16, ROM, GAL, JAM
 law{G3551}(nomos) MAT, ROM 1-4, GAL, EPH, PHP, JAM
 tempting{G3985}(peirazo) MAT + JAM
+son{G5207}(huios) ROM - 2TH
 wide-place{H7339} maybe?
 ########################################################
 
@@ -355,4 +356,4 @@ shortcoming{G0265}(hamartema) (sorted!)
 praiseworthy{G2128}(eulogetos) (sorted!)
 Greek/Gentile{G1672}(Hellen) (sorted!)
 
-\' - &apos; (needs checking! - checked up to JOS 16)
+\' - &apos; (needs checking! - checked up to JOS)
