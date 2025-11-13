@@ -12,7 +12,7 @@ NUM 1-6:18
 NEH
 
 MAT-MAR, ROM (quick pass)
-ROM 8:1-25
+ROM 8:1-28
 GAL
 JAM
 
@@ -32,12 +32,13 @@ you-all up to MAT 6 + JAM
 praise{G2127}(eulogeo)
 praise{G2129}(eulogia)
 shortcomings{G0266}(hamartia) MAT, ROM, JAM
-shortcomer{G0268}(hamartolos) MAT, ROM, JAM
 man{G0435}(aner) MAT, ROM, GAL, JAM
 human{G0444}(anthropos) up to MAT 5:16, ROM, GAL, JAM
 law{G3551}(nomos) MAT, ROM 1-4, GAL, EPH, PHP, JAM
+law{G3551} - law-of-Moses{G3551}?
+commandment{G1785} MAT-MAR
 tempting{G3985}(peirazo) MAT + JAM
-son{G5207}(huios) ROM - 2TH
+son{G5207}(huios) ROM - REV
 trust{G4100}(pisteuo) ROM 10:14
 trust{G4102}(pistis)
 
@@ -354,11 +355,17 @@ carnally - sexually (sorted!)
 least even to the - least to the (sorted!)
 love(s/d){G0025} - selflessly-love(s/d){G0025} (sorted!)
 love{G0026} - selfless-love{G0026} (sorted!)
-Amen{H0543} (sorted!)
-Amen{G0281} (sorted!)
 May it never be! - Absolutely not! (sorted!)
 shortcoming{G0265}(hamartema) (sorted!)
 praiseworthy{G2128}(eulogetos) (sorted!)
 Greek/Gentile{G1672}(Hellen) (sorted!)
+Amen{H0543} - Absolutely{H0543} (sorted!)
+Most-certainly{G0281} - Absolutely{G0281} (sorted!)
+Amen{G0281} - Absolutely{G0281} (sorted!)
+Children - Sons{G5207} (where appropriate!) (sorted!)
+throne-angel{H3742} (sorted!)
+throne-angel{G5502} (sorted!)
+shortcomer{G0268}(hamartolos) (sorted!)
+ordinance/decree{G1378}(dogma) (sorted!)
 
 \' - &apos; (needs checking! - checked up to JDG 2)
