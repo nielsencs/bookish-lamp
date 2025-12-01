@@ -10,6 +10,8 @@ GEN-DEU (quick pass)
 NUM 1-6:18
 2KI 5:16
 NEH
+LAM 1-2:10
+SON (quick pass)
 
 MAT-MAR, ROM (quick pass)
 ROM 8:1-28
@@ -368,4 +370,4 @@ throne-angel{G5502} (sorted!)
 shortcomer{G0268}(hamartolos) (sorted!)
 ordinance/decree{G1378}(dogma) (sorted!)
 
-\' - &apos; (needs checking! - checked up to JDG 2)
+\' - &apos; (needs checking! - checked up to JDG 10)
