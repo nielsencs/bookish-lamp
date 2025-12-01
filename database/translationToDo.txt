@@ -370,4 +370,4 @@ throne-angel{G5502} (sorted!)
 shortcomer{G0268}(hamartolos) (sorted!)
 ordinance/decree{G1378}(dogma) (sorted!)
 
-\' - &apos; (needs checking! - checked up to JDG 10)
+\' - &apos; (needs checking! - checked up to JDG 14)
