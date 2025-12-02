@@ -10,7 +10,7 @@ GEN-DEU (quick pass)
 NUM 1-6:18
 2KI 5:16
 NEH
-LAM 1-2:10
+LAM 1-3:16
 SON (quick pass)
 
 MAT-MAR, ROM (quick pass)
