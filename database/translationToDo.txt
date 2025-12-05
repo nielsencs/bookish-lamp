@@ -10,7 +10,7 @@ GEN-DEU (quick pass)
 NUM 1-6:18
 2KI 5:16
 NEH
-LAM 1-3:16
+LAM 1-3:20
 SON (quick pass)
 
 MAT-MAR, ROM (quick pass)
@@ -18,7 +18,7 @@ ROM 8:1-28
 GAL
 JAM
 
-<p>, </p>, <br> in Psalms up to 19,60-68
+<p>, </p>, <br> in Psalms up to 20, 51, 60-68
 <br> in Proverbs up to 2:3
 ########################################################
 
@@ -31,6 +31,7 @@ you-all up to MAT 6 + JAM
 ########################################################
 ################# Key Words completed ##################
 ########################################################
+created-from-nothing{H1254} GEN-ISA 4:5
 praise{G2127}(eulogeo)
 praise{G2129}(eulogia)
 shortcomings{G0266}(hamartia) MAT, ROM, JAM
@@ -46,6 +47,13 @@ trust{G4102}(pistis)
 
 wide-place{H7339} maybe?
 ########################################################
+
+########################################################
+####### NASB present tense comparison completed ########
+########################################################
+MAT 2:13
+########################################################
+
 
 ### current work ###
 
@@ -370,4 +378,4 @@ throne-angel{G5502} (sorted!)
 shortcomer{G0268}(hamartolos) (sorted!)
 ordinance/decree{G1378}(dogma) (sorted!)
 
-\' - &apos; (needs checking! - checked up to JDG 14)
+\' - &apos; (needs checking! - checked up to JDG 20)
