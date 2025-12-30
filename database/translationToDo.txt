@@ -30,6 +30,7 @@ iniquity
 abase 
 alpha 
 omega
+tabernacle
 
 ########################################################
 ######### AVYous(you-all) comparison completed #########
