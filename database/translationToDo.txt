@@ -12,12 +12,13 @@
 GEN-DEU (quick pass)
 NUM 1-6:18
 2KI 5:16
+1CH 1-2
 NEH
 LAM 1-3:20
 SON (quick pass)
 ISA 31,40 (quick pass)
 MAT-MAR, ROM (quick pass)
-ROM 8:1-28
+ROM 8-9:21
 GAL
 JAM
 <p>, </p>, <br> in Psalms up to 20, 51, 60-68
@@ -31,6 +32,7 @@ abase
 alpha 
 omega
 tabernacle
+scourge
 
 ########################################################
 ######### AVYous(you-all) comparison completed #########
@@ -216,6 +218,7 @@ this day - today
 save - except
 pervert - corrupt
 labor - work/give birth?
+scripture - writings/book/what-is-written/bible/written-thing?
 
 ### to be considered ###
 gathered themselves together - gathered/assembled/got together/crowded?
@@ -386,5 +389,9 @@ shortcomer{G0268}(hamartolos) (sorted!)
 ordinance/decree{G1378}(dogma) (sorted!)
 became the father of - fathered (sorted!)
 created-from-nothing{H1254} (sorted!)
+Moabitess - Moabite (sorted!)
+if it is so that - if indeed (sorted!)
+peril - risk/danger (sorted!)
+Abba - Daddy{G0005} (sorted!)
 
-\' - &apos; (needs checking! - checked up to JDG 20)
+\' - &apos; (needs checking! - checked up to RUT)
