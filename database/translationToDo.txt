@@ -17,7 +17,7 @@ NEH
 LAM 1-3:20
 PSA 1-20, 23, 51, 60-68
 SON (quick pass)
-ISA 1-6, 31, 40 (quick pass)
+ISA 1-8:12, 31, 40
 HAB (quick pass)
 MAT-MAR, ROM (quick pass)
 ROM 8-9:21
@@ -278,6 +278,7 @@ slain - killed/dead
 put away - purge/removed
 Take heed - Be careful
 footmen - men on foot
+sp.*k.*say[regex] (Hebrew 'He spoke to XXX saying')
 
 ### completed ###
 therein (sorted!)
@@ -415,5 +416,7 @@ doings - actions (sorted!)
 drunken - drunk (sorted!)
 slumber - doze/dozing (sorted!)
 dwell in the midst of - live among (sorted!)
+fuller - washer (sorted!)
+to wit - that is/[delete] (sorted!)
 
 \' - &apos; (needs checking! - checked up to 1SM:10)
