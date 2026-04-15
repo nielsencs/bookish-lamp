@@ -56,7 +56,7 @@ man{G0435}(aner) MAT, ROM, GAL, JAM
 human{G0444}(anthropos) up to MAT 5:16, ROM, GAL, JAM
 law{G3551}(nomos) MAT, ROM 1-4, GAL, EPH, PHP, JAM
 law{G3551} - law-of-Moses{G3551}?
-commandment{G1785} MAT-MAR
+commandment{G1785} MAT-ACT
 tempting{G3985}(peirazo) MAT + JAM
 son{G5207}(huios) ROM - REV
 trust{G4100}(pisteuo) ROM 10:14
@@ -419,5 +419,6 @@ fuller - washer (sorted!)
 to wit - that is/[delete] (sorted!)
 praise{G2127}(eulogeo) (sorted!)
 praise{G2129}(eulogia) (sorted!)
+shadow of death - death-shadow(tsalmavet) (sorted!)
 
 \' - &apos; (needs checking! - checked up to 1SM:12)
