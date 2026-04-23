@@ -13,12 +13,12 @@ GEN-DEU (quick pass)
 NUM 1-6:18
 2KI 5:1-16
 1CH 1-4,16
-2SM 9
+2SM 9,22-23
 NEH
 LAM 1-3:20
 PSA 1-20, 23, 51, 60-68
 SON (quick pass)
-ISA 1-8, 31, 40
+ISA 1-12, 31, 40
 HAB (quick pass)
 MAT-MAR, ROM (quick pass)
 ROM 8-9:21
@@ -56,7 +56,6 @@ man{G0435}(aner) MAT, ROM, GAL, JAM
 human{G0444}(anthropos) up to MAT 5:16, ROM, GAL, JAM
 law{G3551}(nomos) MAT, ROM 1-4, GAL, EPH, PHP, JAM
 law{G3551} - law-of-Moses{G3551}?
-commandment{G1785} MAT-ACT
 tempting{G3985}(peirazo) MAT + JAM
 son{G5207}(huios) ROM - REV
 trust{G4100}(pisteuo) ROM 10:14
@@ -420,5 +419,8 @@ to wit - that is/[delete] (sorted!)
 praise{G2127}(eulogeo) (sorted!)
 praise{G2129}(eulogia) (sorted!)
 shadow of death - death-shadow(tsalmavet) (sorted!)
+antichrist - against-anointed-one{G0500} (sorted!)
+remission - forgiveness (sorted!)
+commandment{G1785}(entole) (sorted!)
 
 \' - &apos; (needs checking! - checked up to 1SM:12)
