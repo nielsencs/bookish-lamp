@@ -422,5 +422,6 @@ shadow of death - death-shadow(tsalmavet) (sorted!)
 antichrist - against-anointed-one{G0500} (sorted!)
 remission - forgiveness (sorted!)
 commandment{G1785}(entole) (sorted!)
+scatter.*abr[regex](scattered abroad) - scatter(ed) (sorted!)
 
 \' - &apos; (needs checking! - checked up to 1SM:12)
