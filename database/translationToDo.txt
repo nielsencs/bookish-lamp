@@ -1,3 +1,4 @@
+is created-from-nothing{H1254} too strong?
 ########################################################
 ################ Translation 'passes': #################
 ########################################################
@@ -10,19 +11,20 @@
 ############### WEB comparison completed ###############
 ########################################################
 GEN-DEU (quick pass)
+LEV 5:1-13
 NUM 1-6:18
 2KI 5:1-16
 1CH 1-4,16
 2SM 9,22-23
 NEH
 LAM 1-3:20
-JOB 1:1-2:6, 21:1-21:27
+JOB 1:1-2:6, 21:1-22:30
 PSA 1-20, 23, 51, 60-68
 SON (quick pass)
 ISA 1-12, 31, 40
 HAB (quick pass)
 MAT-MAR, ROM (quick pass)
-ACT 1-2:1
+ACT 1-2:36
 ROM 8-9:21
 GAL
 JAM
@@ -86,6 +88,8 @@ drew near - came near (sorted up to DEU)
 blot out - wipe (sorted up to DEU)
 
 #=# AFTER comparison with WEB #=#
+mankind - humans (sorted up to DEU)
+
 ordinance - righteous-requirement (sorted in NT up to Rom 12)
 times in the year - times a year (sorted up to 1CH)
 encamp[^m][regex] - camp...(camp/camped/camping etc.) (sorted up to DEU)
@@ -430,5 +434,8 @@ persons - people (sorted!)
 For this cause - For this reason (sorted!)
 cause them to - make them (sorted!)
 began .* to reign[regex] [xxx] began to reign (sorted!)
+tabernacle of the Tent of Meeting - tabernacle, the Tent of Meeting (sorted!)
+He shall sprinkle - He is to sprinkle (sorted!)
+adjuration - solemn-order (sorted!)
 
 \' - &apos; (needs checking! - checked up to 1SM:14)
