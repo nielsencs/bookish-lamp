@@ -4,6 +4,20 @@
 Some basic tools to edit my bible, based on the WEB public domain Bible.
 
 This is VERY MUCH a WiP! The purpose is to prepare a full (without apocrypha) Bible text for my website BibleStudyMan.co.uk. I've opted (so far) to use the downloadable WEB USFM format files as my source. Then I convert them to SQL and modify as I learn and get inspiration for changes to modernise some passages and more closely match the original text.
+
+## TCSB text-format direction
+
+The canonical TCSB text should be text plus Bible-specific semantic markup, not browser HTML.
+
+Some existing verse text currently contains HTML because the website Reader renders in a browser. That should be treated as a current implementation detail/transition problem, not the long-term source format. The intended direction is:
+
+- canonical TCSB data records Bible semantics such as paragraphs, poetry, headings, and alternative/original-word display markers;
+- website readers convert those semantics to HTML/CSS;
+- mobile readers render the same semantics natively from their local data/SQLite copy, rather than using a browser/WebView just to preserve HTML behaviour;
+- BibleHarmony and import/export tooling will need to preserve/edit this semantic format rather than assuming website HTML is canonical.
+
+This decision is also recorded in BSMT decision `0003 — Canonical TCSB text uses semantic Bible markup, not HTML`.
+
 The following is some explanation of what the files are intented for:
 
 ```
