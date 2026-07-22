@@ -11,20 +11,20 @@ is created-from-nothing{H1254} too strong?
 ############### WEB comparison completed ###############
 ########################################################
 GEN-DEU (quick pass)
-LEV 5:1-6:7
+LEV 5:1-6:23
 NUM 1-6:18
 2KI 5:1-16
 1CH 1-4,16
 2SM 9,22-23
 NEH
 LAM 1-3:20
-JOB 1:1-2:6, 21:1-24:8
+JOB 1:1-2:6, 21:1-25:6
 PSA 1-20, 23, 51, 60-68
 SON (quick pass)
 ISA 1-12, 31, 40
 HAB (quick pass)
 MAT-MAR, ROM (quick pass)
-ACT 1-2:40
+ACT 1-3:21
 ROM 8-9:21
 GAL
 JAM
@@ -55,7 +55,7 @@ you-all up to MAT 6 + JAM
 ################# Key Words completed ##################
 ########################################################
 sky{H8064}(shamayim) up to GEN 1:17
-shortcomings{G0266}(hamartia) MAT, ROM, JAM
+sin - shortcoming{G0266}(hamartia) MAT, ROM, JAM
 man{G0435}(aner) MAT, ROM, GAL, JAM
 human{G0444}(anthropos) up to MAT 5:16, ROM, GAL, JAM
 law{G3551}(nomos) MAT, ROM 1-4, GAL, EPH, PHP, JAM
@@ -66,6 +66,8 @@ trust{G4100}(pisteuo) ROM 10:14
 trust{G4102}(pistis)
 Armies/army/array{H6635}(tsavah) up to NUM 1:3
 strong-encouraging{G3874} parakaleo up to LUK 3:18
+preach - proclaim-good-news{G2097}
+God - God{G2316} up to 2TI
 
 Maybe:
 wide-place{H7339}
@@ -284,6 +286,7 @@ put away - purge/removed
 Take heed - Be careful
 footmen - men on foot
 sp.*k.*say[regex] (Hebrew 'He spoke to XXX saying')
+from off - from/off of?
 
 ### completed ###
 therein (sorted!)
@@ -440,5 +443,6 @@ He shall sprinkle - He is to sprinkle (sorted!)
 adjuration - solemn-order (sorted!)
 exhortation - strong-encouragement{G3874}
 Comforter - strong-encourager{G3875}
+God&apos;s kingdom - the kingdom of God{G2316} (sorted!)
 
 \' - &apos; (needs checking! - checked up to 1SM:14)
