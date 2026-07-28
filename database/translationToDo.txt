@@ -67,7 +67,7 @@ trust{G4102}(pistis)
 Armies/army/array{H6635}(tsavah) up to NUM 1:3
 strong-encouraging{G3874} parakaleo up to LUK 3:18
 preach - proclaim-good-news{G2097}
-God - God{G2316} up to 2TI
+God - God{G2316} up to HEB 6
 God - God{H0410} up to GEN
 El - God{H0410} up to GEN
 
