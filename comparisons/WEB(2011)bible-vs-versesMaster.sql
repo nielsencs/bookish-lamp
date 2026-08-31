@@ -44832,8 +44832,8 @@ INSERT INTO `verses` (`bookCode`, `chapter`, `verseNumber`, `verseText`) VALUES 
 -
 -
 -
-INSERT INTO `verses` (`bookCode`, `chapter`, `verseNumber`, `verseText`) VALUES ('JOE',   1,   8, 'Mourn like a virgin dressed in sackcloth for the husband of her youth!');
---INSERT INTO `verses` (`bookCode`, `chapter`, `verseNumber`, `verseText`) VALUES ('JOE',   1,   8, 'Mourn like a virgin dressed in sackcloth for the husband<H1167> of her youth!');
+INSERT INTO `verses` (`bookCode`, `chapter`, `verseNumber`, `verseText`) VALUES ('JOL',   1,   8, 'Mourn like a virgin dressed in sackcloth for the husband of her youth!');
+--INSERT INTO `verses` (`bookCode`, `chapter`, `verseNumber`, `verseText`) VALUES ('JOL',   1,   8, 'Mourn like a virgin dressed in sackcloth for the husband<H1167> of her youth!');
 -
 -
 -
@@ -44850,8 +44850,8 @@ INSERT INTO `verses` (`bookCode`, `chapter`, `verseNumber`, `verseText`) VALUES 
 -
 -
 -
-INSERT INTO `verses` (`bookCode`, `chapter`, `verseNumber`, `verseText`) VALUES ('JOE',   1,  17, 'The offsprings rot under their clods. The granaries are laid desolate. The barns are broken down, for the grain has withered.');
---INSERT INTO `verses` (`bookCode`, `chapter`, `verseNumber`, `verseText`) VALUES ('JOE',   1,  17, 'The seeds rot under their clods. The granaries are laid desolate. The barns are broken down, for the grain has withered.');
+INSERT INTO `verses` (`bookCode`, `chapter`, `verseNumber`, `verseText`) VALUES ('JOL',   1,  17, 'The offsprings rot under their clods. The granaries are laid desolate. The barns are broken down, for the grain has withered.');
+--INSERT INTO `verses` (`bookCode`, `chapter`, `verseNumber`, `verseText`) VALUES ('JOL',   1,  17, 'The seeds rot under their clods. The granaries are laid desolate. The barns are broken down, for the grain has withered.');
 -
 -
 -

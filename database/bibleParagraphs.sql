@@ -5011,7 +5011,7 @@ INSERT INTO `paragraphs` (`bookCode`, `chapter`, `verseNumber`) VALUES ('JOB',  
 INSERT INTO `paragraphs` (`bookCode`, `chapter`, `verseNumber`) VALUES ('JOB',  42,   9);
 INSERT INTO `paragraphs` (`bookCode`, `chapter`, `verseNumber`) VALUES ('JOB',  42,  10);
 INSERT INTO `paragraphs` (`bookCode`, `chapter`, `verseNumber`) VALUES ('JOB',  42,  12);
-INSERT INTO `paragraphs` (`bookCode`, `chapter`, `verseNumber`) VALUES ('JOE',   1,   1);
+INSERT INTO `paragraphs` (`bookCode`, `chapter`, `verseNumber`) VALUES ('JOL',   1,   1);
 INSERT INTO `paragraphs` (`bookCode`, `chapter`, `verseNumber`) VALUES ('JON',   1,   1);
 INSERT INTO `paragraphs` (`bookCode`, `chapter`, `verseNumber`) VALUES ('JON',   1,   3);
 INSERT INTO `paragraphs` (`bookCode`, `chapter`, `verseNumber`) VALUES ('JON',   1,   4);

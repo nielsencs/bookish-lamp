@@ -147,8 +147,6 @@ def myBookAbbrFromWEB(tBookAbbr):
         tMyBookAbbr = 'SON'
     if tBookAbbr == 'EZK':
         tMyBookAbbr = 'EZE'
-    if tBookAbbr == 'JOL':
-        tMyBookAbbr = 'JOE'
     if tBookAbbr == 'NAM':
         tMyBookAbbr = 'NAH'
     if tBookAbbr == 'MRK':
@@ -249,7 +247,7 @@ def myBookAbbrFromWEBName(tWEBName):
     elif tWEBName == 'Job':
         tMyBookAbbr = 'JOB'
     elif tWEBName == 'Joel':
-        tMyBookAbbr = 'JOE'
+        tMyBookAbbr = 'JOL'
     elif tWEBName == 'John':
         tMyBookAbbr = 'JOH'
     elif tWEBName == 'Jonah':

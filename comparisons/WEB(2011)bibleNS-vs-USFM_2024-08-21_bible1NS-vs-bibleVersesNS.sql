@@ -22408,79 +22408,79 @@ INSERT INTO `verses` (`bookCode`, `chapter`, `verseNumber`, `verseText`) VALUES 
 -
 INSERT INTO `verses` (`bookCode`, `chapter`, `verseNumber`, `verseText`) VALUES ('HOS',  14,   8, 'Ephraim, what have I to do any more with idols? I answer, and will take care of him. I am like a green cypress tree; from me your fruit is found.');
 INSERT INTO `verses` (`bookCode`, `chapter`, `verseNumber`, `verseText`) VALUES ('HOS',  14,   9, 'Who is wise, that he may understand these things? Who is prudent, that he may know them? For the ways of ForeverOne are right, and the righteous walk in them, but the rebellious stumble in them.');
-INSERT INTO `verses` (`bookCode`, `chapter`, `verseNumber`, `verseText`) VALUES ('JOE',   1,   1, 'ForeverOnes word that came to Joel, the son of Pethuel.');
-INSERT INTO `verses` (`bookCode`, `chapter`, `verseNumber`, `verseText`) VALUES ('JOE',   1,   2, 'Hear this, you elders, and listen, all you inhabitants of the land! Has this ever happened in your days, or in the days of your fathers?');
+INSERT INTO `verses` (`bookCode`, `chapter`, `verseNumber`, `verseText`) VALUES ('JOL',   1,   1, 'ForeverOnes word that came to Joel, the son of Pethuel.');
+INSERT INTO `verses` (`bookCode`, `chapter`, `verseNumber`, `verseText`) VALUES ('JOL',   1,   2, 'Hear this, you elders, and listen, all you inhabitants of the land! Has this ever happened in your days, or in the days of your fathers?');
 -
 -
-INSERT INTO `verses` (`bookCode`, `chapter`, `verseNumber`, `verseText`) VALUES ('JOE',   1,   5, 'Wake up, you drunkards, and weep! Wail, all you drinkers of wine, because of the sweet wine, for it is cut off from your mouth.');
--
--
--
--
--
-INSERT INTO `verses` (`bookCode`, `chapter`, `verseNumber`, `verseText`) VALUES ('JOE',   1,  11, 'Be confounded, you farmers! Wail, you vineyard keepers, for the wheat and for the barley; for the harvest of the field has perished.');
-INSERT INTO `verses` (`bookCode`, `chapter`, `verseNumber`, `verseText`) VALUES ('JOE',   1,  12, 'The vine has dried up, and the fig tree withered- the pomegranate tree, the palm tree also, and the apple tree, even all of the trees of the field are withered; for joy has withered away from the sons of men.');
--
-INSERT INTO `verses` (`bookCode`, `chapter`, `verseNumber`, `verseText`) VALUES ('JOE',   1,  14, 'Sanctify a fast. Call a solemn assembly. Gather the elders and all the inhabitants of the land to the house of ForeverOne, your God, and cry to ForeverOne.');
--
-INSERT INTO `verses` (`bookCode`, `chapter`, `verseNumber`, `verseText`) VALUES ('JOE',   1,  16, 'Isnt the food cut off before our eyes, joy and gladness from the house of our God?');
-INSERT INTO `verses` (`bookCode`, `chapter`, `verseNumber`, `verseText`) VALUES ('JOE',   1,  17, 'The seeds rot under their clods. The granaries are laid desolate. The barns are broken down, for the grain has withered.');
--
-INSERT INTO `verses` (`bookCode`, `chapter`, `verseNumber`, `verseText`) VALUES ('JOE',   1,  19, 'ForeverOne, I cry to you, for the fire has devoured the pastures of the wilderness, and the flame has burned all the trees of the field.');
-INSERT INTO `verses` (`bookCode`, `chapter`, `verseNumber`, `verseText`) VALUES ('JOE',   1,  20, 'Yes, the animals of the field pant to you, for the water brooks have dried up, and the fire has devoured the pastures of the wilderness.');
--
--
--
-INSERT INTO `verses` (`bookCode`, `chapter`, `verseNumber`, `verseText`) VALUES ('JOE',   2,   4, 'Their appearance is as the appearance of horses, and they run as horsemen.');
-INSERT INTO `verses` (`bookCode`, `chapter`, `verseNumber`, `verseText`) VALUES ('JOE',   2,   5, 'Like the noise of chariots on the tops of the mountains, they leap, like the noise of a flame of fire that devours the stubble, like a strong people set in battle array.');
--
--
-INSERT INTO `verses` (`bookCode`, `chapter`, `verseNumber`, `verseText`) VALUES ('JOE',   2,   8, 'One doesnt jostle another. They each march in their own path. They burst through the defenses and dont break ranks.');
--
--
-INSERT INTO `verses` (`bookCode`, `chapter`, `verseNumber`, `verseText`) VALUES ('JOE',   2,  11, 'ForeverOne thunders his voice before his army, for his forces are very great; for he is strong who obeys his command; for the day of ForeverOne is great and very awesome, and who can endure it?');
--
-INSERT INTO `verses` (`bookCode`, `chapter`, `verseNumber`, `verseText`) VALUES ('JOE',   2,  13, 'Tear your heart and not your garments, and turn to ForeverOne, your God; for he is gracious and merciful, slow to anger, and abundant in loving kindness, and relents from sending calamity.');
--
--
-INSERT INTO `verses` (`bookCode`, `chapter`, `verseNumber`, `verseText`) VALUES ('JOE',   2,  16, 'Gather the people. Sanctify the assembly. Assemble the elders. Gather the children, and those who nurse from breasts. Let the bridegroom go out of his room, and the bride out of her chamber.');
--
-INSERT INTO `verses` (`bookCode`, `chapter`, `verseNumber`, `verseText`) VALUES ('JOE',   2,  18, 'Then ForeverOne was jealous for his land, and had pity on his people.');
--
--
--
--
-INSERT INTO `verses` (`bookCode`, `chapter`, `verseNumber`, `verseText`) VALUES ('JOE',   2,  23, 'Be glad then, you children of Zion, and rejoice in ForeverOne, your God; for he gives you the early rain in just measure, and he causes the rain to come down for you, the early rain and the latter rain, as before.');
--
--
-INSERT INTO `verses` (`bookCode`, `chapter`, `verseNumber`, `verseText`) VALUES ('JOE',   2,  26, 'You will have plenty to eat and be satisfied, and will praise the name of ForeverOne, your God, who has dealt wondrously with you; and my people will never again be disappointed.');
-INSERT INTO `verses` (`bookCode`, `chapter`, `verseNumber`, `verseText`) VALUES ('JOE',   2,  27, 'You will know that I am among Israel, and that I am ForeverOne, your God, and there is no one else; and my people will never again be disappointed.');
--
--
--
--
-INSERT INTO `verses` (`bookCode`, `chapter`, `verseNumber`, `verseText`) VALUES ('JOE',   2,  32, 'It will happen that whoever will call on ForeverOnes name shall be saved; for in Mount Zion and in Jerusalem there will be those who escape, as ForeverOne has said, and among the remnant, those whom ForeverOne calls.');
--
--
--
-INSERT INTO `verses` (`bookCode`, `chapter`, `verseNumber`, `verseText`) VALUES ('JOE',   3,   4, 'Yes, and what are you to me, Tyre and Sidon, and all the regions of Philistia? Will you repay me? And if you repay me, I will swiftly and speedily return your repayment on your own head.');
+INSERT INTO `verses` (`bookCode`, `chapter`, `verseNumber`, `verseText`) VALUES ('JOL',   1,   5, 'Wake up, you drunkards, and weep! Wail, all you drinkers of wine, because of the sweet wine, for it is cut off from your mouth.');
 -
 -
 -
 -
 -
+INSERT INTO `verses` (`bookCode`, `chapter`, `verseNumber`, `verseText`) VALUES ('JOL',   1,  11, 'Be confounded, you farmers! Wail, you vineyard keepers, for the wheat and for the barley; for the harvest of the field has perished.');
+INSERT INTO `verses` (`bookCode`, `chapter`, `verseNumber`, `verseText`) VALUES ('JOL',   1,  12, 'The vine has dried up, and the fig tree withered- the pomegranate tree, the palm tree also, and the apple tree, even all of the trees of the field are withered; for joy has withered away from the sons of men.');
+-
+INSERT INTO `verses` (`bookCode`, `chapter`, `verseNumber`, `verseText`) VALUES ('JOL',   1,  14, 'Sanctify a fast. Call a solemn assembly. Gather the elders and all the inhabitants of the land to the house of ForeverOne, your God, and cry to ForeverOne.');
+-
+INSERT INTO `verses` (`bookCode`, `chapter`, `verseNumber`, `verseText`) VALUES ('JOL',   1,  16, 'Isnt the food cut off before our eyes, joy and gladness from the house of our God?');
+INSERT INTO `verses` (`bookCode`, `chapter`, `verseNumber`, `verseText`) VALUES ('JOL',   1,  17, 'The seeds rot under their clods. The granaries are laid desolate. The barns are broken down, for the grain has withered.');
+-
+INSERT INTO `verses` (`bookCode`, `chapter`, `verseNumber`, `verseText`) VALUES ('JOL',   1,  19, 'ForeverOne, I cry to you, for the fire has devoured the pastures of the wilderness, and the flame has burned all the trees of the field.');
+INSERT INTO `verses` (`bookCode`, `chapter`, `verseNumber`, `verseText`) VALUES ('JOL',   1,  20, 'Yes, the animals of the field pant to you, for the water brooks have dried up, and the fire has devoured the pastures of the wilderness.');
 -
 -
-INSERT INTO `verses` (`bookCode`, `chapter`, `verseNumber`, `verseText`) VALUES ('JOE',   3,  12, 'Let the nations arouse themselves, and come up to the valley of Jehoshaphat; for there I will sit to judge all the surrounding nations.');
-INSERT INTO `verses` (`bookCode`, `chapter`, `verseNumber`, `verseText`) VALUES ('JOE',   3,  13, 'Put in the sickle; for the harvest is ripe. Come, tread, for the wine press is full, the vats overflow, for their wickedness is great.');
-INSERT INTO `verses` (`bookCode`, `chapter`, `verseNumber`, `verseText`) VALUES ('JOE',   3,  14, 'Multitudes, multitudes in the valley of decision! For the day of ForeverOne is near in the valley of decision.');
+-
+INSERT INTO `verses` (`bookCode`, `chapter`, `verseNumber`, `verseText`) VALUES ('JOL',   2,   4, 'Their appearance is as the appearance of horses, and they run as horsemen.');
+INSERT INTO `verses` (`bookCode`, `chapter`, `verseNumber`, `verseText`) VALUES ('JOL',   2,   5, 'Like the noise of chariots on the tops of the mountains, they leap, like the noise of a flame of fire that devours the stubble, like a strong people set in battle array.');
+-
+-
+INSERT INTO `verses` (`bookCode`, `chapter`, `verseNumber`, `verseText`) VALUES ('JOL',   2,   8, 'One doesnt jostle another. They each march in their own path. They burst through the defenses and dont break ranks.');
+-
+-
+INSERT INTO `verses` (`bookCode`, `chapter`, `verseNumber`, `verseText`) VALUES ('JOL',   2,  11, 'ForeverOne thunders his voice before his army, for his forces are very great; for he is strong who obeys his command; for the day of ForeverOne is great and very awesome, and who can endure it?');
+-
+INSERT INTO `verses` (`bookCode`, `chapter`, `verseNumber`, `verseText`) VALUES ('JOL',   2,  13, 'Tear your heart and not your garments, and turn to ForeverOne, your God; for he is gracious and merciful, slow to anger, and abundant in loving kindness, and relents from sending calamity.');
+-
+-
+INSERT INTO `verses` (`bookCode`, `chapter`, `verseNumber`, `verseText`) VALUES ('JOL',   2,  16, 'Gather the people. Sanctify the assembly. Assemble the elders. Gather the children, and those who nurse from breasts. Let the bridegroom go out of his room, and the bride out of her chamber.');
+-
+INSERT INTO `verses` (`bookCode`, `chapter`, `verseNumber`, `verseText`) VALUES ('JOL',   2,  18, 'Then ForeverOne was jealous for his land, and had pity on his people.');
 -
 -
 -
-INSERT INTO `verses` (`bookCode`, `chapter`, `verseNumber`, `verseText`) VALUES ('JOE',   3,  18, 'It will happen in that day, that the mountains will drop down sweet wine, the hills will flow with milk, all the brooks of Judah will flow with waters; and a fountain will flow out from ForeverOnes house, and will water the valley of Shittim.');
-INSERT INTO `verses` (`bookCode`, `chapter`, `verseNumber`, `verseText`) VALUES ('JOE',   3,  19, 'Egypt will be a desolation and Edom will be a desolate wilderness, for the violence done to the children of Judah, because they have shed innocent blood in their land.');
 -
-INSERT INTO `verses` (`bookCode`, `chapter`, `verseNumber`, `verseText`) VALUES ('JOE',   3,  21, 'I will cleanse their blood that I have not cleansed, for ForeverOne dwells in Zion.');
+INSERT INTO `verses` (`bookCode`, `chapter`, `verseNumber`, `verseText`) VALUES ('JOL',   2,  23, 'Be glad then, you children of Zion, and rejoice in ForeverOne, your God; for he gives you the early rain in just measure, and he causes the rain to come down for you, the early rain and the latter rain, as before.');
+-
+-
+INSERT INTO `verses` (`bookCode`, `chapter`, `verseNumber`, `verseText`) VALUES ('JOL',   2,  26, 'You will have plenty to eat and be satisfied, and will praise the name of ForeverOne, your God, who has dealt wondrously with you; and my people will never again be disappointed.');
+INSERT INTO `verses` (`bookCode`, `chapter`, `verseNumber`, `verseText`) VALUES ('JOL',   2,  27, 'You will know that I am among Israel, and that I am ForeverOne, your God, and there is no one else; and my people will never again be disappointed.');
+-
+-
+-
+-
+INSERT INTO `verses` (`bookCode`, `chapter`, `verseNumber`, `verseText`) VALUES ('JOL',   2,  32, 'It will happen that whoever will call on ForeverOnes name shall be saved; for in Mount Zion and in Jerusalem there will be those who escape, as ForeverOne has said, and among the remnant, those whom ForeverOne calls.');
+-
+-
+-
+INSERT INTO `verses` (`bookCode`, `chapter`, `verseNumber`, `verseText`) VALUES ('JOL',   3,   4, 'Yes, and what are you to me, Tyre and Sidon, and all the regions of Philistia? Will you repay me? And if you repay me, I will swiftly and speedily return your repayment on your own head.');
+-
+-
+-
+-
+-
+-
+-
+INSERT INTO `verses` (`bookCode`, `chapter`, `verseNumber`, `verseText`) VALUES ('JOL',   3,  12, 'Let the nations arouse themselves, and come up to the valley of Jehoshaphat; for there I will sit to judge all the surrounding nations.');
+INSERT INTO `verses` (`bookCode`, `chapter`, `verseNumber`, `verseText`) VALUES ('JOL',   3,  13, 'Put in the sickle; for the harvest is ripe. Come, tread, for the wine press is full, the vats overflow, for their wickedness is great.');
+INSERT INTO `verses` (`bookCode`, `chapter`, `verseNumber`, `verseText`) VALUES ('JOL',   3,  14, 'Multitudes, multitudes in the valley of decision! For the day of ForeverOne is near in the valley of decision.');
+-
+-
+-
+INSERT INTO `verses` (`bookCode`, `chapter`, `verseNumber`, `verseText`) VALUES ('JOL',   3,  18, 'It will happen in that day, that the mountains will drop down sweet wine, the hills will flow with milk, all the brooks of Judah will flow with waters; and a fountain will flow out from ForeverOnes house, and will water the valley of Shittim.');
+INSERT INTO `verses` (`bookCode`, `chapter`, `verseNumber`, `verseText`) VALUES ('JOL',   3,  19, 'Egypt will be a desolation and Edom will be a desolate wilderness, for the violence done to the children of Judah, because they have shed innocent blood in their land.');
+-
+INSERT INTO `verses` (`bookCode`, `chapter`, `verseNumber`, `verseText`) VALUES ('JOL',   3,  21, 'I will cleanse their blood that I have not cleansed, for ForeverOne dwells in Zion.');
 INSERT INTO `verses` (`bookCode`, `chapter`, `verseNumber`, `verseText`) VALUES ('AMO',   1,   1, 'The words of Amos, who was among the herdsmen of Tekoa, which he saw concerning Israel in the days of Uzziah king of Judah and in the days of Jeroboam the son of Joash, king of Israel, two years before the earthquake.');
 -
 INSERT INTO `verses` (`bookCode`, `chapter`, `verseNumber`, `verseText`) VALUES ('AMO',   1,   3, 'ForeverOne says: For three transgressions of Damascus, yes, for four, I will not turn away its punishment, because they have threshed Gilead with threshing instruments of iron;');
