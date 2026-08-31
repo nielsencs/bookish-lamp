@@ -8,6 +8,14 @@ is created-from-nothing{H1254} too strong?
 4. Hand-craft new version from original Hebrew, Greek or Aramaic - an example from Genesis 1:3 God said, "Light is!" and light became!
 
 ########################################################
+############### USFM Revision completed ################
+########################################################
+PSA 1-20
+PRO
+OBA
+HAB
+
+########################################################
 ############### WEB comparison completed ###############
 ########################################################
 GEN-DEU (quick pass)
