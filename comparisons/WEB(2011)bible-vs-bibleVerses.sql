@@ -22802,7 +22802,7 @@ INSERT INTO `verses` (`bookCode`, `chapter`, `verseNumber`, `verseText`) VALUES 
 -
 -
 -
-INSERT INTO `verses` (`bookCode`, `chapter`, `verseNumber`, `verseText`) VALUES ('NAH',   1,   2, 'ForeverOne<H3068> is a jealous God<H0410> and avenges. ForeverOne<H3068> avenges and is master<H1167> of wrath. ForeverOne<H3068> takes vengeance on his adversaries, and he maintains wrath against his enemies.');
+INSERT INTO `verses` (`bookCode`, `chapter`, `verseNumber`, `verseText`) VALUES ('NAM',   1,   2, 'ForeverOne<H3068> is a jealous God<H0410> and avenges. ForeverOne<H3068> avenges and is master<H1167> of wrath. ForeverOne<H3068> takes vengeance on his adversaries, and he maintains wrath against his enemies.');
 -
 -
 -
@@ -22814,7 +22814,7 @@ INSERT INTO `verses` (`bookCode`, `chapter`, `verseNumber`, `verseText`) VALUES 
 -
 -
 -
-INSERT INTO `verses` (`bookCode`, `chapter`, `verseNumber`, `verseText`) VALUES ('NAH',   1,  14, 'ForeverOne<H3068> has commanded concerning you: \"No more descendants will bear your name. Out of the house of your gods, will I cut off the engraved image and the molten image. I will make your grave, for you are vile.\"');
+INSERT INTO `verses` (`bookCode`, `chapter`, `verseNumber`, `verseText`) VALUES ('NAM',   1,  14, 'ForeverOne<H3068> has commanded concerning you: \"No more descendants will bear your name. Out of the house of your gods, will I cut off the engraved image and the molten image. I will make your grave, for you are vile.\"');
 -
 -
 -

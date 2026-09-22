@@ -13,7 +13,9 @@ is created-from-nothing{H1254} too strong?
 PSA 1-20
 PRO
 OBA
+NAM
 HAB
+JOL
 
 ########################################################
 ############### WEB comparison completed ###############

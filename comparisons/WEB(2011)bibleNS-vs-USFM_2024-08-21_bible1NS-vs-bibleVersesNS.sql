@@ -22801,53 +22801,53 @@ INSERT INTO `verses` (`bookCode`, `chapter`, `verseNumber`, `verseText`) VALUES 
 -
 INSERT INTO `verses` (`bookCode`, `chapter`, `verseNumber`, `verseText`) VALUES ('MIC',   7,  19, 'He will again have compassion on us. He will tread our iniquities under foot. You will cast all their sins into the depths of the sea.');
 -
-INSERT INTO `verses` (`bookCode`, `chapter`, `verseNumber`, `verseText`) VALUES ('NAH',   1,   1, 'A revelation about Nineveh. The book of the vision of Nahum the Elkoshite.');
+INSERT INTO `verses` (`bookCode`, `chapter`, `verseNumber`, `verseText`) VALUES ('NAM',   1,   1, 'A revelation about Nineveh. The book of the vision of Nahum the Elkoshite.');
 -
 -
-INSERT INTO `verses` (`bookCode`, `chapter`, `verseNumber`, `verseText`) VALUES ('NAH',   1,   4, 'He rebukes the sea and makes it dry, and dries up all the rivers. Bashan and Carmel languish. The flower of Lebanon languishes.');
--
--
--
+INSERT INTO `verses` (`bookCode`, `chapter`, `verseNumber`, `verseText`) VALUES ('NAM',   1,   4, 'He rebukes the sea and makes it dry, and dries up all the rivers. Bashan and Carmel languish. The flower of Lebanon languishes.');
 -
 -
 -
-INSERT INTO `verses` (`bookCode`, `chapter`, `verseNumber`, `verseText`) VALUES ('NAH',   1,  11, 'One has gone out of you who devises evil against ForeverOne, who counsels wickedness.');
-INSERT INTO `verses` (`bookCode`, `chapter`, `verseNumber`, `verseText`) VALUES ('NAH',   1,  12, 'ForeverOne says: Though they are in full strength and likewise many, even so they will be cut down and pass away. Though I have afflicted you, I will afflict you no more.');
-INSERT INTO `verses` (`bookCode`, `chapter`, `verseNumber`, `verseText`) VALUES ('NAH',   1,  13, 'Now I will break his yoke from off you, and will burst your bonds apart.');
-INSERT INTO `verses` (`bookCode`, `chapter`, `verseNumber`, `verseText`) VALUES ('NAH',   1,  14, 'ForeverOne has commanded concerning you: No more descendants will bear your name. Out of the house of your gods, I will cut off the engraved image and the molten image. I will make your grave, for you are vile.');
--
--
-INSERT INTO `verses` (`bookCode`, `chapter`, `verseNumber`, `verseText`) VALUES ('NAH',   2,   2, 'For ForeverOne restores the excellency of Jacob as the excellency of Israel, for the destroyers have destroyed them and ruined their vine branches.');
--
-INSERT INTO `verses` (`bookCode`, `chapter`, `verseNumber`, `verseText`) VALUES ('NAH',   2,   4, 'The chariots rage in the streets. They rush back and forth in the wide ways. Their appearance is like torches. They run like the lightnings.');
--
--
-INSERT INTO `verses` (`bookCode`, `chapter`, `verseNumber`, `verseText`) VALUES ('NAH',   2,   7, 'It is decreed: she is uncovered, she is carried away; and her servants moan as with the voice of doves, beating on their breasts.');
--
-INSERT INTO `verses` (`bookCode`, `chapter`, `verseNumber`, `verseText`) VALUES ('NAH',   2,   9, 'Take the plunder of silver. Take the plunder of gold, for there is no end of treasure, an abundance of every precious thing.');
--
-INSERT INTO `verses` (`bookCode`, `chapter`, `verseNumber`, `verseText`) VALUES ('NAH',   2,  11, 'Where is the den of the lions, and the feeding place of the young lions, where the lion and the lioness walked with the lions cubs, and no one made them afraid?');
-INSERT INTO `verses` (`bookCode`, `chapter`, `verseNumber`, `verseText`) VALUES ('NAH',   2,  12, 'The lion tore in pieces enough for his cubs, and strangled prey for his lionesses, and filled his caves with the kill and his dens with prey.');
--
-INSERT INTO `verses` (`bookCode`, `chapter`, `verseNumber`, `verseText`) VALUES ('NAH',   3,   1, 'Woe to the bloody city! It is all full of lies and robbery- no end to the prey.');
--
-INSERT INTO `verses` (`bookCode`, `chapter`, `verseNumber`, `verseText`) VALUES ('NAH',   3,   3, 'the horseman charging, and the flashing sword, the glittering spear, and a multitude of slain, and a great heap of corpses, and there is no end of the bodies. They stumble on their bodies');
--
--
-INSERT INTO `verses` (`bookCode`, `chapter`, `verseNumber`, `verseText`) VALUES ('NAH',   3,   6, 'I will throw abominable filth on you and make you vile, and will make you a spectacle.');
--
-INSERT INTO `verses` (`bookCode`, `chapter`, `verseNumber`, `verseText`) VALUES ('NAH',   3,   8, 'Are you better than No-Amon, who was situated among the rivers, who had the waters around her, whose rampart was the sea, and her wall was of the sea?');
 -
 -
 -
-INSERT INTO `verses` (`bookCode`, `chapter`, `verseNumber`, `verseText`) VALUES ('NAH',   3,  12, 'All your fortresses will be like fig trees with the first-ripe figs. If they are shaken, they fall into the mouth of the eater.');
-INSERT INTO `verses` (`bookCode`, `chapter`, `verseNumber`, `verseText`) VALUES ('NAH',   3,  13, 'Behold, your troops among you are women. The gates of your land are set wide open to your enemies. The fire has devoured your bars.');
+INSERT INTO `verses` (`bookCode`, `chapter`, `verseNumber`, `verseText`) VALUES ('NAM',   1,  11, 'One has gone out of you who devises evil against ForeverOne, who counsels wickedness.');
+INSERT INTO `verses` (`bookCode`, `chapter`, `verseNumber`, `verseText`) VALUES ('NAM',   1,  12, 'ForeverOne says: Though they are in full strength and likewise many, even so they will be cut down and pass away. Though I have afflicted you, I will afflict you no more.');
+INSERT INTO `verses` (`bookCode`, `chapter`, `verseNumber`, `verseText`) VALUES ('NAM',   1,  13, 'Now I will break his yoke from off you, and will burst your bonds apart.');
+INSERT INTO `verses` (`bookCode`, `chapter`, `verseNumber`, `verseText`) VALUES ('NAM',   1,  14, 'ForeverOne has commanded concerning you: No more descendants will bear your name. Out of the house of your gods, I will cut off the engraved image and the molten image. I will make your grave, for you are vile.');
 -
 -
-INSERT INTO `verses` (`bookCode`, `chapter`, `verseNumber`, `verseText`) VALUES ('NAH',   3,  16, 'You have increased your merchants more than the stars of the skies. The grasshopper strips and flees away.');
+INSERT INTO `verses` (`bookCode`, `chapter`, `verseNumber`, `verseText`) VALUES ('NAM',   2,   2, 'For ForeverOne restores the excellency of Jacob as the excellency of Israel, for the destroyers have destroyed them and ruined their vine branches.');
+-
+INSERT INTO `verses` (`bookCode`, `chapter`, `verseNumber`, `verseText`) VALUES ('NAM',   2,   4, 'The chariots rage in the streets. They rush back and forth in the wide ways. Their appearance is like torches. They run like the lightnings.');
 -
 -
-INSERT INTO `verses` (`bookCode`, `chapter`, `verseNumber`, `verseText`) VALUES ('NAH',   3,  19, 'There is no healing your wound, for your injury is fatal. All who hear the report of you clap their hands over you, for who hasnt felt your endless cruelty?');
+INSERT INTO `verses` (`bookCode`, `chapter`, `verseNumber`, `verseText`) VALUES ('NAM',   2,   7, 'It is decreed: she is uncovered, she is carried away; and her servants moan as with the voice of doves, beating on their breasts.');
+-
+INSERT INTO `verses` (`bookCode`, `chapter`, `verseNumber`, `verseText`) VALUES ('NAM',   2,   9, 'Take the plunder of silver. Take the plunder of gold, for there is no end of treasure, an abundance of every precious thing.');
+-
+INSERT INTO `verses` (`bookCode`, `chapter`, `verseNumber`, `verseText`) VALUES ('NAM',   2,  11, 'Where is the den of the lions, and the feeding place of the young lions, where the lion and the lioness walked with the lions cubs, and no one made them afraid?');
+INSERT INTO `verses` (`bookCode`, `chapter`, `verseNumber`, `verseText`) VALUES ('NAM',   2,  12, 'The lion tore in pieces enough for his cubs, and strangled prey for his lionesses, and filled his caves with the kill and his dens with prey.');
+-
+INSERT INTO `verses` (`bookCode`, `chapter`, `verseNumber`, `verseText`) VALUES ('NAM',   3,   1, 'Woe to the bloody city! It is all full of lies and robbery- no end to the prey.');
+-
+INSERT INTO `verses` (`bookCode`, `chapter`, `verseNumber`, `verseText`) VALUES ('NAM',   3,   3, 'the horseman charging, and the flashing sword, the glittering spear, and a multitude of slain, and a great heap of corpses, and there is no end of the bodies. They stumble on their bodies');
+-
+-
+INSERT INTO `verses` (`bookCode`, `chapter`, `verseNumber`, `verseText`) VALUES ('NAM',   3,   6, 'I will throw abominable filth on you and make you vile, and will make you a spectacle.');
+-
+INSERT INTO `verses` (`bookCode`, `chapter`, `verseNumber`, `verseText`) VALUES ('NAM',   3,   8, 'Are you better than No-Amon, who was situated among the rivers, who had the waters around her, whose rampart was the sea, and her wall was of the sea?');
+-
+-
+-
+INSERT INTO `verses` (`bookCode`, `chapter`, `verseNumber`, `verseText`) VALUES ('NAM',   3,  12, 'All your fortresses will be like fig trees with the first-ripe figs. If they are shaken, they fall into the mouth of the eater.');
+INSERT INTO `verses` (`bookCode`, `chapter`, `verseNumber`, `verseText`) VALUES ('NAM',   3,  13, 'Behold, your troops among you are women. The gates of your land are set wide open to your enemies. The fire has devoured your bars.');
+-
+-
+INSERT INTO `verses` (`bookCode`, `chapter`, `verseNumber`, `verseText`) VALUES ('NAM',   3,  16, 'You have increased your merchants more than the stars of the skies. The grasshopper strips and flees away.');
+-
+-
+INSERT INTO `verses` (`bookCode`, `chapter`, `verseNumber`, `verseText`) VALUES ('NAM',   3,  19, 'There is no healing your wound, for your injury is fatal. All who hear the report of you clap their hands over you, for who hasnt felt your endless cruelty?');
 INSERT INTO `verses` (`bookCode`, `chapter`, `verseNumber`, `verseText`) VALUES ('HAB',   1,   1, 'The revelation which Habakkuk the prophet saw.');
 -
 -

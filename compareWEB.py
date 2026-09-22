@@ -169,7 +169,7 @@ def getFileName2(tFileName1):
         tFileName2 = '27-EZKeng-web.usfm'
     if tFileName1 == '30-JOLeng-web.usfm':
         tFileName2 = '30-JOLeng-web.usfm'
-    if tFileName1 == '35-NAHeng-web.usfm':
+    if tFileName1 == '35-NAMeng-web.usfm':
         tFileName2 = '35-NAMeng-web.usfm'
     if tFileName1 == '71-MAReng-web.usfm':
         tFileName2 = '71-MRKeng-web.usfm'
