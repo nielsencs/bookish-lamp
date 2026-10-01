@@ -16,6 +16,13 @@ OBA
 NAM
 HAB
 JOL
+1JO
+2JO
+3JO
+
+'(sorted!)' words done in JER:
+
+dwell
 
 ########################################################
 ############### WEB comparison completed ###############
@@ -72,7 +79,7 @@ law{G3551}(nomos) MAT, ROM 1-4, GAL, EPH, PHP, JAM
 law{G3551} - law-of-Moses{G3551}?
 tempting{G3985}(peirazo) MAT + JAM
 son{G5207}(huios) ROM - REV
-trust{G4100}(pisteuo) ROM 10:14
+trust{G4100}(pisteuo) ROM 10:14 + 1JN?
 trust{G4102}(pistis)
 Armies/army/array{H6635}(tsavah) up to NUM 1:3
 strong-encouraging{G3874} parakaleo up to LUK 3:18
@@ -422,7 +429,7 @@ throne-angel{H3742} (sorted!)
 throne-angel{G5502} (sorted!)
 shortcomer{G0268}(hamartolos) (sorted!)
 ordinance/decree{G1378}(dogma) (sorted!)
-became the father of - fathered (sorted!)
+became the father of - fathered (USFM sorted!)
 created-from-nothing{H1254} (sorted!)
 Moabitess - Moabite (sorted!)
 if it is so that - if indeed (sorted!)
