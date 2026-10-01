@@ -139,10 +139,6 @@ def escapeQuotes(tText, tQuote):
 
 def myBookAbbrFromWEB(tBookAbbr):
     tMyBookAbbr = tBookAbbr
-    if tBookAbbr == '1SA':
-        tMyBookAbbr = '1SM'
-    if tBookAbbr == '2SA':
-        tMyBookAbbr = '2SM'
     if tBookAbbr == 'SNG':
         tMyBookAbbr = 'SON'
     if tBookAbbr == 'EZK':
@@ -173,7 +169,7 @@ def myBookAbbrFromWEBName(tWEBName):
     elif tWEBName == '1_Peter':
         tMyBookAbbr = '1PE'
     elif tWEBName == '1_Samuel':
-        tMyBookAbbr = '1SM'
+        tMyBookAbbr = '1SA'
     elif tWEBName == '1_Thessalonians':
         tMyBookAbbr = '1TH'
     elif tWEBName == '1_Timothy':
@@ -189,7 +185,7 @@ def myBookAbbrFromWEBName(tWEBName):
     elif tWEBName == '2_Peter':
         tMyBookAbbr = '2PE'
     elif tWEBName == '2_Samuel':
-        tMyBookAbbr = '2SM'
+        tMyBookAbbr = '2SA'
     elif tWEBName == '2_Thessalonians':
         tMyBookAbbr = '2TH'
     elif tWEBName == '2_Timothy':

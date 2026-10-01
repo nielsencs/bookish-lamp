@@ -14518,8 +14518,8 @@ INSERT INTO `verses` (`bookCode`, `chapter`, `verseNumber`, `verseText`) VALUES 
 -
 -
 -
-INSERT INTO `verses` (`bookCode`, `chapter`, `verseNumber`, `verseText`) VALUES ('1SM',   2,  20, 'Eli blessed Elkanah and his wife, and said, \"TheIAM<H3068> give you offspring of this woman for the petition which was asked of TheIAM<H3068>.\" They went to their own home.');
---INSERT INTO `verses` (`bookCode`, `chapter`, `verseNumber`, `verseText`) VALUES ('1SM',   2,  20, 'Eli blessed Elkanah and his wife, and said, \"TheIAM<H3068> give you seed of this woman for the petition which was asked of TheIAM<H3068>.\" They went to their own home.');
+INSERT INTO `verses` (`bookCode`, `chapter`, `verseNumber`, `verseText`) VALUES ('1SA',   2,  20, 'Eli blessed Elkanah and his wife, and said, \"TheIAM<H3068> give you offspring of this woman for the petition which was asked of TheIAM<H3068>.\" They went to their own home.');
+--INSERT INTO `verses` (`bookCode`, `chapter`, `verseNumber`, `verseText`) VALUES ('1SA',   2,  20, 'Eli blessed Elkanah and his wife, and said, \"TheIAM<H3068> give you seed of this woman for the petition which was asked of TheIAM<H3068>.\" They went to their own home.');
 -
 -
 -
@@ -15542,8 +15542,8 @@ INSERT INTO `verses` (`bookCode`, `chapter`, `verseNumber`, `verseText`) VALUES 
 -
 -
 -
-INSERT INTO `verses` (`bookCode`, `chapter`, `verseNumber`, `verseText`) VALUES ('1SM',  20,  42, 'Jonathan said to David, \"Go in peace, because we have both sworn in the name of TheIAM<H3068>, saying, \'TheIAM<H3068> shall be between me and you, and between my offspring and your offspring, forever.\'\" He arose and departed; and Jonathan went into the city.');
---INSERT INTO `verses` (`bookCode`, `chapter`, `verseNumber`, `verseText`) VALUES ('1SM',  20,  42, 'Jonathan said to David, \"Go in peace, because we have both sworn in the name of TheIAM<H3068>, saying, \'TheIAM<H3068> shall be between me and you, and between my seed and your seed, forever.\'\" He arose and departed; and Jonathan went into the city.');
+INSERT INTO `verses` (`bookCode`, `chapter`, `verseNumber`, `verseText`) VALUES ('1SA',  20,  42, 'Jonathan said to David, \"Go in peace, because we have both sworn in the name of TheIAM<H3068>, saying, \'TheIAM<H3068> shall be between me and you, and between my offspring and your offspring, forever.\'\" He arose and departed; and Jonathan went into the city.');
+--INSERT INTO `verses` (`bookCode`, `chapter`, `verseNumber`, `verseText`) VALUES ('1SA',  20,  42, 'Jonathan said to David, \"Go in peace, because we have both sworn in the name of TheIAM<H3068>, saying, \'TheIAM<H3068> shall be between me and you, and between my seed and your seed, forever.\'\" He arose and departed; and Jonathan went into the city.');
 -
 -
 -
@@ -15718,8 +15718,8 @@ INSERT INTO `verses` (`bookCode`, `chapter`, `verseNumber`, `verseText`) VALUES 
 -
 -
 -
-INSERT INTO `verses` (`bookCode`, `chapter`, `verseNumber`, `verseText`) VALUES ('1SM',  24,  21, 'Swear now therefore to me by TheIAM<H3068>, that you will not cut off my offspring after me, and that you will not destroy my name out of my father\'s house.\"');
---INSERT INTO `verses` (`bookCode`, `chapter`, `verseNumber`, `verseText`) VALUES ('1SM',  24,  21, 'Swear now therefore to me by TheIAM<H3068>, that you will not cut off my seed after me, and that you will not destroy my name out of my father\'s house.\"');
+INSERT INTO `verses` (`bookCode`, `chapter`, `verseNumber`, `verseText`) VALUES ('1SA',  24,  21, 'Swear now therefore to me by TheIAM<H3068>, that you will not cut off my offspring after me, and that you will not destroy my name out of my father\'s house.\"');
+--INSERT INTO `verses` (`bookCode`, `chapter`, `verseNumber`, `verseText`) VALUES ('1SA',  24,  21, 'Swear now therefore to me by TheIAM<H3068>, that you will not cut off my seed after me, and that you will not destroy my name out of my father\'s house.\"');
 -
 -
 -
@@ -16254,8 +16254,8 @@ INSERT INTO `verses` (`bookCode`, `chapter`, `verseNumber`, `verseText`) VALUES 
 -
 -
 -
-INSERT INTO `verses` (`bookCode`, `chapter`, `verseNumber`, `verseText`) VALUES ('2SM',   4,   8, 'They brought the head of Ishbosheth to David to Hebron, and said to the king, \"Behold, the head of Ishbosheth, the son of Saul, your enemy, who sought your life! TheIAM<H3068> has avenged my lord<H0113> the king this day of Saul, and of his offspring.\"');
---INSERT INTO `verses` (`bookCode`, `chapter`, `verseNumber`, `verseText`) VALUES ('2SM',   4,   8, 'They brought the head of Ishbosheth to David to Hebron, and said to the king, \"Behold, the head of Ishbosheth, the son of Saul, your enemy, who sought your life! TheIAM<H3068> has avenged my lord<H0113> the king this day of Saul, and of his seed.\"');
+INSERT INTO `verses` (`bookCode`, `chapter`, `verseNumber`, `verseText`) VALUES ('2SA',   4,   8, 'They brought the head of Ishbosheth to David to Hebron, and said to the king, \"Behold, the head of Ishbosheth, the son of Saul, your enemy, who sought your life! TheIAM<H3068> has avenged my lord<H0113> the king this day of Saul, and of his offspring.\"');
+--INSERT INTO `verses` (`bookCode`, `chapter`, `verseNumber`, `verseText`) VALUES ('2SA',   4,   8, 'They brought the head of Ishbosheth to David to Hebron, and said to the king, \"Behold, the head of Ishbosheth, the son of Saul, your enemy, who sought your life! TheIAM<H3068> has avenged my lord<H0113> the king this day of Saul, and of his seed.\"');
 -
 -
 -
@@ -16382,8 +16382,8 @@ INSERT INTO `verses` (`bookCode`, `chapter`, `verseNumber`, `verseText`) VALUES 
 -
 -
 -
-INSERT INTO `verses` (`bookCode`, `chapter`, `verseNumber`, `verseText`) VALUES ('2SM',   7,  12, 'When your days are fulfilled, and you shall sleep with your fathers, I will set up your offspring after you, who shall proceed out of your bowels, and I will establish his kingdom.');
---INSERT INTO `verses` (`bookCode`, `chapter`, `verseNumber`, `verseText`) VALUES ('2SM',   7,  12, 'When your days are fulfilled, and you shall sleep with your fathers, I will set up your seed after you, who shall proceed out of your bowels, and I will establish his kingdom.');
+INSERT INTO `verses` (`bookCode`, `chapter`, `verseNumber`, `verseText`) VALUES ('2SA',   7,  12, 'When your days are fulfilled, and you shall sleep with your fathers, I will set up your offspring after you, who shall proceed out of your bowels, and I will establish his kingdom.');
+--INSERT INTO `verses` (`bookCode`, `chapter`, `verseNumber`, `verseText`) VALUES ('2SA',   7,  12, 'When your days are fulfilled, and you shall sleep with your fathers, I will set up your seed after you, who shall proceed out of your bowels, and I will establish his kingdom.');
 -
 -
 -
@@ -17304,8 +17304,8 @@ INSERT INTO `verses` (`bookCode`, `chapter`, `verseNumber`, `verseText`) VALUES 
 -
 -
 -
-INSERT INTO `verses` (`bookCode`, `chapter`, `verseNumber`, `verseText`) VALUES ('2SM',  22,  51, 'He gives great deliverance to his king, and shows loving kindness to his anointed<H4899>, to David and to his offspring, forevermore.\"');
---INSERT INTO `verses` (`bookCode`, `chapter`, `verseNumber`, `verseText`) VALUES ('2SM',  22,  51, 'He gives great deliverance to his king, and shows loving kindness to his anointed<H4899>, to David and to his seed, forevermore.\"');
+INSERT INTO `verses` (`bookCode`, `chapter`, `verseNumber`, `verseText`) VALUES ('2SA',  22,  51, 'He gives great deliverance to his king, and shows loving kindness to his anointed<H4899>, to David and to his offspring, forevermore.\"');
+--INSERT INTO `verses` (`bookCode`, `chapter`, `verseNumber`, `verseText`) VALUES ('2SA',  22,  51, 'He gives great deliverance to his king, and shows loving kindness to his anointed<H4899>, to David and to his seed, forevermore.\"');
 -
 -
 -

@@ -159,10 +159,6 @@ def processLine(tLine1, tLine2, tBook, tChapter1, tChapter2):
 
 def getFileName2(tFileName1):
     tFileName2 = tFileName1
-    if tFileName1 == '10-1SMeng-web.usfm':
-        tFileName2 = '10-1SAeng-web.usfm'
-    if tFileName1 == '11-2SMeng-web.usfm':
-        tFileName2 = '11-2SAeng-web.usfm'
     if tFileName1 == '23-SONeng-web.usfm':
         tFileName2 = '23-SNGeng-web.usfm'
     if tFileName1 == '27-EZEeng-web.usfm':

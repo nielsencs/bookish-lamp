@@ -33,7 +33,7 @@ LEV 5:1-6:23
 NUM 1-6:18
 2KI 5:1-16
 1CH 1-4,16
-2SM 9,22-23
+2SA 9,22-23
 NEH
 LAM 1-3:20
 JOB 1:1-2:6, 21:1-25:6
@@ -128,7 +128,7 @@ on the way - on the way/on the journey (sorted up to DEU)
 with which - with which/(delete)/...with (sorted up to EXO)
 NEXT 6 IN THIS ORDER! *
 came out of - left (sorted up to DEU and MAT)*
-go out of - leave (sorted up to 2SM and NT)*
+go out of - leave (sorted up to 2SA and NT)*
 come out of - left/leave (sorted up to JOS and NT)*
 bring.* out[regex] - bring/take ... out (sorted up to NUM and MAT)*
 brought.* out[regex] - brought/take/took/taken ... out (sorted up to NUM and MAT)*
@@ -180,14 +180,14 @@ come to pass - (delete) (sorted up to LEV)
 bring it to pass - bring it about (sorted up to ISA 45)
 : I am ForeverOne{H3068} - . I am ForeverOne{H3068} (sorted up to LEV)
 Notwithstanding - Nevertheless (sorted up to LEV)
-its length ... - ... long (sorted up to 2SM)
+its length ... - ... long (sorted up to 2SA)
 afflict your souls - deny yourselves (sorted up to LEV)
 seven days - seven days/for seven days (sorted up to LEV)
 make no - don&apos;t make any/not make any (sorted up to NUM)
 from year to year - every year (sorted up to JOS)
 happen.* that[regex] - (delete) (sorted up to NUM)
 neither - nor (sorted up to LEV)
-went up from - went up from/left/stopped (sorted up to 2SM)
+went up from - went up from/left/stopped (sorted up to 2SA)
 went out from - left (sorted up to DEU)
 forefront - front (sorted up to DEU)
 was stayed - was halted (sorted up to LEV)
@@ -467,4 +467,4 @@ God&apos;s kingdom - the kingdom of God{G2316} (sorted!)
 proconsul - deputy (sorted!)
 God - God{G2316} (sorted!)
 
-\' - &apos; (needs checking! - checked up to 1SM:14)
+\' - &apos; (needs checking! - checked up to 1SA:14)

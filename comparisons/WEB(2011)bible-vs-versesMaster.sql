@@ -14484,8 +14484,8 @@ INSERT INTO `verses` (`bookCode`, `chapter`, `verseNumber`, `verseText`) VALUES 
 -
 -
 -
-INSERT INTO `verses` (`bookCode`, `chapter`, `verseNumber`, `verseText`) VALUES ('1SM',   2,   3, '\"Talk no more so exceeding proudly. Don\'t let arrogance come out of your mouth, For TheIAM<H3068> is a God<H0430> of knowledge. By him actions are weighed.');
---INSERT INTO `verses` (`bookCode`, `chapter`, `verseNumber`, `verseText`) VALUES ('1SM',   2,   3, '\"Talk no more so exceeding proudly. Don\'t let arrogance come out of your mouth, For TheIAM<H3068> is a God<H0410> of knowledge. By him actions are weighed.');
+INSERT INTO `verses` (`bookCode`, `chapter`, `verseNumber`, `verseText`) VALUES ('1SA',   2,   3, '\"Talk no more so exceeding proudly. Don\'t let arrogance come out of your mouth, For TheIAM<H3068> is a God<H0430> of knowledge. By him actions are weighed.');
+--INSERT INTO `verses` (`bookCode`, `chapter`, `verseNumber`, `verseText`) VALUES ('1SA',   2,   3, '\"Talk no more so exceeding proudly. Don\'t let arrogance come out of your mouth, For TheIAM<H3068> is a God<H0410> of knowledge. By him actions are weighed.');
 -
 -
 -
@@ -14498,8 +14498,8 @@ INSERT INTO `verses` (`bookCode`, `chapter`, `verseNumber`, `verseText`) VALUES 
 -
 -
 -
-INSERT INTO `verses` (`bookCode`, `chapter`, `verseNumber`, `verseText`) VALUES ('1SM',   2,  10, 'Those who strive with TheIAM<H3068> shall be broken to pieces. He will thunder against them in the sky. \"TheIAM<H3068> will judge the ends of the earth. He will give strength to his king, and exalt the horn of his anointed<H4886>.\"');
---INSERT INTO `verses` (`bookCode`, `chapter`, `verseNumber`, `verseText`) VALUES ('1SM',   2,  10, 'Those who strive with TheIAM<H3068> shall be broken to pieces. He will thunder against them in the sky. \"TheIAM<H3068> will judge the ends of the earth. He will give strength to his king, and exalt the horn of his anointed<H4899>.\"');
+INSERT INTO `verses` (`bookCode`, `chapter`, `verseNumber`, `verseText`) VALUES ('1SA',   2,  10, 'Those who strive with TheIAM<H3068> shall be broken to pieces. He will thunder against them in the sky. \"TheIAM<H3068> will judge the ends of the earth. He will give strength to his king, and exalt the horn of his anointed<H4886>.\"');
+--INSERT INTO `verses` (`bookCode`, `chapter`, `verseNumber`, `verseText`) VALUES ('1SA',   2,  10, 'Those who strive with TheIAM<H3068> shall be broken to pieces. He will thunder against them in the sky. \"TheIAM<H3068> will judge the ends of the earth. He will give strength to his king, and exalt the horn of his anointed<H4899>.\"');
 -
 -
 -
@@ -14508,8 +14508,8 @@ INSERT INTO `verses` (`bookCode`, `chapter`, `verseNumber`, `verseText`) VALUES 
 -
 -
 -
-INSERT INTO `verses` (`bookCode`, `chapter`, `verseNumber`, `verseText`) VALUES ('1SM',   2,  15, 'Yes, before they burnt the fat, the priest\'s servant came, and said to the man who sacrificed, \"Give meat to roast for the priest; for he will not accept boiled meat from you, but raw.\"');
---INSERT INTO `verses` (`bookCode`, `chapter`, `verseNumber`, `verseText`) VALUES ('1SM',   2,  15, 'Yes, before they burned the fat, the priest\'s servant came, and said to the man who sacrificed, \"Give meat to roast for the priest; for he will not accept boiled meat from you, but raw.\"');
+INSERT INTO `verses` (`bookCode`, `chapter`, `verseNumber`, `verseText`) VALUES ('1SA',   2,  15, 'Yes, before they burnt the fat, the priest\'s servant came, and said to the man who sacrificed, \"Give meat to roast for the priest; for he will not accept boiled meat from you, but raw.\"');
+--INSERT INTO `verses` (`bookCode`, `chapter`, `verseNumber`, `verseText`) VALUES ('1SA',   2,  15, 'Yes, before they burned the fat, the priest\'s servant came, and said to the man who sacrificed, \"Give meat to roast for the priest; for he will not accept boiled meat from you, but raw.\"');
 -
 -
 -
@@ -14542,14 +14542,14 @@ INSERT INTO `verses` (`bookCode`, `chapter`, `verseNumber`, `verseText`) VALUES 
 -
 -
 -
-INSERT INTO `verses` (`bookCode`, `chapter`, `verseNumber`, `verseText`) VALUES ('1SM',   2,  32, 'You shall see the affliction of [my] habitation, in all the wealth which [God<H0430>] shall give Israel; and there shall not be an old man in your house forever.');
---INSERT INTO `verses` (`bookCode`, `chapter`, `verseNumber`, `verseText`) VALUES ('1SM',   2,  32, 'You shall see the affliction of [my] habitation, in all the wealth which shall be given Israel; and there shall not be an old man in your house forever.');
+INSERT INTO `verses` (`bookCode`, `chapter`, `verseNumber`, `verseText`) VALUES ('1SA',   2,  32, 'You shall see the affliction of [my] habitation, in all the wealth which [God<H0430>] shall give Israel; and there shall not be an old man in your house forever.');
+--INSERT INTO `verses` (`bookCode`, `chapter`, `verseNumber`, `verseText`) VALUES ('1SA',   2,  32, 'You shall see the affliction of [my] habitation, in all the wealth which shall be given Israel; and there shall not be an old man in your house forever.');
 -
 -
 -
 -
-INSERT INTO `verses` (`bookCode`, `chapter`, `verseNumber`, `verseText`) VALUES ('1SM',   2,  35, 'I will raise me up a faithful priest, that shall do according to that which is in my heart and in my mind. I will build him a sure house; and he shall walk before my anointed<H4886> forever.');
---INSERT INTO `verses` (`bookCode`, `chapter`, `verseNumber`, `verseText`) VALUES ('1SM',   2,  35, 'I will raise me up a faithful priest, that shall do according to that which is in my heart and in my mind. I will build him a sure house; and he shall walk before my anointed<H4899> forever.');
+INSERT INTO `verses` (`bookCode`, `chapter`, `verseNumber`, `verseText`) VALUES ('1SA',   2,  35, 'I will raise me up a faithful priest, that shall do according to that which is in my heart and in my mind. I will build him a sure house; and he shall walk before my anointed<H4886> forever.');
+--INSERT INTO `verses` (`bookCode`, `chapter`, `verseNumber`, `verseText`) VALUES ('1SA',   2,  35, 'I will raise me up a faithful priest, that shall do according to that which is in my heart and in my mind. I will build him a sure house; and he shall walk before my anointed<H4899> forever.');
 -
 -
 -
@@ -14606,8 +14606,8 @@ INSERT INTO `verses` (`bookCode`, `chapter`, `verseNumber`, `verseText`) VALUES 
 -
 -
 -
-INSERT INTO `verses` (`bookCode`, `chapter`, `verseNumber`, `verseText`) VALUES ('1SM',   4,   7, 'The Philistines were afraid, for they said, \"God<H0430> has come into the camp.\" They said, \"Woe to us! For there has not been such a thing before.');
---INSERT INTO `verses` (`bookCode`, `chapter`, `verseNumber`, `verseText`) VALUES ('1SM',   4,   7, 'The Philistines were afraid, for they said, \"god<H0430> has come into the camp.\" They said, \"Woe to us! For there has not been such a thing before.');
+INSERT INTO `verses` (`bookCode`, `chapter`, `verseNumber`, `verseText`) VALUES ('1SA',   4,   7, 'The Philistines were afraid, for they said, \"God<H0430> has come into the camp.\" They said, \"Woe to us! For there has not been such a thing before.');
+--INSERT INTO `verses` (`bookCode`, `chapter`, `verseNumber`, `verseText`) VALUES ('1SA',   4,   7, 'The Philistines were afraid, for they said, \"god<H0430> has come into the camp.\" They said, \"Woe to us! For there has not been such a thing before.');
 -
 -
 -
@@ -14652,14 +14652,14 @@ INSERT INTO `verses` (`bookCode`, `chapter`, `verseNumber`, `verseText`) VALUES 
 -
 -
 -
-INSERT INTO `verses` (`bookCode`, `chapter`, `verseNumber`, `verseText`) VALUES ('1SM',   5,   8, 'They sent therefore and gathered all the lords of the Philistines to them, and said, \"What shall we do with the ark of the God<H0430> of Israel?\" They answered, \"Let the ark of the God<H0430> of Israel be carried over to Gath.\" They carried the ark of the God<H0430> of Israel [there].');
---INSERT INTO `verses` (`bookCode`, `chapter`, `verseNumber`, `verseText`) VALUES ('1SM',   5,   8, 'They sent therefore and gathered all the lords<H5633> of the Philistines to them, and said, \"What shall we do with the ark of the God<H0430> of Israel?\" They answered, \"Let the ark of the God<H0430> of Israel be carried over to Gath.\" They carried the ark of the God<H0430> of Israel [there].');
+INSERT INTO `verses` (`bookCode`, `chapter`, `verseNumber`, `verseText`) VALUES ('1SA',   5,   8, 'They sent therefore and gathered all the lords of the Philistines to them, and said, \"What shall we do with the ark of the God<H0430> of Israel?\" They answered, \"Let the ark of the God<H0430> of Israel be carried over to Gath.\" They carried the ark of the God<H0430> of Israel [there].');
+--INSERT INTO `verses` (`bookCode`, `chapter`, `verseNumber`, `verseText`) VALUES ('1SA',   5,   8, 'They sent therefore and gathered all the lords<H5633> of the Philistines to them, and said, \"What shall we do with the ark of the God<H0430> of Israel?\" They answered, \"Let the ark of the God<H0430> of Israel be carried over to Gath.\" They carried the ark of the God<H0430> of Israel [there].');
 -
 -
 -
 -
-INSERT INTO `verses` (`bookCode`, `chapter`, `verseNumber`, `verseText`) VALUES ('1SM',   5,  11, 'They sent therefore and gathered together all the lords of the Philistines, and they said, \"Send away the ark of the God<H0430> of Israel, and let it go again to its own place, that it not kill us and our people.\" For there was a deadly confusion throughout all the city; the hand of God<H0430> was very heavy there.');
---INSERT INTO `verses` (`bookCode`, `chapter`, `verseNumber`, `verseText`) VALUES ('1SM',   5,  11, 'They sent therefore and gathered together all the lords<H5633> of the Philistines, and they said, \"Send away the ark of the God<H0430> of Israel, and let it go again to its own place, that it not kill us and our people.\" For there was a deadly confusion throughout all the city; the hand of God<H0430> was very heavy there.');
+INSERT INTO `verses` (`bookCode`, `chapter`, `verseNumber`, `verseText`) VALUES ('1SA',   5,  11, 'They sent therefore and gathered together all the lords of the Philistines, and they said, \"Send away the ark of the God<H0430> of Israel, and let it go again to its own place, that it not kill us and our people.\" For there was a deadly confusion throughout all the city; the hand of God<H0430> was very heavy there.');
+--INSERT INTO `verses` (`bookCode`, `chapter`, `verseNumber`, `verseText`) VALUES ('1SA',   5,  11, 'They sent therefore and gathered together all the lords<H5633> of the Philistines, and they said, \"Send away the ark of the God<H0430> of Israel, and let it go again to its own place, that it not kill us and our people.\" For there was a deadly confusion throughout all the city; the hand of God<H0430> was very heavy there.');
 -
 -
 -
@@ -14668,8 +14668,8 @@ INSERT INTO `verses` (`bookCode`, `chapter`, `verseNumber`, `verseText`) VALUES 
 -
 -
 -
-INSERT INTO `verses` (`bookCode`, `chapter`, `verseNumber`, `verseText`) VALUES ('1SM',   6,   4, 'Then they said, \"What shall be the trespass offering which we shall return to him?\" They said, \"Five golden tumors, and five golden mice, [according to] the number of the lords of the Philistines; for one plague was on you all, and on your lords.');
---INSERT INTO `verses` (`bookCode`, `chapter`, `verseNumber`, `verseText`) VALUES ('1SM',   6,   4, 'Then they said, \"What shall be the trespass offering which we shall return to him?\" They said, \"Five golden tumors, and five golden mice, [according to] the number of the lords<H5633> of the Philistines; for one plague was on you all, and on your lords<H5633>.');
+INSERT INTO `verses` (`bookCode`, `chapter`, `verseNumber`, `verseText`) VALUES ('1SA',   6,   4, 'Then they said, \"What shall be the trespass offering which we shall return to him?\" They said, \"Five golden tumors, and five golden mice, [according to] the number of the lords of the Philistines; for one plague was on you all, and on your lords.');
+--INSERT INTO `verses` (`bookCode`, `chapter`, `verseNumber`, `verseText`) VALUES ('1SA',   6,   4, 'Then they said, \"What shall be the trespass offering which we shall return to him?\" They said, \"Five golden tumors, and five golden mice, [according to] the number of the lords<H5633> of the Philistines; for one plague was on you all, and on your lords<H5633>.');
 -
 -
 -
@@ -14684,20 +14684,20 @@ INSERT INTO `verses` (`bookCode`, `chapter`, `verseNumber`, `verseText`) VALUES 
 -
 -
 -
-INSERT INTO `verses` (`bookCode`, `chapter`, `verseNumber`, `verseText`) VALUES ('1SM',   6,  12, 'The cows took the straight way by the way to Beth Shemesh; they went along the highway, lowing as they went, and didn\'t turn aside to the right hand or to the left; and the lords of the Philistines went after them to the border of Beth Shemesh.');
---INSERT INTO `verses` (`bookCode`, `chapter`, `verseNumber`, `verseText`) VALUES ('1SM',   6,  12, 'The cows took the straight way by the way to Beth Shemesh; they went along the highway, lowing as they went, and didn\'t turn aside to the right hand or to the left; and the lords<H5633> of the Philistines went after them to the border of Beth Shemesh.');
+INSERT INTO `verses` (`bookCode`, `chapter`, `verseNumber`, `verseText`) VALUES ('1SA',   6,  12, 'The cows took the straight way by the way to Beth Shemesh; they went along the highway, lowing as they went, and didn\'t turn aside to the right hand or to the left; and the lords of the Philistines went after them to the border of Beth Shemesh.');
+--INSERT INTO `verses` (`bookCode`, `chapter`, `verseNumber`, `verseText`) VALUES ('1SA',   6,  12, 'The cows took the straight way by the way to Beth Shemesh; they went along the highway, lowing as they went, and didn\'t turn aside to the right hand or to the left; and the lords<H5633> of the Philistines went after them to the border of Beth Shemesh.');
 -
 -
 -
 -
 -
 -
-INSERT INTO `verses` (`bookCode`, `chapter`, `verseNumber`, `verseText`) VALUES ('1SM',   6,  16, 'When the five lords of the Philistines had seen it, they returned to Ekron the same day.');
---INSERT INTO `verses` (`bookCode`, `chapter`, `verseNumber`, `verseText`) VALUES ('1SM',   6,  16, 'When the five lords<H5633> of the Philistines had seen it, they returned to Ekron the same day.');
+INSERT INTO `verses` (`bookCode`, `chapter`, `verseNumber`, `verseText`) VALUES ('1SA',   6,  16, 'When the five lords of the Philistines had seen it, they returned to Ekron the same day.');
+--INSERT INTO `verses` (`bookCode`, `chapter`, `verseNumber`, `verseText`) VALUES ('1SA',   6,  16, 'When the five lords<H5633> of the Philistines had seen it, they returned to Ekron the same day.');
 -
 -
-INSERT INTO `verses` (`bookCode`, `chapter`, `verseNumber`, `verseText`) VALUES ('1SM',   6,  18, 'and the golden mice, according to the number of all the cities of the Philistines belonging to the five lords, both of fortified cities and of country villages, even to the great stone, whereon they set down the ark of TheIAM<H3068>, [which stone remains] to this day in the field of Joshua of Beth Shemesh.');
---INSERT INTO `verses` (`bookCode`, `chapter`, `verseNumber`, `verseText`) VALUES ('1SM',   6,  18, 'and the golden mice, according to the number of all the cities of the Philistines belonging to the five lords<H5633>, both of fortified cities and of country villages, even to the great stone, whereon they set down the ark of TheIAM<H3068>, [which stone remains] to this day in the field of Joshua of Beth Shemesh.');
+INSERT INTO `verses` (`bookCode`, `chapter`, `verseNumber`, `verseText`) VALUES ('1SA',   6,  18, 'and the golden mice, according to the number of all the cities of the Philistines belonging to the five lords, both of fortified cities and of country villages, even to the great stone, whereon they set down the ark of TheIAM<H3068>, [which stone remains] to this day in the field of Joshua of Beth Shemesh.');
+--INSERT INTO `verses` (`bookCode`, `chapter`, `verseNumber`, `verseText`) VALUES ('1SA',   6,  18, 'and the golden mice, according to the number of all the cities of the Philistines belonging to the five lords<H5633>, both of fortified cities and of country villages, even to the great stone, whereon they set down the ark of TheIAM<H3068>, [which stone remains] to this day in the field of Joshua of Beth Shemesh.');
 -
 -
 -
@@ -14716,16 +14716,16 @@ INSERT INTO `verses` (`bookCode`, `chapter`, `verseNumber`, `verseText`) VALUES 
 -
 -
 -
-INSERT INTO `verses` (`bookCode`, `chapter`, `verseNumber`, `verseText`) VALUES ('1SM',   7,   7, 'When the Philistines heard that the children of Israel were gathered together at Mizpah, the lords of the Philistines went up against Israel. When the children of Israel heard it, they were afraid of the Philistines.');
---INSERT INTO `verses` (`bookCode`, `chapter`, `verseNumber`, `verseText`) VALUES ('1SM',   7,   7, 'When the Philistines heard that the children of Israel were gathered together at Mizpah, the lords<H5633> of the Philistines went up against Israel. When the children of Israel heard it, they were afraid of the Philistines.');
+INSERT INTO `verses` (`bookCode`, `chapter`, `verseNumber`, `verseText`) VALUES ('1SA',   7,   7, 'When the Philistines heard that the children of Israel were gathered together at Mizpah, the lords of the Philistines went up against Israel. When the children of Israel heard it, they were afraid of the Philistines.');
+--INSERT INTO `verses` (`bookCode`, `chapter`, `verseNumber`, `verseText`) VALUES ('1SA',   7,   7, 'When the Philistines heard that the children of Israel were gathered together at Mizpah, the lords<H5633> of the Philistines went up against Israel. When the children of Israel heard it, they were afraid of the Philistines.');
 -
 -
 -
 -
 -
 -
-INSERT INTO `verses` (`bookCode`, `chapter`, `verseNumber`, `verseText`) VALUES ('1SM',   7,  11, 'The men of Israel went out of Mizpah, and pursued the Philistines, and struck them, until they came under Beth Kar.');
---INSERT INTO `verses` (`bookCode`, `chapter`, `verseNumber`, `verseText`) VALUES ('1SM',   7,  11, 'The men of Israel went out of Mizpah, and pursued<H7291> the Philistines, and struck them, until they came under Beth Kar.');
+INSERT INTO `verses` (`bookCode`, `chapter`, `verseNumber`, `verseText`) VALUES ('1SA',   7,  11, 'The men of Israel went out of Mizpah, and pursued the Philistines, and struck them, until they came under Beth Kar.');
+--INSERT INTO `verses` (`bookCode`, `chapter`, `verseNumber`, `verseText`) VALUES ('1SA',   7,  11, 'The men of Israel went out of Mizpah, and pursued<H7291> the Philistines, and struck them, until they came under Beth Kar.');
 -
 -
 -
@@ -14766,8 +14766,8 @@ INSERT INTO `verses` (`bookCode`, `chapter`, `verseNumber`, `verseText`) VALUES 
 -
 -
 -
-INSERT INTO `verses` (`bookCode`, `chapter`, `verseNumber`, `verseText`) VALUES ('1SM',   8,  15, 'He will take the tenth of your offspring, and of your vineyards, and give to his officers, and to his servants.');
---INSERT INTO `verses` (`bookCode`, `chapter`, `verseNumber`, `verseText`) VALUES ('1SM',   8,  15, 'He will take the tenth of your seed, and of your vineyards, and give to his officers, and to his servants.');
+INSERT INTO `verses` (`bookCode`, `chapter`, `verseNumber`, `verseText`) VALUES ('1SA',   8,  15, 'He will take the tenth of your offspring, and of your vineyards, and give to his officers, and to his servants.');
+--INSERT INTO `verses` (`bookCode`, `chapter`, `verseNumber`, `verseText`) VALUES ('1SA',   8,  15, 'He will take the tenth of your seed, and of your vineyards, and give to his officers, and to his servants.');
 -
 -
 -
@@ -14812,8 +14812,8 @@ INSERT INTO `verses` (`bookCode`, `chapter`, `verseNumber`, `verseText`) VALUES 
 -
 -
 -
-INSERT INTO `verses` (`bookCode`, `chapter`, `verseNumber`, `verseText`) VALUES ('1SM',   9,  16, '\"Tomorrow about this time I will send you a man out of the land of Benjamin, and you shall anoint him to be prince over my people Israel; and he shall save my people out of the hand of the Philistines: for I have looked on my people, because their cry has come to me.\"');
---INSERT INTO `verses` (`bookCode`, `chapter`, `verseNumber`, `verseText`) VALUES ('1SM',   9,  16, '\"Tomorrow about this time I will send you a man out of the land of Benjamin, and you shall anoint<H4886> him to be prince over my people Israel; and he shall save my people out of the hand of the Philistines: for I have looked on my people, because their cry has come to me.\"');
+INSERT INTO `verses` (`bookCode`, `chapter`, `verseNumber`, `verseText`) VALUES ('1SA',   9,  16, '\"Tomorrow about this time I will send you a man out of the land of Benjamin, and you shall anoint him to be prince over my people Israel; and he shall save my people out of the hand of the Philistines: for I have looked on my people, because their cry has come to me.\"');
+--INSERT INTO `verses` (`bookCode`, `chapter`, `verseNumber`, `verseText`) VALUES ('1SA',   9,  16, '\"Tomorrow about this time I will send you a man out of the land of Benjamin, and you shall anoint<H4886> him to be prince over my people Israel; and he shall save my people out of the hand of the Philistines: for I have looked on my people, because their cry has come to me.\"');
 -
 -
 -
@@ -14836,8 +14836,8 @@ INSERT INTO `verses` (`bookCode`, `chapter`, `verseNumber`, `verseText`) VALUES 
 -
 -
 -
-INSERT INTO `verses` (`bookCode`, `chapter`, `verseNumber`, `verseText`) VALUES ('1SM',  10,   1, 'Then Samuel took the vial of oil, and poured it on his head, and kissed him, and said, \"Isn\'t it that TheIAM<H3068> has anointed<H4886> you to be prince over his inheritance?');
---INSERT INTO `verses` (`bookCode`, `chapter`, `verseNumber`, `verseText`) VALUES ('1SM',  10,   1, 'Then Samuel took the vial of oil, and poured it on his head, and kissed him, and said, \"Hasn\'t TheIAM<H3068> anointed<H4886> you to be prince over his inheritance?');
+INSERT INTO `verses` (`bookCode`, `chapter`, `verseNumber`, `verseText`) VALUES ('1SA',  10,   1, 'Then Samuel took the vial of oil, and poured it on his head, and kissed him, and said, \"Isn\'t it that TheIAM<H3068> has anointed<H4886> you to be prince over his inheritance?');
+--INSERT INTO `verses` (`bookCode`, `chapter`, `verseNumber`, `verseText`) VALUES ('1SA',  10,   1, 'Then Samuel took the vial of oil, and poured it on his head, and kissed him, and said, \"Hasn\'t TheIAM<H3068> anointed<H4886> you to be prince over his inheritance?');
 -
 -
 -
@@ -14924,12 +14924,12 @@ INSERT INTO `verses` (`bookCode`, `chapter`, `verseNumber`, `verseText`) VALUES 
 -
 -
 -
-INSERT INTO `verses` (`bookCode`, `chapter`, `verseNumber`, `verseText`) VALUES ('1SM',  12,   3, 'Here I am. Witness against me before TheIAM<H3068>, and before his anointed<H4886>. Whose ox have I taken? Whose donkey have I taken? Whom have I defrauded? Whom have I oppressed? Of whose hand have I taken a ransom to blind my eyes therewith? I will restore it to you.\"');
---INSERT INTO `verses` (`bookCode`, `chapter`, `verseNumber`, `verseText`) VALUES ('1SM',  12,   3, 'Here I am. Witness against me before TheIAM<H3068>, and before his anointed<H4899>. Whose ox have I taken? Whose donkey have I taken? Whom have I defrauded? Whom have I oppressed? Of whose hand have I taken a ransom to blind my eyes therewith? I will restore it to you.\"');
+INSERT INTO `verses` (`bookCode`, `chapter`, `verseNumber`, `verseText`) VALUES ('1SA',  12,   3, 'Here I am. Witness against me before TheIAM<H3068>, and before his anointed<H4886>. Whose ox have I taken? Whose donkey have I taken? Whom have I defrauded? Whom have I oppressed? Of whose hand have I taken a ransom to blind my eyes therewith? I will restore it to you.\"');
+--INSERT INTO `verses` (`bookCode`, `chapter`, `verseNumber`, `verseText`) VALUES ('1SA',  12,   3, 'Here I am. Witness against me before TheIAM<H3068>, and before his anointed<H4899>. Whose ox have I taken? Whose donkey have I taken? Whom have I defrauded? Whom have I oppressed? Of whose hand have I taken a ransom to blind my eyes therewith? I will restore it to you.\"');
 -
 -
-INSERT INTO `verses` (`bookCode`, `chapter`, `verseNumber`, `verseText`) VALUES ('1SM',  12,   5, 'He said to them, \"TheIAM<H3068> is witness against you, and his anointed<H4886> is witness this day, that you have not found anything in my hand.\" They said, \"He is witness.\"');
---INSERT INTO `verses` (`bookCode`, `chapter`, `verseNumber`, `verseText`) VALUES ('1SM',  12,   5, 'He said to them, \"TheIAM<H3068> is witness against you, and his anointed<H4899> is witness this day, that you have not found anything in my hand.\" They said, \"He is witness.\"');
+INSERT INTO `verses` (`bookCode`, `chapter`, `verseNumber`, `verseText`) VALUES ('1SA',  12,   5, 'He said to them, \"TheIAM<H3068> is witness against you, and his anointed<H4886> is witness this day, that you have not found anything in my hand.\" They said, \"He is witness.\"');
+--INSERT INTO `verses` (`bookCode`, `chapter`, `verseNumber`, `verseText`) VALUES ('1SA',  12,   5, 'He said to them, \"TheIAM<H3068> is witness against you, and his anointed<H4899> is witness this day, that you have not found anything in my hand.\" They said, \"He is witness.\"');
 -
 -
 -
@@ -15044,8 +15044,8 @@ INSERT INTO `verses` (`bookCode`, `chapter`, `verseNumber`, `verseText`) VALUES 
 -
 -
 -
-INSERT INTO `verses` (`bookCode`, `chapter`, `verseNumber`, `verseText`) VALUES ('1SM',  14,  15, 'There was a trembling in the camp, in the field, and among all the people; the garrison, and the spoilers, they also trembled; and the earth quaked: so there was an exceeding great trembling.');
---INSERT INTO `verses` (`bookCode`, `chapter`, `verseNumber`, `verseText`) VALUES ('1SM',  14,  15, 'There was a trembling in the camp, in the field, and among all the people; the garrison, and the spoilers, they also trembled; and the earth quaked: so there was an exceeding great<H0430> trembling.');
+INSERT INTO `verses` (`bookCode`, `chapter`, `verseNumber`, `verseText`) VALUES ('1SA',  14,  15, 'There was a trembling in the camp, in the field, and among all the people; the garrison, and the spoilers, they also trembled; and the earth quaked: so there was an exceeding great trembling.');
+--INSERT INTO `verses` (`bookCode`, `chapter`, `verseNumber`, `verseText`) VALUES ('1SA',  14,  15, 'There was a trembling in the camp, in the field, and among all the people; the garrison, and the spoilers, they also trembled; and the earth quaked: so there was an exceeding great<H0430> trembling.');
 -
 -
 -
@@ -15118,10 +15118,10 @@ INSERT INTO `verses` (`bookCode`, `chapter`, `verseNumber`, `verseText`) VALUES 
 -
 -
 -
-INSERT INTO `verses` (`bookCode`, `chapter`, `verseNumber`, `verseText`) VALUES ('1SM',  14,  52, 'There was severe war against the Philistines all the days of Saul: and when Saul saw any mighty man, or any valiant man, he took him to him.');
---INSERT INTO `verses` (`bookCode`, `chapter`, `verseNumber`, `verseText`) VALUES ('1SM',  14,  52, ' There was severe war against the Philistines all the days of Saul: and when Saul saw any mighty man, or any valiant man, he took him to him.');
-INSERT INTO `verses` (`bookCode`, `chapter`, `verseNumber`, `verseText`) VALUES ('1SM',  15,   1, 'Samuel said to Saul, \"TheIAM<H3068> sent me to anoint you to be king over his people, over Israel. Now therefore listen to the voice of the words of TheIAM<H3068>.');
---INSERT INTO `verses` (`bookCode`, `chapter`, `verseNumber`, `verseText`) VALUES ('1SM',  15,   1, 'Samuel said to Saul, \"TheIAM<H3068> sent me to anoint<H4886> you to be king over his people, over Israel. Now therefore listen to the voice of the words of TheIAM<H3068>.');
+INSERT INTO `verses` (`bookCode`, `chapter`, `verseNumber`, `verseText`) VALUES ('1SA',  14,  52, 'There was severe war against the Philistines all the days of Saul: and when Saul saw any mighty man, or any valiant man, he took him to him.');
+--INSERT INTO `verses` (`bookCode`, `chapter`, `verseNumber`, `verseText`) VALUES ('1SA',  14,  52, ' There was severe war against the Philistines all the days of Saul: and when Saul saw any mighty man, or any valiant man, he took him to him.');
+INSERT INTO `verses` (`bookCode`, `chapter`, `verseNumber`, `verseText`) VALUES ('1SA',  15,   1, 'Samuel said to Saul, \"TheIAM<H3068> sent me to anoint you to be king over his people, over Israel. Now therefore listen to the voice of the words of TheIAM<H3068>.');
+--INSERT INTO `verses` (`bookCode`, `chapter`, `verseNumber`, `verseText`) VALUES ('1SA',  15,   1, 'Samuel said to Saul, \"TheIAM<H3068> sent me to anoint<H4886> you to be king over his people, over Israel. Now therefore listen to the voice of the words of TheIAM<H3068>.');
 -
 -
 -
@@ -15182,8 +15182,8 @@ INSERT INTO `verses` (`bookCode`, `chapter`, `verseNumber`, `verseText`) VALUES 
 -
 -
 -
-INSERT INTO `verses` (`bookCode`, `chapter`, `verseNumber`, `verseText`) VALUES ('1SM',  15,  32, 'Then Samuel said, \"Bring here to me Agag the king of the Amalekites!\" Agag came to him cheerfully. Agag said, \"Surely the bitterness of death is past.\"');
---INSERT INTO `verses` (`bookCode`, `chapter`, `verseNumber`, `verseText`) VALUES ('1SM',  15,  32, 'Then Samuel said, \"Bring here to me Agag the king of the Amalekites!\" Agag came to him cheerfully. Agag said, \"Surely<H0403> the bitterness of death is past.\"');
+INSERT INTO `verses` (`bookCode`, `chapter`, `verseNumber`, `verseText`) VALUES ('1SA',  15,  32, 'Then Samuel said, \"Bring here to me Agag the king of the Amalekites!\" Agag came to him cheerfully. Agag said, \"Surely the bitterness of death is past.\"');
+--INSERT INTO `verses` (`bookCode`, `chapter`, `verseNumber`, `verseText`) VALUES ('1SA',  15,  32, 'Then Samuel said, \"Bring here to me Agag the king of the Amalekites!\" Agag came to him cheerfully. Agag said, \"Surely<H0403> the bitterness of death is past.\"');
 -
 -
 -
@@ -15194,14 +15194,14 @@ INSERT INTO `verses` (`bookCode`, `chapter`, `verseNumber`, `verseText`) VALUES 
 -
 -
 -
-INSERT INTO `verses` (`bookCode`, `chapter`, `verseNumber`, `verseText`) VALUES ('1SM',  16,   3, 'Call Jesse to the sacrifice, and I will show you what you shall do. You shall anoint to me him whom I name to you.\"');
---INSERT INTO `verses` (`bookCode`, `chapter`, `verseNumber`, `verseText`) VALUES ('1SM',  16,   3, 'Call Jesse to the sacrifice, and I will show you what you shall do. You shall anoint<H4886> to me him whom I name to you.\"');
+INSERT INTO `verses` (`bookCode`, `chapter`, `verseNumber`, `verseText`) VALUES ('1SA',  16,   3, 'Call Jesse to the sacrifice, and I will show you what you shall do. You shall anoint to me him whom I name to you.\"');
+--INSERT INTO `verses` (`bookCode`, `chapter`, `verseNumber`, `verseText`) VALUES ('1SA',  16,   3, 'Call Jesse to the sacrifice, and I will show you what you shall do. You shall anoint<H4886> to me him whom I name to you.\"');
 -
 -
 -
 -
-INSERT INTO `verses` (`bookCode`, `chapter`, `verseNumber`, `verseText`) VALUES ('1SM',  16,   6, 'It happened, when they had come, that he looked at Eliab, and said, \"Surely TheIAM<H3068>\'s anointed<H4886> is before him.\"');
---INSERT INTO `verses` (`bookCode`, `chapter`, `verseNumber`, `verseText`) VALUES ('1SM',  16,   6, 'It happened, when they had come, that he looked at Eliab, and said, \"Surely TheIAM<H3068>\'s anointed<H4899> is before him.\"');
+INSERT INTO `verses` (`bookCode`, `chapter`, `verseNumber`, `verseText`) VALUES ('1SA',  16,   6, 'It happened, when they had come, that he looked at Eliab, and said, \"Surely TheIAM<H3068>\'s anointed<H4886> is before him.\"');
+--INSERT INTO `verses` (`bookCode`, `chapter`, `verseNumber`, `verseText`) VALUES ('1SA',  16,   6, 'It happened, when they had come, that he looked at Eliab, and said, \"Surely TheIAM<H3068>\'s anointed<H4899> is before him.\"');
 -
 -
 -
@@ -15212,8 +15212,8 @@ INSERT INTO `verses` (`bookCode`, `chapter`, `verseNumber`, `verseText`) VALUES 
 -
 -
 -
-INSERT INTO `verses` (`bookCode`, `chapter`, `verseNumber`, `verseText`) VALUES ('1SM',  16,  12, 'He sent, and brought him in. Now he was ruddy, and withal of a beautiful face, and goodly to look on. TheIAM<H3068> said, \"Arise, anoint him; for this is he.\"');
---INSERT INTO `verses` (`bookCode`, `chapter`, `verseNumber`, `verseText`) VALUES ('1SM',  16,  12, 'He sent, and brought him in. Now he was ruddy, and withal of a beautiful face, and goodly to look on. TheIAM<H3068> said, \"Arise, anoint<H4886> him; for he is the one.\"');
+INSERT INTO `verses` (`bookCode`, `chapter`, `verseNumber`, `verseText`) VALUES ('1SA',  16,  12, 'He sent, and brought him in. Now he was ruddy, and withal of a beautiful face, and goodly to look on. TheIAM<H3068> said, \"Arise, anoint him; for this is he.\"');
+--INSERT INTO `verses` (`bookCode`, `chapter`, `verseNumber`, `verseText`) VALUES ('1SA',  16,  12, 'He sent, and brought him in. Now he was ruddy, and withal of a beautiful face, and goodly to look on. TheIAM<H3068> said, \"Arise, anoint<H4886> him; for he is the one.\"');
 -
 -
 -
@@ -15338,8 +15338,8 @@ INSERT INTO `verses` (`bookCode`, `chapter`, `verseNumber`, `verseText`) VALUES 
 -
 -
 -
-INSERT INTO `verses` (`bookCode`, `chapter`, `verseNumber`, `verseText`) VALUES ('1SM',  17,  52, 'The men of Israel and of Judah arose, and shouted, and pursued the Philistines, until you come to Gai, and to the gates of Ekron. The wounded of the Philistines fell down by the way to Shaaraim, even to Gath, and to Ekron.');
---INSERT INTO `verses` (`bookCode`, `chapter`, `verseNumber`, `verseText`) VALUES ('1SM',  17,  52, 'The men of Israel and of Judah arose, and shouted, and pursued<H7291> the Philistines, until you come to Gai, and to the gates of Ekron. The wounded of the Philistines fell down by the way to Shaaraim, even to Gath, and to Ekron.');
+INSERT INTO `verses` (`bookCode`, `chapter`, `verseNumber`, `verseText`) VALUES ('1SA',  17,  52, 'The men of Israel and of Judah arose, and shouted, and pursued the Philistines, until you come to Gai, and to the gates of Ekron. The wounded of the Philistines fell down by the way to Shaaraim, even to Gath, and to Ekron.');
+--INSERT INTO `verses` (`bookCode`, `chapter`, `verseNumber`, `verseText`) VALUES ('1SA',  17,  52, 'The men of Israel and of Judah arose, and shouted, and pursued<H7291> the Philistines, until you come to Gai, and to the gates of Ekron. The wounded of the Philistines fell down by the way to Shaaraim, even to Gath, and to Ekron.');
 -
 -
 -
@@ -15534,8 +15534,8 @@ INSERT INTO `verses` (`bookCode`, `chapter`, `verseNumber`, `verseText`) VALUES 
 -
 -
 -
-INSERT INTO `verses` (`bookCode`, `chapter`, `verseNumber`, `verseText`) VALUES ('1SM',  20,  38, 'Jonathan cried after the boy, \"Go fast! Hurry! Don\'t delay!\" Jonathan\'s boy gathered up the arrows, and came to his master.');
---INSERT INTO `verses` (`bookCode`, `chapter`, `verseNumber`, `verseText`) VALUES ('1SM',  20,  38, 'Jonathan cried after the boy, \"Go fast! Hurry! Don\'t delay!\" Jonathan\'s boy gathered up the arrows, and came to his master<H0113>.');
+INSERT INTO `verses` (`bookCode`, `chapter`, `verseNumber`, `verseText`) VALUES ('1SA',  20,  38, 'Jonathan cried after the boy, \"Go fast! Hurry! Don\'t delay!\" Jonathan\'s boy gathered up the arrows, and came to his master.');
+--INSERT INTO `verses` (`bookCode`, `chapter`, `verseNumber`, `verseText`) VALUES ('1SA',  20,  38, 'Jonathan cried after the boy, \"Go fast! Hurry! Don\'t delay!\" Jonathan\'s boy gathered up the arrows, and came to his master<H0113>.');
 -
 -
 -
@@ -15640,10 +15640,10 @@ INSERT INTO `verses` (`bookCode`, `chapter`, `verseNumber`, `verseText`) VALUES 
 -
 -
 -
-INSERT INTO `verses` (`bookCode`, `chapter`, `verseNumber`, `verseText`) VALUES ('1SM',  23,  11, 'Will the men of Keilah deliver me up into his hand? Will Saul come down, as your servant has heard? TheIAM<H3068>, the God<H0430> of Israel, I beg you, tell your servant.\" TheIAM<H3068> said, \"He will come down.\"');
---INSERT INTO `verses` (`bookCode`, `chapter`, `verseNumber`, `verseText`) VALUES ('1SM',  23,  11, 'Will the men<H1167> of Keilah deliver me up into his hand? Will Saul come down, as your servant has heard? TheIAM<H3068>, the God<H0430> of Israel, I beg you, tell your servant.\" TheIAM<H3068> said, \"He will come down.\"');
-INSERT INTO `verses` (`bookCode`, `chapter`, `verseNumber`, `verseText`) VALUES ('1SM',  23,  12, 'Then David said, \"Will the men of Keilah deliver me and my men into the hand of Saul?\" TheIAM<H3068> said, \"They will deliver you up.\"');
---INSERT INTO `verses` (`bookCode`, `chapter`, `verseNumber`, `verseText`) VALUES ('1SM',  23,  12, 'Then David said, \"Will the men<H1167> of Keilah deliver me and my men into the hand of Saul?\" TheIAM<H3068> said, \"They will deliver you up.\"');
+INSERT INTO `verses` (`bookCode`, `chapter`, `verseNumber`, `verseText`) VALUES ('1SA',  23,  11, 'Will the men of Keilah deliver me up into his hand? Will Saul come down, as your servant has heard? TheIAM<H3068>, the God<H0430> of Israel, I beg you, tell your servant.\" TheIAM<H3068> said, \"He will come down.\"');
+--INSERT INTO `verses` (`bookCode`, `chapter`, `verseNumber`, `verseText`) VALUES ('1SA',  23,  11, 'Will the men<H1167> of Keilah deliver me up into his hand? Will Saul come down, as your servant has heard? TheIAM<H3068>, the God<H0430> of Israel, I beg you, tell your servant.\" TheIAM<H3068> said, \"He will come down.\"');
+INSERT INTO `verses` (`bookCode`, `chapter`, `verseNumber`, `verseText`) VALUES ('1SA',  23,  12, 'Then David said, \"Will the men of Keilah deliver me and my men into the hand of Saul?\" TheIAM<H3068> said, \"They will deliver you up.\"');
+--INSERT INTO `verses` (`bookCode`, `chapter`, `verseNumber`, `verseText`) VALUES ('1SA',  23,  12, 'Then David said, \"Will the men<H1167> of Keilah deliver me and my men into the hand of Saul?\" TheIAM<H3068> said, \"They will deliver you up.\"');
 -
 -
 -
@@ -15668,8 +15668,8 @@ INSERT INTO `verses` (`bookCode`, `chapter`, `verseNumber`, `verseText`) VALUES 
 -
 -
 -
-INSERT INTO `verses` (`bookCode`, `chapter`, `verseNumber`, `verseText`) VALUES ('1SM',  23,  25, 'Saul and his men went to seek him. When David was told, he went down to the rock, and stayed in the wilderness of Maon. When Saul heard [that], he pursued after David in the wilderness of Maon.');
---INSERT INTO `verses` (`bookCode`, `chapter`, `verseNumber`, `verseText`) VALUES ('1SM',  23,  25, 'Saul and his men went to seek him. When David was told, he went down to the rock, and stayed in the wilderness of Maon. When Saul heard [that], he pursued<H7291> after David in the wilderness of Maon.');
+INSERT INTO `verses` (`bookCode`, `chapter`, `verseNumber`, `verseText`) VALUES ('1SA',  23,  25, 'Saul and his men went to seek him. When David was told, he went down to the rock, and stayed in the wilderness of Maon. When Saul heard [that], he pursued after David in the wilderness of Maon.');
+--INSERT INTO `verses` (`bookCode`, `chapter`, `verseNumber`, `verseText`) VALUES ('1SA',  23,  25, 'Saul and his men went to seek him. When David was told, he went down to the rock, and stayed in the wilderness of Maon. When Saul heard [that], he pursued<H7291> after David in the wilderness of Maon.');
 -
 -
 -
@@ -15688,16 +15688,16 @@ INSERT INTO `verses` (`bookCode`, `chapter`, `verseNumber`, `verseText`) VALUES 
 -
 -
 -
-INSERT INTO `verses` (`bookCode`, `chapter`, `verseNumber`, `verseText`) VALUES ('1SM',  24,   6, 'He said to his men, \"TheIAM<H3068> forbid that I should do this thing to my lord<H0113>, TheIAM<H3068>\'s anointed<H4886>, to put forth my hand against him, since he is TheIAM<H3068>\'s anointed<H4886>.\"');
---INSERT INTO `verses` (`bookCode`, `chapter`, `verseNumber`, `verseText`) VALUES ('1SM',  24,   6, 'He said to his men, \"TheIAM<H3068> forbid that I should do this thing to my lord<H0113>, TheIAM<H3068>\'s anointed<H4899>, to put forth my hand against him, since he is TheIAM<H3068>\'s anointed<H4899>.\"');
+INSERT INTO `verses` (`bookCode`, `chapter`, `verseNumber`, `verseText`) VALUES ('1SA',  24,   6, 'He said to his men, \"TheIAM<H3068> forbid that I should do this thing to my lord<H0113>, TheIAM<H3068>\'s anointed<H4886>, to put forth my hand against him, since he is TheIAM<H3068>\'s anointed<H4886>.\"');
+--INSERT INTO `verses` (`bookCode`, `chapter`, `verseNumber`, `verseText`) VALUES ('1SA',  24,   6, 'He said to his men, \"TheIAM<H3068> forbid that I should do this thing to my lord<H0113>, TheIAM<H3068>\'s anointed<H4899>, to put forth my hand against him, since he is TheIAM<H3068>\'s anointed<H4899>.\"');
 -
 -
 -
 -
 -
 -
-INSERT INTO `verses` (`bookCode`, `chapter`, `verseNumber`, `verseText`) VALUES ('1SM',  24,  10, 'Behold, this day your eyes have seen how that TheIAM<H3068> had delivered you today into my hand in the cave. Some urged me to kill you; but I spared you; and I said, I will not put forth my hand against my lord<H0113>; for he is TheIAM<H3068>\'s anointed<H4886>.');
---INSERT INTO `verses` (`bookCode`, `chapter`, `verseNumber`, `verseText`) VALUES ('1SM',  24,  10, 'Behold, this day your eyes have seen how that TheIAM<H3068> had delivered you today into my hand in the cave. Some urged me to kill you; but I spared you; and I said, I will not put forth my hand against my lord<H0113>; for he is TheIAM<H3068>\'s anointed<H4899>.');
+INSERT INTO `verses` (`bookCode`, `chapter`, `verseNumber`, `verseText`) VALUES ('1SA',  24,  10, 'Behold, this day your eyes have seen how that TheIAM<H3068> had delivered you today into my hand in the cave. Some urged me to kill you; but I spared you; and I said, I will not put forth my hand against my lord<H0113>; for he is TheIAM<H3068>\'s anointed<H4886>.');
+--INSERT INTO `verses` (`bookCode`, `chapter`, `verseNumber`, `verseText`) VALUES ('1SA',  24,  10, 'Behold, this day your eyes have seen how that TheIAM<H3068> had delivered you today into my hand in the cave. Some urged me to kill you; but I spared you; and I said, I will not put forth my hand against my lord<H0113>; for he is TheIAM<H3068>\'s anointed<H4899>.');
 -
 -
 -
@@ -15740,22 +15740,22 @@ INSERT INTO `verses` (`bookCode`, `chapter`, `verseNumber`, `verseText`) VALUES 
 -
 -
 -
-INSERT INTO `verses` (`bookCode`, `chapter`, `verseNumber`, `verseText`) VALUES ('1SM',  25,  10, 'Nabal answered David\'s servants, and said, \"Who is David? Who is the son of Jesse? There are many servants who break away from their masters these days.');
---INSERT INTO `verses` (`bookCode`, `chapter`, `verseNumber`, `verseText`) VALUES ('1SM',  25,  10, 'Nabal answered David\'s servants, and said, \"Who is David? Who is the son of Jesse? There are many servants who break away from their masters<H0113> these days.');
+INSERT INTO `verses` (`bookCode`, `chapter`, `verseNumber`, `verseText`) VALUES ('1SA',  25,  10, 'Nabal answered David\'s servants, and said, \"Who is David? Who is the son of Jesse? There are many servants who break away from their masters these days.');
+--INSERT INTO `verses` (`bookCode`, `chapter`, `verseNumber`, `verseText`) VALUES ('1SA',  25,  10, 'Nabal answered David\'s servants, and said, \"Who is David? Who is the son of Jesse? There are many servants who break away from their masters<H0113> these days.');
 -
 -
 -
 -
 -
 -
-INSERT INTO `verses` (`bookCode`, `chapter`, `verseNumber`, `verseText`) VALUES ('1SM',  25,  14, 'But one of the young men told Abigail, Nabal\'s wife, saying, \"Behold, David sent messengers out of the wilderness to Greet our master; and he railed at them.');
---INSERT INTO `verses` (`bookCode`, `chapter`, `verseNumber`, `verseText`) VALUES ('1SM',  25,  14, 'But one of the young men told Abigail, Nabal\'s wife, saying, \"Behold, David sent messengers out of the wilderness to Greet our master<H0113>; and he railed at them.');
+INSERT INTO `verses` (`bookCode`, `chapter`, `verseNumber`, `verseText`) VALUES ('1SA',  25,  14, 'But one of the young men told Abigail, Nabal\'s wife, saying, \"Behold, David sent messengers out of the wilderness to Greet our master; and he railed at them.');
+--INSERT INTO `verses` (`bookCode`, `chapter`, `verseNumber`, `verseText`) VALUES ('1SA',  25,  14, 'But one of the young men told Abigail, Nabal\'s wife, saying, \"Behold, David sent messengers out of the wilderness to Greet our master<H0113>; and he railed at them.');
 -
 -
 -
 -
-INSERT INTO `verses` (`bookCode`, `chapter`, `verseNumber`, `verseText`) VALUES ('1SM',  25,  17, 'Now therefore know and consider what you will do; for evil is determined against our master, and against all his house; for he is such a worthless fellow that one can\'t speak to him.\"');
---INSERT INTO `verses` (`bookCode`, `chapter`, `verseNumber`, `verseText`) VALUES ('1SM',  25,  17, 'Now therefore know and consider what you will do; for evil is determined against our master<H0113>, and against all his house; for he is such a worthless fellow that one can\'t speak to him.\"');
+INSERT INTO `verses` (`bookCode`, `chapter`, `verseNumber`, `verseText`) VALUES ('1SA',  25,  17, 'Now therefore know and consider what you will do; for evil is determined against our master, and against all his house; for he is such a worthless fellow that one can\'t speak to him.\"');
+--INSERT INTO `verses` (`bookCode`, `chapter`, `verseNumber`, `verseText`) VALUES ('1SA',  25,  17, 'Now therefore know and consider what you will do; for evil is determined against our master<H0113>, and against all his house; for he is such a worthless fellow that one can\'t speak to him.\"');
 -
 -
 -
@@ -15826,12 +15826,12 @@ INSERT INTO `verses` (`bookCode`, `chapter`, `verseNumber`, `verseText`) VALUES 
 -
 -
 -
-INSERT INTO `verses` (`bookCode`, `chapter`, `verseNumber`, `verseText`) VALUES ('1SM',  26,   9, 'David said to Abishai, \"Don\'t destroy him; for who can put forth his hand against TheIAM<H3068>\'s anointed<H4886>, and be guiltless?\"');
---INSERT INTO `verses` (`bookCode`, `chapter`, `verseNumber`, `verseText`) VALUES ('1SM',  26,   9, 'David said to Abishai, \"Don\'t destroy him; for who can put forth his hand against TheIAM<H3068>\'s anointed<H4899>, and be guiltless?\"');
+INSERT INTO `verses` (`bookCode`, `chapter`, `verseNumber`, `verseText`) VALUES ('1SA',  26,   9, 'David said to Abishai, \"Don\'t destroy him; for who can put forth his hand against TheIAM<H3068>\'s anointed<H4886>, and be guiltless?\"');
+--INSERT INTO `verses` (`bookCode`, `chapter`, `verseNumber`, `verseText`) VALUES ('1SA',  26,   9, 'David said to Abishai, \"Don\'t destroy him; for who can put forth his hand against TheIAM<H3068>\'s anointed<H4899>, and be guiltless?\"');
 -
 -
-INSERT INTO `verses` (`bookCode`, `chapter`, `verseNumber`, `verseText`) VALUES ('1SM',  26,  11, 'TheIAM<H3068> forbid that I should put forth my hand against TheIAM<H3068>\'s anointed<H4886>; but now please take the spear that is at his head, and the jar of water, and let us go.\"');
---INSERT INTO `verses` (`bookCode`, `chapter`, `verseNumber`, `verseText`) VALUES ('1SM',  26,  11, 'TheIAM<H3068> forbid that I should put forth my hand against TheIAM<H3068>\'s anointed<H4899>; but now please take the spear that is at his head, and the jar of water, and let us go.\"');
+INSERT INTO `verses` (`bookCode`, `chapter`, `verseNumber`, `verseText`) VALUES ('1SA',  26,  11, 'TheIAM<H3068> forbid that I should put forth my hand against TheIAM<H3068>\'s anointed<H4886>; but now please take the spear that is at his head, and the jar of water, and let us go.\"');
+--INSERT INTO `verses` (`bookCode`, `chapter`, `verseNumber`, `verseText`) VALUES ('1SA',  26,  11, 'TheIAM<H3068> forbid that I should put forth my hand against TheIAM<H3068>\'s anointed<H4899>; but now please take the spear that is at his head, and the jar of water, and let us go.\"');
 -
 -
 -
@@ -15840,8 +15840,8 @@ INSERT INTO `verses` (`bookCode`, `chapter`, `verseNumber`, `verseText`) VALUES 
 -
 -
 -
-INSERT INTO `verses` (`bookCode`, `chapter`, `verseNumber`, `verseText`) VALUES ('1SM',  26,  16, 'This thing isn\'t good that you have done. As TheIAM<H3068> lives, you are worthy to die, because you have not kept watch over your lord<H0113>, TheIAM<H3068>\'s anointed<H4886>. Now see where the king\'s spear is, and the jar of water that was at his head.\"');
---INSERT INTO `verses` (`bookCode`, `chapter`, `verseNumber`, `verseText`) VALUES ('1SM',  26,  16, 'This thing isn\'t good that you have done. As TheIAM<H3068> lives, you are worthy to die, because you have not kept watch over your lord<H0113>, TheIAM<H3068>\'s anointed<H4899>. Now see where the king\'s spear is, and the jar of water that was at his head.\"');
+INSERT INTO `verses` (`bookCode`, `chapter`, `verseNumber`, `verseText`) VALUES ('1SA',  26,  16, 'This thing isn\'t good that you have done. As TheIAM<H3068> lives, you are worthy to die, because you have not kept watch over your lord<H0113>, TheIAM<H3068>\'s anointed<H4886>. Now see where the king\'s spear is, and the jar of water that was at his head.\"');
+--INSERT INTO `verses` (`bookCode`, `chapter`, `verseNumber`, `verseText`) VALUES ('1SA',  26,  16, 'This thing isn\'t good that you have done. As TheIAM<H3068> lives, you are worthy to die, because you have not kept watch over your lord<H0113>, TheIAM<H3068>\'s anointed<H4899>. Now see where the king\'s spear is, and the jar of water that was at his head.\"');
 -
 -
 -
@@ -15854,8 +15854,8 @@ INSERT INTO `verses` (`bookCode`, `chapter`, `verseNumber`, `verseText`) VALUES 
 -
 -
 -
-INSERT INTO `verses` (`bookCode`, `chapter`, `verseNumber`, `verseText`) VALUES ('1SM',  26,  23, 'TheIAM<H3068> will render to every man his righteousness and his faithfulness; because TheIAM<H3068> delivered you into my hand today, and I wouldn\'t put forth my hand against TheIAM<H3068>\'s anointed<H4886>.');
---INSERT INTO `verses` (`bookCode`, `chapter`, `verseNumber`, `verseText`) VALUES ('1SM',  26,  23, 'TheIAM<H3068> will render to every man his righteousness and his faithfulness; because TheIAM<H3068> delivered you into my hand today, and I wouldn\'t put forth my hand against TheIAM<H3068>\'s anointed<H4899>.');
+INSERT INTO `verses` (`bookCode`, `chapter`, `verseNumber`, `verseText`) VALUES ('1SA',  26,  23, 'TheIAM<H3068> will render to every man his righteousness and his faithfulness; because TheIAM<H3068> delivered you into my hand today, and I wouldn\'t put forth my hand against TheIAM<H3068>\'s anointed<H4886>.');
+--INSERT INTO `verses` (`bookCode`, `chapter`, `verseNumber`, `verseText`) VALUES ('1SA',  26,  23, 'TheIAM<H3068> will render to every man his righteousness and his faithfulness; because TheIAM<H3068> delivered you into my hand today, and I wouldn\'t put forth my hand against TheIAM<H3068>\'s anointed<H4899>.');
 -
 -
 -
@@ -15936,18 +15936,18 @@ INSERT INTO `verses` (`bookCode`, `chapter`, `verseNumber`, `verseText`) VALUES 
 -
 -
 -
-INSERT INTO `verses` (`bookCode`, `chapter`, `verseNumber`, `verseText`) VALUES ('1SM',  29,   2, 'The lords of the Philistines passed on by hundreds, and by thousands; and David and his men passed on in the rear with Achish.');
---INSERT INTO `verses` (`bookCode`, `chapter`, `verseNumber`, `verseText`) VALUES ('1SM',  29,   2, 'The lords<H5633> of the Philistines passed on by hundreds, and by thousands; and David and his men passed on in the rear with Achish.');
+INSERT INTO `verses` (`bookCode`, `chapter`, `verseNumber`, `verseText`) VALUES ('1SA',  29,   2, 'The lords of the Philistines passed on by hundreds, and by thousands; and David and his men passed on in the rear with Achish.');
+--INSERT INTO `verses` (`bookCode`, `chapter`, `verseNumber`, `verseText`) VALUES ('1SA',  29,   2, 'The lords<H5633> of the Philistines passed on by hundreds, and by thousands; and David and his men passed on in the rear with Achish.');
 -
 -
 -
 -
 -
 -
-INSERT INTO `verses` (`bookCode`, `chapter`, `verseNumber`, `verseText`) VALUES ('1SM',  29,   6, 'Then Achish called David, and said to him, \"As TheIAM<H3068> lives, you have been upright, and your going out and your coming in with me in the army is good in my sight; for I have not found evil in you since the day of your coming to me to this day. Nevertheless, the lords don\'t favor you.');
---INSERT INTO `verses` (`bookCode`, `chapter`, `verseNumber`, `verseText`) VALUES ('1SM',  29,   6, 'Then Achish called David, and said to him, \"As TheIAM<H3068> lives, you have been upright, and your going out and your coming in with me in the army is good in my sight; for I have not found evil in you since the day of your coming to me to this day. Nevertheless, the lords<H5633> don\'t favor you.');
-INSERT INTO `verses` (`bookCode`, `chapter`, `verseNumber`, `verseText`) VALUES ('1SM',  29,   7, 'Therefore now return, and go in peace, that you not displease the lords of the Philistines.\"');
---INSERT INTO `verses` (`bookCode`, `chapter`, `verseNumber`, `verseText`) VALUES ('1SM',  29,   7, 'Therefore now return, and go in peace, that you not displease the lords<H5633> of the Philistines.\"');
+INSERT INTO `verses` (`bookCode`, `chapter`, `verseNumber`, `verseText`) VALUES ('1SA',  29,   6, 'Then Achish called David, and said to him, \"As TheIAM<H3068> lives, you have been upright, and your going out and your coming in with me in the army is good in my sight; for I have not found evil in you since the day of your coming to me to this day. Nevertheless, the lords don\'t favor you.');
+--INSERT INTO `verses` (`bookCode`, `chapter`, `verseNumber`, `verseText`) VALUES ('1SA',  29,   6, 'Then Achish called David, and said to him, \"As TheIAM<H3068> lives, you have been upright, and your going out and your coming in with me in the army is good in my sight; for I have not found evil in you since the day of your coming to me to this day. Nevertheless, the lords<H5633> don\'t favor you.');
+INSERT INTO `verses` (`bookCode`, `chapter`, `verseNumber`, `verseText`) VALUES ('1SA',  29,   7, 'Therefore now return, and go in peace, that you not displease the lords of the Philistines.\"');
+--INSERT INTO `verses` (`bookCode`, `chapter`, `verseNumber`, `verseText`) VALUES ('1SA',  29,   7, 'Therefore now return, and go in peace, that you not displease the lords<H5633> of the Philistines.\"');
 -
 -
 -
@@ -15970,22 +15970,22 @@ INSERT INTO `verses` (`bookCode`, `chapter`, `verseNumber`, `verseText`) VALUES 
 -
 -
 -
-INSERT INTO `verses` (`bookCode`, `chapter`, `verseNumber`, `verseText`) VALUES ('1SM',  30,   8, 'David inquired of TheIAM<H3068>, saying, \"If I pursue<H7291> after this troop, shall I overtake them?\" He answered him, \"Pursue; for you shall surely overtake them, and shall without fail recover all.\"');
---INSERT INTO `verses` (`bookCode`, `chapter`, `verseNumber`, `verseText`) VALUES ('1SM',  30,   8, 'David inquired of TheIAM<H3068>, saying, \"If I pursue<H7291> after this troop, shall I overtake them?\" He answered him, \"Pursue<H7291>; for you shall surely overtake them, and shall without fail recover all.\"');
+INSERT INTO `verses` (`bookCode`, `chapter`, `verseNumber`, `verseText`) VALUES ('1SA',  30,   8, 'David inquired of TheIAM<H3068>, saying, \"If I pursue<H7291> after this troop, shall I overtake them?\" He answered him, \"Pursue; for you shall surely overtake them, and shall without fail recover all.\"');
+--INSERT INTO `verses` (`bookCode`, `chapter`, `verseNumber`, `verseText`) VALUES ('1SA',  30,   8, 'David inquired of TheIAM<H3068>, saying, \"If I pursue<H7291> after this troop, shall I overtake them?\" He answered him, \"Pursue<H7291>; for you shall surely overtake them, and shall without fail recover all.\"');
 -
 -
-INSERT INTO `verses` (`bookCode`, `chapter`, `verseNumber`, `verseText`) VALUES ('1SM',  30,  10, 'But David pursued, he and four hundred men; for two hundred stayed behind, who were so faint that they couldn\'t go over the brook Besor.');
---INSERT INTO `verses` (`bookCode`, `chapter`, `verseNumber`, `verseText`) VALUES ('1SM',  30,  10, 'But David pursued<H7291>, he and four hundred men; for two hundred stayed behind, who were so faint that they couldn\'t go over the brook Besor.');
+INSERT INTO `verses` (`bookCode`, `chapter`, `verseNumber`, `verseText`) VALUES ('1SA',  30,  10, 'But David pursued, he and four hundred men; for two hundred stayed behind, who were so faint that they couldn\'t go over the brook Besor.');
+--INSERT INTO `verses` (`bookCode`, `chapter`, `verseNumber`, `verseText`) VALUES ('1SA',  30,  10, 'But David pursued<H7291>, he and four hundred men; for two hundred stayed behind, who were so faint that they couldn\'t go over the brook Besor.');
 -
 -
 -
 -
-INSERT INTO `verses` (`bookCode`, `chapter`, `verseNumber`, `verseText`) VALUES ('1SM',  30,  13, 'David asked him, \"To whom do you belong? Where are you from?\" He said, \"I am a young man of Egypt, servant to an Amalekite; and my master left me, because three days ago I fell sick.');
---INSERT INTO `verses` (`bookCode`, `chapter`, `verseNumber`, `verseText`) VALUES ('1SM',  30,  13, 'David asked him, \"To whom do you belong? Where are you from?\" He said, \"I am a young man of Egypt, servant to an Amalekite; and my master<H0113> left me, because three days ago I fell sick.');
+INSERT INTO `verses` (`bookCode`, `chapter`, `verseNumber`, `verseText`) VALUES ('1SA',  30,  13, 'David asked him, \"To whom do you belong? Where are you from?\" He said, \"I am a young man of Egypt, servant to an Amalekite; and my master left me, because three days ago I fell sick.');
+--INSERT INTO `verses` (`bookCode`, `chapter`, `verseNumber`, `verseText`) VALUES ('1SA',  30,  13, 'David asked him, \"To whom do you belong? Where are you from?\" He said, \"I am a young man of Egypt, servant to an Amalekite; and my master<H0113> left me, because three days ago I fell sick.');
 -
 -
-INSERT INTO `verses` (`bookCode`, `chapter`, `verseNumber`, `verseText`) VALUES ('1SM',  30,  15, 'David said to him, \"Will you bring me down to this troop?\" He said, \"Swear to me by God<H0430> that you will neither kill me, nor deliver me up into the hands of my master, and I will bring you down to this troop.\"');
---INSERT INTO `verses` (`bookCode`, `chapter`, `verseNumber`, `verseText`) VALUES ('1SM',  30,  15, 'David said to him, \"Will you bring me down to this troop?\" He said, \"Swear to me by God<H0430> that you will neither kill me, nor deliver me up into the hands of my master<H0113>, and I will bring you down to this troop.\"');
+INSERT INTO `verses` (`bookCode`, `chapter`, `verseNumber`, `verseText`) VALUES ('1SA',  30,  15, 'David said to him, \"Will you bring me down to this troop?\" He said, \"Swear to me by God<H0430> that you will neither kill me, nor deliver me up into the hands of my master, and I will bring you down to this troop.\"');
+--INSERT INTO `verses` (`bookCode`, `chapter`, `verseNumber`, `verseText`) VALUES ('1SA',  30,  15, 'David said to him, \"Will you bring me down to this troop?\" He said, \"Swear to me by God<H0430> that you will neither kill me, nor deliver me up into the hands of my master<H0113>, and I will bring you down to this troop.\"');
 -
 -
 -
@@ -16040,8 +16040,8 @@ INSERT INTO `verses` (`bookCode`, `chapter`, `verseNumber`, `verseText`) VALUES 
 -
 -
 -
-INSERT INTO `verses` (`bookCode`, `chapter`, `verseNumber`, `verseText`) VALUES ('1SM',  31,  12, 'all the valiant men arose, and went all night, and took the body of Saul and the bodies of his sons from the wall of Beth Shan; and they came to Jabesh, and burnt them there.');
---INSERT INTO `verses` (`bookCode`, `chapter`, `verseNumber`, `verseText`) VALUES ('1SM',  31,  12, 'all the valiant men arose, and went all night, and took the body of Saul and the bodies of his sons from the wall of Beth Shan; and they came to Jabesh, and burned them there.');
+INSERT INTO `verses` (`bookCode`, `chapter`, `verseNumber`, `verseText`) VALUES ('1SA',  31,  12, 'all the valiant men arose, and went all night, and took the body of Saul and the bodies of his sons from the wall of Beth Shan; and they came to Jabesh, and burnt them there.');
+--INSERT INTO `verses` (`bookCode`, `chapter`, `verseNumber`, `verseText`) VALUES ('1SA',  31,  12, 'all the valiant men arose, and went all night, and took the body of Saul and the bodies of his sons from the wall of Beth Shan; and they came to Jabesh, and burned them there.');
 -
 -
 -
@@ -16054,8 +16054,8 @@ INSERT INTO `verses` (`bookCode`, `chapter`, `verseNumber`, `verseText`) VALUES 
 -
 -
 -
-INSERT INTO `verses` (`bookCode`, `chapter`, `verseNumber`, `verseText`) VALUES ('2SM',   1,   6, 'The young man who told him said, \"As I happened by chance on Mount Gilboa, behold, Saul was leaning on his spear; and behold, the chariots and the horsemen followed hard after him.');
---INSERT INTO `verses` (`bookCode`, `chapter`, `verseNumber`, `verseText`) VALUES ('2SM',   1,   6, 'The young man who told him said, \"As I happened by chance on Mount Gilboa, behold, Saul was leaning on his spear; and behold, the chariots and the master<H1167> horsemen followed hard after him.');
+INSERT INTO `verses` (`bookCode`, `chapter`, `verseNumber`, `verseText`) VALUES ('2SA',   1,   6, 'The young man who told him said, \"As I happened by chance on Mount Gilboa, behold, Saul was leaning on his spear; and behold, the chariots and the horsemen followed hard after him.');
+--INSERT INTO `verses` (`bookCode`, `chapter`, `verseNumber`, `verseText`) VALUES ('2SA',   1,   6, 'The young man who told him said, \"As I happened by chance on Mount Gilboa, behold, Saul was leaning on his spear; and behold, the chariots and the master<H1167> horsemen followed hard after him.');
 -
 -
 -
@@ -16070,12 +16070,12 @@ INSERT INTO `verses` (`bookCode`, `chapter`, `verseNumber`, `verseText`) VALUES 
 -
 -
 -
-INSERT INTO `verses` (`bookCode`, `chapter`, `verseNumber`, `verseText`) VALUES ('2SM',   1,  14, 'David said to him, \"How were you not afraid to put forth your hand to destroy TheIAM<H3068>\'s anointed<H4886>?\"');
---INSERT INTO `verses` (`bookCode`, `chapter`, `verseNumber`, `verseText`) VALUES ('2SM',   1,  14, 'David said to him, \"How were you not afraid to put forth your hand to destroy TheIAM<H3068>\'s anointed<H4899>?\"');
+INSERT INTO `verses` (`bookCode`, `chapter`, `verseNumber`, `verseText`) VALUES ('2SA',   1,  14, 'David said to him, \"How were you not afraid to put forth your hand to destroy TheIAM<H3068>\'s anointed<H4886>?\"');
+--INSERT INTO `verses` (`bookCode`, `chapter`, `verseNumber`, `verseText`) VALUES ('2SA',   1,  14, 'David said to him, \"How were you not afraid to put forth your hand to destroy TheIAM<H3068>\'s anointed<H4899>?\"');
 -
 -
-INSERT INTO `verses` (`bookCode`, `chapter`, `verseNumber`, `verseText`) VALUES ('2SM',   1,  16, 'David said to him, \"Your blood be on your head; for your mouth has testified against you, saying, \'I have slain TheIAM<H3068>\'s anointed<H4886>.\'\"');
---INSERT INTO `verses` (`bookCode`, `chapter`, `verseNumber`, `verseText`) VALUES ('2SM',   1,  16, 'David said to him, \"Your blood be on your head; for your mouth has testified against you, saying, \'I have slain TheIAM<H3068>\'s anointed<H4899>.\'\"');
+INSERT INTO `verses` (`bookCode`, `chapter`, `verseNumber`, `verseText`) VALUES ('2SA',   1,  16, 'David said to him, \"Your blood be on your head; for your mouth has testified against you, saying, \'I have slain TheIAM<H3068>\'s anointed<H4886>.\'\"');
+--INSERT INTO `verses` (`bookCode`, `chapter`, `verseNumber`, `verseText`) VALUES ('2SA',   1,  16, 'David said to him, \"Your blood be on your head; for your mouth has testified against you, saying, \'I have slain TheIAM<H3068>\'s anointed<H4899>.\'\"');
 -
 -
 -
@@ -16084,8 +16084,8 @@ INSERT INTO `verses` (`bookCode`, `chapter`, `verseNumber`, `verseText`) VALUES 
 -
 -
 -
-INSERT INTO `verses` (`bookCode`, `chapter`, `verseNumber`, `verseText`) VALUES ('2SM',   1,  21, 'You mountains of Gilboa, let there be no dew nor rain on you, neither fields of offerings; For there the shield of the mighty was vilely cast away, The shield of Saul was not anointed<H4886> with oil.');
---INSERT INTO `verses` (`bookCode`, `chapter`, `verseNumber`, `verseText`) VALUES ('2SM',   1,  21, 'You mountains of Gilboa, let there be no dew nor rain on you, neither fields of offerings; For there the shield of the mighty was vilely cast away, The shield of Saul was not anointed<H4899> with oil.');
+INSERT INTO `verses` (`bookCode`, `chapter`, `verseNumber`, `verseText`) VALUES ('2SA',   1,  21, 'You mountains of Gilboa, let there be no dew nor rain on you, neither fields of offerings; For there the shield of the mighty was vilely cast away, The shield of Saul was not anointed<H4886> with oil.');
+--INSERT INTO `verses` (`bookCode`, `chapter`, `verseNumber`, `verseText`) VALUES ('2SA',   1,  21, 'You mountains of Gilboa, let there be no dew nor rain on you, neither fields of offerings; For there the shield of the mighty was vilely cast away, The shield of Saul was not anointed<H4899> with oil.');
 -
 -
 -
@@ -16134,8 +16134,8 @@ INSERT INTO `verses` (`bookCode`, `chapter`, `verseNumber`, `verseText`) VALUES 
 -
 -
 -
-INSERT INTO `verses` (`bookCode`, `chapter`, `verseNumber`, `verseText`) VALUES ('2SM',   2,  19, 'Asahel pursued after Abner; and in going he didn\'t turn to the right hand nor to the left from following Abner.');
---INSERT INTO `verses` (`bookCode`, `chapter`, `verseNumber`, `verseText`) VALUES ('2SM',   2,  19, 'Asahel pursued<H7291> after Abner; and in going he didn\'t turn to the right hand nor to the left from following Abner.');
+INSERT INTO `verses` (`bookCode`, `chapter`, `verseNumber`, `verseText`) VALUES ('2SA',   2,  19, 'Asahel pursued after Abner; and in going he didn\'t turn to the right hand nor to the left from following Abner.');
+--INSERT INTO `verses` (`bookCode`, `chapter`, `verseNumber`, `verseText`) VALUES ('2SA',   2,  19, 'Asahel pursued<H7291> after Abner; and in going he didn\'t turn to the right hand nor to the left from following Abner.');
 -
 -
 -
@@ -16144,16 +16144,16 @@ INSERT INTO `verses` (`bookCode`, `chapter`, `verseNumber`, `verseText`) VALUES 
 -
 -
 -
-INSERT INTO `verses` (`bookCode`, `chapter`, `verseNumber`, `verseText`) VALUES ('2SM',   2,  24, 'But Joab and Abishai pursued after Abner: and the sun went down when they were come to the hill of Ammah, that lies before Giah by the way of the wilderness of Gibeon.');
---INSERT INTO `verses` (`bookCode`, `chapter`, `verseNumber`, `verseText`) VALUES ('2SM',   2,  24, 'But Joab and Abishai pursued<H7291> after Abner: and the sun went down when they were come to the hill of Ammah, that lies before Giah by the way of the wilderness of Gibeon.');
+INSERT INTO `verses` (`bookCode`, `chapter`, `verseNumber`, `verseText`) VALUES ('2SA',   2,  24, 'But Joab and Abishai pursued after Abner: and the sun went down when they were come to the hill of Ammah, that lies before Giah by the way of the wilderness of Gibeon.');
+--INSERT INTO `verses` (`bookCode`, `chapter`, `verseNumber`, `verseText`) VALUES ('2SA',   2,  24, 'But Joab and Abishai pursued<H7291> after Abner: and the sun went down when they were come to the hill of Ammah, that lies before Giah by the way of the wilderness of Gibeon.');
 -
 -
 -
 -
 -
 -
-INSERT INTO `verses` (`bookCode`, `chapter`, `verseNumber`, `verseText`) VALUES ('2SM',   2,  28, 'So Joab blew the trumpet; and all the people stood still, and pursued after Israel no more, neither fought they any more.');
---INSERT INTO `verses` (`bookCode`, `chapter`, `verseNumber`, `verseText`) VALUES ('2SM',   2,  28, 'So Joab blew the trumpet; and all the people stood still, and pursued<H7291> after Israel no more, neither fought they any more.');
+INSERT INTO `verses` (`bookCode`, `chapter`, `verseNumber`, `verseText`) VALUES ('2SA',   2,  28, 'So Joab blew the trumpet; and all the people stood still, and pursued after Israel no more, neither fought they any more.');
+--INSERT INTO `verses` (`bookCode`, `chapter`, `verseNumber`, `verseText`) VALUES ('2SA',   2,  28, 'So Joab blew the trumpet; and all the people stood still, and pursued<H7291> after Israel no more, neither fought they any more.');
 -
 -
 -
@@ -16230,8 +16230,8 @@ INSERT INTO `verses` (`bookCode`, `chapter`, `verseNumber`, `verseText`) VALUES 
 -
 -
 -
-INSERT INTO `verses` (`bookCode`, `chapter`, `verseNumber`, `verseText`) VALUES ('2SM',   3,  35, 'All the people came to cause David to eat bread while it was yet day; but David swore, saying, \"God<H0430> do so to me, and more also, if I taste bread, or anything else, until the sun goes down.\"');
---INSERT INTO `verses` (`bookCode`, `chapter`, `verseNumber`, `verseText`) VALUES ('2SM',   3,  35, 'All the people came to cause David to eat bread while it was yet day; but David swore, saying, \"May God<H0430> so deal with me, and even more, if I taste bread, or anything else, until the sun goes down.\"');
+INSERT INTO `verses` (`bookCode`, `chapter`, `verseNumber`, `verseText`) VALUES ('2SA',   3,  35, 'All the people came to cause David to eat bread while it was yet day; but David swore, saying, \"God<H0430> do so to me, and more also, if I taste bread, or anything else, until the sun goes down.\"');
+--INSERT INTO `verses` (`bookCode`, `chapter`, `verseNumber`, `verseText`) VALUES ('2SA',   3,  35, 'All the people came to cause David to eat bread while it was yet day; but David swore, saying, \"May God<H0430> so deal with me, and even more, if I taste bread, or anything else, until the sun goes down.\"');
 -
 -
 -
@@ -16394,12 +16394,12 @@ INSERT INTO `verses` (`bookCode`, `chapter`, `verseNumber`, `verseText`) VALUES 
 -
 -
 -
-INSERT INTO `verses` (`bookCode`, `chapter`, `verseNumber`, `verseText`) VALUES ('2SM',   7,  18, 'Then David the king went in, and sat before TheIAM<H3068>; and he said, \"Who am I, Lord<H0113> TheIAM<H3068>, and what is my house, that you have brought me thus far?');
---INSERT INTO `verses` (`bookCode`, `chapter`, `verseNumber`, `verseText`) VALUES ('2SM',   7,  18, 'Then David the king went in, and sat before TheIAM<H3068>; and he said, \"Who am I, Lord<H0136> TheIAM<H3068>, and what is my house, that you have brought me thus far?');
-INSERT INTO `verses` (`bookCode`, `chapter`, `verseNumber`, `verseText`) VALUES ('2SM',   7,  19, 'This was yet a small thing in your eyes, Lord<H0113> TheIAM<H3068>; but you have spoken also of your servant\'s house for a great while to come; and this after the way of men, Lord<H0113> TheIAM<H3068>!');
---INSERT INTO `verses` (`bookCode`, `chapter`, `verseNumber`, `verseText`) VALUES ('2SM',   7,  19, 'This was yet a small thing in your eyes, Lord<H0136> TheIAM<H3068>; but you have spoken also of your servant\'s house for a great while to come; and this after the way of men, Lord<H0136> TheIAM<H3068>!');
-INSERT INTO `verses` (`bookCode`, `chapter`, `verseNumber`, `verseText`) VALUES ('2SM',   7,  20, 'What more can David say to you? For you know your servant, Lord<H0113> TheIAM<H3068>.');
---INSERT INTO `verses` (`bookCode`, `chapter`, `verseNumber`, `verseText`) VALUES ('2SM',   7,  20, 'What more can David say to you? For you know your servant, Lord<H0136> TheIAM<H3068>.');
+INSERT INTO `verses` (`bookCode`, `chapter`, `verseNumber`, `verseText`) VALUES ('2SA',   7,  18, 'Then David the king went in, and sat before TheIAM<H3068>; and he said, \"Who am I, Lord<H0113> TheIAM<H3068>, and what is my house, that you have brought me thus far?');
+--INSERT INTO `verses` (`bookCode`, `chapter`, `verseNumber`, `verseText`) VALUES ('2SA',   7,  18, 'Then David the king went in, and sat before TheIAM<H3068>; and he said, \"Who am I, Lord<H0136> TheIAM<H3068>, and what is my house, that you have brought me thus far?');
+INSERT INTO `verses` (`bookCode`, `chapter`, `verseNumber`, `verseText`) VALUES ('2SA',   7,  19, 'This was yet a small thing in your eyes, Lord<H0113> TheIAM<H3068>; but you have spoken also of your servant\'s house for a great while to come; and this after the way of men, Lord<H0113> TheIAM<H3068>!');
+--INSERT INTO `verses` (`bookCode`, `chapter`, `verseNumber`, `verseText`) VALUES ('2SA',   7,  19, 'This was yet a small thing in your eyes, Lord<H0136> TheIAM<H3068>; but you have spoken also of your servant\'s house for a great while to come; and this after the way of men, Lord<H0136> TheIAM<H3068>!');
+INSERT INTO `verses` (`bookCode`, `chapter`, `verseNumber`, `verseText`) VALUES ('2SA',   7,  20, 'What more can David say to you? For you know your servant, Lord<H0113> TheIAM<H3068>.');
+--INSERT INTO `verses` (`bookCode`, `chapter`, `verseNumber`, `verseText`) VALUES ('2SA',   7,  20, 'What more can David say to you? For you know your servant, Lord<H0136> TheIAM<H3068>.');
 -
 -
 -
@@ -16414,12 +16414,12 @@ INSERT INTO `verses` (`bookCode`, `chapter`, `verseNumber`, `verseText`) VALUES 
 -
 -
 -
-INSERT INTO `verses` (`bookCode`, `chapter`, `verseNumber`, `verseText`) VALUES ('2SM',   7,  28, '\"Now, O Lord<H0113> TheIAM<H3068>, you are God<H0430>, and your words are truth, and you have promised this good thing to your servant.');
---INSERT INTO `verses` (`bookCode`, `chapter`, `verseNumber`, `verseText`) VALUES ('2SM',   7,  28, '\"Now, O Lord<H0136> TheIAM<H3068>, you are God<H0430>, and your words are truth, and you have promised this good thing to your servant.');
-INSERT INTO `verses` (`bookCode`, `chapter`, `verseNumber`, `verseText`) VALUES ('2SM',   7,  29, 'Now therefore let it please you to bless the house of your servant, that it may continue forever before you; for you, Lord<H0113> TheIAM<H3068>, have spoken it. Let the house of your servant be blessed forever with your blessing.\"');
---INSERT INTO `verses` (`bookCode`, `chapter`, `verseNumber`, `verseText`) VALUES ('2SM',   7,  29, 'Now therefore let it please you to bless the house of your servant, that it may continue forever before you; for you, Lord<H0136> TheIAM<H3068>, have spoken it. Let the house of your servant be blessed forever with your blessing.\"');
-INSERT INTO `verses` (`bookCode`, `chapter`, `verseNumber`, `verseText`) VALUES ('2SM',   8,   1, 'After this it happened that David struck the Philistines, and subdued them: and David took the bridle of the mother city out of the hand of the Philistines.');
---INSERT INTO `verses` (`bookCode`, `chapter`, `verseNumber`, `verseText`) VALUES ('2SM',   8,   1, 'After this David struck the Philistines, and subdued them: and David took the bridle of the mother city out of the hand of the Philistines.');
+INSERT INTO `verses` (`bookCode`, `chapter`, `verseNumber`, `verseText`) VALUES ('2SA',   7,  28, '\"Now, O Lord<H0113> TheIAM<H3068>, you are God<H0430>, and your words are truth, and you have promised this good thing to your servant.');
+--INSERT INTO `verses` (`bookCode`, `chapter`, `verseNumber`, `verseText`) VALUES ('2SA',   7,  28, '\"Now, O Lord<H0136> TheIAM<H3068>, you are God<H0430>, and your words are truth, and you have promised this good thing to your servant.');
+INSERT INTO `verses` (`bookCode`, `chapter`, `verseNumber`, `verseText`) VALUES ('2SA',   7,  29, 'Now therefore let it please you to bless the house of your servant, that it may continue forever before you; for you, Lord<H0113> TheIAM<H3068>, have spoken it. Let the house of your servant be blessed forever with your blessing.\"');
+--INSERT INTO `verses` (`bookCode`, `chapter`, `verseNumber`, `verseText`) VALUES ('2SA',   7,  29, 'Now therefore let it please you to bless the house of your servant, that it may continue forever before you; for you, Lord<H0136> TheIAM<H3068>, have spoken it. Let the house of your servant be blessed forever with your blessing.\"');
+INSERT INTO `verses` (`bookCode`, `chapter`, `verseNumber`, `verseText`) VALUES ('2SA',   8,   1, 'After this it happened that David struck the Philistines, and subdued them: and David took the bridle of the mother city out of the hand of the Philistines.');
+--INSERT INTO `verses` (`bookCode`, `chapter`, `verseNumber`, `verseText`) VALUES ('2SA',   8,   1, 'After this David struck the Philistines, and subdued them: and David took the bridle of the mother city out of the hand of the Philistines.');
 -
 -
 -
@@ -16470,10 +16470,10 @@ INSERT INTO `verses` (`bookCode`, `chapter`, `verseNumber`, `verseText`) VALUES 
 -
 -
 -
-INSERT INTO `verses` (`bookCode`, `chapter`, `verseNumber`, `verseText`) VALUES ('2SM',   9,   9, 'Then the king called to Ziba, Saul\'s servant, and said to him, \"All that pertained to Saul and to all his house have I given to your master\'s son.');
---INSERT INTO `verses` (`bookCode`, `chapter`, `verseNumber`, `verseText`) VALUES ('2SM',   9,   9, 'Then the king called to Ziba, Saul\'s servant, and said to him, \"All that pertained to Saul and to all his house have I given to your master<H0113>\'s son.');
-INSERT INTO `verses` (`bookCode`, `chapter`, `verseNumber`, `verseText`) VALUES ('2SM',   9,  10, 'You shall till the land for him, you, and your sons, and your servants; and you shall bring in [the fruits], that your master\'s son may have bread to eat: but Mephibosheth your master\'s son shall eat bread always at my table.\" Now Ziba had fifteen sons and twenty servants.');
---INSERT INTO `verses` (`bookCode`, `chapter`, `verseNumber`, `verseText`) VALUES ('2SM',   9,  10, 'You shall till the land for him, you, and your sons, and your servants; and you shall bring in [the fruits], that your master<H0113>\'s son may have bread to eat: but Mephibosheth your master<H0113>\'s son shall eat bread always at my table.\" Now Ziba had fifteen sons and twenty servants.');
+INSERT INTO `verses` (`bookCode`, `chapter`, `verseNumber`, `verseText`) VALUES ('2SA',   9,   9, 'Then the king called to Ziba, Saul\'s servant, and said to him, \"All that pertained to Saul and to all his house have I given to your master\'s son.');
+--INSERT INTO `verses` (`bookCode`, `chapter`, `verseNumber`, `verseText`) VALUES ('2SA',   9,   9, 'Then the king called to Ziba, Saul\'s servant, and said to him, \"All that pertained to Saul and to all his house have I given to your master<H0113>\'s son.');
+INSERT INTO `verses` (`bookCode`, `chapter`, `verseNumber`, `verseText`) VALUES ('2SA',   9,  10, 'You shall till the land for him, you, and your sons, and your servants; and you shall bring in [the fruits], that your master\'s son may have bread to eat: but Mephibosheth your master\'s son shall eat bread always at my table.\" Now Ziba had fifteen sons and twenty servants.');
+--INSERT INTO `verses` (`bookCode`, `chapter`, `verseNumber`, `verseText`) VALUES ('2SA',   9,  10, 'You shall till the land for him, you, and your sons, and your servants; and you shall bring in [the fruits], that your master<H0113>\'s son may have bread to eat: but Mephibosheth your master<H0113>\'s son shall eat bread always at my table.\" Now Ziba had fifteen sons and twenty servants.');
 -
 -
 -
@@ -16568,8 +16568,8 @@ INSERT INTO `verses` (`bookCode`, `chapter`, `verseNumber`, `verseText`) VALUES 
 -
 -
 -
-INSERT INTO `verses` (`bookCode`, `chapter`, `verseNumber`, `verseText`) VALUES ('2SM',  11,  26, 'When the wife of Uriah heard that Uriah her husband was dead, she made lamentation for her husband.');
---INSERT INTO `verses` (`bookCode`, `chapter`, `verseNumber`, `verseText`) VALUES ('2SM',  11,  26, 'When the wife of Uriah heard that Uriah her man was dead, she made lamentation for her husband<H1167>.');
+INSERT INTO `verses` (`bookCode`, `chapter`, `verseNumber`, `verseText`) VALUES ('2SA',  11,  26, 'When the wife of Uriah heard that Uriah her husband was dead, she made lamentation for her husband.');
+--INSERT INTO `verses` (`bookCode`, `chapter`, `verseNumber`, `verseText`) VALUES ('2SA',  11,  26, 'When the wife of Uriah heard that Uriah her man was dead, she made lamentation for her husband<H1167>.');
 -
 -
 -
@@ -16586,8 +16586,8 @@ INSERT INTO `verses` (`bookCode`, `chapter`, `verseNumber`, `verseText`) VALUES 
 -
 -
 -
-INSERT INTO `verses` (`bookCode`, `chapter`, `verseNumber`, `verseText`) VALUES ('2SM',  12,   8, 'I gave you your master\'s house, and your master\'s wives into your bosom, and gave you the house of Israel and of Judah; and if that would have been too little, I would have added to you many more such things.');
---INSERT INTO `verses` (`bookCode`, `chapter`, `verseNumber`, `verseText`) VALUES ('2SM',  12,   8, 'I gave you your master<H0113>\'s house, and your master<H0113>\'s wives into your bosom, and gave you the house of Israel and of Judah; and if that would have been too little, I would have added to you many more such things.');
+INSERT INTO `verses` (`bookCode`, `chapter`, `verseNumber`, `verseText`) VALUES ('2SA',  12,   8, 'I gave you your master\'s house, and your master\'s wives into your bosom, and gave you the house of Israel and of Judah; and if that would have been too little, I would have added to you many more such things.');
+--INSERT INTO `verses` (`bookCode`, `chapter`, `verseNumber`, `verseText`) VALUES ('2SA',  12,   8, 'I gave you your master<H0113>\'s house, and your master<H0113>\'s wives into your bosom, and gave you the house of Israel and of Judah; and if that would have been too little, I would have added to you many more such things.');
 -
 -
 -
@@ -16610,8 +16610,8 @@ INSERT INTO `verses` (`bookCode`, `chapter`, `verseNumber`, `verseText`) VALUES 
 -
 -
 -
-INSERT INTO `verses` (`bookCode`, `chapter`, `verseNumber`, `verseText`) VALUES ('2SM',  12,  20, 'Then David arose from the earth, and washed, and anointed<H4886> himself, and changed his clothing; and he came into the house of TheIAM<H3068>, and worshiped: then he came to his own house; and when he required, they set bread before him, and he ate.');
---INSERT INTO `verses` (`bookCode`, `chapter`, `verseNumber`, `verseText`) VALUES ('2SM',  12,  20, 'Then David arose from the earth, and washed, and anointed himself, and changed his clothing; and he came into the house of TheIAM<H3068>, and worshiped: then he came to his own house; and when he required, they set bread before him, and he ate.');
+INSERT INTO `verses` (`bookCode`, `chapter`, `verseNumber`, `verseText`) VALUES ('2SA',  12,  20, 'Then David arose from the earth, and washed, and anointed<H4886> himself, and changed his clothing; and he came into the house of TheIAM<H3068>, and worshiped: then he came to his own house; and when he required, they set bread before him, and he ate.');
+--INSERT INTO `verses` (`bookCode`, `chapter`, `verseNumber`, `verseText`) VALUES ('2SA',  12,  20, 'Then David arose from the earth, and washed, and anointed himself, and changed his clothing; and he came into the house of TheIAM<H3068>, and worshiped: then he came to his own house; and when he required, they set bread before him, and he ate.');
 -
 -
 -
@@ -16856,8 +16856,8 @@ INSERT INTO `verses` (`bookCode`, `chapter`, `verseNumber`, `verseText`) VALUES 
 -
 -
 -
-INSERT INTO `verses` (`bookCode`, `chapter`, `verseNumber`, `verseText`) VALUES ('2SM',  16,   3, 'The king said, \"Where is your master\'s son?\" Ziba said to the king, \"Behold, he is staying in Jerusalem; for he said, \'Today the house of Israel will restore me the kingdom of my father.\'\"');
---INSERT INTO `verses` (`bookCode`, `chapter`, `verseNumber`, `verseText`) VALUES ('2SM',  16,   3, 'The king said, \"Where is your master<H0113>\'s son?\" Ziba said to the king, \"Behold, he is staying in Jerusalem; for he said, \'Today the house of Israel will restore me the kingdom of my father.\'\"');
+INSERT INTO `verses` (`bookCode`, `chapter`, `verseNumber`, `verseText`) VALUES ('2SA',  16,   3, 'The king said, \"Where is your master\'s son?\" Ziba said to the king, \"Behold, he is staying in Jerusalem; for he said, \'Today the house of Israel will restore me the kingdom of my father.\'\"');
+--INSERT INTO `verses` (`bookCode`, `chapter`, `verseNumber`, `verseText`) VALUES ('2SA',  16,   3, 'The king said, \"Where is your master<H0113>\'s son?\" Ziba said to the king, \"Behold, he is staying in Jerusalem; for he said, \'Today the house of Israel will restore me the kingdom of my father.\'\"');
 -
 -
 -
@@ -16986,8 +16986,8 @@ INSERT INTO `verses` (`bookCode`, `chapter`, `verseNumber`, `verseText`) VALUES 
 -
 -
 -
-INSERT INTO `verses` (`bookCode`, `chapter`, `verseNumber`, `verseText`) VALUES ('2SM',  18,  16, 'Joab blew the trumpet, and the people returned from pursuing after Israel; for Joab held back the people.');
---INSERT INTO `verses` (`bookCode`, `chapter`, `verseNumber`, `verseText`) VALUES ('2SM',  18,  16, 'Joab blew the trumpet, and the people returned from pursuing<H7291> after Israel; for Joab held back the people.');
+INSERT INTO `verses` (`bookCode`, `chapter`, `verseNumber`, `verseText`) VALUES ('2SA',  18,  16, 'Joab blew the trumpet, and the people returned from pursuing after Israel; for Joab held back the people.');
+--INSERT INTO `verses` (`bookCode`, `chapter`, `verseNumber`, `verseText`) VALUES ('2SA',  18,  16, 'Joab blew the trumpet, and the people returned from pursuing<H7291> after Israel; for Joab held back the people.');
 -
 -
 -
@@ -17046,8 +17046,8 @@ INSERT INTO `verses` (`bookCode`, `chapter`, `verseNumber`, `verseText`) VALUES 
 -
 -
 -
-INSERT INTO `verses` (`bookCode`, `chapter`, `verseNumber`, `verseText`) VALUES ('2SM',  19,  13, 'Say to Amasa, \'Aren\'t you my bone and my flesh? God<H0430> do so to me, and more also, if you aren\'t captain of the army before me continually in the room of Joab.\'\"');
---INSERT INTO `verses` (`bookCode`, `chapter`, `verseNumber`, `verseText`) VALUES ('2SM',  19,  13, 'Say to Amasa, \'Aren\'t you my bone and my flesh? May God<H0430> so deal with me, and even more, if you aren\'t captain of the army before me continually in the room of Joab.\'\"');
+INSERT INTO `verses` (`bookCode`, `chapter`, `verseNumber`, `verseText`) VALUES ('2SA',  19,  13, 'Say to Amasa, \'Aren\'t you my bone and my flesh? God<H0430> do so to me, and more also, if you aren\'t captain of the army before me continually in the room of Joab.\'\"');
+--INSERT INTO `verses` (`bookCode`, `chapter`, `verseNumber`, `verseText`) VALUES ('2SA',  19,  13, 'Say to Amasa, \'Aren\'t you my bone and my flesh? May God<H0430> so deal with me, and even more, if you aren\'t captain of the army before me continually in the room of Joab.\'\"');
 -
 -
 -
@@ -17062,8 +17062,8 @@ INSERT INTO `verses` (`bookCode`, `chapter`, `verseNumber`, `verseText`) VALUES 
 -
 -
 -
-INSERT INTO `verses` (`bookCode`, `chapter`, `verseNumber`, `verseText`) VALUES ('2SM',  19,  21, 'But Abishai the son of Zeruiah answered, \"Shall Shimei not be put to death for this, because he cursed TheIAM<H3068>\'s anointed<H4886>?\"');
---INSERT INTO `verses` (`bookCode`, `chapter`, `verseNumber`, `verseText`) VALUES ('2SM',  19,  21, 'But Abishai the son of Zeruiah answered, \"Shall Shimei not be put to death for this, because he cursed TheIAM<H3068>\'s anointed<H4899>?\"');
+INSERT INTO `verses` (`bookCode`, `chapter`, `verseNumber`, `verseText`) VALUES ('2SA',  19,  21, 'But Abishai the son of Zeruiah answered, \"Shall Shimei not be put to death for this, because he cursed TheIAM<H3068>\'s anointed<H4886>?\"');
+--INSERT INTO `verses` (`bookCode`, `chapter`, `verseNumber`, `verseText`) VALUES ('2SA',  19,  21, 'But Abishai the son of Zeruiah answered, \"Shall Shimei not be put to death for this, because he cursed TheIAM<H3068>\'s anointed<H4899>?\"');
 -
 -
 -
@@ -17126,8 +17126,8 @@ INSERT INTO `verses` (`bookCode`, `chapter`, `verseNumber`, `verseText`) VALUES 
 -
 -
 -
-INSERT INTO `verses` (`bookCode`, `chapter`, `verseNumber`, `verseText`) VALUES ('2SM',  20,  10, 'But Amasa took no heed to the sword that was in Joab\'s hand. So he struck him with it in the body, and shed out his bowels to the ground, and didn\'t strike him again; and he died. Joab and Abishai his brother pursued after Sheba the son of Bichri.');
---INSERT INTO `verses` (`bookCode`, `chapter`, `verseNumber`, `verseText`) VALUES ('2SM',  20,  10, 'But Amasa took no heed to the sword that was in Joab\'s hand. So he struck him with it in the body, and shed out his bowels to the ground, and didn\'t strike him again; and he died. Joab and Abishai his brother pursued<H7291> after Sheba the son of Bichri.');
+INSERT INTO `verses` (`bookCode`, `chapter`, `verseNumber`, `verseText`) VALUES ('2SA',  20,  10, 'But Amasa took no heed to the sword that was in Joab\'s hand. So he struck him with it in the body, and shed out his bowels to the ground, and didn\'t strike him again; and he died. Joab and Abishai his brother pursued after Sheba the son of Bichri.');
+--INSERT INTO `verses` (`bookCode`, `chapter`, `verseNumber`, `verseText`) VALUES ('2SA',  20,  10, 'But Amasa took no heed to the sword that was in Joab\'s hand. So he struck him with it in the body, and shed out his bowels to the ground, and didn\'t strike him again; and he died. Joab and Abishai his brother pursued<H7291> after Sheba the son of Bichri.');
 -
 -
 -
@@ -17182,8 +17182,8 @@ INSERT INTO `verses` (`bookCode`, `chapter`, `verseNumber`, `verseText`) VALUES 
 -
 -
 -
-INSERT INTO `verses` (`bookCode`, `chapter`, `verseNumber`, `verseText`) VALUES ('2SM',  21,  12, 'David went and took the bones of Saul and the bones of Jonathan his son from the men of Jabesh Gilead, who had stolen them from the street of Beth Shan, where the Philistines had hanged them, in the day that the Philistines killed Saul in Gilboa;');
---INSERT INTO `verses` (`bookCode`, `chapter`, `verseNumber`, `verseText`) VALUES ('2SM',  21,  12, 'David went and took the bones of Saul and the bones of Jonathan his son from the men<H1167> of Jabesh Gilead, who had stolen them from the street of Beth Shan, where the Philistines had hanged them, in the day that the Philistines killed Saul in Gilboa;');
+INSERT INTO `verses` (`bookCode`, `chapter`, `verseNumber`, `verseText`) VALUES ('2SA',  21,  12, 'David went and took the bones of Saul and the bones of Jonathan his son from the men of Jabesh Gilead, who had stolen them from the street of Beth Shan, where the Philistines had hanged them, in the day that the Philistines killed Saul in Gilboa;');
+--INSERT INTO `verses` (`bookCode`, `chapter`, `verseNumber`, `verseText`) VALUES ('2SA',  21,  12, 'David went and took the bones of Saul and the bones of Jonathan his son from the men<H1167> of Jabesh Gilead, who had stolen them from the street of Beth Shan, where the Philistines had hanged them, in the day that the Philistines killed Saul in Gilboa;');
 -
 -
 -
@@ -17264,12 +17264,12 @@ INSERT INTO `verses` (`bookCode`, `chapter`, `verseNumber`, `verseText`) VALUES 
 -
 -
 -
-INSERT INTO `verses` (`bookCode`, `chapter`, `verseNumber`, `verseText`) VALUES ('2SM',  22,  31, 'As for God<H0430>, his way is perfect. The word of TheIAM<H3068> is tested. He is a shield to all those who take refuge in him.');
---INSERT INTO `verses` (`bookCode`, `chapter`, `verseNumber`, `verseText`) VALUES ('2SM',  22,  31, 'As for God<H0410>, his way is perfect. The word of TheIAM<H3068> is tested. He is a shield to all those who take refuge in him.');
-INSERT INTO `verses` (`bookCode`, `chapter`, `verseNumber`, `verseText`) VALUES ('2SM',  22,  32, 'For who is God<H0430>, besides TheIAM<H3068>? Who is a rock, besides our God<H0430>?');
---INSERT INTO `verses` (`bookCode`, `chapter`, `verseNumber`, `verseText`) VALUES ('2SM',  22,  32, 'For who is God<H0410>, besides TheIAM<H3068>? Who is a rock, besides our God<H0430>?');
-INSERT INTO `verses` (`bookCode`, `chapter`, `verseNumber`, `verseText`) VALUES ('2SM',  22,  33, 'God<H0430> is my strong fortress. He makes my way perfect.');
---INSERT INTO `verses` (`bookCode`, `chapter`, `verseNumber`, `verseText`) VALUES ('2SM',  22,  33, 'God<H0410> is my strong fortress. He makes my way perfect.');
+INSERT INTO `verses` (`bookCode`, `chapter`, `verseNumber`, `verseText`) VALUES ('2SA',  22,  31, 'As for God<H0430>, his way is perfect. The word of TheIAM<H3068> is tested. He is a shield to all those who take refuge in him.');
+--INSERT INTO `verses` (`bookCode`, `chapter`, `verseNumber`, `verseText`) VALUES ('2SA',  22,  31, 'As for God<H0410>, his way is perfect. The word of TheIAM<H3068> is tested. He is a shield to all those who take refuge in him.');
+INSERT INTO `verses` (`bookCode`, `chapter`, `verseNumber`, `verseText`) VALUES ('2SA',  22,  32, 'For who is God<H0430>, besides TheIAM<H3068>? Who is a rock, besides our God<H0430>?');
+--INSERT INTO `verses` (`bookCode`, `chapter`, `verseNumber`, `verseText`) VALUES ('2SA',  22,  32, 'For who is God<H0410>, besides TheIAM<H3068>? Who is a rock, besides our God<H0430>?');
+INSERT INTO `verses` (`bookCode`, `chapter`, `verseNumber`, `verseText`) VALUES ('2SA',  22,  33, 'God<H0430> is my strong fortress. He makes my way perfect.');
+--INSERT INTO `verses` (`bookCode`, `chapter`, `verseNumber`, `verseText`) VALUES ('2SA',  22,  33, 'God<H0410> is my strong fortress. He makes my way perfect.');
 -
 -
 -
@@ -17278,8 +17278,8 @@ INSERT INTO `verses` (`bookCode`, `chapter`, `verseNumber`, `verseText`) VALUES 
 -
 -
 -
-INSERT INTO `verses` (`bookCode`, `chapter`, `verseNumber`, `verseText`) VALUES ('2SM',  22,  38, 'I have pursued my enemies and destroyed them. I didn\'t turn again until they were consumed.');
---INSERT INTO `verses` (`bookCode`, `chapter`, `verseNumber`, `verseText`) VALUES ('2SM',  22,  38, 'I have pursued<H7291> my enemies and destroyed them. I didn\'t turn again until they were consumed.');
+INSERT INTO `verses` (`bookCode`, `chapter`, `verseNumber`, `verseText`) VALUES ('2SA',  22,  38, 'I have pursued my enemies and destroyed them. I didn\'t turn again until they were consumed.');
+--INSERT INTO `verses` (`bookCode`, `chapter`, `verseNumber`, `verseText`) VALUES ('2SA',  22,  38, 'I have pursued<H7291> my enemies and destroyed them. I didn\'t turn again until they were consumed.');
 -
 -
 -
@@ -17298,24 +17298,24 @@ INSERT INTO `verses` (`bookCode`, `chapter`, `verseNumber`, `verseText`) VALUES 
 -
 -
 -
-INSERT INTO `verses` (`bookCode`, `chapter`, `verseNumber`, `verseText`) VALUES ('2SM',  22,  48, 'even the God<H0430> who executes vengeance for me, who brings down peoples under me,');
---INSERT INTO `verses` (`bookCode`, `chapter`, `verseNumber`, `verseText`) VALUES ('2SM',  22,  48, 'even the God<H0410> who executes vengeance for me, who brings down peoples under me,');
+INSERT INTO `verses` (`bookCode`, `chapter`, `verseNumber`, `verseText`) VALUES ('2SA',  22,  48, 'even the God<H0430> who executes vengeance for me, who brings down peoples under me,');
+--INSERT INTO `verses` (`bookCode`, `chapter`, `verseNumber`, `verseText`) VALUES ('2SA',  22,  48, 'even the God<H0410> who executes vengeance for me, who brings down peoples under me,');
 -
 -
 -
 -
-INSERT INTO `verses` (`bookCode`, `chapter`, `verseNumber`, `verseText`) VALUES ('2SM',  22,  51, 'He gives great deliverance to his king, and shows loving kindness to his anointed<H4886>, to David and to his offspring, forevermore.\"');
---INSERT INTO `verses` (`bookCode`, `chapter`, `verseNumber`, `verseText`) VALUES ('2SM',  22,  51, 'He gives great deliverance to his king, and shows loving kindness to his anointed<H4899>, to David and to his offspring, forevermore.\"');
-INSERT INTO `verses` (`bookCode`, `chapter`, `verseNumber`, `verseText`) VALUES ('2SM',  23,   1, 'Now these are the last words of David. David the son of Jesse says, the man who was raised on high says, the anointed<H4886> of the God<H0430> of Jacob, the sweet psalmist of Israel:');
---INSERT INTO `verses` (`bookCode`, `chapter`, `verseNumber`, `verseText`) VALUES ('2SM',  23,   1, 'Now these are the last words of David. David the son of Jesse says, the man who was raised on high says, the anointed<H4899> of the God<H0430> of Jacob, the sweet psalmist of Israel:');
+INSERT INTO `verses` (`bookCode`, `chapter`, `verseNumber`, `verseText`) VALUES ('2SA',  22,  51, 'He gives great deliverance to his king, and shows loving kindness to his anointed<H4886>, to David and to his offspring, forevermore.\"');
+--INSERT INTO `verses` (`bookCode`, `chapter`, `verseNumber`, `verseText`) VALUES ('2SA',  22,  51, 'He gives great deliverance to his king, and shows loving kindness to his anointed<H4899>, to David and to his offspring, forevermore.\"');
+INSERT INTO `verses` (`bookCode`, `chapter`, `verseNumber`, `verseText`) VALUES ('2SA',  23,   1, 'Now these are the last words of David. David the son of Jesse says, the man who was raised on high says, the anointed<H4886> of the God<H0430> of Jacob, the sweet psalmist of Israel:');
+--INSERT INTO `verses` (`bookCode`, `chapter`, `verseNumber`, `verseText`) VALUES ('2SA',  23,   1, 'Now these are the last words of David. David the son of Jesse says, the man who was raised on high says, the anointed<H4899> of the God<H0430> of Jacob, the sweet psalmist of Israel:');
 -
 -
 -
 -
 -
 -
-INSERT INTO `verses` (`bookCode`, `chapter`, `verseNumber`, `verseText`) VALUES ('2SM',  23,   5, 'Most certainly my house is not so with God<H0430>, yet he has made with me an everlasting covenant, ordered in all things, and sure, for it is all my salvation, and all [my] desire, although he doesn\'t make it grow.');
---INSERT INTO `verses` (`bookCode`, `chapter`, `verseNumber`, `verseText`) VALUES ('2SM',  23,   5, 'Most certainly my house is not so with God<H0410>, yet he has made with me an everlasting covenant, ordered in all things, and sure, for it is all my salvation, and all [my] desire, although he doesn\'t make it grow.');
+INSERT INTO `verses` (`bookCode`, `chapter`, `verseNumber`, `verseText`) VALUES ('2SA',  23,   5, 'Most certainly my house is not so with God<H0430>, yet he has made with me an everlasting covenant, ordered in all things, and sure, for it is all my salvation, and all [my] desire, although he doesn\'t make it grow.');
+--INSERT INTO `verses` (`bookCode`, `chapter`, `verseNumber`, `verseText`) VALUES ('2SA',  23,   5, 'Most certainly my house is not so with God<H0410>, yet he has made with me an everlasting covenant, ordered in all things, and sure, for it is all my salvation, and all [my] desire, although he doesn\'t make it grow.');
 -
 -
 -
