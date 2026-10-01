@@ -16534,7 +16534,7 @@ INSERT INTO `verses` (`bookCode`, `chapter`, `verseNumber`, `verseText`) VALUES 
 INSERT INTO `verses` (`bookCode`, `chapter`, `verseNumber`, `verseText`) VALUES ('PRO',   1,   3, 'to receive instruction in wise dealing,<br>in righteousness, justice, and equity;<br>');
 INSERT INTO `verses` (`bookCode`, `chapter`, `verseNumber`, `verseText`) VALUES ('PRO',   1,   4, 'to give prudence to the simple,<br>knowledge and discretion to the young man:<br>');
 INSERT INTO `verses` (`bookCode`, `chapter`, `verseNumber`, `verseText`) VALUES ('PRO',   1,   5, 'that the wise man may hear, and increase in learning;<br>that the man of understanding may attain to sound counsel;<br>');
-INSERT INTO `verses` (`bookCode`, `chapter`, `verseNumber`, `verseText`) VALUES ('PRO',   1,   6, 'to understand a proverb  and parables,<br>the words and riddles of the wise.');
+INSERT INTO `verses` (`bookCode`, `chapter`, `verseNumber`, `verseText`) VALUES ('PRO',   1,   6, 'to understand a proverb and parables,<br>the words and riddles of the wise.');
 INSERT INTO `verses` (`bookCode`, `chapter`, `verseNumber`, `verseText`) VALUES ('PRO',   1,   7, 'The fear of ForeverOne{H3068} is the beginning of knowledge,<br>but the foolish despise wisdom and instruction.<br>');
 INSERT INTO `verses` (`bookCode`, `chapter`, `verseNumber`, `verseText`) VALUES ('PRO',   1,   8, 'My son, listen to your father&apos;s instruction,<br>and don&apos;t forsake your mother&apos;s teaching;<br>');
 INSERT INTO `verses` (`bookCode`, `chapter`, `verseNumber`, `verseText`) VALUES ('PRO',   1,   9, 'for they will be a garland to grace your head,<br>and chains around your neck.<br>');
