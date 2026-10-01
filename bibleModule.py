@@ -153,12 +153,6 @@ def myBookAbbrFromWEB(tBookAbbr):
         tMyBookAbbr = 'JOH'
     if tBookAbbr == 'JAS':
         tMyBookAbbr = 'JAM'
-    if tBookAbbr == '1JN':
-        tMyBookAbbr = '1JO'
-    if tBookAbbr == '2JN':
-        tMyBookAbbr = '2JO'
-    if tBookAbbr == '3JN':
-        tMyBookAbbr = '3JO'
     if tBookAbbr == 'JUD':
         tMyBookAbbr = 'JDE'
     return tMyBookAbbr
@@ -173,7 +167,7 @@ def myBookAbbrFromWEBName(tWEBName):
     elif tWEBName == '1_Corinthians':
         tMyBookAbbr = '1CO'
     elif tWEBName == '1_John':
-        tMyBookAbbr = '1JO'
+        tMyBookAbbr = '1JN'
     elif tWEBName == '1_Kings':
         tMyBookAbbr = '1KI'
     elif tWEBName == '1_Peter':
@@ -189,7 +183,7 @@ def myBookAbbrFromWEBName(tWEBName):
     elif tWEBName == '2_Corinthians':
         tMyBookAbbr = '2CO'
     elif tWEBName == '2_John':
-        tMyBookAbbr = '2JO'
+        tMyBookAbbr = '2JN'
     elif tWEBName == '2_Kings':
         tMyBookAbbr = '2KI'
     elif tWEBName == '2_Peter':
@@ -201,7 +195,7 @@ def myBookAbbrFromWEBName(tWEBName):
     elif tWEBName == '2_Timothy':
         tMyBookAbbr = '2TI'
     elif tWEBName == '3_John':
-        tMyBookAbbr = '3JO'
+        tMyBookAbbr = '3JN'
     elif tWEBName == 'Acts':
         tMyBookAbbr = 'ACT'
     elif tWEBName == 'Amos':

@@ -177,12 +177,6 @@ def getFileName2(tFileName1):
         tFileName2 = '73-JHNeng-web.usfm'
     if tFileName1 == '89-JAMeng-web.usfm':
         tFileName2 = '89-JASeng-web.usfm'
-    if tFileName1 == '92-1JOeng-web.usfm':
-        tFileName2 = '92-1JNeng-web.usfm'
-    if tFileName1 == '93-2JOeng-web.usfm':
-        tFileName2 = '93-2JNeng-web.usfm'
-    if tFileName1 == '94-3JOeng-web.usfm':
-        tFileName2 = '94-3JNeng-web.usfm'
     if tFileName1 == '95-JDEeng-web.usfm':
         tFileName2 = '95-JUDeng-web.usfm'
     return tFileName2

@@ -30661,7 +30661,7 @@ INSERT INTO `verses` (`bookCode`, `chapter`, `verseNumber`, `verseText`) VALUES 
 INSERT INTO `verses` (`bookCode`, `chapter`, `verseNumber`, `verseText`) VALUES ('2PE',   3,  17, 'So you, dear-ones<G0027>, knowing these things beforehand, beware, lest being carried away with the error of the wicked, you fall from your own steadfastness.');
 -
 -
-INSERT INTO `verses` (`bookCode`, `chapter`, `verseNumber`, `verseText`) VALUES ('1JO',   1,   2, 'and the life was revealed, and we have seen, and testify, and declare to you the life, the eternal life, which was with the Father, and was revealed to us);');
+INSERT INTO `verses` (`bookCode`, `chapter`, `verseNumber`, `verseText`) VALUES ('1JN',   1,   2, 'and the life was revealed, and we have seen, and testify, and declare to you the life, the eternal life, which was with the Father, and was revealed to us);');
 -
 -
 -
@@ -30674,17 +30674,17 @@ INSERT INTO `verses` (`bookCode`, `chapter`, `verseNumber`, `verseText`) VALUES 
 -
 -
 -
-INSERT INTO `verses` (`bookCode`, `chapter`, `verseNumber`, `verseText`) VALUES ('1JO',   2,   5, 'But God\'s love<G0026> has most certainly been perfected in whoever keeps his word. This is how we know that we are in him:');
+INSERT INTO `verses` (`bookCode`, `chapter`, `verseNumber`, `verseText`) VALUES ('1JN',   2,   5, 'But God\'s love<G0026> has most certainly been perfected in whoever keeps his word. This is how we know that we are in him:');
 -
 -
-INSERT INTO `verses` (`bookCode`, `chapter`, `verseNumber`, `verseText`) VALUES ('1JO',   2,   8, 'Again, I write a new commandment to you, which is true in him and in you; because the darkness is passing away and the true light already shines.');
-INSERT INTO `verses` (`bookCode`, `chapter`, `verseNumber`, `verseText`) VALUES ('1JO',   2,   9, 'He who says he is in the light and hates his brother is in darkness even until now.');
-INSERT INTO `verses` (`bookCode`, `chapter`, `verseNumber`, `verseText`) VALUES ('1JO',   2,  10, 'He who loves<G0025> his brother remains in the light, and there is no occasion for stumbling in him.');
+INSERT INTO `verses` (`bookCode`, `chapter`, `verseNumber`, `verseText`) VALUES ('1JN',   2,   8, 'Again, I write a new commandment to you, which is true in him and in you; because the darkness is passing away and the true light already shines.');
+INSERT INTO `verses` (`bookCode`, `chapter`, `verseNumber`, `verseText`) VALUES ('1JN',   2,   9, 'He who says he is in the light and hates his brother is in darkness even until now.');
+INSERT INTO `verses` (`bookCode`, `chapter`, `verseNumber`, `verseText`) VALUES ('1JN',   2,  10, 'He who loves<G0025> his brother remains in the light, and there is no occasion for stumbling in him.');
 -
 -
 -
 -
-INSERT INTO `verses` (`bookCode`, `chapter`, `verseNumber`, `verseText`) VALUES ('1JO',   2,  15, 'Don\'t love<G0025> the world or the things that are in the world. If anyone loves<G0025> the world, the Father\'s love<G0026> isn\'t in him.');
+INSERT INTO `verses` (`bookCode`, `chapter`, `verseNumber`, `verseText`) VALUES ('1JN',   2,  15, 'Don\'t love<G0025> the world or the things that are in the world. If anyone loves<G0025> the world, the Father\'s love<G0026> isn\'t in him.');
 -
 -
 -
@@ -30692,106 +30692,106 @@ INSERT INTO `verses` (`bookCode`, `chapter`, `verseNumber`, `verseText`) VALUES 
 -
 -
 -
-INSERT INTO `verses` (`bookCode`, `chapter`, `verseNumber`, `verseText`) VALUES ('1JO',   2,  23, 'Whoever denies the Son doesn\'t have the Father. He who confesses the Son has the Father also.');
-INSERT INTO `verses` (`bookCode`, `chapter`, `verseNumber`, `verseText`) VALUES ('1JO',   2,  24, 'So, as for you, let what you heard from the beginning remain in you. If what you heard from the beginning remains in you, you also will remain in the Son, and in the Father.');
+INSERT INTO `verses` (`bookCode`, `chapter`, `verseNumber`, `verseText`) VALUES ('1JN',   2,  23, 'Whoever denies the Son doesn\'t have the Father. He who confesses the Son has the Father also.');
+INSERT INTO `verses` (`bookCode`, `chapter`, `verseNumber`, `verseText`) VALUES ('1JN',   2,  24, 'So, as for you, let what you heard from the beginning remain in you. If what you heard from the beginning remains in you, you also will remain in the Son, and in the Father.');
 -
 -
 -
 -
-INSERT INTO `verses` (`bookCode`, `chapter`, `verseNumber`, `verseText`) VALUES ('1JO',   2,  29, 'If you know that he is righteous, you know that everyone who practices righteousness has been born of him.');
-INSERT INTO `verses` (`bookCode`, `chapter`, `verseNumber`, `verseText`) VALUES ('1JO',   3,   1, 'See how great a love<G0026> the Father has given to us, that we should be called children of God! For this cause the world doesn\'t know us, because it didn\'t know him.');
-INSERT INTO `verses` (`bookCode`, `chapter`, `verseNumber`, `verseText`) VALUES ('1JO',   3,   2, 'Dear-ones<G0027>, now we are children of God. It is not yet revealed what we will be; but we know that when he is revealed, we will be like him; for we will see him just as he is.');
+INSERT INTO `verses` (`bookCode`, `chapter`, `verseNumber`, `verseText`) VALUES ('1JN',   2,  29, 'If you know that he is righteous, you know that everyone who practices righteousness has been born of him.');
+INSERT INTO `verses` (`bookCode`, `chapter`, `verseNumber`, `verseText`) VALUES ('1JN',   3,   1, 'See how great a love<G0026> the Father has given to us, that we should be called children of God! For this cause the world doesn\'t know us, because it didn\'t know him.');
+INSERT INTO `verses` (`bookCode`, `chapter`, `verseNumber`, `verseText`) VALUES ('1JN',   3,   2, 'Dear-ones<G0027>, now we are children of God. It is not yet revealed what we will be; but we know that when he is revealed, we will be like him; for we will see him just as he is.');
 -
 -
-INSERT INTO `verses` (`bookCode`, `chapter`, `verseNumber`, `verseText`) VALUES ('1JO',   3,   5, 'You know that he was revealed to take away our sins, and no sin is in him.');
-INSERT INTO `verses` (`bookCode`, `chapter`, `verseNumber`, `verseText`) VALUES ('1JO',   3,   6, 'Whoever remains in him doesn\'t sin. Whoever sins hasn\'t seen him and doesn\'t know him.');
+INSERT INTO `verses` (`bookCode`, `chapter`, `verseNumber`, `verseText`) VALUES ('1JN',   3,   5, 'You know that he was revealed to take away our sins, and no sin is in him.');
+INSERT INTO `verses` (`bookCode`, `chapter`, `verseNumber`, `verseText`) VALUES ('1JN',   3,   6, 'Whoever remains in him doesn\'t sin. Whoever sins hasn\'t seen him and doesn\'t know him.');
 -
-INSERT INTO `verses` (`bookCode`, `chapter`, `verseNumber`, `verseText`) VALUES ('1JO',   3,   8, 'He who sins is of the devil, for the devil has been sinning from the beginning. To this end the Son of God was revealed: that he might destroy the actions of the devil.');
-INSERT INTO `verses` (`bookCode`, `chapter`, `verseNumber`, `verseText`) VALUES ('1JO',   3,   9, 'Whoever is born of God doesn\'t commit sin, because his seed remains in him; and he can\'t sin, because he is born of God.');
+INSERT INTO `verses` (`bookCode`, `chapter`, `verseNumber`, `verseText`) VALUES ('1JN',   3,   8, 'He who sins is of the devil, for the devil has been sinning from the beginning. To this end the Son of God was revealed: that he might destroy the actions of the devil.');
+INSERT INTO `verses` (`bookCode`, `chapter`, `verseNumber`, `verseText`) VALUES ('1JN',   3,   9, 'Whoever is born of God doesn\'t commit sin, because his seed remains in him; and he can\'t sin, because he is born of God.');
 -
 -
-INSERT INTO `verses` (`bookCode`, `chapter`, `verseNumber`, `verseText`) VALUES ('1JO',   3,  12, 'unlike Cain, who was of the evil one, and killed his brother. Why did he kill him? Because his actions were evil, and his brother\'s righteous.');
+INSERT INTO `verses` (`bookCode`, `chapter`, `verseNumber`, `verseText`) VALUES ('1JN',   3,  12, 'unlike Cain, who was of the evil one, and killed his brother. Why did he kill him? Because his actions were evil, and his brother\'s righteous.');
 -
 -
 -
-INSERT INTO `verses` (`bookCode`, `chapter`, `verseNumber`, `verseText`) VALUES ('1JO',   3,  16, 'By this we know love<G0026>, because he laid down his life for us. And we ought to lay down our lives for the brothers.');
-INSERT INTO `verses` (`bookCode`, `chapter`, `verseNumber`, `verseText`) VALUES ('1JO',   3,  17, 'But whoever has the world\'s goods and sees his brother in need, then closes his heart of compassion against him, how does God\'s love<G0026> remain in him?');
-INSERT INTO `verses` (`bookCode`, `chapter`, `verseNumber`, `verseText`) VALUES ('1JO',   3,  18, 'My little children, let\'s not love<G0025> in word or with the tongue only, but in deed and truth.');
+INSERT INTO `verses` (`bookCode`, `chapter`, `verseNumber`, `verseText`) VALUES ('1JN',   3,  16, 'By this we know love<G0026>, because he laid down his life for us. And we ought to lay down our lives for the brothers.');
+INSERT INTO `verses` (`bookCode`, `chapter`, `verseNumber`, `verseText`) VALUES ('1JN',   3,  17, 'But whoever has the world\'s goods and sees his brother in need, then closes his heart of compassion against him, how does God\'s love<G0026> remain in him?');
+INSERT INTO `verses` (`bookCode`, `chapter`, `verseNumber`, `verseText`) VALUES ('1JN',   3,  18, 'My little children, let\'s not love<G0025> in word or with the tongue only, but in deed and truth.');
 -
 -
 -
-INSERT INTO `verses` (`bookCode`, `chapter`, `verseNumber`, `verseText`) VALUES ('1JO',   3,  22, 'so whatever we ask, we receive from him, because we keep his commandments and do the things that are pleasing in his sight.');
+INSERT INTO `verses` (`bookCode`, `chapter`, `verseNumber`, `verseText`) VALUES ('1JN',   3,  22, 'so whatever we ask, we receive from him, because we keep his commandments and do the things that are pleasing in his sight.');
 -
 -
 -
 -
 -
 -
-INSERT INTO `verses` (`bookCode`, `chapter`, `verseNumber`, `verseText`) VALUES ('1JO',   4,   5, 'They are of the world; so they speak of the world, and the world hears them.');
+INSERT INTO `verses` (`bookCode`, `chapter`, `verseNumber`, `verseText`) VALUES ('1JN',   4,   5, 'They are of the world; so they speak of the world, and the world hears them.');
 -
-INSERT INTO `verses` (`bookCode`, `chapter`, `verseNumber`, `verseText`) VALUES ('1JO',   4,   7, 'Dear-ones<G0027>, let\'s love<G0025> one another, for love<G0026> is of God; and everyone who loves<G0025> has been born of God, and knows God.');
+INSERT INTO `verses` (`bookCode`, `chapter`, `verseNumber`, `verseText`) VALUES ('1JN',   4,   7, 'Dear-ones<G0027>, let\'s love<G0025> one another, for love<G0026> is of God; and everyone who loves<G0025> has been born of God, and knows God.');
 -
-INSERT INTO `verses` (`bookCode`, `chapter`, `verseNumber`, `verseText`) VALUES ('1JO',   4,   9, 'By this God\'s love<G0026> was revealed in us, that God has sent his one and only Son into the world that we might live through him.');
-INSERT INTO `verses` (`bookCode`, `chapter`, `verseNumber`, `verseText`) VALUES ('1JO',   4,  10, 'In this is love<G0026>, not that we loved<G0025> God, but that he loved<G0025> us, and sent his Son as the atoning sacrifice for our sins.');
-INSERT INTO `verses` (`bookCode`, `chapter`, `verseNumber`, `verseText`) VALUES ('1JO',   4,  11, 'Dear-ones<G0027>, if God loved<G0025> us in this way, we also ought to love<G0025> one another.');
+INSERT INTO `verses` (`bookCode`, `chapter`, `verseNumber`, `verseText`) VALUES ('1JN',   4,   9, 'By this God\'s love<G0026> was revealed in us, that God has sent his one and only Son into the world that we might live through him.');
+INSERT INTO `verses` (`bookCode`, `chapter`, `verseNumber`, `verseText`) VALUES ('1JN',   4,  10, 'In this is love<G0026>, not that we loved<G0025> God, but that he loved<G0025> us, and sent his Son as the atoning sacrifice for our sins.');
+INSERT INTO `verses` (`bookCode`, `chapter`, `verseNumber`, `verseText`) VALUES ('1JN',   4,  11, 'Dear-ones<G0027>, if God loved<G0025> us in this way, we also ought to love<G0025> one another.');
 -
 -
 -
 -
-INSERT INTO `verses` (`bookCode`, `chapter`, `verseNumber`, `verseText`) VALUES ('1JO',   4,  16, 'We know and have believed the love<G0026> which God has for us. God is love<G0026>, and he who remains in love<G0026> remains in God, and God remains in him.');
-INSERT INTO `verses` (`bookCode`, `chapter`, `verseNumber`, `verseText`) VALUES ('1JO',   4,  17, 'In this, love<G0026> has been made perfect among us, that we may have boldness in the day of judgment, because as he is, even so are we in this world.');
-INSERT INTO `verses` (`bookCode`, `chapter`, `verseNumber`, `verseText`) VALUES ('1JO',   4,  18, 'There is no fear in love<G0026>; but perfect love<G0026> casts out fear, because fear has punishment. He who fears is not made perfect in love<G0026>.');
-INSERT INTO `verses` (`bookCode`, `chapter`, `verseNumber`, `verseText`) VALUES ('1JO',   4,  19, 'We love<G0025> him, because he first loved<G0025> us.');
+INSERT INTO `verses` (`bookCode`, `chapter`, `verseNumber`, `verseText`) VALUES ('1JN',   4,  16, 'We know and have believed the love<G0026> which God has for us. God is love<G0026>, and he who remains in love<G0026> remains in God, and God remains in him.');
+INSERT INTO `verses` (`bookCode`, `chapter`, `verseNumber`, `verseText`) VALUES ('1JN',   4,  17, 'In this, love<G0026> has been made perfect among us, that we may have boldness in the day of judgment, because as he is, even so are we in this world.');
+INSERT INTO `verses` (`bookCode`, `chapter`, `verseNumber`, `verseText`) VALUES ('1JN',   4,  18, 'There is no fear in love<G0026>; but perfect love<G0026> casts out fear, because fear has punishment. He who fears is not made perfect in love<G0026>.');
+INSERT INTO `verses` (`bookCode`, `chapter`, `verseNumber`, `verseText`) VALUES ('1JN',   4,  19, 'We love<G0025> him, because he first loved<G0025> us.');
 -
-INSERT INTO `verses` (`bookCode`, `chapter`, `verseNumber`, `verseText`) VALUES ('1JO',   4,  21, 'This commandment we have from him, that he who loves<G0025> God should also love<G0025> his brother.');
-INSERT INTO `verses` (`bookCode`, `chapter`, `verseNumber`, `verseText`) VALUES ('1JO',   5,   1, 'Whoever believes that Jesus is the AnointedOne<G5547> has been born of God. Whoever loves<G0025> the Father also loves<G0025> the child who is born of him.');
+INSERT INTO `verses` (`bookCode`, `chapter`, `verseNumber`, `verseText`) VALUES ('1JN',   4,  21, 'This commandment we have from him, that he who loves<G0025> God should also love<G0025> his brother.');
+INSERT INTO `verses` (`bookCode`, `chapter`, `verseNumber`, `verseText`) VALUES ('1JN',   5,   1, 'Whoever believes that Jesus is the AnointedOne<G5547> has been born of God. Whoever loves<G0025> the Father also loves<G0025> the child who is born of him.');
 -
-INSERT INTO `verses` (`bookCode`, `chapter`, `verseNumber`, `verseText`) VALUES ('1JO',   5,   3, 'For this is loving<G0026> God, that we keep his commandments. His commandments are not grievous.');
+INSERT INTO `verses` (`bookCode`, `chapter`, `verseNumber`, `verseText`) VALUES ('1JN',   5,   3, 'For this is loving<G0026> God, that we keep his commandments. His commandments are not grievous.');
 -
 -
 -
-INSERT INTO `verses` (`bookCode`, `chapter`, `verseNumber`, `verseText`) VALUES ('1JO',   5,   7, '[*For there are three who testify:]');
-INSERT INTO `verses` (`bookCode`, `chapter`, `verseNumber`, `verseText`) VALUES ('1JO',   5,   8, '[*the Spirit, the water, and the blood; and the three agree as one.]');
+INSERT INTO `verses` (`bookCode`, `chapter`, `verseNumber`, `verseText`) VALUES ('1JN',   5,   7, '[*For there are three who testify:]');
+INSERT INTO `verses` (`bookCode`, `chapter`, `verseNumber`, `verseText`) VALUES ('1JN',   5,   8, '[*the Spirit, the water, and the blood; and the three agree as one.]');
 -
 -
 -
 -
 -
-INSERT INTO `verses` (`bookCode`, `chapter`, `verseNumber`, `verseText`) VALUES ('1JO',   5,  14, 'This is the boldness which we have toward him, that if we ask anything according to his will, he listens to us.');
+INSERT INTO `verses` (`bookCode`, `chapter`, `verseNumber`, `verseText`) VALUES ('1JN',   5,  14, 'This is the boldness which we have toward him, that if we ask anything according to his will, he listens to us.');
 -
 -
 -
 -
 -
-INSERT INTO `verses` (`bookCode`, `chapter`, `verseNumber`, `verseText`) VALUES ('1JO',   5,  20, 'We know that the Son of God has come, and has given us an understanding, that we know him who is true, and we are in him who is true, in his Son Jesus AnointedOne<G5547>. This is the true God and eternal life.');
+INSERT INTO `verses` (`bookCode`, `chapter`, `verseNumber`, `verseText`) VALUES ('1JN',   5,  20, 'We know that the Son of God has come, and has given us an understanding, that we know him who is true, and we are in him who is true, in his Son Jesus AnointedOne<G5547>. This is the true God and eternal life.');
 -
-INSERT INTO `verses` (`bookCode`, `chapter`, `verseNumber`, `verseText`) VALUES ('2JO',   1,   1, 'The elder, to the chosen lady and her children, whom I love<G0025> in truth; and not only me, but also all those who know the truth;');
+INSERT INTO `verses` (`bookCode`, `chapter`, `verseNumber`, `verseText`) VALUES ('2JN',   1,   1, 'The elder, to the chosen lady and her children, whom I love<G0025> in truth; and not only me, but also all those who know the truth;');
 -
-INSERT INTO `verses` (`bookCode`, `chapter`, `verseNumber`, `verseText`) VALUES ('2JO',   1,   3, 'Grace, mercy, and peace will be with us, from God the Father, and from the Lord<G2962> Jesus AnointedOne<G5547>, the Son of the Father, in truth and love<G0026>.');
+INSERT INTO `verses` (`bookCode`, `chapter`, `verseNumber`, `verseText`) VALUES ('2JN',   1,   3, 'Grace, mercy, and peace will be with us, from God the Father, and from the Lord<G2962> Jesus AnointedOne<G5547>, the Son of the Father, in truth and love<G0026>.');
 -
 -
 -
 -
 -
-INSERT INTO `verses` (`bookCode`, `chapter`, `verseNumber`, `verseText`) VALUES ('2JO',   1,   9, 'Whoever transgresses and doesn\'t remain in the teaching of the AnointedOne<G5547>, doesn\'t have God. He who remains in the teaching has both the Father and the Son.');
+INSERT INTO `verses` (`bookCode`, `chapter`, `verseNumber`, `verseText`) VALUES ('2JN',   1,   9, 'Whoever transgresses and doesn\'t remain in the teaching of the AnointedOne<G5547>, doesn\'t have God. He who remains in the teaching has both the Father and the Son.');
 -
-INSERT INTO `verses` (`bookCode`, `chapter`, `verseNumber`, `verseText`) VALUES ('2JO',   1,  11, 'for he who welcomes him participates in his evil actions.');
+INSERT INTO `verses` (`bookCode`, `chapter`, `verseNumber`, `verseText`) VALUES ('2JN',   1,  11, 'for he who welcomes him participates in his evil actions.');
 -
 -
-INSERT INTO `verses` (`bookCode`, `chapter`, `verseNumber`, `verseText`) VALUES ('3JO',   1,   1, 'The elder, to dear<G0027> Gaius whom I love<G0025> in truth.');
+INSERT INTO `verses` (`bookCode`, `chapter`, `verseNumber`, `verseText`) VALUES ('3JN',   1,   1, 'The elder, to dear<G0027> Gaius whom I love<G0025> in truth.');
 -
-INSERT INTO `verses` (`bookCode`, `chapter`, `verseNumber`, `verseText`) VALUES ('3JO',   1,   3, 'For I rejoiced greatly when brothers came and testified about your truth, even as you walk in truth.');
-INSERT INTO `verses` (`bookCode`, `chapter`, `verseNumber`, `verseText`) VALUES ('3JO',   1,   4, 'I have no greater joy than this: to hear about my children walking in truth.');
+INSERT INTO `verses` (`bookCode`, `chapter`, `verseNumber`, `verseText`) VALUES ('3JN',   1,   3, 'For I rejoiced greatly when brothers came and testified about your truth, even as you walk in truth.');
+INSERT INTO `verses` (`bookCode`, `chapter`, `verseNumber`, `verseText`) VALUES ('3JN',   1,   4, 'I have no greater joy than this: to hear about my children walking in truth.');
 -
-INSERT INTO `verses` (`bookCode`, `chapter`, `verseNumber`, `verseText`) VALUES ('3JO',   1,   6, 'They have testified about your love<G0026> before the assembly. You will do well to send them forward on their journey in a way worthy of God,');
+INSERT INTO `verses` (`bookCode`, `chapter`, `verseNumber`, `verseText`) VALUES ('3JN',   1,   6, 'They have testified about your love<G0026> before the assembly. You will do well to send them forward on their journey in a way worthy of God,');
 -
-INSERT INTO `verses` (`bookCode`, `chapter`, `verseNumber`, `verseText`) VALUES ('3JO',   1,   8, 'So we ought to receive such as these, that we may be fellow workers for the truth.');
+INSERT INTO `verses` (`bookCode`, `chapter`, `verseNumber`, `verseText`) VALUES ('3JN',   1,   8, 'So we ought to receive such as these, that we may be fellow workers for the truth.');
 -
-INSERT INTO `verses` (`bookCode`, `chapter`, `verseNumber`, `verseText`) VALUES ('3JO',   1,  10, 'So if I come, I will call attention to his actions which he does, unjustly accusing us with wicked words. Not content with this, neither does he himself receive the brothers, and those who would, he forbids and throws out of the assembly.');
+INSERT INTO `verses` (`bookCode`, `chapter`, `verseNumber`, `verseText`) VALUES ('3JN',   1,  10, 'So if I come, I will call attention to his actions which he does, unjustly accusing us with wicked words. Not content with this, neither does he himself receive the brothers, and those who would, he forbids and throws out of the assembly.');
 -
 -
 -
-INSERT INTO `verses` (`bookCode`, `chapter`, `verseNumber`, `verseText`) VALUES ('3JO',   1,  14, 'but I hope to see you soon. Then we will speak face to face. Peace be to you. The friends greet you. Greet the friends by name.');
+INSERT INTO `verses` (`bookCode`, `chapter`, `verseNumber`, `verseText`) VALUES ('3JN',   1,  14, 'but I hope to see you soon. Then we will speak face to face. Peace be to you. The friends greet you. Greet the friends by name.');
 INSERT INTO `verses` (`bookCode`, `chapter`, `verseNumber`, `verseText`) VALUES ('JDE',   1,   1, 'Jude, a servant of Jesus AnointedOne<G5547>, and brother of James, to those who are called loved<G0025>, sanctified by God the Father, and kept for Jesus AnointedOne<G5547>:');
 INSERT INTO `verses` (`bookCode`, `chapter`, `verseNumber`, `verseText`) VALUES ('JDE',   1,   2, 'May mercy, peace and love<G0026> be multiplied to you.');
 -
