@@ -1,0 +1,32 @@
+This is a temporary document just for Carl to manage his side of the migration of these names. Everyone else ignore it for now - it'll be deleted soon enough (hopefully!)
+
+I believe that I've just completed converting the codes for:
+
+1SM -> 1SA
+2SM -> 2SA
+
+across all 7 repos in this order:
+
+1. bookish-lamp
+2. the-cleanslate-bible
+3. bible-harmony
+4. BibleHarmony-USFM
+5. tcsb-mobile
+6. Newsletter
+7. BibleStudyMan
+
+Please double check that I did everything correctly.
+
+Change TCSB:
+SON -> SNG
+EZE -> EZK
+MAR -> MRK
+JOH -> JHN
+JAM -> JAS
+JDE -> JUD
+
+VSC .* (remember to set that!) regex global search:
+
+([12])SM
+
+$1SA
