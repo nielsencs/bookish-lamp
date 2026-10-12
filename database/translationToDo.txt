@@ -1,4 +1,5 @@
 is created-from-nothing{H1254} too strong?
+when is praise{G2129} blessing?
 ########################################################
 ################ Translation 'passes': #################
 ########################################################
@@ -63,7 +64,7 @@ insurgents - rebels?
 cohort
 did homage to him
 prevail
-
+wrath -> anger
 ########################################################
 ######### AVYous(you-all) comparison completed #########
 ########################################################
